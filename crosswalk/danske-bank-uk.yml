@@ -1,7 +1,7 @@
 provider: danske-bank-uk
 apis_io: https://apis.io/providers/danske-bank-uk/
 context: banking
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   bank_account:
     path_segment:

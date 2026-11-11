@@ -124,3 +124,11 @@ decisions:
     word collides with nothing."
   - "A bank account is `/accounts`, the market's word (123 providers), because inside banking
     it means only one thing. Accounting uses `/ledger-accounts` to stay clear of it."
+
+workflows:
+  - id: pay-a-beneficiary
+    summary: Add a beneficiary and transfer money to them from an account
+    steps:
+      - {op: getBankAccount, id: account, path: {"{bank_account_id}": "$inputs.account_id"}}
+      - {op: createBeneficiary, id: beneficiary}
+      - {op: createTransfer, id: transfer, link: {from_account_id: "$steps.account.outputs.id", to_account_id: "$steps.beneficiary.outputs.id"}}
