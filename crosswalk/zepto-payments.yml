@@ -1,0 +1,52 @@
+provider: zepto-payments
+apis_io: https://apis.io/providers/zepto-payments/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bank_accounts
+    properties:
+      name: title
+      type: account_type
+      status: status
+      id: id
+      account_number: account_number
+      balance: available_balance
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/zepto-payments-zepto.yml#GET /bank_accounts
+    - openapi/_original/zepto-payments-zepto.yml#GET /bank_accounts/{id}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      amount: amount
+      status: status
+      direction: type
+      description: description
+      account_id: bank_account_id
+      created_at: created_at
+      category: category
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/zepto-payments-zepto.yml#GET /transactions
+  transfer:
+    path_segment:
+    - payments
+    - transfers
+    properties:
+      amount: amount
+      status: state
+      created_at: created_at
+      description:
+      - reference
+      - description
+      metadata: metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/zepto-payments-pay-to.yml#GET /payto/payments
+    - openapi/_original/zepto-payments-pay-to.yml#GET /payto/payments/{payment_uid}
+    - openapi/_original/zepto-payments-pay-to.yml#POST /payto/payments
+    - openapi/_original/zepto-payments-zepto.yml#GET /payments
+    - openapi/_original/zepto-payments-zepto.yml#GET /payments/{payment_ref}

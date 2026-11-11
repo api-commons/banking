@@ -1,0 +1,3355 @@
+[
+ {
+  "slug": "accrue-savings",
+  "specs": [
+   "openapi/_original/accrue-savings-merchant-api-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "aeropay",
+  "specs": [
+   "openapi/_original/aeropay-v2-openapi.json",
+   "openapi/_original/aeropay-v2-openapi.yml"
+  ]
+ },
+ {
+  "slug": "affinda",
+  "specs": [
+   "openapi/_original/affinda-document-splitters-api-openapi.yml",
+   "openapi/_original/affinda-extractors-api-openapi.yml",
+   "openapi/_original/affinda-invitations-api-openapi.yml",
+   "openapi/_original/affinda-v3-openapi.yml"
+  ]
+ },
+ {
+  "slug": "agicap",
+  "specs": [
+   "openapi/_original/agicap-ar-clients-v1-openapi.json",
+   "openapi/_original/agicap-auth-v1-openapi.json",
+   "openapi/_original/agicap-banking-documents-v1-openapi.json",
+   "openapi/_original/agicap-business-documents-v1-openapi.json",
+   "openapi/_original/agicap-business-documents-v2-openapi.json",
+   "openapi/_original/agicap-card-expenses-bank-journal-v1-openapi.json",
+   "openapi/_original/agicap-chart-of-accounts-v1-openapi.json",
+   "openapi/_original/agicap-client-risk-v1-openapi.json",
+   "openapi/_original/agicap-einvoicing-v1-openapi.json",
+   "openapi/_original/agicap-events-v1-openapi.json",
+   "openapi/_original/agicap-financial-investments-v1-openapi.json",
+   "openapi/_original/agicap-httpbin-v1-openapi.json",
+   "openapi/_original/agicap-intragroup-financing-v1-openapi.json",
+   "openapi/_original/agicap-invoices-management-v1-openapi.json",
+   "openapi/_original/agicap-organizations-v1-openapi.json",
+   "openapi/_original/agicap-payments-v2-openapi.json",
+   "openapi/_original/agicap-purchase-journal-v1-openapi.json",
+   "openapi/_original/agicap-suppliers-v1-openapi.json",
+   "openapi/_original/agicap-treasury-bank-journal-v1-openapi.json"
+  ]
+ },
+ {
+  "slug": "aib-group-uk",
+  "specs": [
+   "openapi/_original/aib-group-uk-open-data-openapi.json"
+  ]
+ },
+ {
+  "slug": "alex-bank",
+  "specs": [
+   "openapi/_original/alex-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "algbra",
+  "specs": [
+   "openapi/_original/algbra-openapi.json"
+  ]
+ },
+ {
+  "slug": "alliance-data-systems",
+  "specs": [
+   "openapi/_original/bread-classic-merchant-openapi.yml",
+   "openapi/_original/bread-pay-platform-openapi.yml"
+  ]
+ },
+ {
+  "slug": "allica-bank",
+  "specs": [
+   "openapi/_original/allica-bank-account-information-openapi.yaml",
+   "openapi/_original/allica-bank-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "alloy-com",
+  "specs": [
+   "openapi/_original/alloy-com-identity-api-openapi.yml",
+   "openapi/_original/alloy-openapi.yml"
+  ]
+ },
+ {
+  "slug": "alviere",
+  "specs": [
+   "openapi/_original/alviere-openapi.yml"
+  ]
+ },
+ {
+  "slug": "amp-bank",
+  "specs": [
+   "openapi/_original/amp-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "anchorage",
+  "specs": [
+   "openapi/_original/anchorage-v2-openapi-original.yml",
+   "openapi/_original/anchorage-v3-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "anz",
+  "specs": [
+   "openapi/_original/anz-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "atlar",
+  "specs": [
+   "openapi/_original/atlar-api-v2-openapi.yml",
+   "openapi/_original/atlar-api-v2-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "augustus",
+  "specs": [
+   "openapi/_original/augustus-openapi.json"
+  ]
+ },
+ {
+  "slug": "australian-military-bank",
+  "specs": [
+   "openapi/_original/australian-military-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "australian-unity-bank",
+  "specs": [
+   "openapi/_original/australian-unity-bank-cds-banking-openapi.json"
+  ]
+ },
+ {
+  "slug": "auswide-bank",
+  "specs": [
+   "openapi/_original/auswide-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "avaloq",
+  "specs": [
+   "openapi/_original/avaloq-banking-openapi.yml",
+   "openapi/_original/avaloq-payments-openapi.yml"
+  ]
+ },
+ {
+  "slug": "avenue-bank",
+  "specs": [
+   "openapi/_original/avenue-bank-cds-banking-openapi.json"
+  ]
+ },
+ {
+  "slug": "azupay",
+  "specs": [
+   "openapi/_original/azupay-check-accounts.yml",
+   "openapi/_original/azupay-configuration.yml",
+   "openapi/_original/azupay-payment-agreement.yml",
+   "openapi/_original/azupay-payment-request.yml",
+   "openapi/_original/azupay-payment.yml",
+   "openapi/_original/azupay-reports.yml"
+  ]
+ },
+ {
+  "slug": "backbase",
+  "specs": [
+   "openapi/_original/backbase-openapi-openapi.yml",
+   "openapi/_original/payment-order-client-api-v2.0.0.yaml"
+  ]
+ },
+ {
+  "slug": "balad-corp",
+  "specs": [
+   "openapi/_original/balad-corp-gateway-openapi.yml"
+  ]
+ },
+ {
+  "slug": "banco-inter",
+  "specs": [
+   "openapi/_original/banco-inter-banking-openapi.yml",
+   "openapi/_original/banco-inter-cobranca-bolepix-openapi.yml",
+   "openapi/_original/banco-inter-cobranca-openapi.yml",
+   "openapi/_original/banco-inter-forum-openapi.yml",
+   "openapi/_original/banco-inter-partners-credito-imobiliario-credito-openapi.yml",
+   "openapi/_original/banco-inter-partners-credito-imobiliario-token-openapi.yml",
+   "openapi/_original/banco-inter-pix-automatico-openapi.yml",
+   "openapi/_original/banco-inter-pix-openapi.yml",
+   "openapi/_original/banco-inter-token-openapi.yml",
+   "openapi/_original/partners-credito-imobiliario-credito-yaml.yaml",
+   "openapi/_original/partners-credito-imobiliario-token-yaml.yaml",
+   "openapi/_original/swagger-api-forum-yaml.yaml",
+   "openapi/_original/swagger-api-pix-automatico-yaml.yaml",
+   "openapi/_original/swagger-api-pix-yaml.yaml",
+   "openapi/_original/swagger-banking-yaml.yaml",
+   "openapi/_original/swagger-cobranca-bolepix-yaml.yaml",
+   "openapi/_original/swagger-cobranca-yaml.yaml",
+   "openapi/_original/swagger-token-yaml.yaml"
+  ]
+ },
+ {
+  "slug": "bancomat",
+  "specs": [
+   "openapi/_original/bancomat-flowpay-api-v1-openapi.json",
+   "openapi/_original/bancomat-flowpay-api-v1-openapi.yml",
+   "openapi/_original/bancomat-flowpay-api-v2-openapi.json"
+  ]
+ },
+ {
+  "slug": "bancontact",
+  "specs": [
+   "openapi/_original/merchant-payment.openapi.yaml",
+   "openapi/_original/merchant-reconciliation.openapi.yaml",
+   "openapi/_original/refund-public.openapi.yaml"
+  ]
+ },
+ {
+  "slug": "bank-australia",
+  "specs": [
+   "openapi/_original/bank-australia-cds-banking-openapi.json"
+  ]
+ },
+ {
+  "slug": "bank-first",
+  "specs": [
+   "openapi/_original/bank-first-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bank-of-america",
+  "specs": [
+   "openapi/_original/bank-of-america-bofa-api-openapi.yml",
+   "openapi/_original/bank-of-america-cashpro-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bank-of-ireland-uk",
+  "specs": [
+   "openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml",
+   "openapi/_original/bank-of-ireland-uk-confirmation-funds-openapi.yaml",
+   "openapi/_original/bank-of-ireland-uk-open-data-openapi.json",
+   "openapi/_original/bank-of-ireland-uk-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "bank-of-new-york-mellon",
+  "specs": [
+   "openapi/_original/bny-mellon-treasury-services-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bank-of-queensland",
+  "specs": [
+   "openapi/_original/bank-of-queensland-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bank-of-scotland",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-opendata-swagger.json",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "bank-of-sydney",
+  "specs": [
+   "openapi/_original/bank-of-sydney-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bank-of-us",
+  "specs": [
+   "openapi/_original/bank-of-us-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "banksa",
+  "specs": [
+   "openapi/_original/banksa-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bankvic",
+  "specs": [
+   "openapi/_original/bankvic-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bankwest",
+  "specs": [
+   "openapi/_original/bankwest-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "barclays",
+  "specs": [
+   "openapi/_original/barclays-account-and-transactions-openapi.json",
+   "openapi/_original/barclays-account-management-openapi.json",
+   "openapi/_original/barclays-accounts-openapi.json",
+   "openapi/_original/barclays-atm-locator-openapi.json",
+   "openapi/_original/barclays-authentication-openapi.json",
+   "openapi/_original/barclays-bank-ireland-account-information-openapi.json",
+   "openapi/_original/barclays-bank-ireland-confirmation-of-funds-openapi.json",
+   "openapi/_original/barclays-bank-ireland-payment-initiation-openapi.json",
+   "openapi/_original/barclays-benefits-redemption-openapi.json",
+   "openapi/_original/barclays-branch-locator-openapi.json",
+   "openapi/_original/barclays-card-application-openapi.json",
+   "openapi/_original/barclays-card-control-openapi.json",
+   "openapi/_original/barclays-confirmation-of-funds-openapi.json",
+   "openapi/_original/barclays-cryptography-key-exchange-openapi.json",
+   "openapi/_original/barclays-digital-wallet-openapi.json",
+   "openapi/_original/barclays-dynamic-client-registration-openapi.json",
+   "openapi/_original/barclays-event-notification-openapi.json",
+   "openapi/_original/barclays-fca-service-metrics-openapi.json",
+   "openapi/_original/barclays-payment-initiation-openapi.json",
+   "openapi/_original/barclays-payments-openapi.json",
+   "openapi/_original/barclays-product-details-openapi.json",
+   "openapi/_original/barclays-rewards-earn-openapi.json",
+   "openapi/_original/barclays-rewards-loyalty-sync-openapi.json",
+   "openapi/_original/barclays-statements-retriever-openapi.json",
+   "openapi/_original/barclays-transactions-openapi.json",
+   "openapi/_original/barclays-variable-recurring-payment-openapi.json"
+  ]
+ },
+ {
+  "slug": "basiq",
+  "specs": [
+   "openapi/_original/basiq-affordability-openapi.json",
+   "openapi/_original/basiq-analytics-openapi.json",
+   "openapi/_original/basiq-enrich-openapi.json",
+   "openapi/_original/basiq-identity-openapi.json",
+   "openapi/_original/basiq-insights-openapi.json",
+   "openapi/_original/basiq-openapi.json",
+   "openapi/_original/basiq-payees-openapi.json",
+   "openapi/_original/basiq-platform-openapi.json",
+   "openapi/_original/basiq-reporting-openapi.json",
+   "openapi/_original/basiq-webhooks-openapi.json"
+  ]
+ },
+ {
+  "slug": "bbandt-corp",
+  "specs": [
+   "openapi/_original/bbandt-corp-commercial-account-balance-openapi.yml",
+   "openapi/_original/bbandt-corp-commercial-account-transactions-openapi.yml",
+   "openapi/_original/bbandt-corp-commercial-accounts-openapi.yml",
+   "openapi/_original/bbandt-corp-commercial-credit-transfers-oas-v2-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-accounts-contact-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-accounts-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-accounts-transaction-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-auth-oauth-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-consents-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-customers-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-event-notifications-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-event-subscriptions-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-locator-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-payment-networks-openapi.yml",
+   "openapi/_original/bbandt-corp-retail-register-recipient-openapi.yml",
+   "openapi/_original/commercial-account-balance.yaml",
+   "openapi/_original/commercial-account-transactions.yaml",
+   "openapi/_original/commercial-accounts.yaml",
+   "openapi/_original/commercial-credit-transfers-oas-v2.yaml",
+   "openapi/_original/retail-accounts-contact.yaml",
+   "openapi/_original/retail-accounts-transaction.yaml",
+   "openapi/_original/retail-accounts.yaml",
+   "openapi/_original/retail-auth-oauth.yaml",
+   "openapi/_original/retail-consents.yaml",
+   "openapi/_original/retail-customers.yaml",
+   "openapi/_original/retail-event-notifications.yaml",
+   "openapi/_original/retail-event-subscriptions.yaml",
+   "openapi/_original/retail-locator.yaml",
+   "openapi/_original/retail-payment-networks.yaml",
+   "openapi/_original/retail-register-recipient.yaml"
+  ]
+ },
+ {
+  "slug": "bcb-group",
+  "specs": [
+   "openapi/_original/bcb-group-payments-openapi.json"
+  ]
+ },
+ {
+  "slug": "bcu-bank",
+  "specs": [
+   "openapi/_original/bcu-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "belvo",
+  "specs": [
+   "openapi/_original/belvo-openapi.json"
+  ]
+ },
+ {
+  "slug": "bendigo-and-adelaide-bank",
+  "specs": [
+   "openapi/_original/bendigo-and-adelaide-bank-cds-banking-products-openapi.yml",
+   "openapi/_original/bendigo-and-adelaide-bank-up-developer-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "beyond-bank",
+  "specs": [
+   "openapi/_original/beyond-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "blend-mortgage",
+  "specs": [
+   "openapi/_original/blend-mortgage-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bmo",
+  "specs": [
+   "openapi/_original/bmo-account-information-openapi.json",
+   "openapi/_original/bmo-account-validation-openapi.json",
+   "openapi/_original/bmo-ach-payments-openapi.json",
+   "openapi/_original/bmo-authorize-token-swagger.json",
+   "openapi/_original/bmo-client-data-encryption-key-swagger.json",
+   "openapi/_original/bmo-eft-payments-openapi.json",
+   "openapi/_original/bmo-image-retrieval-swagger.json",
+   "openapi/_original/bmo-interac-instant-payments-openapi.json",
+   "openapi/_original/bmo-push-notification-openapi.json",
+   "openapi/_original/bmo-wire-payments-ca-openapi.json",
+   "openapi/_original/bmo-wire-payments-us-openapi.json"
+  ]
+ },
+ {
+  "slug": "bond",
+  "specs": [
+   "openapi/_original/bond-accounts-openapi.yml",
+   "openapi/_original/bond-accounts-readme-slices.json",
+   "openapi/_original/bond-business-openapi.yml",
+   "openapi/_original/bond-business-readme-slices.json",
+   "openapi/_original/bond-cards-openapi.yml",
+   "openapi/_original/bond-cards-readme-slices.json",
+   "openapi/_original/bond-credit-openapi.yml",
+   "openapi/_original/bond-credit-readme-slices.json",
+   "openapi/_original/bond-customer-openapi.yml",
+   "openapi/_original/bond-customer-readme-slices.json",
+   "openapi/_original/bond-ledger-openapi.yml",
+   "openapi/_original/bond-ledger-readme-slices.json",
+   "openapi/_original/bond-simulation-openapi.yml",
+   "openapi/_original/bond-simulation-readme-slices.json",
+   "openapi/_original/bond-transfers-openapi.yml",
+   "openapi/_original/bond-transfers-readme-slices.json",
+   "openapi/_original/bond-webhooks-openapi.yml",
+   "openapi/_original/bond-webhooks-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "btg-pactual",
+  "specs": [
+   "openapi/_original/btg-pactual-acquirers-paymentlink-openapi.yml",
+   "openapi/_original/btg-pactual-acquirers-salesprovider-openapi.yml",
+   "openapi/_original/btg-pactual-antecred-subcredenciadores-openapi.yml",
+   "openapi/_original/btg-pactual-banking-accounts-openapi.yml",
+   "openapi/_original/btg-pactual-banking-cards-openapi.yml",
+   "openapi/_original/btg-pactual-banking-ccreceivables-openapi.yml",
+   "openapi/_original/btg-pactual-banking-collections-openapi.yml",
+   "openapi/_original/btg-pactual-banking-dda-openapi.yml",
+   "openapi/_original/btg-pactual-banking-paymentlink-openapi.yml",
+   "openapi/_original/btg-pactual-banking-paymentlinkrec-openapi.yml",
+   "openapi/_original/btg-pactual-banking-payments-openapi.yml",
+   "openapi/_original/btg-pactual-banking-payroll-openapi.yml",
+   "openapi/_original/btg-pactual-banking-pix-automatico-openapi.yml",
+   "openapi/_original/btg-pactual-banking-pixcashin-openapi.yml",
+   "openapi/_original/btg-pactual-banking-protest-openapi.yml",
+   "openapi/_original/btg-pactual-banking-split-openapi.yml",
+   "openapi/_original/btg-pactual-bankinghub-open-finance-balance-refresh-openapi.yml",
+   "openapi/_original/btg-pactual-crediflow-ativos-e-cessoes-openapi.yml",
+   "openapi/_original/btg-pactual-docs-embedded-operations.json",
+   "openapi/_original/btg-pactual-fidc-consignado-privado-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-credit-conciliation-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-document-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-eligibility-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-motor-de-credito-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-operation-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-payment-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-portability-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-prepayment-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-renegotiation-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-simulation-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-wallet-openapi.yml",
+   "openapi/_original/btg-pactual-fidc-warranty-openapi.yml",
+   "openapi/_original/btg-pactual-files-openapi.yml",
+   "openapi/_original/btg-pactual-hubfx-cambio-openapi.yml",
+   "openapi/_original/btg-pactual-kgiro-leads-de-credito-openapi.yml",
+   "openapi/_original/btg-pactual-onboarding-openapi.yml",
+   "openapi/_original/btg-pactual-scf-colombia-openapi.yml",
+   "openapi/_original/btg-pactual-scf-financiers-supplier-openapi.yml",
+   "openapi/_original/btg-pactual-scf-risco-sacado-openapi.yml",
+   "openapi/_original/btg-pactual-solar-creditanalysis-openapi.yml",
+   "openapi/_original/btg-pactual-solar-workflow-openapi.yml",
+   "openapi/_original/btg-pactual-webhooks-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bud-co",
+  "specs": [
+   "openapi/_original/bud-platform-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bunq",
+  "specs": [
+   "openapi/_original/bunq-openapi.json"
+  ]
+ },
+ {
+  "slug": "buxfer",
+  "specs": [
+   "openapi/_original/buxfer-openapi.yml"
+  ]
+ },
+ {
+  "slug": "bvnk",
+  "specs": [
+   "openapi/_original/bvnk-api-endpoints-openapi-original.yml",
+   "openapi/_original/bvnk-layer1-digital-asset-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "c-hoare-and-co",
+  "specs": [
+   "openapi/_original/c-hoare-and-co-account-and-transaction-api-openapi.yml",
+   "openapi/_original/c-hoare-and-co-dynamic-client-registration-api-openapi.yml",
+   "openapi/_original/c-hoare-and-co-payment-initiation-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "cable",
+  "specs": [
+   "openapi/_original/cable-api-reference-openapi-original.yml",
+   "openapi/_original/cable-customer-data-api-openapi-original.yml",
+   "openapi/_original/cable-transaction-data-api-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "cardlytics",
+  "specs": [
+   "openapi/_original/cardlytics-campaign-build-api-openapi.json",
+   "openapi/_original/cardlytics-campaign-build-api-openapi.yml",
+   "openapi/_original/cardlytics-partner-api-openapi.json",
+   "openapi/_original/cardlytics-partner-api-openapi.yml",
+   "openapi/_original/cardlytics-publisher-api-openapi.json",
+   "openapi/_original/cardlytics-publisher-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "casap",
+  "specs": [
+   "openapi/_original/casap-openapi.json"
+  ]
+ },
+ {
+  "slug": "cash-app",
+  "specs": [
+   "openapi/_original/cash-app-billing-agreements-deprecated-openapi.json",
+   "openapi/_original/cash-app-checkouts-openapi.json",
+   "openapi/_original/cash-app-configuration-openapi.json",
+   "openapi/_original/cash-app-customer-request-api-openapi.json",
+   "openapi/_original/cash-app-disputes-openapi.json",
+   "openapi/_original/cash-app-grants-afterpay-openapi.json",
+   "openapi/_original/cash-app-grants-cash-app-pay-openapi.json",
+   "openapi/_original/cash-app-management-api-openapi.json",
+   "openapi/_original/cash-app-network-api-openapi.json",
+   "openapi/_original/cash-app-orders-openapi.json",
+   "openapi/_original/cash-app-payments-openapi.json",
+   "openapi/_original/cash-app-service-status-openapi.json"
+  ]
+ },
+ {
+  "slug": "cashplus",
+  "specs": [
+   "openapi/_original/cashplus-account-information-openapi.yml",
+   "openapi/_original/cashplus-confirmation-of-funds-openapi.yml",
+   "openapi/_original/cashplus-openapi.json",
+   "openapi/_original/cashplus-payment-initiation-openapi.yml"
+  ]
+ },
+ {
+  "slug": "celcoin",
+  "specs": [
+   "openapi/_original/celcoin-billissuance-settlement-openapi.json",
+   "openapi/_original/celcoin-credit-openapi.json",
+   "openapi/_original/celcoin-onboarding-openapi.json"
+  ]
+ },
+ {
+  "slug": "centrapay",
+  "specs": [
+   "openapi/_original/centrapay-openapi.yml"
+  ]
+ },
+ {
+  "slug": "cfx-labs",
+  "specs": [
+   "openapi/_original/cash-deposit-simulator-api.json",
+   "openapi/_original/deposit-api.json",
+   "openapi/_original/escrow-transfer-api.json",
+   "openapi/_original/identity-api.json"
+  ]
+ },
+ {
+  "slug": "chariot",
+  "specs": [
+   "openapi/_original/chariot-fdx-openapi-original.yml",
+   "openapi/_original/chariot-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "charles-schwab",
+  "specs": [
+   "openapi/_original/charles-schwab-market-data-api-openapi.yml",
+   "openapi/_original/charles-schwab-trader-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "chase",
+  "specs": [
+   "openapi/_original/chase-account-aggregation-user-consent-api-openapi.yml",
+   "openapi/_original/chase-account-and-customer-information-api-openapi.yml",
+   "openapi/_original/chase-loyalty-pay-with-points-enrollment-service-api-openapi.yml",
+   "openapi/_original/chase-loyalty-pay-with-points-order-service-api-openapi.yml",
+   "openapi/_original/chase-loyalty-pci-merchant-relationship-manager-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "chase-uk",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "chime",
+  "specs": [
+   "openapi/_original/chime-partner-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "citi",
+  "specs": [
+   "openapi/_original/AddOnService.yaml",
+   "openapi/_original/BrazilLocalMandate.yaml",
+   "openapi/_original/DigitalPaymentsCollections-webhooks.yaml",
+   "openapi/_original/DigitalPaymentsCollectionsv12.yaml",
+   "openapi/_original/EntityID.yaml",
+   "openapi/_original/IDD.yaml",
+   "openapi/_original/MobileVirtualLifecycle.yaml",
+   "openapi/_original/PayTo.yaml",
+   "openapi/_original/Static.yaml",
+   "openapi/_original/VAManagement.yaml",
+   "openapi/_original/VCA_api.yaml",
+   "openapi/_original/WorldLink_IR_api.yaml",
+   "openapi/_original/WorldLink_V1_api.yaml",
+   "openapi/_original/WorldLink_V2_api.yaml",
+   "openapi/_original/WorldLink_V3_api.yaml",
+   "openapi/_original/WorldLink_V5_api.yaml",
+   "openapi/_original/account-notifications-api.yaml",
+   "openapi/_original/account_balance_inquiry_api.yaml",
+   "openapi/_original/accounts.yaml",
+   "openapi/_original/accountsv5.yaml",
+   "openapi/_original/add-on-service.yaml",
+   "openapi/_original/authentication_api_1.yaml",
+   "openapi/_original/authentication_api_2.yaml",
+   "openapi/_original/authentication_api_3.yaml",
+   "openapi/_original/authentication_api_4.yaml",
+   "openapi/_original/balances_api.yaml",
+   "openapi/_original/beneficiary-search.yaml",
+   "openapi/_original/blocksandfilters.yaml",
+   "openapi/_original/bulk-payments.yaml",
+   "openapi/_original/card-disputes.yaml",
+   "openapi/_original/cash-balances.yaml",
+   "openapi/_original/cash-transactions.yaml",
+   "openapi/_original/citi-accounts-openapi.yaml",
+   "openapi/_original/citi-accountsv5-openapi.yaml",
+   "openapi/_original/citi-add-on-service-openapi.yaml",
+   "openapi/_original/citi-addonservice-openapi.yaml",
+   "openapi/_original/citi-authentication-api-1-openapi.yaml",
+   "openapi/_original/citi-authentication-api-2-openapi.yaml",
+   "openapi/_original/citi-authentication-api-3-openapi.yaml",
+   "openapi/_original/citi-authentication-api-4-openapi.yaml",
+   "openapi/_original/citi-beneficiary-search-openapi.yaml",
+   "openapi/_original/citi-blocksandfilters-openapi.yaml",
+   "openapi/_original/citi-brazillocalmandate-openapi.yaml",
+   "openapi/_original/citi-bulk-payments-openapi.yaml",
+   "openapi/_original/citi-card-disputes-openapi.yaml",
+   "openapi/_original/citi-cash-balances-openapi.yaml",
+   "openapi/_original/citi-cash-transactions-openapi.yaml",
+   "openapi/_original/citi-clearing-exception-report-openapi.yaml",
+   "openapi/_original/citi-contractstatusinquiry-openapi.yaml",
+   "openapi/_original/citi-custody-billing-openapi.yaml",
+   "openapi/_original/citi-custody-fx-transactions-openapi.yaml",
+   "openapi/_original/citi-custody-penalties-openapi.yaml",
+   "openapi/_original/citi-digitalpaymentscollectionsv12-openapi.yaml",
+   "openapi/_original/citi-dispute-webhook-openapi.yaml",
+   "openapi/_original/citi-due-date-openapi.yaml",
+   "openapi/_original/citi-e-mandate-api-v1-openapi.yaml",
+   "openapi/_original/citi-e-mandate-api-v2-openapi.yaml",
+   "openapi/_original/citi-entityid-openapi.yaml",
+   "openapi/_original/citi-grace-iva-openapi.yaml",
+   "openapi/_original/citi-id-provisioning-openapi.yaml",
+   "openapi/_original/citi-idd-openapi.yaml",
+   "openapi/_original/citi-immediate-openapi.yaml",
+   "openapi/_original/citi-marketplace-management-openapi.yaml",
+   "openapi/_original/citi-marqueta-openapi.yaml",
+   "openapi/_original/citi-mobile-wallets-openapi.yaml",
+   "openapi/_original/citi-mobilecardonboarding-openapi.yaml",
+   "openapi/_original/citi-mobilevirtuallifecycle-openapi.yaml",
+   "openapi/_original/citi-order-approval-openapi.yaml",
+   "openapi/_original/citi-payment-reconfirmation-openapi.yaml",
+   "openapi/_original/citi-payment-refund-openapi.yaml",
+   "openapi/_original/citi-payment-status-openapi.yaml",
+   "openapi/_original/citi-paymentcancellation-json-openapi.yaml",
+   "openapi/_original/citi-paymentcancellation-xml-openapi.yaml",
+   "openapi/_original/citi-paymentenhancedinquiry-json-openapi.yaml",
+   "openapi/_original/citi-paymentenhancedinquiry-xml-openapi.yaml",
+   "openapi/_original/citi-paymentinitiation-pacs008-openapi.yaml",
+   "openapi/_original/citi-paymentinitiation-pacs009-openapi.yaml",
+   "openapi/_original/citi-paymentinitiation-pain102-openapi.yaml",
+   "openapi/_original/citi-paymentinitiation-pain103-openapi.yaml",
+   "openapi/_original/citi-payto-openapi.yaml",
+   "openapi/_original/citi-portfolio-listing-openapi.yaml",
+   "openapi/_original/citi-proof-of-payment-openapi.yaml",
+   "openapi/_original/citi-purchase-openapi.yaml",
+   "openapi/_original/citi-reporting-get-2-openapi.yaml",
+   "openapi/_original/citi-request-to-pay-openapi.yaml",
+   "openapi/_original/citi-safekeeping-accounts-openapi.yaml",
+   "openapi/_original/citi-safekeeping-positions-openapi.yaml",
+   "openapi/_original/citi-securitytransactionsaccounts-openapi.yaml",
+   "openapi/_original/citi-statement-transactions-openapi.yaml",
+   "openapi/_original/citi-static-openapi.yaml",
+   "openapi/_original/citi-submit-action-openapi.yaml",
+   "openapi/_original/citi-tax-reclaims-openapi.yaml",
+   "openapi/_original/citi-transfer-agency-accounts-openapi.yaml",
+   "openapi/_original/citi-transfer-agency-holding-openapi.yaml",
+   "openapi/_original/citi-transfer-agency-investors-openapi.yaml",
+   "openapi/_original/citi-transfer-agency-transactions-openapi.yaml",
+   "openapi/_original/citi-vamanagement-openapi.yaml",
+   "openapi/_original/citi-vca-dual-auth-authorization-openapi.yaml",
+   "openapi/_original/citi-vca-dual-auth-notification-openapi.yaml",
+   "openapi/_original/citi-vcaeventssubscriptions-openapi.yaml",
+   "openapi/_original/citi-vcagetnotifications-openapi.yaml",
+   "openapi/_original/citi-vcanotificationswebhooks-openapi.yaml",
+   "openapi/_original/citi-virtual-cards-lifecycle-v1-openapi.yaml",
+   "openapi/_original/citi-virtual-cards-lifecycle-v4-openapi.yaml",
+   "openapi/_original/citi-virtual-cards-notifications-openapi.yaml",
+   "openapi/_original/citi-virtual-cards-pi-openapi.yaml",
+   "openapi/_original/citi-virtual-cards-pi-v2-openapi.yaml",
+   "openapi/_original/citi-virtual-cards-pi-webhooks-openapi.yaml",
+   "openapi/_original/citi-virtual-cards-reporting-openapi.yaml",
+   "openapi/_original/citi-virtual-cards-reporting-v1-openapi.yaml",
+   "openapi/_original/clearing-exception-report.yaml",
+   "openapi/_original/contractstatusinquiry.yaml",
+   "openapi/_original/custody-billing.yaml",
+   "openapi/_original/custody-fx-transactions.yaml",
+   "openapi/_original/custody-penalties.yaml",
+   "openapi/_original/direct-debit-api.yaml",
+   "openapi/_original/dispute-webhook.yaml",
+   "openapi/_original/due-date.yaml",
+   "openapi/_original/e-mandate-api-v1.yaml",
+   "openapi/_original/e-mandate-api-v2.yaml",
+   "openapi/_original/express_payments_api.yaml",
+   "openapi/_original/express_payments_webhooks.yaml",
+   "openapi/_original/finance_undertaking_api.yaml",
+   "openapi/_original/fx_authentication_api.yaml",
+   "openapi/_original/fx_benchmark_async_api.yaml",
+   "openapi/_original/fx_benchmark_sync_api.yaml",
+   "openapi/_original/fx_cancel_async_api.yaml",
+   "openapi/_original/fx_cancel_sync_api.yaml",
+   "openapi/_original/fx_eCommerce_api.yaml",
+   "openapi/_original/fx_gateway_reporting_async_api.yaml",
+   "openapi/_original/fx_gateway_reporting_sync_api.yaml",
+   "openapi/_original/fx_market_async_api.yaml",
+   "openapi/_original/fx_market_sync_api.yaml",
+   "openapi/_original/fx_orders_async_api.yaml",
+   "openapi/_original/fx_orders_sync_api.yaml",
+   "openapi/_original/fx_quote_async_api.yaml",
+   "openapi/_original/fx_quote_sync_api.yaml",
+   "openapi/_original/fx_reporting_async_api.yaml",
+   "openapi/_original/fx_reporting_sync_api.yaml",
+   "openapi/_original/fx_test.yaml",
+   "openapi/_original/grace-iva.yaml",
+   "openapi/_original/id-provisioning.yaml",
+   "openapi/_original/immediate.yaml",
+   "openapi/_original/marketplace-management.yaml",
+   "openapi/_original/marqueta.yaml",
+   "openapi/_original/mobile-wallets.yaml",
+   "openapi/_original/mobileCardOnboarding.yaml",
+   "openapi/_original/online-payment-acceptance-api.yaml",
+   "openapi/_original/order-approval.yaml",
+   "openapi/_original/payerid_api.yaml",
+   "openapi/_original/payment-reconfirmation.yaml",
+   "openapi/_original/payment-refund.yaml",
+   "openapi/_original/payment-status.yaml",
+   "openapi/_original/paymentcancellation-json.yaml",
+   "openapi/_original/paymentcancellation-xml.yaml",
+   "openapi/_original/paymentenhancedinquiry-json.yaml",
+   "openapi/_original/paymentenhancedinquiry-xml.yaml",
+   "openapi/_original/paymentinitiation-pacs008.yaml",
+   "openapi/_original/paymentinitiation-pacs009.yaml",
+   "openapi/_original/paymentinitiation-pain102.yaml",
+   "openapi/_original/paymentinitiation-pain103.yaml",
+   "openapi/_original/portfolio-listing.yaml",
+   "openapi/_original/proof-of-payment.yaml",
+   "openapi/_original/purchase.yaml",
+   "openapi/_original/reporting-get-2.yaml",
+   "openapi/_original/request-to-pay.yaml",
+   "openapi/_original/safekeeping-accounts.yaml",
+   "openapi/_original/safekeeping-positions.yaml",
+   "openapi/_original/securitytransactionsaccounts.yaml",
+   "openapi/_original/self-service_api.yaml",
+   "openapi/_original/statement-transactions.yaml",
+   "openapi/_original/statements_api.yaml",
+   "openapi/_original/statementsv2_api.yaml",
+   "openapi/_original/submit-action.yaml",
+   "openapi/_original/tax-reclaims.yaml",
+   "openapi/_original/trade_api.yaml",
+   "openapi/_original/transfer-agency-accounts.yaml",
+   "openapi/_original/transfer-agency-holding.yaml",
+   "openapi/_original/transfer-agency-investors.yaml",
+   "openapi/_original/transfer-agency-transactions.yaml",
+   "openapi/_original/ukraine_bank_data_sharing_api.yaml",
+   "openapi/_original/ukraine_open_banking_authentication_api.yaml",
+   "openapi/_original/ukraine_payment_service_initiation_api.yaml",
+   "openapi/_original/vca-dual-auth-authorization.yaml",
+   "openapi/_original/vca-dual-auth-notification.yaml",
+   "openapi/_original/vcaEventsSubscriptions.yaml",
+   "openapi/_original/vcaGetNotifications.yaml",
+   "openapi/_original/vcaNotificationsWebhooks.yaml",
+   "openapi/_original/virtual-cards-lifecycle-v1.yaml",
+   "openapi/_original/virtual-cards-lifecycle-v4.yaml",
+   "openapi/_original/virtual-cards-notifications.yaml",
+   "openapi/_original/virtual-cards-pi-v2.yaml",
+   "openapi/_original/virtual-cards-pi-webhooks.yaml",
+   "openapi/_original/virtual-cards-pi.yaml",
+   "openapi/_original/virtual-cards-reporting-v1.yaml",
+   "openapi/_original/virtual-cards-reporting.yaml"
+  ]
+ },
+ {
+  "slug": "citizens-financial",
+  "specs": [
+   "openapi/_original/citizens-bank-accounts-api-openapi.yml",
+   "openapi/_original/citizens-bank-atm-locator-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "citizens-financial-group",
+  "specs": [
+   "openapi/_original/citizens-account-transfer-v1.json",
+   "openapi/_original/citizens-account-validation-v1.json",
+   "openapi/_original/citizens-accounts-fdx-v1.json",
+   "openapi/_original/citizens-accounts-fdx-v2-sandbox.json",
+   "openapi/_original/citizens-atm-locator-v1-sandbox.json",
+   "openapi/_original/citizens-authorize-v1.json",
+   "openapi/_original/citizens-authorize-v2-sandbox.json",
+   "openapi/_original/citizens-branch-locator-v1-sandbox.json",
+   "openapi/_original/citizens-financial-group-account-transfer-openapi.yml",
+   "openapi/_original/citizens-financial-group-account-validation-openapi.yml",
+   "openapi/_original/citizens-financial-group-accounts-openapi.yml",
+   "openapi/_original/citizens-financial-group-accounts-v2-openapi.yml",
+   "openapi/_original/citizens-financial-group-atm-locator-openapi.yml",
+   "openapi/_original/citizens-financial-group-authorize-openapi.yml",
+   "openapi/_original/citizens-financial-group-authorize-v2-openapi.yml",
+   "openapi/_original/citizens-financial-group-branch-locator-openapi.yml",
+   "openapi/_original/citizens-financial-group-information-reporting-openapi.yml",
+   "openapi/_original/citizens-financial-group-payments-openapi.yml",
+   "openapi/_original/citizens-financial-group-statements-openapi.yml",
+   "openapi/_original/citizens-financial-group-statements-v2-openapi.yml",
+   "openapi/_original/citizens-information-reporting-v1.json",
+   "openapi/_original/citizens-payments-v3.json",
+   "openapi/_original/citizens-statements-fdx-v1.json",
+   "openapi/_original/citizens-statements-fdx-v2-sandbox.json"
+  ]
+ },
+ {
+  "slug": "clearbank",
+  "specs": [
+   "openapi/_original/clearbank-chaps-v6.json",
+   "openapi/_original/clearbank-cop-outbound-v1.json",
+   "openapi/_original/clearbank-cross-border-v4.json",
+   "openapi/_original/clearbank-customers_v2_retail.json",
+   "openapi/_original/clearbank-fps-initiate-payment-v3.json",
+   "openapi/_original/clearbank-fx-orchestrator-rfq.json",
+   "openapi/_original/clearbank-know-your-customer-v1.json",
+   "openapi/_original/clearbank-mccy-accounts-v2.json",
+   "openapi/_original/clearbank-mccy-payments-v1.json",
+   "openapi/_original/clearbank-sepa-ct-v1.json",
+   "openapi/_original/clearbank-sterling-v4.json"
+  ]
+ },
+ {
+  "slug": "cloudwalk",
+  "specs": [
+   "openapi/_original/cloudwalk-infinitepay-checkout-openapi.yml"
+  ]
+ },
+ {
+  "slug": "co-operative-bank",
+  "specs": [
+   "openapi/_original/co-operative-bank-openapi.json"
+  ]
+ },
+ {
+  "slug": "codat-io",
+  "specs": [
+   "openapi/_original/codat-io-openapi.yml"
+  ]
+ },
+ {
+  "slug": "column",
+  "specs": [
+   "openapi/_original/column-openapi.yml"
+  ]
+ },
+ {
+  "slug": "commonwealth-bank",
+  "specs": [
+   "openapi/_original/commonwealth-bank-cdr-accounts-openapi.json",
+   "openapi/_original/commonwealth-bank-cdr-balances-openapi.json",
+   "openapi/_original/commonwealth-bank-cdr-customer-openapi.json",
+   "openapi/_original/commonwealth-bank-cdr-payees-openapi.json",
+   "openapi/_original/commonwealth-bank-cdr-products-openapi.json",
+   "openapi/_original/commonwealth-bank-cdr-regular-payments-openapi.json",
+   "openapi/_original/commonwealth-bank-cdr-transactions-openapi.json",
+   "openapi/_original/commonwealth-bank-cds-banking-openapi.json"
+  ]
+ },
+ {
+  "slug": "connexis-cash",
+  "specs": [
+   "openapi/_original/connexis-cash-account-information-psd2-stet-mock-openapi.yml",
+   "openapi/_original/connexis-cash-account-information-psd2-stet-mock-openapi_2.yml",
+   "openapi/_original/connexis-cash-openapi.yml"
+  ]
+ },
+ {
+  "slug": "consumer-financial-protection-bureau",
+  "specs": [
+   "openapi/_original/cfpb-ccdb-openapi.yml",
+   "openapi/_original/cfpb-hmda-data-browser-openapi.yml",
+   "openapi/_original/cfpb-hmda-institutions-openapi.yml"
+  ]
+ },
+ {
+  "slug": "cora",
+  "specs": [
+   "openapi/_original/cora-base-openapi.yml",
+   "openapi/_original/cora-base-readme-slices.json",
+   "openapi/_original/cora-boletos-openapi.yml",
+   "openapi/_original/cora-boletos-readme-slices.json",
+   "openapi/_original/cora-boletos-v2-openapi.yml",
+   "openapi/_original/cora-boletos-v2-readme-slices.json",
+   "openapi/_original/cora-dados-de-conta-readme-slices.json",
+   "openapi/_original/cora-extrato-openapi.yml",
+   "openapi/_original/cora-extrato-readme-slices.json",
+   "openapi/_original/cora-nota-fiscal-de-servi-o-openapi.yml",
+   "openapi/_original/cora-nota-fiscal-de-servi-o-readme-slices.json",
+   "openapi/_original/cora-notifica-es-readme-slices.json",
+   "openapi/_original/cora-pagamento-de-impostos-openapi.yml",
+   "openapi/_original/cora-pagamento-de-impostos-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "coutts",
+  "specs": [
+   "openapi/_original/coutts-account-info-openapi.yaml",
+   "openapi/_original/coutts-confirmation-funds-openapi.yaml",
+   "openapi/_original/coutts-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "coventry-building-society",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-opendata-swagger.json",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "cross-river",
+  "specs": [
+   "openapi/_original/cross-river-openapi.yml"
+  ]
+ },
+ {
+  "slug": "currencycloud",
+  "specs": [
+   "openapi/_original/currencycloud-onboarding-openapi-original.yml",
+   "openapi/_original/currencycloud-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "customers-bank",
+  "specs": [
+   "openapi/_original/customers-bank-accounts-openapi.json",
+   "openapi/_original/customers-bank-ach-openapi.json",
+   "openapi/_original/customers-bank-consumerlending-openapi.json",
+   "openapi/_original/customers-bank-instantpayments-openapi.json",
+   "openapi/_original/customers-bank-itoperations-openapi.json",
+   "openapi/_original/customers-bank-partners-openapi.json",
+   "openapi/_original/customers-bank-security-openapi.json",
+   "openapi/_original/customers-bank-transfers-openapi.json",
+   "openapi/_original/customers-bank-webhooks-openapi.json",
+   "openapi/_original/customers-bank-wires-openapi.json"
+  ]
+ },
+ {
+  "slug": "cynergy-bank",
+  "specs": [
+   "openapi/_original/cynergy-bank-account-information-obie-standard-openapi.yaml",
+   "openapi/_original/cynergy-bank-confirmation-of-funds-obie-standard-openapi.yaml",
+   "openapi/_original/cynergy-bank-payment-initiation-obie-standard-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "danske-bank-uk",
+  "specs": [
+   "openapi/_original/danske-bank-uk-account-transaction-balance-premium-openapi.json",
+   "openapi/_original/danske-bank-uk-account-transaction-openapi.json",
+   "openapi/_original/danske-bank-uk-confirmation-of-funds-openapi.json",
+   "openapi/_original/danske-bank-uk-events-openapi.json",
+   "openapi/_original/danske-bank-uk-fx-trade-execution-openapi.json",
+   "openapi/_original/danske-bank-uk-fx-trade-report-openapi.json",
+   "openapi/_original/danske-bank-uk-openapi.json",
+   "openapi/_original/danske-bank-uk-opendata-openapi.json",
+   "openapi/_original/danske-bank-uk-payment-collection-premium-openapi.json",
+   "openapi/_original/danske-bank-uk-payment-initiation-openapi.json",
+   "openapi/_original/danske-bank-uk-premium-payment-initiation-openapi.json",
+   "openapi/_original/danske-bank-uk-variable-recurring-payments-openapi.json"
+  ]
+ },
+ {
+  "slug": "datanomik",
+  "specs": [
+   "openapi/_original/datanomik-openbanking-openapi.json",
+   "openapi/_original/datanomik-remuneration-openapi.json"
+  ]
+ },
+ {
+  "slug": "decentro",
+  "specs": [
+   "openapi/_original/decentro-ledger-api-openapi.yml",
+   "openapi/_original/decentro-openapi.json"
+  ]
+ },
+ {
+  "slug": "defence-bank",
+  "specs": [
+   "openapi/_original/defence-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "deutsche-bank",
+  "specs": [
+   "openapi/_original/deutsche-bank-dbapi-addresses-v2.json",
+   "openapi/_original/deutsche-bank-dbapi-ageCertificate-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-banking-cashAccountOpenings-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-cashAccounts-v2.json",
+   "openapi/_original/deutsche-bank-dbapi-creditCardTransactions-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-creditCards-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-customerSolvency-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-investments-assets-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-investments-earningTransactions-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-investments-espSecuritiesAccounts-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-investments-orders-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-investments-performances-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-investments-reports-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-investments-securityAccounts-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-investments-securityTransactions-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-loanOffers-privatebanking-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-loanOffers-privatebanking-v2.json",
+   "openapi/_original/deutsche-bank-dbapi-partners-v2.json",
+   "openapi/_original/deutsche-bank-dbapi-payments-sepaInstantCreditTransfer-v3.json",
+   "openapi/_original/deutsche-bank-dbapi-processingOrders-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-processingOrders-v2.json",
+   "openapi/_original/deutsche-bank-dbapi-sepaCreditTransfer-v3.json",
+   "openapi/_original/deutsche-bank-dbapi-sepaDirectDebit-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-subscriptions-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-swaggers-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-transactionAnalysis-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-transactionAuthorization-v1.json",
+   "openapi/_original/deutsche-bank-dbapi-transactions-v2.json",
+   "openapi/_original/deutsche-bank-dbapi-verifyCustomer-v1.json",
+   "openapi/_original/deutsche-bank-merchant-solution-callback-v2.json",
+   "openapi/_original/deutsche-bank-merchant-solution-callback-v2_1.json",
+   "openapi/_original/deutsche-bank-merchant-solution-security-v2.json",
+   "openapi/_original/deutsche-bank-merchant-solution-security-v2_1.json",
+   "openapi/_original/deutsche-bank-merchant-solution-services-v2.1.json",
+   "openapi/_original/deutsche-bank-merchant-solution-services-v2.json",
+   "openapi/_original/deutsche-bank-oneid-fakerock-v1.json"
+  ]
+ },
+ {
+  "slug": "diebold",
+  "specs": [
+   "openapi/_original/diebold-dn-account-bc-api-openapi.json",
+   "openapi/_original/diebold-dn-assist-api-openapi.json",
+   "openapi/_original/diebold-dn-online-mobile-api-openapi.json",
+   "openapi/_original/diebold-dn-open-backend-api-openapi.json",
+   "openapi/_original/diebold-dn-payment-initiation-api-openapi.json",
+   "openapi/_original/diebold-dn-secure-business-processing-api-openapi.json",
+   "openapi/_original/diebold-dn-tm-authorization-api-openapi.json",
+   "openapi/_original/diebold-tm-pre-digitization-api-outbound-openapi.json",
+   "openapi/_original/diebold-tm-pre-digitization-api-outbound-openapi.yml"
+  ]
+ },
+ {
+  "slug": "distyra",
+  "specs": [
+   "openapi/_original/distyra-openapi.json"
+  ]
+ },
+ {
+  "slug": "dwolla",
+  "specs": [
+   "openapi/_original/dwolla-accounts-openapi.yml",
+   "openapi/_original/dwolla-beneficial-owners-openapi.yml",
+   "openapi/_original/dwolla-client-tokens-openapi.yml",
+   "openapi/_original/dwolla-customers-openapi.yml",
+   "openapi/_original/dwolla-documents-openapi.yml",
+   "openapi/_original/dwolla-events-openapi.yml",
+   "openapi/_original/dwolla-exchange-sessions-openapi.yml",
+   "openapi/_original/dwolla-exchanges-openapi.yml",
+   "openapi/_original/dwolla-funding-sources-openapi.yml",
+   "openapi/_original/dwolla-kba-openapi.yml",
+   "openapi/_original/dwolla-labels-openapi.yml",
+   "openapi/_original/dwolla-mass-payments-openapi.yml",
+   "openapi/_original/dwolla-openapi.yml",
+   "openapi/_original/dwolla-root-openapi.yml",
+   "openapi/_original/dwolla-sandbox-simulations-openapi.yml",
+   "openapi/_original/dwolla-tokens-openapi.yml",
+   "openapi/_original/dwolla-transfers-openapi.yml",
+   "openapi/_original/dwolla-webhook-subscriptions-openapi.yml",
+   "openapi/_original/dwolla-webhooks-openapi.yml"
+  ]
+ },
+ {
+  "slug": "efi-bank",
+  "specs": [
+   "openapi/_original/efi-bank-openapi.yml"
+  ]
+ },
+ {
+  "slug": "embat",
+  "specs": [
+   "openapi/_original/embat-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "enable-banking",
+  "specs": [
+   "openapi/_original/enable-banking-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "end-close",
+  "specs": [
+   "openapi/_original/end-close-openapi.json"
+  ]
+ },
+ {
+  "slug": "envestnet",
+  "specs": [
+   "openapi/_original/envestnet-account-aggregation-openapi-original.yml",
+   "openapi/_original/envestnet-account-token-openapi-original.yml",
+   "openapi/_original/envestnet-credit-accelerator-openapi-original.yml",
+   "openapi/_original/envestnet-insights-openapi-original.yml",
+   "openapi/_original/envestnet-personalized-views-openapi-original.yml",
+   "openapi/_original/envestnet-verification-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "falcon",
+  "specs": [
+   "openapi/_original/falcon-add-a-program-openapi.yml",
+   "openapi/_original/falcon-add-a-program-readme-slices.json",
+   "openapi/_original/falcon-add-a-user-openapi.yml",
+   "openapi/_original/falcon-add-a-user-readme-slices.json",
+   "openapi/_original/falcon-add-an-aggregator-openapi.yml",
+   "openapi/_original/falcon-add-an-aggregator-readme-slices.json",
+   "openapi/_original/falcon-add-an-enterprise-admin-readme-slices.json",
+   "openapi/_original/falcon-add-an-issuer-openapi.yml",
+   "openapi/_original/falcon-add-an-issuer-readme-slices.json",
+   "openapi/_original/falcon-assign-a-fee-model-to-a-program-readme-slices.json",
+   "openapi/_original/falcon-assign-a-program-to-an-aggregator-readme-slices.json",
+   "openapi/_original/falcon-assign-a-program-to-an-enterprise-readme-slices.json",
+   "openapi/_original/falcon-assign-a-program-to-an-user-readme-slices.json",
+   "openapi/_original/falcon-block-or-allow-mccs-for-enterprise-readme-slices.json",
+   "openapi/_original/falcon-change-due-date-of-an-account-readme-slices.json",
+   "openapi/_original/falcon-confirm-the-user-registration-openapi.yml",
+   "openapi/_original/falcon-confirm-the-user-registration-readme-slices.json",
+   "openapi/_original/falcon-create-a-program-due-date-readme-slices.json",
+   "openapi/_original/falcon-credit-card-account-apis-openapi.yml",
+   "openapi/_original/falcon-credit-card-account-apis-readme-slices.json",
+   "openapi/_original/falcon-credit-card-apis-openapi.yml",
+   "openapi/_original/falcon-credit-card-apis-readme-slices.json",
+   "openapi/_original/falcon-dispute-apis-openapi.yml",
+   "openapi/_original/falcon-dispute-apis-readme-slices.json",
+   "openapi/_original/falcon-emi-api-readme-slices.json",
+   "openapi/_original/falcon-fee-apis-openapi.yml",
+   "openapi/_original/falcon-fee-apis-readme-slices.json",
+   "openapi/_original/falcon-funding-apis-openapi.yml",
+   "openapi/_original/falcon-funding-apis-readme-slices.json",
+   "openapi/_original/falcon-get-program-due-dates-readme-slices.json",
+   "openapi/_original/falcon-get-user-details-using-cif-openapi.yml",
+   "openapi/_original/falcon-get-user-details-using-cif-readme-slices.json",
+   "openapi/_original/falcon-initiate-a-user-registration-openapi.yml",
+   "openapi/_original/falcon-initiate-a-user-registration-readme-slices.json",
+   "openapi/_original/falcon-interest-apis-readme-slices.json",
+   "openapi/_original/falcon-onboard-an-enterprise-openapi.yml",
+   "openapi/_original/falcon-onboard-an-enterprise-readme-slices.json",
+   "openapi/_original/falcon-program-configuration-honor-openapi.yml",
+   "openapi/_original/falcon-program-configuration-honor-readme-slices.json",
+   "openapi/_original/falcon-repayment-apis-openapi.yml",
+   "openapi/_original/falcon-repayment-apis-readme-slices.json",
+   "openapi/_original/falcon-rewards-api-readme-slices.json",
+   "openapi/_original/falcon-statements-api-readme-slices.json",
+   "openapi/_original/falcon-transaction-apis-openapi.yml",
+   "openapi/_original/falcon-transaction-apis-readme-slices.json",
+   "openapi/_original/falcon-update-a-program-due-date-readme-slices.json",
+   "openapi/_original/falcon-update-an-issuer-openapi.yml",
+   "openapi/_original/falcon-update-an-issuer-readme-slices.json",
+   "openapi/_original/falcon-update-enterprise-credit-limits-readme-slices.json",
+   "openapi/_original/falcon-update-enterprise-details-openapi.yml",
+   "openapi/_original/falcon-update-enterprise-details-readme-slices.json",
+   "openapi/_original/falcon-update-user-details-openapi.yml",
+   "openapi/_original/falcon-update-user-details-readme-slices.json",
+   "openapi/_original/falcon-view-a-list-of-enterprise-accounts-readme-slices.json",
+   "openapi/_original/falcon-view-a-list-of-enterprises-readme-slices.json",
+   "openapi/_original/falcon-view-a-program-openapi.yml",
+   "openapi/_original/falcon-view-a-program-readme-slices.json",
+   "openapi/_original/falcon-view-aggregator-program-subscriptions-readme-slices.json",
+   "openapi/_original/falcon-view-an-issuer-openapi.yml",
+   "openapi/_original/falcon-view-an-issuer-readme-slices.json",
+   "openapi/_original/falcon-view-enterprise-account-details-openapi.yml",
+   "openapi/_original/falcon-view-enterprise-account-details-readme-slices.json",
+   "openapi/_original/falcon-view-enterprise-details-openapi.yml",
+   "openapi/_original/falcon-view-enterprise-details-readme-slices.json",
+   "openapi/_original/falcon-view-enterprise-program-subscriptions-readme-slices.json",
+   "openapi/_original/falcon-view-enterprise-summary-openapi.yml",
+   "openapi/_original/falcon-view-enterprise-summary-readme-slices.json",
+   "openapi/_original/falcon-view-issuer-programs-readme-slices.json",
+   "openapi/_original/falcon-view-list-of-programs-readme-slices.json",
+   "openapi/_original/falcon-view-list-of-users-of-an-enterprise-readme-slices.json",
+   "openapi/_original/falcon-view-user-details-openapi.yml",
+   "openapi/_original/falcon-view-user-details-readme-slices.json",
+   "openapi/_original/falcon-view-user-program-subscriptions-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "fdic",
+  "specs": [
+   "openapi/_original/fdic-bankfind-openapi.yml"
+  ]
+ },
+ {
+  "slug": "fdx",
+  "specs": [
+   "openapi/_original/fdx-corex-6.0.0.yaml",
+   "openapi/_original/fdx-corex-6.2.0.yaml",
+   "openapi/_original/fdx-corex-6.3.1.yaml"
+  ]
+ },
+ {
+  "slug": "federal-deposit-insurance-corporation",
+  "specs": [
+   "openapi/_original/bankfind.yml"
+  ]
+ },
+ {
+  "slug": "fiat-republic",
+  "specs": [
+   "openapi/_original/fiat-republic-authentication-readme-slices.json",
+   "openapi/_original/fiat-republic-republic-openapi.yml",
+   "openapi/_original/fiat-republic-republic-readme-slices.json",
+   "openapi/_original/fiat-republic-transaction-monitoring-openapi.yml",
+   "openapi/_original/fiat-republic-transaction-monitoring-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "fifth-third-bancorp",
+  "specs": [
+   "openapi/_original/newline-platform-api.json"
+  ]
+ },
+ {
+  "slug": "fincura",
+  "specs": [
+   "openapi/_original/fincura-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "fingoal",
+  "specs": [
+   "openapi/_original/fingoal-insights-openapi-original.json",
+   "openapi/_original/fingoal-link-money-api-openapi.yml",
+   "openapi/_original/fingoal-link-money-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "finicity",
+  "specs": [
+   "openapi/_original/finicity-openbanking-us-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "fintecture",
+  "specs": [
+   "openapi/_original/fintecture-ais-api-openapi.yml",
+   "openapi/_original/fintecture-emandates-api-openapi.yml",
+   "openapi/_original/fintecture-oac-api-openapi.yml",
+   "openapi/_original/fintecture-pis-api-openapi.yml",
+   "openapi/_original/fintecture-resources-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "fipto",
+  "specs": [
+   "openapi/_original/fipto-customer-api-openapi.json",
+   "openapi/_original/fipto-customer-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "first-direct",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-opendata-openapi.json",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "firstrade",
+  "specs": [
+   "openapi/_original/firstrade-openapi.yml"
+  ]
+ },
+ {
+  "slug": "fis",
+  "specs": [
+   "openapi/_original/fis-accounting-data-as-a-service-openapi.json",
+   "openapi/_original/fis-payments-openapi.yml"
+  ]
+ },
+ {
+  "slug": "fiserv",
+  "specs": [
+   "openapi/_original/fiserv-bankinghub-openapi.yml",
+   "openapi/_original/fiserv-carddeveloper-openapi.yml",
+   "openapi/_original/fiserv-cardpointe-gateway-openapi.yml",
+   "openapi/_original/fiserv-commercehub-openapi.yml"
+  ]
+ },
+ {
+  "slug": "fiskil",
+  "specs": [
+   "openapi/_original/fiskil-openapi.json"
+  ]
+ },
+ {
+  "slug": "flinks",
+  "specs": [
+   "openapi/_original/flinks-openapi.yml"
+  ]
+ },
+ {
+  "slug": "form3",
+  "specs": [
+   "openapi/_original/form3-payments.yml"
+  ]
+ },
+ {
+  "slug": "fraud-net",
+  "specs": [
+   "openapi/_original/fraud-net-public-apis-oas2-original.json",
+   "openapi/_original/fraud-net-public-apis-openapi.json"
+  ]
+ },
+ {
+  "slug": "galileo-fs",
+  "specs": [
+   "openapi/_original/galileo-fs-openapi.yml"
+  ]
+ },
+ {
+  "slug": "gateway-bank",
+  "specs": [
+   "openapi/_original/gateway-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "gb-bank",
+  "specs": [
+   "openapi/_original/uk-open-banking-account-info-api-openapi.yaml",
+   "openapi/_original/uk-open-banking-confirmation-of-funds-api-openapi.yaml",
+   "openapi/_original/uk-open-banking-open-data-api-openapi.json",
+   "openapi/_original/uk-open-banking-payment-initiation-api-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "gc-mutual-bank",
+  "specs": [
+   "openapi/_original/gc-mutual-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "genome",
+  "specs": [
+   "openapi/_original/genome-openapi.yml"
+  ]
+ },
+ {
+  "slug": "gerencianet",
+  "specs": [
+   "openapi/_original/efi-cobrancas-openapi.yml",
+   "openapi/_original/efi-contas-openapi.yml",
+   "openapi/_original/efi-extratos-openapi.yml",
+   "openapi/_original/efi-openfinance-openapi.yml",
+   "openapi/_original/efi-pagamentos-openapi.yml",
+   "openapi/_original/efi-pix-openapi.yml"
+  ]
+ },
+ {
+  "slug": "gocardless",
+  "specs": [
+   "openapi/_original/gocardless-openapi.yml"
+  ]
+ },
+ {
+  "slug": "great-southern-bank",
+  "specs": [
+   "openapi/_original/great-southern-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "greater-bank",
+  "specs": [
+   "openapi/_original/greater-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "green-check-verified",
+  "specs": [
+   "openapi/_original/green-check-verified-access-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "griffin",
+  "specs": [
+   "openapi/_original/griffin-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "groupe-bpce",
+  "specs": [
+   "openapi/_original/accounts-oas3-public-v1.4.2.20-b_2.json",
+   "openapi/_original/accounts-oas3-public-v1.6.2.0-a_2.json",
+   "openapi/_original/accounts-oas3-public-v1.6.2.0-a_4.json",
+   "openapi/_original/accounts-oas3-public-v1.6.2.0-b.json",
+   "openapi/_original/funds-availability-oas3-public-v1.4.2.20-b.json",
+   "openapi/_original/funds-availability-oas3-public-v1.6.2.0-b.json",
+   "openapi/_original/groupe-bpce-natixis-psd2-accounts-openapi.yml",
+   "openapi/_original/groupe-bpce-natixis-wealth-management-psd2-accounts-openapi.yml",
+   "openapi/_original/groupe-bpce-open-finance-transfer-openapi.yml",
+   "openapi/_original/groupe-bpce-psd2-accounts-openapi.yml",
+   "openapi/_original/groupe-bpce-psd2-funds-availability-openapi.yml",
+   "openapi/_original/groupe-bpce-psd2-payments-openapi.yml",
+   "openapi/_original/groupe-bpce-psd2-registration-openapi.yml",
+   "openapi/_original/moneytransfer-oas3-public-v1.1.1.json",
+   "openapi/_original/payments-oas3-public-v1.4.2.20-b_0.json",
+   "openapi/_original/payments-oas3-public-v1.6.2.0-b_0.json",
+   "openapi/_original/registration-oas3-public-v1.0.6-b.json"
+  ]
+ },
+ {
+  "slug": "halifax",
+  "specs": [
+   "openapi/_original/openbanking-opendata-standard-swagger.json"
+  ]
+ },
+ {
+  "slug": "hampden-and-co",
+  "specs": [
+   "openapi/_original/hampden-and-co-account-information-api-openapi.yml",
+   "openapi/_original/hampden-and-co-confirmation-of-funds-api-openapi.yml",
+   "openapi/_original/hampden-and-co-payment-initiation-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "hevn-inc",
+  "specs": [
+   "openapi/_original/hevn-inc-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "highnote",
+  "specs": [
+   "openapi/_original/highnote-openapi.yml"
+  ]
+ },
+ {
+  "slug": "hsbc-australia",
+  "specs": [
+   "openapi/_original/hsbc-australia-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "hume-bank",
+  "specs": [
+   "openapi/_original/hume-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "huntington-bancshares",
+  "specs": [
+   "openapi/_original/huntington-bank-treasury-management-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "ibanfirst",
+  "specs": [
+   "openapi/_original/ibanfirst-clientapi-openapi-original.json",
+   "openapi/_original/ibanfirst-clientapi-openapi.yml"
+  ]
+ },
+ {
+  "slug": "ibanforge",
+  "specs": [
+   "openapi/_original/ibanforge-openapi.json"
+  ]
+ },
+ {
+  "slug": "idenfy",
+  "specs": [
+   "openapi/_original/idenfy-age-estimation-openapi.yml",
+   "openapi/_original/idenfy-age-estimation.yaml",
+   "openapi/_original/idenfy-aml-openapi.yml",
+   "openapi/_original/idenfy-aml.yaml",
+   "openapi/_original/idenfy-bank-card-openapi.yml",
+   "openapi/_original/idenfy-bank-card.yaml",
+   "openapi/_original/idenfy-bank-openapi.yml",
+   "openapi/_original/idenfy-bank.yaml",
+   "openapi/_original/idenfy-face-authentication-openapi.yml",
+   "openapi/_original/idenfy-face-authentication.yaml",
+   "openapi/_original/idenfy-kyb-openapi.yml",
+   "openapi/_original/idenfy-kyb.yaml",
+   "openapi/_original/idenfy-kyc-openapi.yml",
+   "openapi/_original/idenfy-kyc.yaml"
+  ]
+ },
+ {
+  "slug": "if",
+  "specs": [
+   "openapi/_original/if-account-api-readme-slices.json",
+   "openapi/_original/if-card-api-readme-slices.json",
+   "openapi/_original/if-card-transaction-api-readme-slices.json",
+   "openapi/_original/if-client-api-readme-slices.json",
+   "openapi/_original/if-exchange-api-readme-slices.json",
+   "openapi/_original/if-generic-transaction-api-readme-slices.json",
+   "openapi/_original/if-incoming-transfer-api-readme-slices.json",
+   "openapi/_original/if-open-banking-api-readme-slices.json",
+   "openapi/_original/if-outgoing-transfer-api-readme-slices.json",
+   "openapi/_original/if-transaction-account-api-readme-slices.json",
+   "openapi/_original/if-user-api-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "imb-bank",
+  "specs": [
+   "openapi/_original/imb-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "increase",
+  "specs": [
+   "openapi/_original/increase-openapi.json"
+  ]
+ },
+ {
+  "slug": "ing-australia",
+  "specs": [
+   "openapi/_original/ing-australia-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "interhyp",
+  "specs": [
+   "openapi/_original/interhyp-submission-documents-openapi.yml",
+   "openapi/_original/interhyp-submission-openapi.yml"
+  ]
+ },
+ {
+  "slug": "investec",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "itau-unibanco",
+  "specs": [
+   "openapi/_original/itau-unibanco-open-finance-channels-openapi.yml",
+   "openapi/_original/itau-unibanco-open-finance-common-openapi.yml",
+   "openapi/_original/itau-unibanco-open-finance-opendata-accounts-openapi.yml",
+   "openapi/_original/itau-unibanco-open-finance-opendata-creditcards-openapi.yml",
+   "openapi/_original/itau-unibanco-open-finance-opendata-financings-openapi.yml",
+   "openapi/_original/itau-unibanco-open-finance-opendata-invoicefinancings-openapi.yml",
+   "openapi/_original/itau-unibanco-open-finance-opendata-loans-openapi.yml",
+   "openapi/_original/itau-unibanco-open-finance-opendata-unarranged-openapi.yml",
+   "openapi/_original/ofb-channels-2.0.1.yml",
+   "openapi/_original/ofb-common-2.0.1.yml",
+   "openapi/_original/ofb-opendata-accounts-1.0.1.yml",
+   "openapi/_original/ofb-opendata-creditcards-1.0.1.yml",
+   "openapi/_original/ofb-opendata-financings-1.0.1.yml",
+   "openapi/_original/ofb-opendata-invoicefinancings-1.0.1.yml",
+   "openapi/_original/ofb-opendata-loans-1.0.1.yml",
+   "openapi/_original/ofb-opendata-unarranged-1.0.1.yml"
+  ]
+ },
+ {
+  "slug": "jack-henry",
+  "specs": [
+   "openapi/_original/banno-admin-api-openapi.yml",
+   "openapi/_original/banno-authentication-framework-openapi.yml",
+   "openapi/_original/banno-consumer-api-openapi.yml",
+   "openapi/_original/banno-plugin-framework-openapi.yml",
+   "openapi/_original/jack-henry-payments-openapi.yml",
+   "openapi/_original/jxchange-rest-openapi.yml"
+  ]
+ },
+ {
+  "slug": "joinslash-com",
+  "specs": [
+   "openapi/_original/joinslash-com.json"
+  ]
+ },
+ {
+  "slug": "jp-morgan-chase",
+  "specs": [
+   "openapi/_original/jpmorgan-chase-banking-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "judo-bank",
+  "specs": [
+   "openapi/_original/judo-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "keycorp",
+  "specs": [
+   "openapi/_original/keycorp-account-validation-openapi.yml",
+   "openapi/_original/keycorp-ach-inquiry-openapi.yml",
+   "openapi/_original/keycorp-ach-originations-openapi.yml",
+   "openapi/_original/keycorp-check-services-openapi.yml",
+   "openapi/_original/keycorp-commercial-accounts-reporting-openapi.yml",
+   "openapi/_original/keycorp-rtp-inquiry-openapi.yml",
+   "openapi/_original/keycorp-rtp-wire-payments-openapi.yml",
+   "openapi/_original/keycorp-webhooks-openapi.yml",
+   "openapi/_original/keycorp-wire-inquiry-openapi.yml"
+  ]
+ },
+ {
+  "slug": "klarna",
+  "specs": [
+   "openapi/_original/hosted-payment-page-api-openapi.yml",
+   "openapi/_original/klarna-settlements-api-openapi.yml",
+   "openapi/_original/kustom-checkout-api-openapi.yml",
+   "openapi/_original/kustom-checkout-callback-api-openapi.yml",
+   "openapi/_original/merchant-card-service-api-openapi.yml",
+   "openapi/_original/order-management-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "konsentus",
+  "specs": [
+   "openapi/_original/konsentus-verify-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "kontomatik",
+  "specs": [
+   "openapi/_original/kontomatik-ais-api-openapi.yml",
+   "openapi/_original/kontomatik-data-analysis-api-openapi.yml",
+   "openapi/_original/kontomatik-pdf-parsing-api-openapi.yml",
+   "openapi/_original/kontomatik-report-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "kroo",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "lead-bank",
+  "specs": [
+   "openapi/_original/lead-bank-openapi.json"
+  ]
+ },
+ {
+  "slug": "lean-tech",
+  "specs": [
+   "openapi/_original/lean-authentication-api-openapi.yml",
+   "openapi/_original/lean-banks-api-openapi.yml",
+   "openapi/_original/lean-customers-api-openapi.yml",
+   "openapi/_original/lean-data-api-openapi.yml",
+   "openapi/_original/lean-entities-api-openapi.yml",
+   "openapi/_original/lean-insights-api-openapi.yml",
+   "openapi/_original/lean-payment-sources-api-openapi.yml",
+   "openapi/_original/lean-payments-api-openapi.yml",
+   "openapi/_original/lean-payouts-api-openapi.yml",
+   "openapi/_original/lean-refunds-api-openapi.yml",
+   "openapi/_original/lean-verifications-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "lean-technologies",
+  "specs": [
+   "openapi/_original/lean-technologies-account-on-file-openapi.yml",
+   "openapi/_original/lean-technologies-bank-data-openapi.yml",
+   "openapi/_original/lean-technologies-banks-openapi.yml",
+   "openapi/_original/lean-technologies-consents-openapi.yml",
+   "openapi/_original/lean-technologies-core-resources-openapi.yml",
+   "openapi/_original/lean-technologies-customers-openapi.yml",
+   "openapi/_original/lean-technologies-data-openapi.yml",
+   "openapi/_original/lean-technologies-enrichment-openapi.yml",
+   "openapi/_original/lean-technologies-entities-openapi.yml",
+   "openapi/_original/lean-technologies-files-openapi.yml",
+   "openapi/_original/lean-technologies-insights-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-accounts-access-consents-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-bank-data-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-core-resources-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-customers-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-enrichment-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-insights-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-open-banking-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-payouts-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-reports-openapi.yml",
+   "openapi/_original/lean-technologies-ksa-verifications-openapi.yml",
+   "openapi/_original/lean-technologies-payment-links-openapi.yml",
+   "openapi/_original/lean-technologies-payments-core-openapi.yml",
+   "openapi/_original/lean-technologies-payments-customers-openapi.yml",
+   "openapi/_original/lean-technologies-payments-openapi.yml",
+   "openapi/_original/lean-technologies-payouts-extended-openapi.yml",
+   "openapi/_original/lean-technologies-payouts-openapi.yml",
+   "openapi/_original/lean-technologies-reconciliation-extended-openapi.yml",
+   "openapi/_original/lean-technologies-reconciliation-openapi.yml",
+   "openapi/_original/lean-technologies-refunds-openapi.yml",
+   "openapi/_original/lean-technologies-schedules-openapi.yml",
+   "openapi/_original/lean-technologies-sessions-openapi.yml",
+   "openapi/_original/lean-technologies-verifications-openapi.yml"
+  ]
+ },
+ {
+  "slug": "leeds-building-society",
+  "specs": [
+   "openapi/_original/obie-opendata-standard-swagger.json"
+  ]
+ },
+ {
+  "slug": "lemonmarkets",
+  "specs": [
+   "openapi/_original/lemonmarkets-brokerage-openapi.json"
+  ]
+ },
+ {
+  "slug": "lendapi",
+  "specs": [
+   "openapi/_original/lendapi-openapi.json"
+  ]
+ },
+ {
+  "slug": "lendkey",
+  "specs": [
+   "openapi/_original/lendkey-esign-openapi.yml",
+   "openapi/_original/lendkey-integration-openapi.yml",
+   "openapi/_original/lendkey-partner-integration-internal-openapi.yml",
+   "openapi/_original/lendkey-treasury-management-openapi.yml"
+  ]
+ },
+ {
+  "slug": "lili",
+  "specs": [
+   "openapi/_original/lili-application-api-openapi.yml",
+   "openapi/_original/lili-customer-management-api-openapi.yml",
+   "openapi/_original/lili-webhooks-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "lithic-com",
+  "specs": [
+   "openapi/_original/lithic-com-openapi.yml"
+  ]
+ },
+ {
+  "slug": "lloyds-banking-group",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-opendata-swagger.json",
+   "openapi/_original/obie-payment-initiation-openapi.yaml",
+   "openapi/_original/obie-vrp-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "loopay",
+  "specs": [
+   "openapi/_original/loopay-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "lorum",
+  "specs": [
+   "openapi/_original/lorum-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "macquarie-bank",
+  "specs": [
+   "openapi/_original/macquarie-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "marqeta",
+  "specs": [
+   "openapi/_original/marqeta-core-api-openapi.yml",
+   "openapi/_original/marqeta-diva-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mastercard",
+  "specs": [
+   "openapi/_original/bill-payment-validator-openapi.yml",
+   "openapi/_original/mastercard-account-to-account-commerce-for-creditor-service-providers-openapi.yml",
+   "openapi/_original/mastercard-atm-locations-openapi.yml",
+   "openapi/_original/mastercard-authentication-consent-openapi.yml",
+   "openapi/_original/mastercard-automatic-billing-updater-api-openapi.yml",
+   "openapi/_original/mastercard-benefit-allocation-service-openapi.yml",
+   "openapi/_original/mastercard-benefit-eligibility-service-api-openapi.yml",
+   "openapi/_original/mastercard-bin-lookup-api-openapi.yml",
+   "openapi/_original/mastercard-carbon-calculator-api-openapi.yml",
+   "openapi/_original/mastercard-carbon-calculator-experience-api-openapi.yml",
+   "openapi/_original/mastercard-card-issuance-openapi.yml",
+   "openapi/_original/mastercard-checkout-solutions-openapi.yml",
+   "openapi/_original/mastercard-commercial-event-notifications-openapi.yml",
+   "openapi/_original/mastercard-community-pass-payment-apis-openapi.yml",
+   "openapi/_original/mastercard-confirmed-fraud-openapi.yml",
+   "openapi/_original/mastercard-consumer-credit-analytics-openapi.yml",
+   "openapi/_original/mastercard-debtor-service-provider-resources-api-openapi.yml",
+   "openapi/_original/mastercard-doconomy-aland-index-openapi.yml",
+   "openapi/_original/mastercard-donate-api-openapi.yml",
+   "openapi/_original/mastercard-enhanced-currency-conversion-calculator-openapi.yml",
+   "openapi/_original/mastercard-ethoca-alerts-for-merchants-and-merchant-partners-openapi.yml",
+   "openapi/_original/mastercard-ethoca-consumer-clarity-for-merchant-transactions-openapi.yml",
+   "openapi/_original/mastercard-ethoca-merchant-self-services-openapi.yml",
+   "openapi/_original/mastercard-id-for-identity-providers-openapi.yml",
+   "openapi/_original/mastercard-id-for-trust-providers-openapi.yml",
+   "openapi/_original/mastercard-id-verification-openapi.yml",
+   "openapi/_original/mastercard-identity-insights-for-accounts-openapi.yml",
+   "openapi/_original/mastercard-identity-insights-for-transactions-openapi.yml",
+   "openapi/_original/mastercard-in-control-for-mobile-payments-openapi.yml",
+   "openapi/_original/mastercard-installments-openapi.yml",
+   "openapi/_original/mastercard-loyalty-insurance-openapi.yml",
+   "openapi/_original/mastercard-merchant-locations-openapi.yml",
+   "openapi/_original/mastercard-standard-currency-conversion-calculator-openapi.yml",
+   "openapi/_original/mastercard-suspected-fraud-openapi.yml",
+   "openapi/_original/mastercard-traditional-fulfillment-service-openapi.yml",
+   "openapi/_original/mastercard-unified-checkout-solutions-openapi.yml",
+   "openapi/_original/mastercard-user-account-management-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mastercard-developer-hub-for-fdx-apis",
+  "specs": [
+   "openapi/_original/fdx-authorization-api-openapi.yaml",
+   "openapi/_original/fdx-resource-api-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "memo-bank",
+  "specs": [
+   "openapi/_original/memo-bank-marketplace-api-openapi.yml",
+   "openapi/_original/memo-bank-nextgenpsd2-api-openapi.yml",
+   "openapi/_original/memo-bank-premium-bank-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "meow",
+  "specs": [
+   "openapi/_original/meow-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "mercury",
+  "specs": [
+   "openapi/_original/mercury-openapi.yml"
+  ]
+ },
+ {
+  "slug": "method-financial",
+  "specs": [
+   "openapi/_original/method-financial-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "metro-bank",
+  "specs": [
+   "openapi/_original/obie-open-data-api-standard-v1.3-swagger.json"
+  ]
+ },
+ {
+  "slug": "mettle",
+  "specs": [
+   "openapi/_original/mettle-open-data-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "modernfi",
+  "specs": [
+   "openapi/_original/modernfi-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "modulr",
+  "specs": [
+   "openapi/_original/modulr-api.json"
+  ]
+ },
+ {
+  "slug": "moneyhub",
+  "specs": [
+   "openapi/_original/moneyhub-data-api-swagger.json"
+  ]
+ },
+ {
+  "slug": "moniepoint",
+  "specs": [
+   "openapi/_original/moniepoint-pos-api-openapi.yml",
+   "openapi/_original/monnify-authentication-api-openapi.yml",
+   "openapi/_original/monnify-bills-payment-api-openapi.yml",
+   "openapi/_original/monnify-collections-api-openapi.yml",
+   "openapi/_original/monnify-direct-debit-api-openapi.yml",
+   "openapi/_original/monnify-disbursements-api-openapi.yml",
+   "openapi/_original/monnify-invoices-api-openapi.yml",
+   "openapi/_original/monnify-refunds-api-openapi.yml",
+   "openapi/_original/monnify-reserved-accounts-api-openapi.yml",
+   "openapi/_original/monnify-settlements-api-openapi.yml",
+   "openapi/_original/monnify-sub-accounts-api-openapi.yml",
+   "openapi/_original/monnify-verification-api-openapi.yml",
+   "openapi/_original/monnify-wallets-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mono-africa",
+  "specs": [
+   "openapi/_original/mono-africa-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mono-co",
+  "specs": [
+   "openapi/_original/mono-africa-connect-api-openapi.yml",
+   "openapi/_original/mono-africa-creditworthiness-api-openapi.yml",
+   "openapi/_original/mono-africa-financial-data-api-openapi.yml",
+   "openapi/_original/mono-africa-investment-api-openapi.yml",
+   "openapi/_original/mono-africa-lookup-api-openapi.yml",
+   "openapi/_original/mono-co-openapi.yml"
+  ]
+ },
+ {
+  "slug": "montran",
+  "specs": [
+   "openapi/_original/montran-corporate-payments-portal-openapi.yml",
+   "openapi/_original/montran-global-payments-hub-openapi.yml",
+   "openapi/_original/montran-instant-payments-gateway-openapi.yml",
+   "openapi/_original/montran-payments-connectivity-openapi.yml",
+   "openapi/_original/montran-sanctions-screening-openapi.yml",
+   "openapi/_original/montran-virtual-accounts-openapi.yml"
+  ]
+ },
+ {
+  "slug": "monument-bank",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-opendata-swagger.json",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "moov",
+  "specs": [
+   "openapi/_original/moov-api-openapi.yml",
+   "openapi/_original/moov-api-v2026.01.00-openapi.yml",
+   "openapi/_original/moov-openapi.yml",
+   "openapi/_original/moov-openapi_2.yml"
+  ]
+ },
+ {
+  "slug": "move-bank",
+  "specs": [
+   "openapi/_original/move-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mx",
+  "specs": [
+   "openapi/_original/mx-consent-management-openapi.yml",
+   "openapi/_original/mx-platform-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mx-platform",
+  "specs": [
+   "openapi/_original/mx-platform-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mx-technologies",
+  "specs": [
+   "openapi/_original/mx-technologies-platform-openapi.yml",
+   "openapi/_original/mx-technologies-platform-v20250224-openapi.yml"
+  ]
+ },
+ {
+  "slug": "mystate-bank",
+  "specs": [
+   "openapi/_original/mystate-bank-cds-banking-openapi.yml",
+   "openapi/_original/mystate-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "n3xt",
+  "specs": [
+   "openapi/_original/n3xt-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "narmi",
+  "specs": [
+   "openapi/_original/narmi-public-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "national-australia-bank",
+  "specs": [
+   "openapi/_original/national-australia-bank-cds-banking-products-openapi.yml",
+   "openapi/_original/national-australia-bank-gateway-payments-swagger.json"
+  ]
+ },
+ {
+  "slug": "nationwide-building-society",
+  "specs": [
+   "openapi/_original/obie-open-data-atm-locator-openapi.json",
+   "openapi/_original/obie-open-data-branch-locator-openapi.json",
+   "openapi/_original/obie-open-data-personal-current-accounts-openapi.json"
+  ]
+ },
+ {
+  "slug": "natwest",
+  "specs": [
+   "openapi/_original/natwest-account-transaction-openapi.yml",
+   "openapi/_original/natwest-confirmation-of-funds-openapi.yml",
+   "openapi/_original/natwest-payment-initiation-openapi.yml"
+  ]
+ },
+ {
+  "slug": "ncino",
+  "specs": [
+   "openapi/_original/ncino-evault-openapi.json",
+   "openapi/_original/ncino-mortgage-openapi.yml",
+   "openapi/_original/ncino-mortgage-webhooks-openapi.json"
+  ]
+ },
+ {
+  "slug": "ncua",
+  "specs": [
+   "openapi/_original/ncua-credit-union-locator-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "newcastle-permanent",
+  "specs": [
+   "openapi/_original/newcastle-permanent-cds-banking-products-openapi.yml",
+   "openapi/_original/newcastle-permanent-customer-data-openapi.json",
+   "openapi/_original/newcastle-permanent-products-openapi.json"
+  ]
+ },
+ {
+  "slug": "nomba",
+  "specs": [
+   "openapi/_original/nomba-accounts-openapi.yml",
+   "openapi/_original/nomba-authentication-openapi.yml",
+   "openapi/_original/nomba-charge-openapi.yml",
+   "openapi/_original/nomba-global-payout-openapi.yml",
+   "openapi/_original/nomba-online-checkout-openapi.yml",
+   "openapi/_original/nomba-transactions-openapi.yml",
+   "openapi/_original/nomba-transfers-openapi.yml",
+   "openapi/_original/nomba-virtual-accounts-openapi.yml"
+  ]
+ },
+ {
+  "slug": "nopan",
+  "specs": [
+   "openapi/_original/nopan-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "norekey",
+  "specs": [
+   "openapi/_original/norekey-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "northmill",
+  "specs": [
+   "openapi/_original/northmill-flo-api-swagger.json"
+  ]
+ },
+ {
+  "slug": "novo-bank",
+  "specs": [
+   "openapi/_original/novo-bank-openapi.yml"
+  ]
+ },
+ {
+  "slug": "novopayment",
+  "specs": [
+   "openapi/_original/novopayment-accounts-openapi.yml",
+   "openapi/_original/novopayment-accounts.yaml",
+   "openapi/_original/novopayment-alias-directory-openapi.yml",
+   "openapi/_original/novopayment-alias-directory.yaml",
+   "openapi/_original/novopayment-cards-openapi.yml",
+   "openapi/_original/novopayment-cards.yaml",
+   "openapi/_original/novopayment-compliance-openapi.yml",
+   "openapi/_original/novopayment-compliance.yaml",
+   "openapi/_original/novopayment-customers-openapi.yml",
+   "openapi/_original/novopayment-customers.yaml",
+   "openapi/_original/novopayment-issuer-tokenization-openapi.yml",
+   "openapi/_original/novopayment-issuer-tokenization.yaml",
+   "openapi/_original/novopayment-mastercard-issuer-tokenization-openapi.yml",
+   "openapi/_original/novopayment-mastercard-issuer-tokenization.yaml",
+   "openapi/_original/novopayment-merchant-presented-qr-openapi.yml",
+   "openapi/_original/novopayment-merchant-presented-qr.yaml",
+   "openapi/_original/novopayment-oauth2-data-encryption-openapi.yml",
+   "openapi/_original/novopayment-oauth2-data-encryption.yaml",
+   "openapi/_original/novopayment-onboarding-openapi.yml",
+   "openapi/_original/novopayment-onboarding.yaml",
+   "openapi/_original/novopayment-operations-openapi.yml",
+   "openapi/_original/novopayment-operations.yaml",
+   "openapi/_original/novopayment-payment-authorizer-openapi.yml",
+   "openapi/_original/novopayment-payment-authorizer.yaml",
+   "openapi/_original/novopayment-profile-openapi.yml",
+   "openapi/_original/novopayment-profile.yaml",
+   "openapi/_original/novopayment-push-provisioning-openapi.yml",
+   "openapi/_original/novopayment-push-provisioning.yaml",
+   "openapi/_original/novopayment-real-time-payments-openapi.yml",
+   "openapi/_original/novopayment-real-time-payments.yaml"
+  ]
+ },
+ {
+  "slug": "number26",
+  "specs": [
+   "openapi/_original/number26-xs2a-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "okra-africa",
+  "specs": [
+   "openapi/_original/okra-africa-openapi.yml"
+  ]
+ },
+ {
+  "slug": "okra-ng",
+  "specs": [
+   "openapi/_original/okra-ng-openapi.yml"
+  ]
+ },
+ {
+  "slug": "open-banking-uk",
+  "specs": [
+   "openapi/_original/account-info-openapi.yaml",
+   "openapi/_original/confirmation-funds-openapi.yaml",
+   "openapi/_original/event-notifications-openapi.yaml",
+   "openapi/_original/events-openapi.yaml",
+   "openapi/_original/opendata-swagger.json",
+   "openapi/_original/payment-initiation-openapi.yaml",
+   "openapi/_original/vrp-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "open-financial",
+  "specs": [
+   "openapi/_original/open-financial-1-openapi.yml",
+   "openapi/_original/open-financial-1-readme-slices.json",
+   "openapi/_original/open-financial-2-openapi.yml",
+   "openapi/_original/open-financial-2-readme-slices.json",
+   "openapi/_original/open-financial-4-openapi.yml",
+   "openapi/_original/open-financial-4-readme-slices.json",
+   "openapi/_original/open-financial-5-openapi.yml",
+   "openapi/_original/open-financial-5-readme-slices.json",
+   "openapi/_original/open-financial-6-openapi.yml",
+   "openapi/_original/open-financial-6-readme-slices.json",
+   "openapi/_original/open-financial-8-openapi.yml",
+   "openapi/_original/open-financial-8-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "openpayments-io",
+  "specs": [
+   "openapi/_original/openpayments-io-openapi.yml"
+  ]
+ },
+ {
+  "slug": "oper-credits",
+  "specs": [
+   "openapi/_original/oper-credits-api-openapi.json",
+   "openapi/_original/oper-credits-loan-request-webhook-openapi.json",
+   "openapi/_original/oper-credits-metrics-openapi.json",
+   "openapi/_original/oper-credits-resources-openapi.json"
+  ]
+ },
+ {
+  "slug": "orbii",
+  "specs": [
+   "openapi/_original/orbii-ksa-openapi-original.json",
+   "openapi/_original/orbii-omn-openapi-original.json",
+   "openapi/_original/orbii-uae-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "ordo",
+  "specs": [
+   "openapi/_original/ordo-account-data-client-hosted.yml",
+   "openapi/_original/ordo-account-data-ordo-hosted.yml",
+   "openapi/_original/ordo-recurring-payment-mandates.yml",
+   "openapi/_original/ordo-registry-manager.yml",
+   "openapi/_original/ordo-single-payments.yml",
+   "openapi/_original/ordo-smart-request-manager.yml"
+  ]
+ },
+ {
+  "slug": "orum",
+  "specs": [
+   "openapi/_original/orum-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "pagbank",
+  "specs": [
+   "openapi/_original/pagseguro-accounts-api-openapi.yml",
+   "openapi/_original/pagseguro-charges-api-openapi.yml",
+   "openapi/_original/pagseguro-checkout-api-openapi.yml",
+   "openapi/_original/pagseguro-connect-api-openapi.yml",
+   "openapi/_original/pagseguro-coupons-api-openapi.yml",
+   "openapi/_original/pagseguro-invoices-api-openapi.yml",
+   "openapi/_original/pagseguro-orders-api-openapi.yml",
+   "openapi/_original/pagseguro-plans-api-openapi.yml",
+   "openapi/_original/pagseguro-public-keys-api-openapi.yml",
+   "openapi/_original/pagseguro-refunds-api-openapi.yml",
+   "openapi/_original/pagseguro-subscribers-api-openapi.yml",
+   "openapi/_original/pagseguro-subscriptions-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "paragon-bank",
+  "specs": [
+   "openapi/_original/obie-account-info-standard.yaml",
+   "openapi/_original/obie-confirmation-funds-standard.yaml",
+   "openapi/_original/obie-opendata-standard.json",
+   "openapi/_original/obie-payment-initiation-standard.yaml"
+  ]
+ },
+ {
+  "slug": "paywithmybank",
+  "specs": [
+   "openapi/_original/paywithmybank-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "pennylane",
+  "specs": [
+   "openapi/_original/pennylane-openapi.yml"
+  ]
+ },
+ {
+  "slug": "people-first-bank",
+  "specs": [
+   "openapi/_original/people-first-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "pismo",
+  "specs": [
+   "openapi/_original/pismo-openapi.yml"
+  ]
+ },
+ {
+  "slug": "plaid",
+  "specs": [
+   "openapi/_original/plaid-accounts--openapi-original.yml",
+   "openapi/_original/plaid-accounts--openapi.yml",
+   "openapi/_original/plaid-application--openapi-original.yml",
+   "openapi/_original/plaid-asset-report--openapi-original.yml",
+   "openapi/_original/plaid-asset-report--openapi.yml",
+   "openapi/_original/plaid-auth--openapi-original.yml",
+   "openapi/_original/plaid-auth--openapi.yml",
+   "openapi/_original/plaid-bank-transfer--openapi-original.yml",
+   "openapi/_original/plaid-bank-transfer--openapi.yml",
+   "openapi/_original/plaid-beacon--openapi-original.yml",
+   "openapi/_original/plaid-beacon--openapi.yml",
+   "openapi/_original/plaid-beta--openapi-original.yml",
+   "openapi/_original/plaid-categories--openapi-original.yml",
+   "openapi/_original/plaid-categories--openapi.yml",
+   "openapi/_original/plaid-consumer-report-pdf-get--openapi-original.yml",
+   "openapi/_original/plaid-core-exchange-openapi-original.yml",
+   "openapi/_original/plaid-core-exchange-openapi.yml",
+   "openapi/_original/plaid-cra--openapi-original.yml",
+   "openapi/_original/plaid-cra--openapi.yml",
+   "openapi/_original/plaid-credit--openapi-original.yml",
+   "openapi/_original/plaid-credit--openapi.yml",
+   "openapi/_original/plaid-dashboard-user--openapi-original.yml",
+   "openapi/_original/plaid-deposit-switch--openapi-original.yml",
+   "openapi/_original/plaid-deposit-switch--openapi.yml",
+   "openapi/_original/plaid-employers--openapi-original.yml",
+   "openapi/_original/plaid-employers--openapi.yml",
+   "openapi/_original/plaid-fdx--openapi-original.yml",
+   "openapi/_original/plaid-fdx--openapi.yml",
+   "openapi/_original/plaid-identity--openapi-original.yml",
+   "openapi/_original/plaid-identity--openapi.yml",
+   "openapi/_original/plaid-identity-verification--openapi-original.yml",
+   "openapi/_original/plaid-identity-verification--openapi.yml",
+   "openapi/_original/plaid-income--openapi-original.yml",
+   "openapi/_original/plaid-income--openapi.yml",
+   "openapi/_original/plaid-institutions--openapi-original.yml",
+   "openapi/_original/plaid-institutions--openapi.yml",
+   "openapi/_original/plaid-investments--openapi-original.yml",
+   "openapi/_original/plaid-investments--openapi.yml",
+   "openapi/_original/plaid-item--openapi-original.yml",
+   "openapi/_original/plaid-item--openapi.yml",
+   "openapi/_original/plaid-liabilities--openapi-original.yml",
+   "openapi/_original/plaid-liabilities--openapi.yml",
+   "openapi/_original/plaid-link--openapi-original.yml",
+   "openapi/_original/plaid-link--openapi.yml",
+   "openapi/_original/plaid-link-delivery--openapi-original.yml",
+   "openapi/_original/plaid-link-delivery--openapi.yml",
+   "openapi/_original/plaid-openapi-original.yml",
+   "openapi/_original/plaid-partner--openapi-original.yml",
+   "openapi/_original/plaid-partner--openapi.yml",
+   "openapi/_original/plaid-payment-initiation--openapi-original.yml",
+   "openapi/_original/plaid-payment-initiation--openapi.yml",
+   "openapi/_original/plaid-payment-profile--openapi-original.yml",
+   "openapi/_original/plaid-payment-profile--openapi.yml",
+   "openapi/_original/plaid-paymet-profile--openapi-original.yml",
+   "openapi/_original/plaid-processor--openapi-original.yml",
+   "openapi/_original/plaid-processor--openapi.yml",
+   "openapi/_original/plaid-profile--openapi-original.yml",
+   "openapi/_original/plaid-sandbox--openapi-original.yml",
+   "openapi/_original/plaid-sandbox--openapi.yml",
+   "openapi/_original/plaid-signal--openapi-original.yml",
+   "openapi/_original/plaid-signal--openapi.yml",
+   "openapi/_original/plaid-statements--openapi-original.yml",
+   "openapi/_original/plaid-statements--openapi.yml",
+   "openapi/_original/plaid-transactions--openapi-original.yml",
+   "openapi/_original/plaid-transactions--openapi.yml",
+   "openapi/_original/plaid-transfer--openapi-original.yml",
+   "openapi/_original/plaid-transfer--openapi.yml",
+   "openapi/_original/plaid-user--openapi-original.yml",
+   "openapi/_original/plaid-wallet--openapi-original.yml",
+   "openapi/_original/plaid-wallet--openapi.yml",
+   "openapi/_original/plaid-watchlist-screening--openapi-original.yml",
+   "openapi/_original/plaid-watchlist-screening--openapi.yml",
+   "openapi/_original/plaid-webhook-verification--openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "pliant",
+  "specs": [
+   "openapi/_original/pliant-customer-api-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "pluggy",
+  "specs": [
+   "openapi/_original/pluggy-api-readme-slices.json",
+   "openapi/_original/pluggy-api.json",
+   "openapi/_original/pluggy-enrichment-api-readme-slices.json",
+   "openapi/_original/pluggy-enrichment-api.json",
+   "openapi/_original/pluggy-status-api.json"
+  ]
+ },
+ {
+  "slug": "pn-bank",
+  "specs": [
+   "openapi/_original/pn-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "police-bank",
+  "specs": [
+   "openapi/_original/police-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "principality-building-society",
+  "specs": [
+   "openapi/_original/obie-open-data-swagger.json"
+  ]
+ },
+ {
+  "slug": "q2",
+  "specs": [
+   "openapi/_original/q2-helix-api-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "qudos-bank",
+  "specs": [
+   "openapi/_original/qudos-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "quiltt",
+  "specs": [
+   "openapi/_original/quiltt-openapi.yml"
+  ]
+ },
+ {
+  "slug": "rabobank-australia",
+  "specs": [
+   "openapi/_original/rabobank-australia-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "racq-bank",
+  "specs": [
+   "openapi/_original/racq-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "raiffeisen-ru",
+  "specs": [
+   "openapi/_original/raiffeisen-ru-adm-deposit-codes-openapi.yml",
+   "openapi/_original/raiffeisen-ru-adm-deposit-codes-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-agency-factoring-openapi.yml",
+   "openapi/_original/raiffeisen-ru-agency-factoring-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-audit-reports-openapi.yml",
+   "openapi/_original/raiffeisen-ru-audit-reports-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-authorization-openapi.yml",
+   "openapi/_original/raiffeisen-ru-authorization-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-bank-statements-openapi.yml",
+   "openapi/_original/raiffeisen-ru-bank-statements-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-brokerage-payment-orders-openapi.yml",
+   "openapi/_original/raiffeisen-ru-brokerage-payment-orders-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-brokerage-reports-openapi.yml",
+   "openapi/_original/raiffeisen-ru-brokerage-reports-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-cbr-exchange-rates-openapi.yml",
+   "openapi/_original/raiffeisen-ru-cbr-exchange-rates-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-client-tariffs-openapi.yml",
+   "openapi/_original/raiffeisen-ru-client-tariffs-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-content-dictionaries-openapi.yml",
+   "openapi/_original/raiffeisen-ru-content-dictionaries-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-content-interactions-openapi.yml",
+   "openapi/_original/raiffeisen-ru-content-interactions-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-content-macroeconomic-reviews-openapi.yml",
+   "openapi/_original/raiffeisen-ru-content-macroeconomic-reviews-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-content-product-news-openapi.yml",
+   "openapi/_original/raiffeisen-ru-content-product-news-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-content-webinars-openapi.yml",
+   "openapi/_original/raiffeisen-ru-content-webinars-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-corporate-cards-openapi.yml",
+   "openapi/_original/raiffeisen-ru-corporate-cards-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-currency-control-documents-openapi.yml",
+   "openapi/_original/raiffeisen-ru-currency-control-documents-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-currency-operations-information-openapi.yml",
+   "openapi/_original/raiffeisen-ru-currency-operations-information-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-currency-proceeds-distribution-openapi.yml",
+   "openapi/_original/raiffeisen-ru-currency-proceeds-distribution-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-custody-statements-openapi.yml",
+   "openapi/_original/raiffeisen-ru-custody-statements-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-doc-reader-openapi.yml",
+   "openapi/_original/raiffeisen-ru-doc-reader-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-domestic-payments-import-openapi.yml",
+   "openapi/_original/raiffeisen-ru-domestic-payments-import-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-domestic-payments-iso20022-openapi.yml",
+   "openapi/_original/raiffeisen-ru-domestic-payments-iso20022-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-factoring-openapi.yml",
+   "openapi/_original/raiffeisen-ru-factoring-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-financing-consents-openapi.yml",
+   "openapi/_original/raiffeisen-ru-financing-consents-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-foreign-currency-transfers-iso20022-openapi.yml",
+   "openapi/_original/raiffeisen-ru-foreign-currency-transfers-iso20022-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-foreign-trade-contracts-openapi.yml",
+   "openapi/_original/raiffeisen-ru-foreign-trade-contracts-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-fx-openapi.yml",
+   "openapi/_original/raiffeisen-ru-fx-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-invoices-openapi.yml",
+   "openapi/_original/raiffeisen-ru-invoices-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-letters-openapi.yml",
+   "openapi/_original/raiffeisen-ru-letters-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-loans-openapi.yml",
+   "openapi/_original/raiffeisen-ru-loans-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-loro-openapi.yml",
+   "openapi/_original/raiffeisen-ru-loro-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-payment-control-openapi.yml",
+   "openapi/_original/raiffeisen-ru-payment-control-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-payroll-openapi.yml",
+   "openapi/_original/raiffeisen-ru-payroll-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-adm-openapi.json",
+   "openapi/_original/raiffeisen-ru-raif-pay-adm-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-corporate-cards-openapi.json",
+   "openapi/_original/raiffeisen-ru-raif-pay-corporate-cards-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-fiscal-openapi.json",
+   "openapi/_original/raiffeisen-ru-raif-pay-fiscal-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-notifications-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-notifications-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.json",
+   "openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-payouts-openapi.json",
+   "openapi/_original/raiffeisen-ru-raif-pay-payouts-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-reports-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-reports-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-sbp-b2b-openapi.json",
+   "openapi/_original/raiffeisen-ru-raif-pay-sbp-b2b-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-sbp-b2b-transfers-openapi.json",
+   "openapi/_original/raiffeisen-ru-raif-pay-sbp-b2b-transfers-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-sbp-openapi.json",
+   "openapi/_original/raiffeisen-ru-raif-pay-sbp-openapi.yml",
+   "openapi/_original/raiffeisen-ru-raif-pay-whitelabel-ecom-openapi.json",
+   "openapi/_original/raiffeisen-ru-raif-pay-whitelabel-ecom-openapi.yml",
+   "openapi/_original/raiffeisen-ru-rcam-openapi.yml",
+   "openapi/_original/raiffeisen-ru-rcam-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-sbp-acquiring-openapi.yml",
+   "openapi/_original/raiffeisen-ru-sbp-acquiring-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-tariff-change-requests-openapi.yml",
+   "openapi/_original/raiffeisen-ru-tariff-change-requests-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-trade-finance-agreements-openapi.yml",
+   "openapi/_original/raiffeisen-ru-trade-finance-agreements-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-trade-finance-beneficiary-guarantees-openapi.yml",
+   "openapi/_original/raiffeisen-ru-trade-finance-beneficiary-guarantees-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-trade-finance-guarantees-openapi.yml",
+   "openapi/_original/raiffeisen-ru-trade-finance-guarantees-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-treasury-balance-reports-openapi.yml",
+   "openapi/_original/raiffeisen-ru-treasury-balance-reports-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-treasury-digital-connection-openapi.yml",
+   "openapi/_original/raiffeisen-ru-treasury-digital-connection-openapi_2.yml",
+   "openapi/_original/raiffeisen-ru-user-permissions-openapi.yml",
+   "openapi/_original/raiffeisen-ru-user-permissions-openapi_2.yml"
+  ]
+ },
+ {
+  "slug": "recognise-bank",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-opendata-swagger.json",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "regional-australia-bank",
+  "specs": [
+   "openapi/_original/regional-australia-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "regions-financial",
+  "specs": [
+   "openapi/_original/regions-open-banking-openapi.yml"
+  ]
+ },
+ {
+  "slug": "revolut",
+  "specs": [
+   "openapi/_original/revolut-business-openapi.yaml",
+   "openapi/_original/revolut-crypto-ramp-openapi.yaml",
+   "openapi/_original/revolut-merchant-openapi.yaml",
+   "openapi/_original/revolut-open-banking-openapi.yaml",
+   "openapi/_original/revolut-wallet-callbacks-2026-07-01.yaml",
+   "openapi/_original/revolut-wallet-loyalty-callbacks-2026-09-17.yaml",
+   "openapi/_original/revolut-wallet-partner-2026-07-01.yaml",
+   "openapi/_original/revolut-x-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "salt-edge",
+  "specs": [
+   "openapi/_original/salt-edge-openapi.yml"
+  ]
+ },
+ {
+  "slug": "sandbox-banking",
+  "specs": [
+   "openapi/_original/sandbox-banking-glyue-openapi.yml"
+  ]
+ },
+ {
+  "slug": "santander-uk",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-opendata-swagger.json",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "scotiabank",
+  "specs": [
+   "openapi/_original/scotiabank-tranxact-openapi.yml"
+  ]
+ },
+ {
+  "slug": "secure-trust-bank",
+  "specs": [
+   "openapi/_original/obie-account-info-standard-openapi.yaml",
+   "openapi/_original/obie-confirmation-of-funds-standard-openapi.yaml",
+   "openapi/_original/obie-open-data-standard-openapi.json",
+   "openapi/_original/obie-payment-initiation-standard-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "secureauth",
+  "specs": [
+   "openapi/_original/secureauth-admin-openapi.yml",
+   "openapi/_original/secureauth-analytics-openapi.yml",
+   "openapi/_original/secureauth-cdr-openapi.yml",
+   "openapi/_original/secureauth-developer-openapi.yml",
+   "openapi/_original/secureauth-fdx-openapi.yml",
+   "openapi/_original/secureauth-hub-openapi.yml",
+   "openapi/_original/secureauth-identity-openapi.yml",
+   "openapi/_original/secureauth-identityroot-openapi.yml",
+   "openapi/_original/secureauth-identityself-openapi.yml",
+   "openapi/_original/secureauth-identitysystem-openapi.yml",
+   "openapi/_original/secureauth-ksa-openapi.yml",
+   "openapi/_original/secureauth-licensingadmin-openapi.yml",
+   "openapi/_original/secureauth-licensingroot-openapi.yml",
+   "openapi/_original/secureauth-oauth2-openapi.yml",
+   "openapi/_original/secureauth-obbr-openapi.yml",
+   "openapi/_original/secureauth-obuk-openapi.yml",
+   "openapi/_original/secureauth-opin-openapi.yml",
+   "openapi/_original/secureauth-permissions-openapi.yml",
+   "openapi/_original/secureauth-public-openapi.yml",
+   "openapi/_original/secureauth-root-openapi.yml",
+   "openapi/_original/secureauth-saml-openapi.yml",
+   "openapi/_original/secureauth-system-openapi.yml",
+   "openapi/_original/secureauth-web-openapi.yml"
+  ]
+ },
+ {
+  "slug": "shawbrook-bank",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-opendata-swagger.json",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "sibill",
+  "specs": [
+   "openapi/_original/sibill-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "sikoia",
+  "specs": [
+   "openapi/_original/sikoia-openapi.yml"
+  ]
+ },
+ {
+  "slug": "sila-money",
+  "specs": [
+   "openapi/_original/sila-money-openapi.yml"
+  ]
+ },
+ {
+  "slug": "six-group",
+  "specs": [
+   "openapi/_original/six-group-debix-auth-provider-api-v2-provider-to-six-openapi.yml",
+   "openapi/_original/six-group-debix-auth-provider-api-v2-six-to-provider-openapi.yml",
+   "openapi/_original/six-group-debix-bank-api-cardtoken-v2-bank-to-six-openapi.yml",
+   "openapi/_original/six-group-debix-bank-api-v2-bank-to-six-openapi.yml",
+   "openapi/_original/six-group-settlement-info-reporting-openapi.json",
+   "openapi/_original/six-group-sic-clearing-day-calendar-openapi.json",
+   "openapi/_original/six-group-sic-service-status-openapi.json",
+   "openapi/_original/six-group-swiss-bank-master-openapi.json"
+  ]
+ },
+ {
+  "slug": "skipton-building-society",
+  "specs": [
+   "openapi/_original/obie-opendata-openapi.json"
+  ]
+ },
+ {
+  "slug": "slash",
+  "specs": [
+   "openapi/_original/slash-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "sofi",
+  "specs": [
+   "openapi/_original/sofi-home-loan-affiliate-lead-api-openapi.yml",
+   "openapi/_original/sofi-partner-offer-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "sofi-technologies",
+  "specs": [
+   "openapi/_original/sofi-technologies-auth-api-openapi.json",
+   "openapi/_original/sofi-technologies-dispute-api-2-0-openapi.json",
+   "openapi/_original/sofi-technologies-dispute-api-3-0-openapi.json",
+   "openapi/_original/sofi-technologies-events-api-openapi.json",
+   "openapi/_original/sofi-technologies-external-trans-api-openapi.json",
+   "openapi/_original/sofi-technologies-loan-api-openapi.json",
+   "openapi/_original/sofi-technologies-payment-hub-api-openapi.json",
+   "openapi/_original/sofi-technologies-program-api-openapi.json",
+   "openapi/_original/sofi-technologies-public-config-api-openapi.json",
+   "openapi/_original/sofi-technologies-risk-api-1-0-openapi.json",
+   "openapi/_original/sofi-technologies-risk-api-2-0-openapi.json"
+  ]
+ },
+ {
+  "slug": "soldo",
+  "specs": [
+   "openapi/_original/soldo-business-api-v20-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "spare",
+  "specs": [
+   "openapi/_original/spare-bahrain-ais-openapi-original.json",
+   "openapi/_original/spare-bahrain-authentication-openapi-original.json",
+   "openapi/_original/spare-bahrain-pis-openapi-original.json",
+   "openapi/_original/spare-ksa-ais-openapi-original.json",
+   "openapi/_original/spare-ksa-ais-v2-openapi-original.json",
+   "openapi/_original/spare-ksa-authentication-openapi-original.json",
+   "openapi/_original/spare-ksa-pis-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "spliceforms",
+  "specs": [
+   "openapi/_original/spliceforms-auth-services-openapi.yml",
+   "openapi/_original/spliceforms-capture-services-openapi.yml",
+   "openapi/_original/spliceforms-data-services-openapi.yml",
+   "openapi/_original/spliceforms-inquiry-services-openapi.yml",
+   "openapi/_original/spliceforms-processing-service-openapi.yml"
+  ]
+ },
+ {
+  "slug": "st-george-bank",
+  "specs": [
+   "openapi/_original/st-george-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "stark-bank",
+  "specs": [
+   "openapi/_original/stark-bank-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "starling-bank",
+  "specs": [
+   "openapi/_original/obie-opendata-swagger.json"
+  ]
+ },
+ {
+  "slug": "stitch",
+  "specs": [
+   "openapi/_original/stitch-openapi.yml"
+  ]
+ },
+ {
+  "slug": "summerland-bank",
+  "specs": [
+   "openapi/_original/summerland-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "suncorp-bank",
+  "specs": [
+   "openapi/_original/suncorp-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "super-payments",
+  "specs": [
+   "openapi/_original/super-payments-openapi.yml"
+  ]
+ },
+ {
+  "slug": "swift",
+  "specs": [
+   "openapi/_original/swift-swiftref-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "synctera",
+  "specs": [
+   "openapi/_original/synctera-openapi.json"
+  ]
+ },
+ {
+  "slug": "tandem-bank",
+  "specs": [
+   "openapi/_original/obie-standard-account-info-openapi.yaml",
+   "openapi/_original/obie-standard-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-standard-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "td-bank",
+  "specs": [
+   "openapi/_original/td-bank-account-basic-api-openapi.yml",
+   "openapi/_original/td-bank-account-detailed-api-openapi.yml",
+   "openapi/_original/td-bank-apps-management-api-openapi.yml",
+   "openapi/_original/td-bank-bill-payment-api-openapi.yml",
+   "openapi/_original/td-bank-consent-api-openapi.yml",
+   "openapi/_original/td-bank-customer-api-openapi.yml",
+   "openapi/_original/td-bank-service-token-api-openapi.yml",
+   "openapi/_original/td-bank-token-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "teachers-mutual-bank",
+  "specs": [
+   "openapi/_original/teachers-mutual-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "teller",
+  "specs": [
+   "openapi/_original/teller-openapi.yml"
+  ]
+ },
+ {
+  "slug": "temenos",
+  "specs": [
+   "openapi/_original/temenos-bnpl-openapi.yml",
+   "openapi/_original/temenos-cloud-banking-openapi.yml",
+   "openapi/_original/temenos-data-hub-openapi.yml",
+   "openapi/_original/temenos-enterprise-product-pricing-openapi.yml",
+   "openapi/_original/temenos-financial-crime-mitigation-openapi.yml",
+   "openapi/_original/temenos-fund-administration-openapi.yml",
+   "openapi/_original/temenos-infinity-openapi.yml",
+   "openapi/_original/temenos-journey-manager-openapi.yml",
+   "openapi/_original/temenos-microservices-openapi.yml",
+   "openapi/_original/temenos-payments-openapi.yml",
+   "openapi/_original/temenos-transact-openapi.yml",
+   "openapi/_original/temenos-wealth-openapi.yml"
+  ]
+ },
+ {
+  "slug": "temenos-transact",
+  "specs": [
+   "openapi/_original/temenos-transact-core-banking-openapi.yml"
+  ]
+ },
+ {
+  "slug": "tesser",
+  "specs": [
+   "openapi/_original/tesser-openapi-original.json"
+  ]
+ },
+ {
+  "slug": "the-bank-of-london",
+  "specs": [
+   "openapi/_original/the-bank-of-london-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "thisisbud",
+  "specs": [
+   "openapi/_original/thisisbud-assess-api-readme-slices.json",
+   "openapi/_original/thisisbud-authentication-readme-slices.json",
+   "openapi/_original/thisisbud-characteristics-api-readme-slices.json",
+   "openapi/_original/thisisbud-connect-api-readme-slices.json",
+   "openapi/_original/thisisbud-customers-api-readme-slices.json",
+   "openapi/_original/thisisbud-drive-api-readme-slices.json",
+   "openapi/_original/thisisbud-enrichment-api-readme-slices.json",
+   "openapi/_original/thisisbud-financial-data-api-readme-slices.json",
+   "openapi/_original/thisisbud-goals-api-readme-slices.json",
+   "openapi/_original/thisisbud-insights-api-readme-slices.json",
+   "openapi/_original/thisisbud-intelligent-search-api-readme-slices.json",
+   "openapi/_original/thisisbud-mcp-model-context-protocol-api-readme-slices.json",
+   "openapi/_original/thisisbud-openapi-openapi.yml",
+   "openapi/_original/thisisbud-openapi-us-openapi.yml",
+   "openapi/_original/thisisbud-payments-api-readme-slices.json",
+   "openapi/_original/thisisbud-smart-finders-api-readme-slices.json"
+  ]
+ },
+ {
+  "slug": "tietoevry",
+  "specs": [
+   "openapi/_original/tietoevry-financial-api-aggregation-swagger.json",
+   "openapi/_original/tietoevry-financial-api-aggregation-swagger_2.json",
+   "openapi/_original/tietoevry-how-to-instruction.yaml",
+   "openapi/_original/tietoevry-how-to-instruction_2.yaml",
+   "openapi/_original/tietoevry-oauth2-how-to.yaml",
+   "openapi/_original/tietoevry-oauth2-how-to_2.yaml",
+   "openapi/_original/tietoevry-openbanking-xs2a-swagger.json",
+   "openapi/_original/tietoevry-openbanking-xs2a-swagger_2.json",
+   "openapi/_original/tietoevry-sepa-direct-debit-api-gateway.yaml",
+   "openapi/_original/tietoevry-sepa-direct-debit-api-gateway_2.yaml",
+   "openapi/_original/tietoevry-sepa-direct-debit.yaml",
+   "openapi/_original/tietoevry-sepa-direct-debit_2.yaml",
+   "openapi/_original/tietoevry-tieto-oauth2-embedded-intro.yaml",
+   "openapi/_original/tietoevry-tieto-oauth2-embedded-intro_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-accounts-cards-premium.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-accounts-cards-premium.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-accounts-premium.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-accounts-premium.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-accounts.v1_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-accounts.v1_2_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-accounts.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-accounts.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-bulk-payments.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-bulk-payments.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-funds.v1_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-funds.v1_2_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-funds.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-funds.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-future-dated-payments-premium.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-future-dated-payments-premium.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-payments.v1_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-payments.v1_2_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-payments.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-payments.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-periodic-payments-premium.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-periodic-payments-premium.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-recall-payments.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-recall-payments.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-request-to-pay.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-request-to-pay.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-signing-baskets.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-signing-baskets.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-subscriptions-request-to-pay.v1_3.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-subscriptions-request-to-pay.v1_3_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-vam-accounts.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-vam-accounts_2.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-vam-users.yaml",
+   "openapi/_original/tietoevry-tieto-xs2a-vam-users_2.yaml"
+  ]
+ },
+ {
+  "slug": "tink-com",
+  "specs": [
+   "openapi/_original/tink-account-check-api-openapi.yml",
+   "openapi/_original/tink-connector-api-openapi.yml",
+   "openapi/_original/tink-data-api-openapi.yml",
+   "openapi/_original/tink-data-enrichment-api-openapi.yml",
+   "openapi/_original/tink-money-manager-api-openapi.yml",
+   "openapi/_original/tink-oauth-api-openapi.yml",
+   "openapi/_original/tink-payments-api-openapi.yml",
+   "openapi/_original/tink-risk-reports-api-openapi.yml",
+   "openapi/_original/tink-webhooks-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "token-io",
+  "specs": [
+   "openapi/_original/token-io-bank-integration-openapi.json",
+   "openapi/_original/token-io-openapi.yml",
+   "openapi/_original/token-io-refunds-bnpp-openapi.json",
+   "openapi/_original/token-io-rest-api-swagger.json"
+  ]
+ },
+ {
+  "slug": "toqio",
+  "specs": [
+   "openapi/_original/toqio-accounts-openapi.yml",
+   "openapi/_original/toqio-beneficiaries-openapi.yml",
+   "openapi/_original/toqio-card-management-api-openapi.yml",
+   "openapi/_original/toqio-cards-openapi.yml",
+   "openapi/_original/toqio-clients-openapi.yml",
+   "openapi/_original/toqio-compliance-endpoints-openapi.yml",
+   "openapi/_original/toqio-create-lead-service-openapi.yml",
+   "openapi/_original/toqio-custom-notifications-openapi.yml",
+   "openapi/_original/toqio-fees-openapi.yml",
+   "openapi/_original/toqio-get-company-kyb-documents-openapi.yml",
+   "openapi/_original/toqio-get-pre-signed-url-openapi.yml",
+   "openapi/_original/toqio-get-presigned-download-url-openapi.yml",
+   "openapi/_original/toqio-integration-hub-api-openapi.yml",
+   "openapi/_original/toqio-revenue-collections-openapi.yml",
+   "openapi/_original/toqio-security-openapi.yml",
+   "openapi/_original/toqio-transactions-openapi.yml",
+   "openapi/_original/toqio-upload-kyb-documents-openapi.yml"
+  ]
+ },
+ {
+  "slug": "treasury-prime",
+  "specs": [
+   "openapi/_original/treasury-prime-openapi.yml"
+  ]
+ },
+ {
+  "slug": "tribe-payments",
+  "specs": [
+   "openapi/_original/tribe-payments-obb-bank-api-openapi.json",
+   "openapi/_original/tribe-payments-obb-bank-api-webhooks-openapi.json",
+   "openapi/_original/tribe-payments-obb-tpp-api-openapi.json",
+   "openapi/_original/tribe-payments-obb-tpp-api-webhooks-openapi.json",
+   "openapi/_original/tribe-payments-trb-cc-api-merchant-api-credit-card-callback-v3.json",
+   "openapi/_original/tribe-payments-trb-cc-api-merchant-api-credit-card-v3.json",
+   "openapi/_original/tribe-payments-trb-cc-token-api-merchant-api-credit-card-token-v3.json",
+   "openapi/_original/tribe-payments-trb-cc-token-api-merchant-api-credit-card-token-webhook-v3.json",
+   "openapi/_original/tribe-payments-trb-hpp-api-merchant-api-hpp-v3.json",
+   "openapi/_original/tribe-payments-trb-hpp-api-merchant-api-hpp-webhook-v3.json",
+   "openapi/_original/tribe-payments-trb-isac-pos-tdd-device-api-openapi-device-directory-api-v3.json",
+   "openapi/_original/tribe-payments-trb-report-api-merchant-api-report-callback-v3.json",
+   "openapi/_original/tribe-payments-trb-report-api-merchant-api-report-v3.json",
+   "openapi/_original/tribe-payments-trb-risk-monitor-client-api-openapi.json",
+   "openapi/_original/tribe-payments-trb-risk-monitor-client-api-webhooks-openapi.json"
+  ]
+ },
+ {
+  "slug": "triodos-bank-uk",
+  "specs": [
+   "openapi/_original/triodos-bank-uk-auth-openapi.json",
+   "openapi/_original/triodos-bank-uk-xs2a-openapi.json"
+  ]
+ },
+ {
+  "slug": "truelayer",
+  "specs": [
+   "openapi/_original/truelayer-payments-openapi.yml"
+  ]
+ },
+ {
+  "slug": "truist-financial",
+  "specs": [
+   "openapi/_original/truist-commercial-account-transactions-openapi.yml",
+   "openapi/_original/truist-commercial-accounts-openapi.yml",
+   "openapi/_original/truist-personal-small-business-accounts-openapi.yml",
+   "openapi/_original/truist-personal-small-business-transactions-openapi.yml"
+  ]
+ },
+ {
+  "slug": "trustly",
+  "specs": [
+   "openapi/_original/trustly-north-america-openapi.json",
+   "openapi/_original/trustly-north-america-openapi.yml"
+  ]
+ },
+ {
+  "slug": "tsb-bank",
+  "specs": [
+   "openapi/_original/obie-open-data-openapi.json",
+   "openapi/_original/tsb-bank-oauth-server-openapi.json"
+  ]
+ },
+ {
+  "slug": "ubank",
+  "specs": [
+   "openapi/_original/ubank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "unit-co",
+  "specs": [
+   "openapi/_original/unit-co-accounts-openapi.json",
+   "openapi/_original/unit-co-applications-openapi.json",
+   "openapi/_original/unit-co-authorizations-openapi.json",
+   "openapi/_original/unit-co-cards-openapi.json",
+   "openapi/_original/unit-co-checks-openapi.json",
+   "openapi/_original/unit-co-credit-openapi.json",
+   "openapi/_original/unit-co-customers-openapi.json",
+   "openapi/_original/unit-co-disputes-openapi.json",
+   "openapi/_original/unit-co-fees-rewards-openapi.json",
+   "openapi/_original/unit-co-openapi-source.json",
+   "openapi/_original/unit-co-openapi.yml",
+   "openapi/_original/unit-co-payments-openapi.json",
+   "openapi/_original/unit-co-sandbox-openapi.json",
+   "openapi/_original/unit-co-statements-openapi.json",
+   "openapi/_original/unit-co-stop-payments-openapi.json",
+   "openapi/_original/unit-co-tax-forms-openapi.json",
+   "openapi/_original/unit-co-transactions-openapi.json",
+   "openapi/_original/unit-co-webhooks-openapi.json"
+  ]
+ },
+ {
+  "slug": "unity-bank",
+  "specs": [
+   "openapi/_original/unity-bank-cds-banking-products-openapi.yml"
+  ]
+ },
+ {
+  "slug": "unstoppable-finance",
+  "specs": [
+   "openapi/_original/unstoppable-finance-iron-openapi-original.yml",
+   "openapi/_original/unstoppable-finance-moonpay-enterprise-openapi-latest.yml"
+  ]
+ },
+ {
+  "slug": "up-bank",
+  "specs": [
+   "openapi/_original/up-bank-cds-banking-products-openapi.yml",
+   "openapi/_original/up-bank-openapi.json"
+  ]
+ },
+ {
+  "slug": "uphold",
+  "specs": [
+   "openapi/_original/uphold-core-api-openapi.json",
+   "openapi/_original/uphold-kyc-connector-api-openapi.json",
+   "openapi/_original/uphold-market-pulse-api-openapi.json",
+   "openapi/_original/uphold-topper-api-openapi.json",
+   "openapi/_original/uphold-widgets-api-openapi.json"
+  ]
+ },
+ {
+  "slug": "upward-financial",
+  "specs": [
+   "openapi/_original/upward-financial-openapi.json"
+  ]
+ },
+ {
+  "slug": "us-bancorp",
+  "specs": [
+   "openapi/_original/us-bank-corporate-account-information-openapi.yml",
+   "openapi/_original/us-bank-positive-pay-openapi.yml",
+   "openapi/_original/us-bank-push-to-card-openapi.yml",
+   "openapi/_original/us-bank-rtp-openapi.yml"
+  ]
+ },
+ {
+  "slug": "uzum",
+  "specs": [
+   "openapi/_original/uzum-checkout-openapi.yaml",
+   "openapi/_original/uzum-crossborder-openapi.yaml",
+   "openapi/_original/uzum-dynamicqr-openapi.yaml",
+   "openapi/_original/uzum-fastpay-openapi.yaml",
+   "openapi/_original/uzum-fiscalization-openapi.yaml",
+   "openapi/_original/uzum-nasiya-openapi.yaml",
+   "openapi/_original/uzum-ratekeeper-openapi.yaml",
+   "openapi/_original/uzum-remitcore-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "vanquis-banking-group",
+  "specs": [
+   "openapi/_original/obie-account-info-openapi.yaml",
+   "openapi/_original/obie-confirmation-funds-openapi.yaml",
+   "openapi/_original/obie-payment-initiation-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "virgin-money-uk",
+  "specs": [
+   "openapi/_original/obie-opendata-api-standard-openapi.json"
+  ]
+ },
+ {
+  "slug": "visa",
+  "specs": [
+   "openapi/_original/b2b-virtual-account-payment-method.yml",
+   "openapi/_original/card-on-file-data-inquiry.yml",
+   "openapi/_original/foreign-exchange.yml",
+   "openapi/_original/payment-account-attributes-inquiry.yml",
+   "openapi/_original/payment-account-validation.yml",
+   "openapi/_original/visa-account-updater.yml",
+   "openapi/_original/visa-b2b-connect.yml",
+   "openapi/_original/visa-bin-attribute-sharing.yml",
+   "openapi/_original/visa-business-data-solutions.yml",
+   "openapi/_original/visa-card-program-management.yml",
+   "openapi/_original/visa-click-to-pay.yml",
+   "openapi/_original/visa-consent-management-service.yml",
+   "openapi/_original/visa-data-tokens.yml",
+   "openapi/_original/visa-digital-enablement.yml",
+   "openapi/_original/visa-direct.yml",
+   "openapi/_original/visa-global-atm-locator.yml",
+   "openapi/_original/visa-in-app-provisioning.yml",
+   "openapi/_original/visa-merchant-offers.yml",
+   "openapi/_original/visa-merchant-screening.yml",
+   "openapi/_original/visa-merchant-search.yml",
+   "openapi/_original/visa-supplier-matching-service.yml",
+   "openapi/_original/visa-transaction-controls.yml"
+  ]
+ },
+ {
+  "slug": "volt-io",
+  "specs": [
+   "openapi/_original/volt-io-accounts-openapi-original.yaml"
+  ]
+ },
+ {
+  "slug": "vopay",
+  "specs": [
+   "openapi/_original/vopay-account-api-reference.json",
+   "openapi/_original/vopay-account-onboarding.json",
+   "openapi/_original/vopay-bill-pay-references.json",
+   "openapi/_original/vopay-blocked-accounts-api-reference.json",
+   "openapi/_original/vopay-branding-api-reference.json",
+   "openapi/_original/vopay-client-accounts.json",
+   "openapi/_original/vopay-contact.json",
+   "openapi/_original/vopay-convenience-fee-api-reference.json",
+   "openapi/_original/vopay-dispute-management-api-reference.json",
+   "openapi/_original/vopay-elinx.json",
+   "openapi/_original/vopay-file-conversion-api-reference.json",
+   "openapi/_original/vopay-global-cash-management.json",
+   "openapi/_original/vopay-integrations-and-support.json",
+   "openapi/_original/vopay-iq11.json",
+   "openapi/_original/vopay-payment-api-reference.json",
+   "openapi/_original/vopay-payment-method-api-reference.json",
+   "openapi/_original/vopay-payment-rails-api-reference.json",
+   "openapi/_original/vopay-ping.json",
+   "openapi/_original/vopay-remittance-api-reference.json",
+   "openapi/_original/vopay-scheduled-payments-api-reference.json",
+   "openapi/_original/vopay-transaction-management.json",
+   "openapi/_original/vopay-verification.json",
+   "openapi/_original/vopay-virtual-account-api-reference.json"
+  ]
+ },
+ {
+  "slug": "wealth-reader",
+  "specs": [
+   "openapi/_original/wealth-reader-api-for-ai.yaml",
+   "openapi/_original/wealth-reader-api.yaml"
+  ]
+ },
+ {
+  "slug": "weatherbys-bank",
+  "specs": [
+   "openapi/_original/obie-opendata-atm-locator-standard.json",
+   "openapi/_original/obie-opendata-branch-locator-standard.json",
+   "openapi/_original/obie-opendata-business-current-accounts-standard.json",
+   "openapi/_original/obie-opendata-personal-current-accounts-standard.json"
+  ]
+ },
+ {
+  "slug": "weavr",
+  "specs": [
+   "openapi/_original/weavr-multi-backoffice-openapi-original.yml",
+   "openapi/_original/weavr-multi-openapi-original.yml",
+   "openapi/_original/weavr-payment-run-openapi-original.yml",
+   "openapi/_original/weavr-simulator-openapi-original.yml",
+   "openapi/_original/weavr-webhooks-openapi-original.yml"
+  ]
+ },
+ {
+  "slug": "wells-fargo",
+  "specs": [
+   "openapi/_original/wells-fargo-account-transactions-api-openapi.yml",
+   "openapi/_original/wells-fargo-gateway-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "western-union",
+  "specs": [
+   "openapi/_original/western-union-mass-payments-openapi.yml"
+  ]
+ },
+ {
+  "slug": "westpac",
+  "specs": [
+   "openapi/_original/westpac-cds-banking-openapi.yml"
+  ]
+ },
+ {
+  "slug": "wise",
+  "specs": [
+   "openapi/_original/wise-platform-openapi.yml"
+  ]
+ },
+ {
+  "slug": "wordline",
+  "specs": [
+   "openapi/_original/worldline-card-issuing-api-2.41.1.json",
+   "openapi/_original/worldline-fido-server-api-1.0.0.yaml",
+   "openapi/_original/worldline-interchange-fees-api.yaml",
+   "openapi/_original/worldline-merchant-analysis-api.yaml",
+   "openapi/_original/worldline-merchant-contract-api-2.0.4.yaml",
+   "openapi/_original/worldline-merchant-payments-api-2.0.yaml",
+   "openapi/_original/worldline-open-banking-payment-initiation-3.15.0.yaml",
+   "openapi/_original/worldline-statements-api.yaml",
+   "openapi/_original/worldline-transactions-api-2.0.2.yaml"
+  ]
+ },
+ {
+  "slug": "yapily",
+  "specs": [
+   "openapi/_original/yapily-beneficiaries-api-openapi.yml",
+   "openapi/_original/yapily-data-api-openapi.yml",
+   "openapi/_original/yapily-hosted-pages-api-openapi.yml",
+   "openapi/_original/yapily-platform-api-openapi.yml",
+   "openapi/_original/yapily-vrp-api-openapi.yml"
+  ]
+ },
+ {
+  "slug": "yodlee",
+  "specs": [
+   "openapi/_original/yodlee-core-openapi.yml"
+  ]
+ },
+ {
+  "slug": "yorkshire-building-society",
+  "specs": [
+   "openapi/_original/yorkshire-building-society-account-information-api-openapi.yaml",
+   "openapi/_original/yorkshire-building-society-confirmation-of-funds-api-openapi.yaml",
+   "openapi/_original/yorkshire-building-society-event-subscriptions-api-openapi.yaml",
+   "openapi/_original/yorkshire-building-society-payment-initiation-api-openapi.yaml"
+  ]
+ },
+ {
+  "slug": "zai",
+  "specs": [
+   "openapi/_original/zai-assembly-api.json",
+   "openapi/_original/zai-async-api.json",
+   "openapi/_original/zai-payto.json",
+   "openapi/_original/zai-virtual-accounts-payid.json"
+  ]
+ },
+ {
+  "slug": "zepto-payments",
+  "specs": [
+   "openapi/_original/zepto-payments-clients.yml",
+   "openapi/_original/zepto-payments-investigations.yml",
+   "openapi/_original/zepto-payments-merchant-reports.yml",
+   "openapi/_original/zepto-payments-notifications.yml",
+   "openapi/_original/zepto-payments-pay-to.yml",
+   "openapi/_original/zepto-payments-validate-cop.yml",
+   "openapi/_original/zepto-payments-zepto.yml"
+  ]
+ },
+ {
+  "slug": "zoho-books",
+  "specs": [
+   "openapi/_original/zoho-books-openapi.yml"
+  ]
+ },
+ {
+  "slug": "zopa",
+  "specs": [
+   "openapi/_original/zopa-account-info-openapi-original.yml",
+   "openapi/_original/zopa-payment-initiation-openapi-original.yml"
+  ]
+ }
+]

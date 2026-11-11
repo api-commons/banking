@@ -1,0 +1,62 @@
+provider: modulr
+apis_io: https://apis.io/providers/modulr/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      status: status
+      currency: currency
+      id: id
+      balance:
+      - balance
+      - availableBalance
+      created_at: createdDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/modulr-api.json#GET /accounts
+    - openapi/_original/modulr-api.json#GET /accounts/{accountId}
+    - openapi/_original/modulr-api.json#GET /customers/{customerId}/accounts
+    - openapi/_original/modulr-api.json#POST /customers/{customerId}/accounts
+    - openapi/_original/modulr-api.json#PUT /accounts/{accountId}
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/modulr-api.json#GET /accounts/{accountId}/transactions
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties:
+      id: id
+      name: name
+      created_at: created
+      status: status
+      updated_at: updated
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/modulr-api.json#DELETE /customers/{customerId}/beneficiaries
+    - openapi/_original/modulr-api.json#GET /beneficiaries
+    - openapi/_original/modulr-api.json#POST /customers/{customerId}/beneficiaries
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: createdDate
+      description: reference
+      id: id
+      rail: type
+      currency: currency
+      from_account_id: sourceAccountId
+      to_account_id: destination
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/modulr-api.json#GET /payments
+    - openapi/_original/modulr-api.json#POST /payments

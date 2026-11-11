@@ -1,0 +1,62 @@
+provider: lithic-com
+apis_io: https://apis.io/providers/lithic-com/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - financial_accounts
+    - accounts
+    properties:
+      created_at: created
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/accounts
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/accounts/{account_token}
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/financial_accounts
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/financial_accounts/{financial_account_token}
+    - openapi/_original/lithic-com-openapi.yml#PATCH /v1/accounts/{account_token}
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/balances
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/cards/{card_token}/balances
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/financial_accounts/{financial_account_token}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      created_at: created
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/fraud/transactions/{transaction_token}
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/transaction_monitoring/cases/{case_token}/transactions
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/transactions
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/transactions/{transaction_token}
+    - openapi/_original/lithic-com-openapi.yml#POST /v1/fraud/transactions/{transaction_token}
+  transfer:
+    path_segment:
+    - payments
+    - book_transfers
+    - transfer
+    properties:
+      created_at: created
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/book_transfers
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/book_transfers/{book_transfer_token}
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/payments
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/payments/{payment_token}
+    - openapi/_original/lithic-com-openapi.yml#POST /v1/book_transfers
+  statement:
+    path_segment:
+    - statements
+    properties:
+      created_at: created
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/financial_accounts/{financial_account_token}/statements
+    - openapi/_original/lithic-com-openapi.yml#GET /v1/financial_accounts/{financial_account_token}/statements/{statement_token}

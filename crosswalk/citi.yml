@@ -1,0 +1,75 @@
+provider: citi
+apis_io: https://apis.io/providers/citi/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: account_name
+      type: account_type
+      status: status
+      currency: currency_code
+      account_number: account_number
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/accounts.yaml#GET /accounts
+    - openapi/_original/accountsv5.yaml#GET /accounts
+    - openapi/_original/citi-accounts-openapi.yaml#GET /accounts
+    - openapi/_original/citi-accountsv5-openapi.yaml#GET /accounts
+    - openapi/_original/citi-transfer-agency-accounts-openapi.yaml#GET /v1/accounts/{fundManagerId}
+  balance:
+    path_segment:
+    - balances
+    properties:
+      available: available_amount
+      currency: currency_code
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/accounts.yaml#GET /balances
+    - openapi/_original/accountsv5.yaml#GET /balances
+    - openapi/_original/citi-accounts-openapi.yaml#GET /balances
+    - openapi/_original/citi-accountsv5-openapi.yaml#GET /balances
+    - openapi/_original/citi-marketplace-management-openapi.yaml#GET /merchants/v1/wallets/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      amount: transactionAmount
+      status: status
+      description: reference
+      posted_at: transactionDate
+      currency: currencyCode
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/accounts.yaml#GET /transactions
+    - openapi/_original/citi-accounts-openapi.yaml#GET /transactions
+    - openapi/_original/citi-marketplace-management-openapi.yaml#GET /merchants/v1/transactions
+    - openapi/_original/citi-statement-transactions-openapi.yaml#POST /accounts/v1/statement/transactions
+    - openapi/_original/citi-transfer-agency-transactions-openapi.yaml#GET /v1/transactions/{fundManagerId}
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      status: status
+      created_at: creationDateTime
+      rail:
+      - method
+      - paymentType
+      updated_at: statusUpdateDateTime
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/citi-marketplace-management-openapi.yaml#GET /merchants/v1/payments
+    - openapi/_original/citi-marketplace-management-openapi.yaml#POST /merchants/v1/payments
+    - openapi/_original/express_payments_api.yaml#GET /paymentservices/v1/payments
+    - openapi/_original/express_payments_api.yaml#GET /paymentservices/v1/payments/{uetr}
+    - openapi/_original/express_payments_api.yaml#POST /paymentservices/v1/payments
+  statement:
+    path_segment:
+    - statement
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/statementsv2_api.yaml#POST /accountreporting/v2/statement

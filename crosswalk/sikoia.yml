@@ -1,0 +1,32 @@
+provider: sikoia
+apis_io: https://apis.io/providers/sikoia/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bankaccounts
+    properties:
+      type: account_type
+      status: status
+      currency: currency
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/sikoia-openapi.yml#GET /v2/bankaccounts/{account_connection_id}
+    - openapi/_original/sikoia-openapi.yml#GET /v2/{entity_type}/{entity_id}/bankaccounts
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sikoia-openapi.yml#GET /v2/bankaccounts/{account_connection_id}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      status: status
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/sikoia-openapi.yml#GET /v2/affordability-insights/{request_id}/transactions
+    - openapi/_original/sikoia-openapi.yml#GET /v2/bankaccounts/{account_connection_id}/transactions

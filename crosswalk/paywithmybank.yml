@@ -1,0 +1,56 @@
+provider: paywithmybank
+apis_io: https://apis.io/providers/paywithmybank/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      account_number:
+      - accountNumber
+      - iban
+      routing_number: routingNumber
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/paywithmybank-openapi-original.yml#GET /transactions/{transactionId}/payment/paymentProvider/accounts
+  balance:
+    path_segment:
+    - balance
+    properties:
+      account_id: account
+      currency: currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/paywithmybank-openapi-original.yml#GET /transactions/{transactionId}/payment/paymentProvider/account/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      amount: amount
+      status: status
+      direction: transactionType
+      currency: currency
+      created_at: createdAt
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/paywithmybank-openapi-original.yml#GET /transactions
+    - openapi/_original/paywithmybank-openapi-original.yml#GET /transactions/{transactionId}
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      created_at: createdAt
+      description: description
+      rail: paymentType
+      currency: currency
+      updated_at: updatedAt
+      payment_id: paymentId
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/paywithmybank-openapi-original.yml#GET /payments
+    - openapi/_original/paywithmybank-openapi-original.yml#GET /payments/{paymentId}

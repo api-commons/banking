@@ -1,0 +1,50 @@
+provider: bank-of-new-york-mellon
+apis_io: https://apis.io/providers/bank-of-new-york-mellon/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: accountName
+      type: accountType
+      status: status
+      currency: currency
+      account_number: accountNumber
+      account_id: accountId
+      routing_number: bankCode
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts
+    - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts/{accountId}
+  balance:
+    path_segment:
+    - balances
+    properties:
+      account_id: accountId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts/{accountId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts/{accountId}/transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+      rail: paymentType
+      currency: currency
+      payment_id: paymentId
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /payments
+    - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /payments/{paymentId}
+    - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#POST /payments

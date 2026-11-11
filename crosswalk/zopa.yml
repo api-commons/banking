@@ -1,0 +1,49 @@
+provider: zopa
+apis_io: https://apis.io/providers/zopa/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zopa-account-info-openapi-original.yml#GET /accounts
+    - openapi/_original/zopa-account-info-openapi-original.yml#GET /accounts/{AccountId}
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zopa-account-info-openapi-original.yml#GET /accounts/{AccountId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zopa-account-info-openapi-original.yml#GET /accounts/{AccountId}/transactions
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zopa-account-info-openapi-original.yml#GET /accounts/{AccountId}/beneficiaries
+  transfer:
+    path_segment:
+    - domestic-payments
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zopa-payment-initiation-openapi-original.yml#GET /domestic-payments/{DomesticPaymentId}
+    - openapi/_original/zopa-payment-initiation-openapi-original.yml#POST /domestic-payments
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zopa-account-info-openapi-original.yml#GET /accounts/{AccountId}/statements

@@ -1,0 +1,36 @@
+provider: triodos-bank-uk
+apis_io: https://apis.io/providers/triodos-bank-uk/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      status: status
+      currency: currency
+      id: resourceId
+      account_number: iban
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v1/accounts
+    - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v1/accounts/{account-id}
+  balance:
+    path_segment:
+    - balances
+    properties:
+      account_id: account
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v1/accounts/{account-id}/balances
+    - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v2/savings/{account-id}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      account_id: account
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v1/accounts/{account-id}/transactions
+    - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v2/savings/{account-id}/transactions

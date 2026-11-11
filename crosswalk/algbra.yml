@@ -1,0 +1,65 @@
+provider: algbra
+apis_io: https://apis.io/providers/algbra/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - account
+    properties:
+      type: type
+      status: state
+      currency: currencyCode
+      id: id
+      balance: balance
+      account_id:
+      - accountId
+      - sourceAccountId
+      created_at: createdOn
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/accounts
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/accounts/{accountId}
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/automated-payments/accounts/{accountId}
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/customers/{customerId}/accounts
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/customers/{customerId}/accounts/{accountId}
+  balance:
+    path_segment:
+    - balance
+    properties:
+      available: availableBalance
+      currency: currency
+      current: ledgerBalance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/accounts/{accountId}/balance
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/customers/{customerId}/accounts/{accountId}/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      amount: amount
+      status: state
+      description: description
+      account_id:
+      - accountId
+      - sourceAccountId
+      posted_at: transactionDate
+      currency: currencyCode
+      category: category
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/customers/{customerId}/transactions
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/transactions
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/transactions/{transactionId}
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      created_at: createdOn
+      payment_id: paymentId
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/algbra-openapi.json#GET /v1/partner/payments/{paymentId}

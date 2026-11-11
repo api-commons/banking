@@ -1,0 +1,52 @@
+provider: uphold
+apis_io: https://apis.io/providers/uphold/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: label
+      id: id
+      balance: balance
+      created_at: createdAt
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/uphold-core-api-openapi.json#DELETE /core/accounts/{accountId}
+    - openapi/_original/uphold-core-api-openapi.json#GET /core/accounts
+    - openapi/_original/uphold-core-api-openapi.json#GET /core/accounts/{accountId}
+    - openapi/_original/uphold-core-api-openapi.json#PATCH /core/accounts/{accountId}
+    - openapi/_original/uphold-core-api-openapi.json#POST /core/accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      status: status
+      created_at: createdAt
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/uphold-core-api-openapi.json#GET /core/accounts/{accountId}/transactions
+    - openapi/_original/uphold-core-api-openapi.json#GET /core/statements/transactions
+    - openapi/_original/uphold-core-api-openapi.json#GET /core/transactions
+    - openapi/_original/uphold-core-api-openapi.json#GET /core/transactions/{transactionId}
+    - openapi/_original/uphold-core-api-openapi.json#POST /core/transactions
+  beneficiary:
+    path_segment:
+    - external-accounts
+    properties:
+      id: id
+      name: label
+      created_at: createdAt
+      account_number: number
+      status: status
+      type: type
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/uphold-core-api-openapi.json#DELETE /core/external-accounts/{externalAccountId}
+    - openapi/_original/uphold-core-api-openapi.json#GET /core/external-accounts
+    - openapi/_original/uphold-core-api-openapi.json#GET /core/external-accounts/{externalAccountId}
+    - openapi/_original/uphold-core-api-openapi.json#PATCH /core/external-accounts/{externalAccountId}
+    - openapi/_original/uphold-core-api-openapi.json#POST /core/external-accounts

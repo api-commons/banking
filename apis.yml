@@ -1,0 +1,60 @@
+aid: common-banking
+name: Banking
+type: Common
+description: 'The common Banking vocabulary, distilled from the harvested OpenAPI of 315 providers in APIs.io: shared
+  operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each provider''s
+  own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Banking
+- Open Banking
+- Consumer Banking
+- Banking as a Service
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/banking/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-banking:banking
+  name: Common Banking Interface
+  description: The Banking interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/banking
+  tags:
+  - Banking
+  - Open Banking
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/banking/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/banking/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/banking/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: bank_account
+    url: https://raw.githubusercontent.com/api-commons/banking/main/schema/bank_account.json
+  - type: JSONSchema
+    name: balance
+    url: https://raw.githubusercontent.com/api-commons/banking/main/schema/balance.json
+  - type: JSONSchema
+    name: transaction
+    url: https://raw.githubusercontent.com/api-commons/banking/main/schema/transaction.json
+  - type: JSONSchema
+    name: beneficiary
+    url: https://raw.githubusercontent.com/api-commons/banking/main/schema/beneficiary.json
+  - type: JSONSchema
+    name: transfer
+    url: https://raw.githubusercontent.com/api-commons/banking/main/schema/transfer.json
+  - type: JSONSchema
+    name: statement
+    url: https://raw.githubusercontent.com/api-commons/banking/main/schema/statement.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/banking/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

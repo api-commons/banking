@@ -1,0 +1,40 @@
+provider: dwolla
+apis_io: https://apis.io/providers/dwolla/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/dwolla-accounts-openapi.yml#GET /accounts/{id}
+    - openapi/_original/dwolla-openapi.yml#GET /accounts/{id}
+  balance:
+    path_segment:
+    - balance
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dwolla-funding-sources-openapi.yml#GET /funding-sources/{id}/balance
+    - openapi/_original/dwolla-openapi.yml#GET /funding-sources/{id}/balance
+  transfer:
+    path_segment:
+    - transfers
+    properties:
+      amount: amount
+      status: status
+      created_at: created
+      id: id
+      metadata: metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/dwolla-accounts-openapi.yml#GET /accounts/{id}/transfers
+    - openapi/_original/dwolla-openapi.yml#GET /accounts/{id}/transfers
+    - openapi/_original/dwolla-openapi.yml#GET /customers/{id}/transfers
+    - openapi/_original/dwolla-openapi.yml#GET /transfers/{id}
+    - openapi/_original/dwolla-openapi.yml#POST /transfers

@@ -1,0 +1,13 @@
+provider: spliceforms
+apis_io: https://apis.io/providers/spliceforms/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/spliceforms-capture-services-openapi.yml#GET /v1/application-forms/{applicationId}/accounts/{accountSerialNo}
+    - openapi/_original/spliceforms-capture-services-openapi.yml#POST /v1/application-forms/{applicationId}/accounts

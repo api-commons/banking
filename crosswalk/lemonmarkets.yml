@@ -1,0 +1,33 @@
+provider: lemonmarkets
+apis_io: https://apis.io/providers/lemonmarkets/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      status: status
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/lemonmarkets-brokerage-openapi.json#GET /accounts
+    - openapi/_original/lemonmarkets-brokerage-openapi.json#GET /accounts/{account_id}
+    - openapi/_original/lemonmarkets-brokerage-openapi.json#POST /accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: status
+      direction:
+      - type
+      - direction
+      currency: currency
+      created_at: created_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/lemonmarkets-brokerage-openapi.json#GET /accounts/{account_id}/transactions
+    - openapi/_original/lemonmarkets-brokerage-openapi.json#GET /accounts/{account_id}/transactions/{transaction_id}
+    - openapi/_original/lemonmarkets-brokerage-openapi.json#GET /settlement_accounts/{settlement_account_id}/transactions

@@ -1,0 +1,55 @@
+provider: chariot
+apis_io: https://apis.io/providers/chariot/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - financial_accounts
+    properties:
+      name: nickname
+      type:
+      - accountType
+      - account_type
+      status: status
+      currency: currency
+      id: id
+      account_number:
+      - accountNumber
+      - accountNumberDisplay
+      balance:
+      - currentBalance
+      - availableBalance
+      account_id: accountId
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/chariot-fdx-openapi-original.yml#GET /accounts
+    - openapi/_original/chariot-fdx-openapi-original.yml#GET /accounts/{id}
+    - openapi/_original/chariot-openapi-original.yml#GET /v1/financial_accounts
+    - openapi/_original/chariot-openapi-original.yml#GET /v1/financial_accounts/{id}
+  balance:
+    path_segment:
+    - balance
+    properties:
+      available: available_balance
+      current: current_balance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/chariot-openapi-original.yml#GET /v1/financial_accounts/{id}/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/chariot-fdx-openapi-original.yml#GET /accounts/{id}/transactions
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/chariot-fdx-openapi-original.yml#GET /accounts/{id}/statements
+    - openapi/_original/chariot-fdx-openapi-original.yml#GET /accounts/{id}/statements/{statementId}

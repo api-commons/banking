@@ -1,0 +1,90 @@
+provider: revolut
+apis_io: https://apis.io/providers/revolut/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      status: state
+      currency: currency
+      id: id
+      balance: balance
+      created_at: created_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/revolut-business-openapi.yaml#GET /accounts
+    - openapi/_original/revolut-business-openapi.yaml#GET /accounts/{account_id}
+    - openapi/_original/revolut-open-banking-openapi.yaml#GET /accounts
+    - openapi/_original/revolut-open-banking-openapi.yaml#GET /accounts/{AccountId}
+  balance:
+    path_segment:
+    - balances
+    properties:
+      available: available
+      currency: currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/revolut-open-banking-openapi.yaml#GET /accounts/{AccountId}/balances
+    - openapi/_original/revolut-x-openapi.yaml#GET /balances
+  transaction:
+    path_segment:
+    - transactions
+    - transaction
+    properties:
+      id: id
+      status: state
+      direction: type
+      description: reference
+      created_at: created_at
+      merchant_name: merchant
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/revolut-business-openapi.yaml#GET /transaction/{id}
+    - openapi/_original/revolut-business-openapi.yaml#GET /transactions
+    - openapi/_original/revolut-open-banking-openapi.yaml#GET /accounts/{AccountId}/transactions
+  beneficiary:
+    path_segment:
+    - counterparty
+    - counterparties
+    - beneficiaries
+    properties:
+      id: id
+      name: name
+      created_at: created_at
+      account_number: iban
+      status: state
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/revolut-business-openapi.yaml#DELETE /counterparty/{counterparty_id}
+    - openapi/_original/revolut-business-openapi.yaml#GET /counterparties
+    - openapi/_original/revolut-business-openapi.yaml#GET /counterparty/{counterparty_id}
+    - openapi/_original/revolut-business-openapi.yaml#POST /counterparty
+    - openapi/_original/revolut-open-banking-openapi.yaml#GET /accounts/{AccountId}/beneficiaries
+  transfer:
+    path_segment:
+    - payments
+    - domestic-payments
+    - international-payments
+    - transfer
+    - transfers
+    properties:
+      amount: amount
+      status: state
+      created_at: created_at
+      description: reference
+      id: id
+      rail: type
+      currency: currency
+      from_account_id: source_account_id
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/revolut-business-openapi.yaml#DELETE /payment-drafts/{payment_draft_id}/payments/{payment_id}
+    - openapi/_original/revolut-business-openapi.yaml#PATCH /payment-drafts/{payment_draft_id}/payments/{payment_id}
+    - openapi/_original/revolut-business-openapi.yaml#POST /payment-drafts/{payment_draft_id}/payments
+    - openapi/_original/revolut-business-openapi.yaml#POST /transfer
+    - openapi/_original/revolut-merchant-openapi.yaml#GET /api/orders/{order_id}/payments

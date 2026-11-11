@@ -1,0 +1,94 @@
+provider: narmi
+apis_io: https://apis.io/providers/narmi/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - account
+    properties:
+      name:
+      - name
+      - nickname
+      type:
+      - type
+      - product_type
+      status: state
+      id: id
+      account_number:
+      - number
+      - account_number
+      balance: balances
+      created_at: created_at
+      routing_number: routing_number
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/narmi-public-openapi-original.yml#DELETE /v1/accounts/{uuid}/
+    - openapi/_original/narmi-public-openapi-original.yml#DELETE /v1/alerts/account/{uuid}/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/accounts/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/accounts/{uuid}/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/alerts/account/
+  transaction:
+    path_segment:
+    - transaction
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      direction: type
+      description:
+      - description
+      - note
+      account_id: account_id
+      posted_at: settled_at
+      created_at: created_at
+      merchant_name: merchant
+      category: category
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/narmi-public-openapi-original.yml#DELETE /v1/alerts/transaction/{uuid}/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/accounts/{account_uuids}/transactions/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/alerts/transaction/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/alerts/transaction/{uuid}/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/transactions/
+  beneficiary:
+    path_segment:
+    - payees
+    - recipients
+    properties:
+      id: id
+      name:
+      - name
+      - nickname
+      account_number: account_number
+      type: type
+      description: description
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/narmi-public-openapi-original.yml#DELETE /v1/payees/{id}/
+    - openapi/_original/narmi-public-openapi-original.yml#DELETE /v1/recipients/{uuid}/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/payees/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/payees/{id}/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/recipients/
+  transfer:
+    path_segment:
+    - payments
+    - transfers
+    properties:
+      amount: amount
+      status: state
+      created_at: created_at
+      description: memo
+      id: id
+      rail: type
+      from_account_id: from_account_id
+      to_account_id: to_account_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/narmi-public-openapi-original.yml#DELETE /v1/payments/{id}/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/payments/
+    - openapi/_original/narmi-public-openapi-original.yml#GET /v1/transfers/
+    - openapi/_original/narmi-public-openapi-original.yml#POST /v1/payments/
+    - openapi/_original/narmi-public-openapi-original.yml#POST /v1/transfers/

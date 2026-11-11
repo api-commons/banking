@@ -1,0 +1,38 @@
+provider: galileo-fs
+apis_io: https://apis.io/providers/galileo-fs/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      status: status
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/galileo-fs-openapi.yml#POST /pro/program/accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      status: status
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/galileo-fs-openapi.yml#POST /pro/program/transactions
+  beneficiary:
+    path_segment:
+    - external-accounts
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/galileo-fs-openapi.yml#POST /pro/payment-hub/external-accounts
+  transfer:
+    path_segment:
+    - transfers
+    properties:
+      status: status
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/galileo-fs-openapi.yml#POST /pro/payment-hub/transfers

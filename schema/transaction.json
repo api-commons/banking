@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/banking/main/schema/transaction.json",
+  "title": "Transaction",
+  "description": "The common transaction in Banking, distilled from 110 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.727,
+      "x-commons-providers": 80,
+      "x-commons-spellings": [
+        "id",
+        "transactionId",
+        "transaction_id",
+        "guid",
+        "resourceId",
+        "uuid",
+        "transactionID",
+        "TransactionID"
+      ]
+    },
+    "amount": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.709,
+      "x-commons-providers": 78,
+      "x-commons-spellings": [
+        "amount",
+        "transactionAmount",
+        "instructedAmount",
+        "instructed_amount",
+        "transaction_amount",
+        "Amount"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.627,
+      "x-commons-providers": 69,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "transactionStatus",
+        "Status",
+        "transaction_status",
+        "TransactionStatus"
+      ]
+    },
+    "direction": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.582,
+      "x-commons-providers": 64,
+      "x-commons-spellings": [
+        "type",
+        "transactionType",
+        "direction",
+        "transaction_type",
+        "credit_debit_indicator",
+        "creditDebitIndicator",
+        "debit_credit"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.564,
+      "x-commons-providers": 62,
+      "x-commons-spellings": [
+        "description",
+        "reference",
+        "memo",
+        "notes",
+        "remittanceInformation",
+        "note",
+        "transactionInformation",
+        "Note"
+      ]
+    },
+    "account_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.455,
+      "x-commons-providers": 50,
+      "x-commons-spellings": [
+        "account_id",
+        "accountId",
+        "account",
+        "sourceAccountId",
+        "bankAccountId",
+        "internalAccountId",
+        "bank_account_id"
+      ]
+    },
+    "posted_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.445,
+      "x-commons-providers": 49,
+      "x-commons-spellings": [
+        "date",
+        "transactionDate",
+        "bookingDate",
+        "posted_at",
+        "postedDate",
+        "value_date_time",
+        "valueDateTime",
+        "settled_at"
+      ],
+      "format": "date-time"
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.364,
+      "x-commons-providers": 40,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code",
+        "currencyCode",
+        "Currency"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.336,
+      "x-commons-providers": 37,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "createdDate",
+        "created",
+        "creationDate",
+        "created_on",
+        "dateCreated",
+        "createdOn"
+      ],
+      "format": "date-time"
+    },
+    "merchant_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.309,
+      "x-commons-providers": 34,
+      "x-commons-spellings": [
+        "merchant",
+        "merchantName",
+        "payee",
+        "merchant_name",
+        "creditorName",
+        "debtorName",
+        "counterpartyName",
+        "counterparty_name"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.291,
+      "x-commons-providers": 32,
+      "x-commons-spellings": [
+        "category",
+        "categories",
+        "categoryId",
+        "bankTransactionCode",
+        "transactionCode",
+        "category_id"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "banking",
+    "concept": "transaction",
+    "providers": 110,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

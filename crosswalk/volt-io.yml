@@ -1,0 +1,42 @@
+provider: volt-io
+apis_io: https://apis.io/providers/volt-io/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      status: status
+      currency: currency
+      id: id
+      balance: balance
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/volt-io-accounts-openapi-original.yaml#GET /accounts
+    - openapi/_original/volt-io-accounts-openapi-original.yaml#GET /accounts/{accountId}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: status
+      direction: type
+      currency: currency
+      created_at: createdAt
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/volt-io-accounts-openapi-original.yaml#GET /transactions
+    - openapi/_original/volt-io-accounts-openapi-original.yaml#GET /transactions/{transactionId}
+    - openapi/_original/volt-io-accounts-openapi-original.yaml#POST /accounts/{accountId}/transactions
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/volt-io-accounts-openapi-original.yaml#GET /accounts/{accountId}/beneficiaries

@@ -1,0 +1,95 @@
+provider: pluggy
+apis_io: https://apis.io/providers/pluggy/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type:
+      - type
+      - subtype
+      currency: currencyCode
+      id: id
+      account_number: number
+      balance: balance
+      created_at: createdAt
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/pluggy-api.json#GET /accounts
+    - openapi/_original/pluggy-api.json#GET /accounts/{id}
+  balance:
+    path_segment:
+    - balance
+    properties:
+      currency: currencyCode
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/pluggy-api.json#GET /accounts/{id}/balance
+    - openapi/_original/pluggy-api.json#GET /smart-transfers/preauthorizations/{id}/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: status
+      direction: type
+      description: description
+      account_id: accountId
+      posted_at: date
+      currency: currencyCode
+      created_at: createdAt
+      merchant_name: merchant
+      category:
+      - category
+      - categoryId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pluggy-api.json#GET /investments/{id}/transactions
+    - openapi/_original/pluggy-api.json#GET /transactions
+    - openapi/_original/pluggy-api.json#GET /transactions/{id}
+    - openapi/_original/pluggy-api.json#GET /v2/transactions
+    - openapi/_original/pluggy-api.json#PATCH /transactions/{id}
+  beneficiary:
+    path_segment:
+    - recipients
+    properties:
+      id: id
+      name: name
+      created_at: createdAt
+      account_number: account
+      type: type
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pluggy-api.json#DELETE /payments/recipients/{id}
+    - openapi/_original/pluggy-api.json#GET /payments/recipients
+    - openapi/_original/pluggy-api.json#GET /payments/recipients/{id}
+    - openapi/_original/pluggy-api.json#PATCH /payments/recipients/{id}
+    - openapi/_original/pluggy-api.json#POST /payments/recipients
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+      description: description
+      id: id
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pluggy-api.json#GET /smart-transfers/payments/{id}
+    - openapi/_original/pluggy-api.json#GET /smart-transfers/preauthorizations/{id}/payments
+    - openapi/_original/pluggy-api.json#POST /smart-transfers/payments
+  statement:
+    path_segment:
+    - statements
+    properties:
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/pluggy-api.json#GET /accounts/{id}/statements

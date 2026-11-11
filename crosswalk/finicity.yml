@@ -1,0 +1,63 @@
+provider: finicity
+apis_io: https://apis.io/providers/finicity/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      status: status
+      currency: currency
+      id: id
+      account_number:
+      - number
+      - accountNumberDisplay
+      - accountNumberLast4
+      balance: balance
+      created_at:
+      - createdDate
+      - creationDate
+      routing_number: routingNumber
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#DELETE /aggregation/v1/customers/{customerId}/accounts/{accountId}
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/v1/customers/{customerId}/accounts
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/v1/customers/{customerId}/institutionLogins/{institutionLoginId}/accounts
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/v1/customers/{customerId}/institutions/{institutionId}/accounts
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/v1/paysuite/customers/{customerId}/accounts/{accountId}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: status
+      direction: type
+      description:
+      - description
+      - memo
+      account_id: accountId
+      posted_at:
+      - transactionDate
+      - postedDate
+      created_at: createdDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/customers/{customerId}/transactions/{uniqueTransactionId}
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/v2/customers/{customerId}/transactions/{transactionId}
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/v3/customers/{customerId}/transactions
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/v4/customers/{customerId}/accounts/{accountId}/transactions
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#POST /aggregation/v1/customers/{customerId}/accounts/{accountId}/transactions
+  statement:
+    path_segment:
+    - statement
+    properties:
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/v1/customers/{customerId}/accounts/{accountId}/statement
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#GET /aggregation/v3/customers/{customerId}/accounts/{accountId}/statement
+    - openapi/_original/finicity-openbanking-us-openapi-original.yml#POST /decisioning/v2/customers/{customerId}/statement

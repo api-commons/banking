@@ -1,0 +1,65 @@
+provider: bank-of-america
+apis_io: https://apis.io/providers/bank-of-america/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: accountName
+      type: accountType
+      status: status
+      currency: currency
+      account_number: accountNumber
+      account_id: accountId
+      routing_number: routingNumber
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts/{accountId}
+  balance:
+    path_segment:
+    - balances
+    properties:
+      account_id: accountId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts/{accountId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts/{accountId}/transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+      description:
+      - reference
+      - memo
+      rail: paymentType
+      currency: currency
+      updated_at: updatedAt
+      payment_id: paymentId
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#DELETE /payments/{paymentId}
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /payments
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /payments/{paymentId}
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#POST /payments
+  statement:
+    path_segment:
+    - statements
+    properties:
+      id: statementId
+      account_id: accountId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /statements
+    - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /statements/{statementId}

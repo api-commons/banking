@@ -1,0 +1,83 @@
+provider: wordline
+apis_io: https://apis.io/providers/wordline/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      status: status
+      account_number: iban
+      routing_number: bic
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/{accountReference}
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/contracts/external-contracts/{issuerContractExternalReference}/accounts
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/contracts/{contractReference}/accounts
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/customers/external-customers/{issuerCustomerExternalReference}/accounts
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/customers/{customerReference}/accounts
+  balance:
+    path_segment:
+    - balances
+    - balance
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/external-accounts/{issuerAccountExternalReference}/balance
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/{accountReference}/balance
+    - openapi/_original/worldline-merchant-contract-api-2.0.4.yaml#GET /acquiring/contract/v2.0/acquirers/{acquirerId}/contracts/{contractId}/balances
+    - openapi/_original/worldline-merchant-contract-api-2.0.4.yaml#GET /acquiring/contract/v2.0/acquirers/{acquirerId}/contracts/{contractId}/sites/{siteId}/balances
+    - openapi/_original/worldline-merchant-contract-api-2.0.4.yaml#GET /acquiring/contract/v2.0/acquirers/{acquirerId}/contracts/{contractId}/sites/{siteId}/terminals/{terminalId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      amount: transactionAmount
+      status: status
+      direction: creditDebitIndicator
+      posted_at:
+      - transactionDate
+      - bookingDate
+      created_at: creationDate
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/transactions/{transactionId}
+    - openapi/_original/worldline-interchange-fees-api.yaml#GET /acquiring/interchangefees/v2.0/acquirers/{acquirerId}/transactions/{transactionId}
+  beneficiary:
+    path_segment:
+    - external-accounts
+    properties:
+      name: name
+      account_number:
+      - iban
+      - account
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/external-accounts/{issuerAccountExternalReference}
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/corporate-contracts/external-contracts/{issuerContractExternalReference}/corporate-employee-accounts/external-accounts/{issuerAccountExternalReference}
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/corporate-contracts/{contractReference}/corporate-employee-accounts/external-accounts/{issuerAccountExternalReference}
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#PATCH /issuers/{issuerId}/accounts/external-accounts/{issuerAccountExternalReference}
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#PATCH /issuers/{issuerId}/contracts/external-contracts/{issuerContractExternalReference}/contract-fees/external-accounts/{issuerAccountExternalReference}
+  transfer:
+    path_segment:
+    - payments
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/worldline-interchange-fees-api.yaml#GET /acquiring/interchangefees/v2.0/acquirers/{acquirerId}/payments
+    - openapi/_original/worldline-open-banking-payment-initiation-3.15.0.yaml#DELETE /payments/{paymentId}
+    - openapi/_original/worldline-open-banking-payment-initiation-3.15.0.yaml#POST /payments
+  statement:
+    path_segment:
+    - statements
+    properties:
+      created_at: creationDate
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/external-accounts/{issuerAccountExternalReference}/statements
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/external-accounts/{issuerAccountExternalReference}/statements/{cycleClosureDate}
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/{accountReference}/statements
+    - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/{accountReference}/statements/{cycleClosureDate}

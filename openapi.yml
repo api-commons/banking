@@ -1,0 +1,419 @@
+openapi: 3.1.0
+info:
+  title: Banking (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Banking interface, distilled from the harvested OpenAPI of 315 providers in the APIs.io
+    catalog. Not a product: no one serves this API. It is the shape the market already shares, measured, so that
+    providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /bank-accounts:
+    get:
+      operationId: listBankAccounts
+      summary: List bank accounts
+      tags:
+      - Bank Accounts
+      x-commons-tier: core
+      x-commons-share: 0.89
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/BankAccount'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createBankAccount
+      summary: Create a bank account
+      tags:
+      - Bank Accounts
+      x-commons-tier: extended
+      x-commons-share: 0.493
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /bank-accounts/{bank_account_id}:
+    parameters:
+    - $ref: '#/components/parameters/bank_account_id'
+    get:
+      operationId: getBankAccount
+      summary: Get a bank account
+      tags:
+      - Bank Accounts
+      x-commons-tier: core
+      x-commons-share: 0.801
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateBankAccount
+      summary: Update a bank account
+      tags:
+      - Bank Accounts
+      x-commons-tier: extended
+      x-commons-share: 0.316
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /balances:
+    get:
+      operationId: listBalances
+      summary: List balances
+      tags:
+      - Balances
+      x-commons-tier: core
+      x-commons-share: 0.946
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Balance'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /transactions:
+    get:
+      operationId: listTransactions
+      summary: List transactions
+      tags:
+      - Transactions
+      x-commons-tier: core
+      x-commons-share: 0.949
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Transaction'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createTransaction
+      summary: Create a transaction
+      tags:
+      - Transactions
+      x-commons-tier: extended
+      x-commons-share: 0.246
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /transactions/{transaction_id}:
+    parameters:
+    - $ref: '#/components/parameters/transaction_id'
+    get:
+      operationId: getTransaction
+      summary: Get a transaction
+      tags:
+      - Transactions
+      x-commons-tier: core
+      x-commons-share: 0.559
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+  /beneficiaries:
+    get:
+      operationId: listBeneficiaries
+      summary: List beneficiaries
+      tags:
+      - Beneficiaries
+      x-commons-tier: core
+      x-commons-share: 0.907
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Beneficiary'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createBeneficiary
+      summary: Create a beneficiary
+      tags:
+      - Beneficiaries
+      x-commons-tier: core
+      x-commons-share: 0.558
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /beneficiaries/{beneficiary_id}:
+    parameters:
+    - $ref: '#/components/parameters/beneficiary_id'
+    get:
+      operationId: getBeneficiary
+      summary: Get a beneficiary
+      tags:
+      - Beneficiaries
+      x-commons-tier: core
+      x-commons-share: 0.605
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateBeneficiary
+      summary: Update a beneficiary
+      tags:
+      - Beneficiaries
+      x-commons-tier: extended
+      x-commons-share: 0.326
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+    delete:
+      operationId: deleteBeneficiary
+      summary: Delete a beneficiary
+      tags:
+      - Beneficiaries
+      x-commons-tier: extended
+      x-commons-share: 0.302
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /transfers:
+    post:
+      operationId: createTransfer
+      summary: Create a transfer
+      tags:
+      - Transfers
+      x-commons-tier: core
+      x-commons-share: 0.877
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id004
+                $ref: '#/components/schemas/Transfer'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+    get:
+      operationId: listTransfers
+      summary: List transfers
+      tags:
+      - Transfers
+      x-commons-tier: core
+      x-commons-share: 0.644
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id004
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /transfers/{transfer_id}:
+    parameters:
+    - $ref: '#/components/parameters/transfer_id'
+    get:
+      operationId: getTransfer
+      summary: Get a transfer
+      tags:
+      - Transfers
+      x-commons-tier: core
+      x-commons-share: 0.74
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+  /statements:
+    get:
+      operationId: listStatements
+      summary: List statements
+      tags:
+      - Statements
+      x-commons-tier: core
+      x-commons-share: 0.918
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Statement'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /statements/{statement_id}:
+    parameters:
+    - $ref: '#/components/parameters/statement_id'
+    get:
+      operationId: getStatement
+      summary: Get a statement
+      tags:
+      - Statements
+      x-commons-tier: extended
+      x-commons-share: 0.469
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+components:
+  schemas:
+    BankAccount:
+      $ref: ./schema/bank_account.json
+    Balance:
+      $ref: ./schema/balance.json
+    Transaction:
+      $ref: ./schema/transaction.json
+    Beneficiary:
+      $ref: ./schema/beneficiary.json
+    Transfer:
+      $ref: ./schema/transfer.json
+    Statement:
+      $ref: ./schema/statement.json
+  parameters:
+    bank_account_id:
+      name: bank_account_id
+      in: path
+      required: true
+      schema:
+        type: string
+    balance_id:
+      name: balance_id
+      in: path
+      required: true
+      schema:
+        type: string
+    transaction_id:
+      name: transaction_id
+      in: path
+      required: true
+      schema:
+        type: string
+    beneficiary_id:
+      name: beneficiary_id
+      in: path
+      required: true
+      schema:
+        type: string
+    transfer_id:
+      name: transfer_id
+      in: path
+      required: true
+      schema:
+        type: string
+    statement_id:
+      name: statement_id
+      in: path
+      required: true
+      schema:
+        type: string

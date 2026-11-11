@@ -1,0 +1,28 @@
+provider: falcon
+apis_io: https://apis.io/providers/falcon/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - account
+    properties:
+      status:
+      - status
+      - transactionStatus
+      currency: currency
+      account_id: accountId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/falcon-credit-card-account-apis-openapi.yml#GET /account/{accountId}
+    - openapi/_original/falcon-credit-card-account-apis-openapi.yml#POST /user/{userId}/account
+    - openapi/_original/falcon-credit-card-account-apis-openapi.yml#PUT /account
+    - openapi/_original/falcon-funding-apis-openapi.yml#POST /account
+    - openapi/_original/falcon-transaction-apis-openapi.yml#GET /account/{accountId}
+  transfer:
+    path_segment:
+    - payment
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/falcon-repayment-apis-openapi.yml#POST /account/{accountID}/net-banking/payment

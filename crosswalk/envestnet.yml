@@ -1,0 +1,74 @@
+provider: envestnet
+apis_io: https://apis.io/providers/envestnet/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - account
+    properties:
+      name:
+      - nickname
+      - accountName
+      type: accountType
+      status: accountStatus
+      id: id
+      account_number: accountNumber
+      balance:
+      - balance
+      - currentBalance
+      - availableBalance
+      created_at: createdDate
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/envestnet-account-aggregation-openapi-original.yml#DELETE /accounts/{accountId}
+    - openapi/_original/envestnet-account-aggregation-openapi-original.yml#GET /accounts
+    - openapi/_original/envestnet-account-aggregation-openapi-original.yml#GET /accounts/{accountId}
+    - openapi/_original/envestnet-account-aggregation-openapi-original.yml#POST /accounts
+    - openapi/_original/envestnet-account-aggregation-openapi-original.yml#PUT /accounts/{accountId}
+  balance:
+    path_segment:
+    - balance
+    properties:
+      available: availableBalance
+      current: currentBalance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/envestnet-account-token-openapi-original.yml#GET /partner/paymentProcessor/account/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: status
+      direction: type
+      description:
+      - description
+      - memo
+      account_id: accountId
+      posted_at:
+      - date
+      - transactionDate
+      created_at: createdDate
+      merchant_name: merchant
+      category:
+      - category
+      - categoryId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/envestnet-account-aggregation-openapi-original.yml#GET /transactions
+    - openapi/_original/envestnet-account-aggregation-openapi-original.yml#PUT /transactions/{transactionId}
+    - openapi/_original/envestnet-personalized-views-openapi-original.yml#GET /views/{viewId}/transactions
+    - openapi/_original/envestnet-verification-openapi-original.yml#GET /transactions
+  statement:
+    path_segment:
+    - statements
+    properties:
+      id: id
+      account_id: accountId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/envestnet-account-aggregation-openapi-original.yml#GET /statements
+    - openapi/_original/envestnet-credit-accelerator-openapi-original.yml#GET /creditAccelerator/report/statements

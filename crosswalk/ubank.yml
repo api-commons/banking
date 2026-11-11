@@ -1,0 +1,128 @@
+provider: ubank
+apis_io: https://apis.io/providers/ubank/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - account
+    properties:
+      name:
+      - displayName
+      - nickname
+      type:
+      - type
+      - accountType
+      status: status
+      currency: currency
+      id: id
+      account_number:
+      - maskedNumber
+      - accountNumber
+      balance:
+      - balances
+      - currentBalance
+      account_id: accountId
+      created_at: creationDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/alex-bank-cds-banking-products-openapi.yml#GET /banking/accounts
+    - openapi/_original/alex-bank-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}
+    - openapi/_original/amp-bank-cds-banking-products-openapi.yml#GET /banking/accounts
+    - openapi/_original/amp-bank-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}
+    - openapi/_original/anz-cds-banking-products-openapi.yml#GET /banking/accounts
+    shared_spec: au-cdr-banking
+  balance:
+    path_segment:
+    - balances
+    - balance
+    properties:
+      account_id: accountId
+      available: availableBalance
+      currency: currency
+      current: currentBalance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/alex-bank-cds-banking-products-openapi.yml#GET /banking/accounts/balances
+    - openapi/_original/alex-bank-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}/balance
+    - openapi/_original/alex-bank-cds-banking-products-openapi.yml#POST /banking/accounts/balances
+    - openapi/_original/amp-bank-cds-banking-products-openapi.yml#GET /banking/accounts/balances
+    - openapi/_original/amp-bank-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}/balance
+    shared_spec: au-cdr-banking
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id:
+      - transactionId
+      - id
+      amount: amount
+      status: status
+      direction: type
+      description:
+      - description
+      - reference
+      account_id: accountId
+      posted_at: valueDateTime
+      currency: currency
+      merchant_name:
+      - merchantName
+      - payee
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/alex-bank-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}/transactions
+    - openapi/_original/alex-bank-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}/transactions/{transactionId}
+    - openapi/_original/amp-bank-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}/transactions
+    - openapi/_original/amp-bank-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}/transactions/{transactionId}
+    - openapi/_original/anz-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}/transactions
+    shared_spec: au-cdr-banking
+  beneficiary:
+    path_segment:
+    - payees
+    properties:
+      name: nickname
+      created_at: creationDate
+      type: type
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/alex-bank-cds-banking-products-openapi.yml#GET /banking/payees
+    - openapi/_original/alex-bank-cds-banking-products-openapi.yml#GET /banking/payees/{payeeId}
+    - openapi/_original/amp-bank-cds-banking-products-openapi.yml#GET /banking/payees
+    - openapi/_original/amp-bank-cds-banking-products-openapi.yml#GET /banking/payees/{payeeId}
+    - openapi/_original/anz-cds-banking-products-openapi.yml#GET /banking/payees
+    shared_spec: au-cdr-banking
+  transfer:
+    path_segment:
+    - transfers
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: createdDate
+      description: memo
+      id:
+      - id
+      - transferId
+      rail: paymentType
+      currency: currency
+      from_account_id: fromAccountId
+      to_account_id: toAccountId
+      payment_id: paymentId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/fiserv-bankinghub-openapi.yml#GET /banking/transfers/{transferId}
+    - openapi/_original/fiserv-bankinghub-openapi.yml#POST /banking/payments
+    - openapi/_original/fiserv-bankinghub-openapi.yml#POST /banking/transfers
+    - openapi/_original/national-australia-bank-gateway-payments-swagger.json#GET /rbs/v1/subscriptions/{id}/payments
+    - openapi/_original/national-australia-bank-gateway-payments-swagger.json#PATCH /pts/v2/payments/{id}
+    shared_spec: au-cdr-banking
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fiserv-carddeveloper-openapi.yml#GET /v1/accounts/{accountNumber}/statements
+    shared_spec: au-cdr-banking

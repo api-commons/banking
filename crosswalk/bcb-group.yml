@@ -1,0 +1,68 @@
+provider: bcb-group
+apis_io: https://apis.io/providers/bcb-group/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: account_type
+      id: id
+      account_number: iban
+      created_at: created_at
+      routing_number: bic
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/bcb-group-payments-openapi.json#GET /v3/accounts
+    - openapi/_original/bcb-group-payments-openapi.json#POST /v4/accounts
+  balance:
+    path_segment:
+    - balance
+    properties:
+      account_id: accountId
+      available: available
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bcb-group-payments-openapi.json#GET /v4/accounts/balance/{accountId}
+  transaction:
+    path_segment:
+    - transactions
+    - transaction
+    properties:
+      id: transactionId
+      amount: amount
+      status: status
+      description: notes
+      account_id: account_id
+      currency: currency
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/bcb-group-payments-openapi.json#GET /v1/payments/{accountId}/transaction/{transactionId}
+    - openapi/_original/bcb-group-payments-openapi.json#GET /v3/accounts/{accountId}/transactions
+    - openapi/_original/bcb-group-payments-openapi.json#GET /v3/accounts/{accountId}/transactions/{transactionId}
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties:
+      id: id
+      created_at: created_at
+      account_number: iban
+      description: description
+      updated_at: updated_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/bcb-group-payments-openapi.json#GET /v3/beneficiaries
+  transfer:
+    path_segment:
+    - payments
+    - payment
+    properties:
+      amount: amount
+      description: reference
+      currency: currency
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/bcb-group-payments-openapi.json#GET /v1/payments/{accountId}
+    - openapi/_original/bcb-group-payments-openapi.json#POST /v1/accounts/{accountId}/virtual/{iban}/payment

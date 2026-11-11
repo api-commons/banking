@@ -1,0 +1,70 @@
+provider: raiffeisen-ru
+apis_io: https://apis.io/providers/raiffeisen-ru/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      status: state
+      currency: currency
+      id: id
+      account_number: accountNumber
+      balance: availableBalance
+      routing_number: bic
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/raiffeisen-ru-agency-factoring-openapi.yml#GET /v1/agreements/{id}/accounts
+    - openapi/_original/raiffeisen-ru-agency-factoring-openapi_2.yml#GET /v1/agreements/{id}/accounts
+    - openapi/_original/raiffeisen-ru-loans-openapi.yml#GET /v1/client-info/accounts
+    - openapi/_original/raiffeisen-ru-loans-openapi_2.yml#GET /v1/client-info/accounts
+    - openapi/_original/raiffeisen-ru-payment-control-openapi.yml#GET /v1/clients/{cnum}/accounts
+  balance:
+    path_segment:
+    - balance
+    properties:
+      available: availableBalance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/raiffeisen-ru-raif-pay-corporate-cards-openapi.json#GET /api/cards/v1/accounts/{account}/balance
+    - openapi/_original/raiffeisen-ru-raif-pay-corporate-cards-openapi.yml#GET /api/cards/v1/accounts/{account}/balance
+  transaction:
+    path_segment:
+    - transactions
+    - transaction
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.json#GET /payments/v1/orders/{orderId}/transaction
+    - openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.json#GET /report/v1/transactions
+    - openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.yml#GET /payments/v1/orders/{orderId}/transaction
+    - openapi/_original/raiffeisen-ru-raif-pay-payment-form-openapi.yml#GET /report/v1/transactions
+    - openapi/_original/raiffeisen-ru-raif-pay-reports-openapi.yml#GET /v1/transactions
+  transfer:
+    path_segment:
+    - transfers
+    - payment
+    properties:
+      amount: amount
+      status: status
+      created_at: createdDate
+      id: id
+      rail: type
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/raiffeisen-ru-payroll-openapi.yml#GET /v1/statements/{externalId}/transfers
+    - openapi/_original/raiffeisen-ru-payroll-openapi_2.yml#GET /v1/statements/{externalId}/transfers
+    - openapi/_original/raiffeisen-ru-raif-pay-sbp-b2b-openapi.json#POST /api/sandbox/b2b/sbp/v1/qrs/{qrId}/payment
+    - openapi/_original/raiffeisen-ru-raif-pay-sbp-b2b-openapi.yml#POST /api/sandbox/b2b/sbp/v1/qrs/{qrId}/payment
+    - openapi/_original/raiffeisen-ru-raif-pay-sbp-b2b-transfers-openapi.json#GET /api/transfers/v1/transfers/{id}
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/raiffeisen-ru-payroll-openapi.yml#GET /v1/statements/{externalId}
+    - openapi/_original/raiffeisen-ru-payroll-openapi.yml#POST /v1/statements
+    - openapi/_original/raiffeisen-ru-payroll-openapi_2.yml#GET /v1/statements/{externalId}
+    - openapi/_original/raiffeisen-ru-payroll-openapi_2.yml#POST /v1/statements

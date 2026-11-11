@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/banking/main/schema/bank_account.json",
+  "title": "Bank Account",
+  "description": "The common bank_account in Banking, distilled from 128 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.719,
+      "x-commons-providers": 92,
+      "x-commons-spellings": [
+        "name",
+        "nickname",
+        "accountName",
+        "account_name",
+        "displayName",
+        "label",
+        "display_name",
+        "display-name"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.703,
+      "x-commons-providers": 90,
+      "x-commons-spellings": [
+        "type",
+        "accountType",
+        "account_type",
+        "subtype",
+        "account_sub_type",
+        "kind",
+        "accountSubType",
+        "productType"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.609,
+      "x-commons-providers": 78,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "accountStatus",
+        "transactionStatus",
+        "account-status",
+        "Status",
+        "account_status"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.602,
+      "x-commons-providers": 77,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code",
+        "currencyCode"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.547,
+      "x-commons-providers": 70,
+      "x-commons-spellings": [
+        "id",
+        "resourceId",
+        "guid"
+      ]
+    },
+    "account_number": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.539,
+      "x-commons-providers": 69,
+      "x-commons-spellings": [
+        "accountNumber",
+        "account_number",
+        "iban",
+        "accountNumberDisplay",
+        "number",
+        "maskedNumber",
+        "mask",
+        "accountNumberLast4"
+      ]
+    },
+    "balance": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.492,
+      "x-commons-providers": 63,
+      "x-commons-spellings": [
+        "balance",
+        "availableBalance",
+        "currentBalance",
+        "balances",
+        "available_balance",
+        "current_balance",
+        "available-balance"
+      ]
+    },
+    "account_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.336,
+      "x-commons-providers": 43,
+      "x-commons-spellings": [
+        "accountId",
+        "account_id",
+        "bankAccountId",
+        "sourceAccountId",
+        "accountID",
+        "AccountID"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.336,
+      "x-commons-providers": 43,
+      "x-commons-spellings": [
+        "created_at",
+        "createdDate",
+        "createdAt",
+        "creationDate",
+        "createdOn",
+        "created",
+        "date_created",
+        "creation_date"
+      ],
+      "format": "date-time"
+    },
+    "routing_number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.242,
+      "x-commons-providers": 31,
+      "x-commons-spellings": [
+        "routing_number",
+        "routingNumber",
+        "bic",
+        "bankCode",
+        "sortCode",
+        "bank_code",
+        "swift_code"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "banking",
+    "concept": "bank_account",
+    "providers": 128,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

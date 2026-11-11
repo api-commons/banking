@@ -1,0 +1,31 @@
+provider: treasury-prime
+apis_io: https://apis.io/providers/treasury-prime/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - account
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/treasury-prime-openapi.yml#GET /account
+    - openapi/_original/treasury-prime-openapi.yml#GET /account/{id}
+    - openapi/_original/treasury-prime-openapi.yml#PATCH /account/{id}
+  transaction:
+    path_segment:
+    - transaction
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/treasury-prime-openapi.yml#GET /transaction
+    - openapi/_original/treasury-prime-openapi.yml#GET /transaction/{id}
+    - openapi/_original/treasury-prime-openapi.yml#PATCH /transaction/{id}
+  statement:
+    path_segment:
+    - statement
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/treasury-prime-openapi.yml#GET /account/statement
+    - openapi/_original/treasury-prime-openapi.yml#POST /account/statement

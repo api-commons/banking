@@ -1,0 +1,37 @@
+provider: temenos-transact
+apis_io: https://apis.io/providers/temenos-transact/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/temenos-transact-core-banking-openapi.yml#GET /holdings/accounts
+    - openapi/_original/temenos-transact-core-banking-openapi.yml#GET /holdings/accounts/{accountId}
+    - openapi/_original/temenos-transact-core-banking-openapi.yml#GET /party/customers/{customerId}/accounts
+    - openapi/_original/temenos-transact-core-banking-openapi.yml#PUT /holdings/accounts/{accountId}
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/temenos-transact-core-banking-openapi.yml#GET /holdings/accounts/{accountId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/temenos-transact-core-banking-openapi.yml#GET /holdings/accounts/{accountId}/transactions
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/temenos-transact-core-banking-openapi.yml#GET /party/beneficiaries
+    - openapi/_original/temenos-transact-core-banking-openapi.yml#POST /party/beneficiaries

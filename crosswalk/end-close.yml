@@ -1,0 +1,23 @@
+provider: end-close
+apis_io: https://apis.io/providers/end-close/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bank_accounts
+    properties:
+      name:
+      - name
+      - display_name
+      currency: currency
+      id: id
+      account_number: mask
+      created_at: created_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/end-close-openapi.json#DELETE /bank_accounts/{id}
+    - openapi/_original/end-close-openapi.json#GET /bank_accounts
+    - openapi/_original/end-close-openapi.json#GET /bank_accounts/{id}
+    - openapi/_original/end-close-openapi.json#PATCH /bank_accounts/{id}
+    - openapi/_original/end-close-openapi.json#POST /bank_accounts

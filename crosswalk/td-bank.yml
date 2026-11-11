@@ -1,0 +1,33 @@
+provider: td-bank
+apis_io: https://apis.io/providers/td-bank/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: displayName
+      type: accountType
+      status: status
+      currency: currency
+      account_number: accountNumberDisplay
+      balance:
+      - currentBalance
+      - availableBalance
+      account_id: accountId
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/td-bank-account-basic-api-openapi.yml#GET /accounts
+    - openapi/_original/td-bank-account-detailed-api-openapi.yml#GET /accounts/{accountId}
+  beneficiary:
+    path_segment:
+    - payees
+    properties:
+      name:
+      - name
+      - nickname
+      account_number: accountNumber
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/td-bank-bill-payment-api-openapi.yml#GET /accounts/{accountId}/payees

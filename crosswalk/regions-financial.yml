@@ -1,0 +1,44 @@
+provider: regions-financial
+apis_io: https://apis.io/providers/regions-financial/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: nickname
+      type: accountType
+      status: status
+      currency: currency
+      account_number: accountNumber
+      balance: balance
+      account_id: accountId
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/regions-open-banking-openapi.yml#GET /accounts
+    - openapi/_original/regions-open-banking-openapi.yml#GET /accounts/{accountId}
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/regions-open-banking-openapi.yml#GET /accounts/{accountId}/transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+      description: memo
+      rail: paymentType
+      currency: currency
+      from_account_id: sourceAccountId
+      to_account_id: destinationAccountId
+      payment_id: paymentId
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/regions-open-banking-openapi.yml#GET /payments/{paymentId}
+    - openapi/_original/regions-open-banking-openapi.yml#POST /payments

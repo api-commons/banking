@@ -1,0 +1,15 @@
+provider: ordo
+apis_io: https://apis.io/providers/ordo/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - account
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/ordo-account-data-client-hosted.yml#GET /account/verification/account
+    - openapi/_original/ordo-account-data-client-hosted.yml#GET /account/verification/account/{avId}
+    - openapi/_original/ordo-account-data-ordo-hosted.yml#GET /account/verification/account
+    - openapi/_original/ordo-account-data-ordo-hosted.yml#GET /account/verification/account/{avId}

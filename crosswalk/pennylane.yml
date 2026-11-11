@@ -1,0 +1,24 @@
+provider: pennylane
+apis_io: https://apis.io/providers/pennylane/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bank_accounts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pennylane-openapi.yml#GET /bank_accounts
+    - openapi/_original/pennylane-openapi.yml#GET /bank_accounts/{id}
+    - openapi/_original/pennylane-openapi.yml#POST /bank_accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pennylane-openapi.yml#GET /transactions
+    - openapi/_original/pennylane-openapi.yml#GET /transactions/{id}
+    - openapi/_original/pennylane-openapi.yml#POST /transactions
+    - openapi/_original/pennylane-openapi.yml#PUT /transactions/{id}

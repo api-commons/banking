@@ -1,0 +1,37 @@
+provider: us-bancorp
+apis_io: https://apis.io/providers/us-bancorp/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: accountName
+      type: accountType
+      status: status
+      currency: currency
+      account_number: accountNumber
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/us-bank-corporate-account-information-openapi.yml#GET /accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/us-bank-corporate-account-information-openapi.yml#GET /accounts/{accountNumber}/transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      description: description
+      currency: currency
+      payment_id: paymentId
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/us-bank-push-to-card-openapi.yml#GET /push-to-card/payments/{paymentId}
+    - openapi/_original/us-bank-push-to-card-openapi.yml#POST /push-to-card/payments

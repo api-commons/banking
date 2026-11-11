@@ -1,0 +1,86 @@
+provider: moneyhub
+apis_io: https://apis.io/providers/moneyhub/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: accountName
+      type:
+      - accountType
+      - type
+      currency: currency
+      id: id
+      balance: balance
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/moneyhub-data-api-swagger.json#DELETE /accounts/{accountId}
+    - openapi/_original/moneyhub-data-api-swagger.json#GET /accounts
+    - openapi/_original/moneyhub-data-api-swagger.json#GET /accounts/{accountId}
+    - openapi/_original/moneyhub-data-api-swagger.json#PATCH /accounts/{accountId}
+    - openapi/_original/moneyhub-data-api-swagger.json#POST /accounts
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/moneyhub-data-api-swagger.json#GET /accounts/{accountId}/balances
+    - openapi/_original/moneyhub-data-api-swagger.json#POST /accounts/{accountId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: status
+      description:
+      - notes
+      - transactionInformation
+      account_id: accountId
+      posted_at: date
+      created_at: dateCreated
+      merchant_name: merchantName
+      category:
+      - categoryId
+      - transactionCode
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/moneyhub-data-api-swagger.json#DELETE /transactions/{transactionId}
+    - openapi/_original/moneyhub-data-api-swagger.json#GET /transactions
+    - openapi/_original/moneyhub-data-api-swagger.json#GET /transactions/{transactionId}
+    - openapi/_original/moneyhub-data-api-swagger.json#PATCH /transactions/{transactionId}
+    - openapi/_original/moneyhub-data-api-swagger.json#POST /transactions
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    - counterparties
+    properties:
+      id: id
+      name:
+      - label
+      - name
+      created_at: createdAt
+      account_number:
+      - accountNumber
+      - iban
+      type: type
+      description: reference
+      updated_at: modifiedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/moneyhub-data-api-swagger.json#GET /accounts/{accountId}/counterparties
+    - openapi/_original/moneyhub-data-api-swagger.json#GET /beneficiaries
+    - openapi/_original/moneyhub-data-api-swagger.json#GET /beneficiaries/{beneficiaryId}
+  statement:
+    path_segment:
+    - statements
+    properties:
+      id: id
+      account_id: accountId
+      created_at: creationDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/moneyhub-data-api-swagger.json#GET /accounts/{accountId}/statements

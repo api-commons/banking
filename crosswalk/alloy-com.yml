@@ -1,0 +1,39 @@
+provider: alloy-com
+apis_io: https://apis.io/providers/alloy-com/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bank-accounts
+    - accounts
+    properties:
+      name: account_name
+      type: account_type
+      status: status
+      currency: currency
+      account_number: account_number
+      routing_number: routing_number
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/alloy-com-identity-api-openapi.yml#GET /bank-accounts/{account_identifier_or_token}
+    - openapi/_original/alloy-openapi.yml#GET /bank-accounts/{account_identifier_or_token}
+    - openapi/_original/alloy-openapi.yml#PATCH /accounts/{bank_account_token}
+    - openapi/_original/alloy-openapi.yml#POST /accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transaction_id
+      amount: amount
+      status: status
+      description: description
+      posted_at:
+      - transaction_date
+      - settled_at
+      currency: currency
+      category: category
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/alloy-com-identity-api-openapi.yml#GET /transactions/{transaction_id}
+    - openapi/_original/alloy-com-identity-api-openapi.yml#PATCH /transactions/{transaction_id}

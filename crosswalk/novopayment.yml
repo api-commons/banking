@@ -1,0 +1,70 @@
+provider: novopayment
+apis_io: https://apis.io/providers/novopayment/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - account
+    properties:
+      type: accountType
+      status: accountStatus
+      currency: currencyCode
+      account_number:
+      - maskedNumber
+      - accountNumber
+      account_id: accountId
+      created_at: createdDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/novopayment-accounts-openapi.yml#GET /customers/{customerId}/accounts
+    - openapi/_original/novopayment-accounts-openapi.yml#GET /customers/{customerId}/accounts/{accountId}
+    - openapi/_original/novopayment-accounts-openapi.yml#POST /customers/{customerId}/accounts
+    - openapi/_original/novopayment-accounts.yaml#GET /customers/{customerId}/accounts
+    - openapi/_original/novopayment-accounts.yaml#GET /customers/{customerId}/accounts/{accountId}
+  balance:
+    path_segment:
+    - balance
+    properties:
+      available: availableBalance
+      current: currentBalance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/novopayment-accounts-openapi.yml#GET /customers/{customerId}/accounts/{accountId}/balance
+    - openapi/_original/novopayment-accounts.yaml#GET /customers/{customerId}/accounts/{accountId}/balance
+    - openapi/_original/novopayment-cards-openapi.yml#GET /cards/{cardId}/balance
+    - openapi/_original/novopayment-cards.yaml#GET /cards/{cardId}/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      amount: amount
+      direction: transactionType
+      description: description
+      posted_at:
+      - date
+      - transactionDate
+      created_at: creationDate
+      merchant_name: merchantName
+      category: transactionCode
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/novopayment-accounts-openapi.yml#GET /customers/{customerId}/accounts/{accountId}/transactions
+    - openapi/_original/novopayment-accounts-openapi.yml#GET /customers/{customerId}/cards/{cardId}/transactions
+    - openapi/_original/novopayment-accounts-openapi.yml#GET /transactions
+    - openapi/_original/novopayment-accounts-openapi.yml#POST /customers/{customerId}/accounts/{accountId}/transactions
+    - openapi/_original/novopayment-accounts.yaml#GET /customers/{customerId}/accounts/{accountId}/transactions
+  transfer:
+    path_segment:
+    - payment
+    - transfers
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/novopayment-accounts-openapi.yml#GET /transfers/{transferId}
+    - openapi/_original/novopayment-accounts.yaml#GET /transfers/{transferId}
+    - openapi/_original/novopayment-merchant-presented-qr-openapi.yml#POST /notifications/payment
+    - openapi/_original/novopayment-merchant-presented-qr.yaml#POST /notifications/payment
+    - openapi/_original/novopayment-onboarding-openapi.yml#POST /payment

@@ -1,0 +1,69 @@
+provider: joinslash-com
+apis_io: https://apis.io/providers/joinslash-com/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - account
+    - accounts
+    properties:
+      name:
+      - name
+      - nickname
+      type:
+      - type
+      - accountType
+      status: status
+      currency: currency
+      id: id
+      account_number:
+      - accountNumber
+      - accountNumberDisplay
+      balance:
+      - balances
+      - currentBalance
+      - availableBalance
+      account_id: accountId
+      created_at: createdAt
+      routing_number: routingNumber
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/joinslash-com.json#GET /account
+    - openapi/_original/joinslash-com.json#GET /account/{accountId}
+    - openapi/_original/joinslash-com.json#GET /fdx/accounts
+    - openapi/_original/joinslash-com.json#GET /fdx/accounts/{accountId}
+  balance:
+    path_segment:
+    - balance
+    properties:
+      account_id: accountId
+      available: available
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/joinslash-com.json#GET /account/{accountId}/balance
+  transaction:
+    path_segment:
+    - transaction
+    - transactions
+    properties:
+      id: id
+      status: status
+      description:
+      - description
+      - memo
+      account_id: accountId
+      posted_at: date
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/joinslash-com.json#GET /fdx/accounts/{accountId}/transactions
+    - openapi/_original/joinslash-com.json#GET /transaction
+    - openapi/_original/joinslash-com.json#GET /transaction/{transactionId}
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/joinslash-com.json#GET /fdx/accounts/{accountId}/statements
+    - openapi/_original/joinslash-com.json#GET /fdx/accounts/{accountId}/statements/{statementId}

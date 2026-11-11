@@ -1,0 +1,42 @@
+provider: sibill
+apis_io: https://apis.io/providers/sibill/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: nickname
+      currency: currency
+      id: id
+      balance:
+      - available_balance
+      - current_balance
+      created_at: created_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/accounts
+    - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/accounts/{id}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      direction: type
+      description: description
+      account_id: account_id
+      posted_at:
+      - booking_date_time
+      - date
+      - value_date_time
+      created_at: created_at
+      category:
+      - category
+      - category_id
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/transactions
+    - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/transactions/{id}
+    - openapi/_original/sibill-openapi-original.json#PATCH /api/v1/companies/{company_id}/transactions/{id}

@@ -1,0 +1,56 @@
+provider: groupe-bpce
+apis_io: https://apis.io/providers/groupe-bpce/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      id: resourceId
+      balance: balances
+      account_id: accountId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/accounts-oas3-public-v1.4.2.20-b_2.json#GET /accounts
+    - openapi/_original/accounts-oas3-public-v1.6.2.0-a_2.json#GET /accounts
+    - openapi/_original/accounts-oas3-public-v1.6.2.0-a_4.json#GET /accounts
+    - openapi/_original/accounts-oas3-public-v1.6.2.0-b.json#GET /accounts
+    - openapi/_original/groupe-bpce-natixis-psd2-accounts-openapi.yml#GET /accounts
+  balance:
+    path_segment:
+    - balances
+    properties:
+      current: balanceAmount
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/accounts-oas3-public-v1.4.2.20-b_2.json#GET /accounts/{accountResourceId}/balances
+    - openapi/_original/accounts-oas3-public-v1.6.2.0-a_2.json#GET /accounts/{accountResourceId}/balances
+    - openapi/_original/accounts-oas3-public-v1.6.2.0-a_4.json#GET /accounts/{accountResourceId}/balances
+    - openapi/_original/accounts-oas3-public-v1.6.2.0-b.json#GET /accounts/{accountResourceId}/balances
+    - openapi/_original/groupe-bpce-natixis-psd2-accounts-openapi.yml#GET /accounts/{accountResourceId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: resourceId
+      amount:
+      - transactionAmount
+      - instructedAmount
+      status:
+      - status
+      - transactionStatus
+      direction: creditDebitIndicator
+      description: remittanceInformation
+      posted_at:
+      - bookingDate
+      - transactionDate
+      category: bankTransactionCode
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/accounts-oas3-public-v1.4.2.20-b_2.json#GET /accounts/{accountResourceId}/transactions
+    - openapi/_original/accounts-oas3-public-v1.6.2.0-a_2.json#GET /accounts/{accountResourceId}/transactions
+    - openapi/_original/accounts-oas3-public-v1.6.2.0-a_4.json#GET /accounts/{accountResourceId}/transactions
+    - openapi/_original/accounts-oas3-public-v1.6.2.0-b.json#GET /accounts/{accountResourceId}/transactions
+    - openapi/_original/groupe-bpce-natixis-psd2-accounts-openapi.yml#GET /accounts/{accountResourceId}/transactions

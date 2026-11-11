@@ -1,0 +1,96 @@
+provider: synctera
+apis_io: https://apis.io/providers/synctera/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - internal_accounts
+    properties:
+      name: nickname
+      type: account_type
+      status: status
+      currency: currency
+      id: id
+      account_number:
+      - account_number
+      - iban
+      balance: balances
+      routing_number: swift_code
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/synctera-openapi.json#GET /accounts
+    - openapi/_original/synctera-openapi.json#GET /accounts/{account_id}
+    - openapi/_original/synctera-openapi.json#GET /internal_accounts
+    - openapi/_original/synctera-openapi.json#PATCH /accounts/{account_id}
+    - openapi/_original/synctera-openapi.json#PATCH /internal_accounts/{internal_account_id}
+  balance:
+    path_segment:
+    - balance
+    properties:
+      available: available
+      currency: currency
+      current: current
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/synctera-openapi.json#GET /external_accounts/{external_account_id}/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transaction_id
+      amount: amount
+      posted_at: date
+      currency: currency
+      merchant_name: merchant_name
+      category: category
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/synctera-openapi.json#GET /external_accounts/{external_account_id}/transactions
+  beneficiary:
+    path_segment:
+    - external_accounts
+    properties:
+      id: id
+      name:
+      - name
+      - nickname
+      status: status
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/synctera-openapi.json#DELETE /external_accounts/{external_account_id}
+    - openapi/_original/synctera-openapi.json#GET /external_accounts
+    - openapi/_original/synctera-openapi.json#GET /external_accounts/{external_account_id}
+    - openapi/_original/synctera-openapi.json#PATCH /external_accounts/{external_account_id}
+    - openapi/_original/synctera-openapi.json#POST /external_accounts
+  transfer:
+    path_segment:
+    - transfers
+    - payments
+    properties:
+      amount: amount
+      status: status
+      description: description
+      id: id
+      rail: type
+      currency: currency
+      from_account_id: originating_account_id
+      metadata: metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/synctera-openapi.json#GET /external_cards/transfers
+    - openapi/_original/synctera-openapi.json#GET /external_cards/transfers/{transfer_id}
+    - openapi/_original/synctera-openapi.json#GET /payment_schedules/payments
+    - openapi/_original/synctera-openapi.json#POST /external_cards/transfers
+  statement:
+    path_segment:
+    - statements
+    properties:
+      id: id
+      account_id: account_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/synctera-openapi.json#GET /statements
+    - openapi/_original/synctera-openapi.json#GET /statements/{statement_id}

@@ -1,0 +1,50 @@
+provider: lorum
+apis_io: https://apis.io/providers/lorum/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: account_name
+      type: account_type
+      status: status
+      currency: currency
+      id: id
+      balance:
+      - available_balance
+      - current_balance
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/lorum-openapi-original.json#GET /v1/accounts
+    - openapi/_original/lorum-openapi-original.json#GET /v1/accounts/{account_id}
+    - openapi/_original/lorum-openapi-original.json#GET /v1/customers/{customer_id}/accounts
+    - openapi/_original/lorum-openapi-original.json#PATCH /v1/accounts/{account_id}
+    - openapi/_original/lorum-openapi-original.json#POST /v1/customers/{customer_id}/accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: instructed_amount
+      status: state
+      direction:
+      - direction
+      - type
+      account_id: account_id
+      currency: currency
+      created_at: created_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/lorum-openapi-original.json#GET /v1/accounts/{account_id}/transactions
+    - openapi/_original/lorum-openapi-original.json#GET /v1/transactions
+    - openapi/_original/lorum-openapi-original.json#GET /v1/transactions/{transaction_id}
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/lorum-openapi-original.json#POST /v1/accounts/{account_id}/payments

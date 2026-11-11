@@ -1,0 +1,46 @@
+provider: connexis-cash
+apis_io: https://apis.io/providers/connexis-cash/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      currency: currency
+      id: resourceId
+      account_id: accountId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/connexis-cash-account-information-psd2-stet-mock-openapi.yml#GET /v2/accounts
+    - openapi/_original/connexis-cash-account-information-psd2-stet-mock-openapi_2.yml#GET /v2/accounts
+    - openapi/_original/connexis-cash-openapi.yml#GET /v1/accounts
+    - openapi/_original/connexis-cash-openapi.yml#GET /v1/accounts/{accountResourceId}
+  balance:
+    path_segment:
+    - balances
+    properties:
+      current: balanceAmount
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/connexis-cash-account-information-psd2-stet-mock-openapi.yml#GET /v2/accounts/{accountResourceId}/balances
+    - openapi/_original/connexis-cash-account-information-psd2-stet-mock-openapi_2.yml#GET /v2/accounts/{accountResourceId}/balances
+    - openapi/_original/connexis-cash-openapi.yml#GET /v1/accounts/{accountResourceId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: resourceId
+      amount: transactionAmount
+      status: status
+      direction: creditDebitIndicator
+      description: remittanceInformation
+      posted_at:
+      - bookingDate
+      - transactionDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/connexis-cash-account-information-psd2-stet-mock-openapi.yml#GET /v2/accounts/{accountResourceId}/transactions
+    - openapi/_original/connexis-cash-account-information-psd2-stet-mock-openapi_2.yml#GET /v2/accounts/{accountResourceId}/transactions
+    - openapi/_original/connexis-cash-openapi.yml#GET /v1/accounts/{accountResourceId}/transactions

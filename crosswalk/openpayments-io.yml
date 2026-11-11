@@ -1,0 +1,61 @@
+provider: openpayments-io
+apis_io: https://apis.io/providers/openpayments-io/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      status: status
+      currency: currency
+      id: resourceId
+      account_number:
+      - iban
+      - accountNumber
+      balance: balances
+      routing_number: bic
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/accounts
+    - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/accounts/{account-id}
+  balance:
+    path_segment:
+    - balances
+    properties:
+      account_id: account
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/accounts/{account-id}/balances
+    - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/card-accounts/{account-id}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      amount: transactionAmount
+      account_id: account
+      posted_at: bookingDate
+      merchant_name:
+      - creditorName
+      - debtorName
+      category: bankTransactionCode
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/accounts/{account-id}/transactions
+    - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/accounts/{account-id}/transactions/{transactionId}
+    - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/card-accounts/{account-id}/transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: instructedAmount
+      status: transactionStatus
+      from_account_id: debtorAccount
+      to_account_id: creditorAccount
+      payment_id: paymentId
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/openpayments-io-openapi.yml#GET /iso/payments/{paymentId}
+    - openapi/_original/openpayments-io-openapi.yml#POST /iso/payments

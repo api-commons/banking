@@ -1,0 +1,65 @@
+provider: alviere
+apis_io: https://apis.io/providers/alviere/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      type: type
+      status: status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/alviere-openapi.yml#DELETE /v1/accounts/{account_uuid}
+    - openapi/_original/alviere-openapi.yml#GET /v1/accounts/{account_uuid}
+    - openapi/_original/alviere-openapi.yml#PATCH /v1/accounts/{account_uuid}
+    - openapi/_original/alviere-openapi.yml#POST /v1/accounts
+  transaction:
+    path_segment:
+    - transactions
+    - transaction
+    properties:
+      amount: amount
+      status: status
+      direction: type
+      description: description
+      currency: currency
+      created_at: created_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/alviere-openapi.yml#GET /v1/ledger/{account_uuid}/transactions
+    - openapi/_original/alviere-openapi.yml#GET /v1/ledger/{account_uuid}/transactions/{transaction_uuid}
+    - openapi/_original/alviere-openapi.yml#POST /v1/remittances/{account_uuid}/transaction
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties:
+      created_at: created_at
+      status: status
+      updated_at: updated_at
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/alviere-openapi.yml#DELETE /v1/remittances/{account_uuid}/beneficiaries/{beneficiary_uuid}
+    - openapi/_original/alviere-openapi.yml#GET /v1/remittances/{account_uuid}/beneficiaries
+    - openapi/_original/alviere-openapi.yml#GET /v1/remittances/{account_uuid}/beneficiaries/{beneficiary_uuid}
+    - openapi/_original/alviere-openapi.yml#PATCH /v1/remittances/{account_uuid}/beneficiaries/{beneficiary_uuid}
+    - openapi/_original/alviere-openapi.yml#POST /v1/remittances/{account_uuid}/beneficiaries
+  transfer:
+    path_segment:
+    - payments
+    - transfer
+    properties:
+      amount:
+      - amount
+      - transaction_amount
+      status: status
+      description: description
+      rail: type
+      currency: currency
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/alviere-openapi.yml#GET /v1/accounts/payments/{account_uuid}
+    - openapi/_original/alviere-openapi.yml#GET /v1/reports/payments
+    - openapi/_original/alviere-openapi.yml#GET /v1/reports/payments/{uuid}
+    - openapi/_original/alviere-openapi.yml#POST /v1/treasury/transfer

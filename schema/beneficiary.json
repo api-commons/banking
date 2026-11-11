@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/banking/main/schema/beneficiary.json",
+  "title": "Beneficiary",
+  "description": "The common beneficiary in Banking, distilled from 41 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.512,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "id",
+        "beneficiaryId"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.512,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "name",
+        "nickname",
+        "label"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.415,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "creationDate",
+        "createdDate",
+        "creation_date",
+        "created-at"
+      ],
+      "format": "date-time"
+    },
+    "account_number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.366,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "iban",
+        "accountNumber",
+        "account_number",
+        "account",
+        "account-number",
+        "number"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.341,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "status",
+        "Status",
+        "state"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.341,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "type",
+        "entity_type"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.268,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "description",
+        "reference",
+        "memo"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.268,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "updated_at",
+        "updated",
+        "updatedAt",
+        "modifiedAt"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "banking",
+    "concept": "beneficiary",
+    "providers": 41,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,51 @@
+provider: tribe-payments
+apis_io: https://apis.io/providers/tribe-payments/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      currency: currency
+      id: resourceId
+      account_number:
+      - iban
+      - accountNumber
+      routing_number: sortCode
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#GET /accounts
+    - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#GET /accounts/{accountId}
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#GET /accounts/{accountId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#GET /accounts/{accountId}/transactions
+    - openapi/_original/tribe-payments-trb-report-api-merchant-api-report-v3.json#POST /transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: instructedAmount
+      status: transactionStatus
+      from_account_id: debtorAccount
+      to_account_id: creditorAccount
+      payment_id: paymentId
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#GET /direct/payments/{paymentId}
+    - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#GET /payments/{paymentId}
+    - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#POST /direct/payments
+    - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#POST /direct/payments/{bankIdentifier}
+    - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#POST /payments

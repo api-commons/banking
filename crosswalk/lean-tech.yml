@@ -1,0 +1,67 @@
+provider: lean-tech
+apis_io: https://apis.io/providers/lean-tech/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      currency: currency
+      account_number:
+      - iban
+      - account_number
+      account_id: account_id
+      routing_number:
+      - bic
+      - bank_code
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/lean-data-api-openapi.yml#GET /data/v2/accounts
+    - openapi/_original/lean-verifications-api-openapi.yml#POST /verifications/v1/accounts
+  balance:
+    path_segment:
+    - balances
+    - balance
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lean-data-api-openapi.yml#GET /data/v2/accounts/{account_id}/balances
+    - openapi/_original/lean-payments-api-openapi.yml#GET /consents/{consent_id}/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      direction: credit_debit_indicator
+      description: description
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/lean-data-api-openapi.yml#GET /data/v2/accounts/{account_id}/transactions
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lean-data-api-openapi.yml#GET /data/v2/accounts/{account_id}/beneficiaries
+  transfer:
+    path_segment:
+    - payment
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: created_at
+      description:
+      - description
+      - reference
+      id: id
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lean-payouts-api-openapi.yml#GET /payouts/v1/payments
+    - openapi/_original/lean-payouts-api-openapi.yml#POST /payouts/v1/payment

@@ -1,0 +1,13 @@
+provider: okra-africa
+apis_io: https://apis.io/providers/okra-africa/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      status: status
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/okra-africa-openapi.yml#POST /products/accounts

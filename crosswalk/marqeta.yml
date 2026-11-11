@@ -1,0 +1,89 @@
+provider: marqeta
+apis_io: https://apis.io/providers/marqeta/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - account
+    properties:
+      name: name
+      type: type
+      status: status
+      currency: currency_code
+      account_number: account_number
+      balance:
+      - current_balance
+      - balances
+      routing_number: routing_number
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /accounts
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /accounts/{account_token}
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /balances/account/{token}
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /directdeposits/accounts/{user_or_business_token}
+    - openapi/_original/marqeta-core-api-openapi.yml#PUT /accounts/{account_token}
+  balance:
+    path_segment:
+    - balances
+    - balance
+    properties:
+      available: available_balance
+      currency: currency_code
+      current: ledger_balance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /balances/{token}
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /fundingsources/ach/partner/{funding_source_token}/balance
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /programreserve/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      amount: amount
+      status:
+      - status
+      - state
+      direction: type
+      description: memo
+      currency: currency_code
+      merchant_name: merchant
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /accounts/{account_token}/transactions
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /cards/{token}/transactions
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /programreserve/transactions
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /transactions
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /transactions/{token}
+  beneficiary:
+    path_segment:
+    - recipient
+    properties:
+      description: memo
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /peertransfers/user/{user_or_business_token}/recipient
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      description: description
+      rail: method
+      currency: currency_code
+      metadata: metadata
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /accounts/{account_token}/payments
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /accounts/{account_token}/payments/{payment_token}
+    - openapi/_original/marqeta-core-api-openapi.yml#POST /accounts/{account_token}/payments
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /accounts/{account_token}/statements
+    - openapi/_original/marqeta-core-api-openapi.yml#GET /accounts/{account_token}/statements/{statement_summary_token}

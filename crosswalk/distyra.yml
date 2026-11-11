@@ -1,0 +1,44 @@
+provider: distyra
+apis_io: https://apis.io/providers/distyra/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: account_type
+      currency: currency
+      balance: balance
+      account_id: account_id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/distyra-openapi.json#GET /v1/connect/connections/{id}/accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/distyra-openapi.json#GET /v1/connect/connections/{id}/transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+      id: id
+      rail: method
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/distyra-openapi.json#GET /v1/billing/payments/{paymentId}
+  statement:
+    path_segment:
+    - statement
+    properties:
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/distyra-openapi.json#POST /v1/underwrite/analyze/statement

@@ -1,0 +1,21 @@
+provider: casap
+apis_io: https://apis.io/providers/casap/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      type: accountType
+    core_coverage: 0.167
+    evidence:
+    - openapi/_original/casap-openapi.json#GET /v1/accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: uuid
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/casap-openapi.json#GET /v1/disputes/transactions

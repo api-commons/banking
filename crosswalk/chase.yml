@@ -1,0 +1,27 @@
+provider: chase
+apis_io: https://apis.io/providers/chase/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/chase-account-and-customer-information-api-openapi.yml#GET /accounts
+    - openapi/_original/chase-account-and-customer-information-api-openapi.yml#GET /accounts/{accountId}
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/chase-account-and-customer-information-api-openapi.yml#GET /accounts/{accountId}/transactions
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/chase-account-and-customer-information-api-openapi.yml#GET /accounts/{accountId}/statements

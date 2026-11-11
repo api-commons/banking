@@ -1,0 +1,1124 @@
+context: banking
+name: Banking
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Banking
+  - Open Banking
+  - Consumer Banking
+  - Banking as a Service
+  - Neobank
+  - Digital Banking
+  - Core Banking
+  providers_with_harvested_openapi: 315
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded: {}
+duplicates: {}
+shared_specs:
+  au-cdr-banking:
+  - alex-bank
+  - amp-bank
+  - anz
+  - australian-military-bank
+  - australian-unity-bank
+  - auswide-bank
+  - avenue-bank
+  - bank-australia
+  - bank-first
+  - bank-of-queensland
+  - bank-of-sydney
+  - bank-of-us
+  - banksa
+  - bankvic
+  - bankwest
+  - bcu-bank
+  - bendigo-and-adelaide-bank
+  - beyond-bank
+  - commonwealth-bank
+  - defence-bank
+  - fiserv
+  - gateway-bank
+  - gc-mutual-bank
+  - great-southern-bank
+  - greater-bank
+  - hsbc-australia
+  - hume-bank
+  - imb-bank
+  - ing-australia
+  - judo-bank
+  - macquarie-bank
+  - move-bank
+  - mystate-bank
+  - national-australia-bank
+  - newcastle-permanent
+  - people-first-bank
+  - pn-bank
+  - police-bank
+  - qudos-bank
+  - rabobank-australia
+  - racq-bank
+  - regional-australia-bank
+  - st-george-bank
+  - summerland-bank
+  - suncorp-bank
+  - teachers-mutual-bank
+  - ubank
+  - unity-bank
+  - up-bank
+  - westpac
+  open-banking-uk:
+  - allica-bank
+  - bank-of-ireland-uk
+  - bank-of-scotland
+  - c-hoare-and-co
+  - cashplus
+  - chase-uk
+  - coutts
+  - coventry-building-society
+  - cynergy-bank
+  - danske-bank-uk
+  - first-direct
+  - gb-bank
+  - hampden-and-co
+  - investec
+  - kroo
+  - lloyds-banking-group
+  - monument-bank
+  - natwest
+  - paragon-bank
+  - recognise-bank
+  - santander-uk
+  - secure-trust-bank
+  - shawbrook-bank
+  - tandem-bank
+  - vanquis-banking-group
+  - yorkshire-building-society
+concepts:
+  bank_account:
+    segments_seen:
+      accounts: 123
+      account: 18
+      bank-accounts: 5
+      bankaccounts: 4
+      bank_accounts: 4
+      financial_accounts: 2
+      deposit-accounts: 1
+      internal_accounts: 1
+    providers_exposing: 136
+    providers_with_readable_schema: 128
+    operations:
+    - operation: GET collection
+      providers: 121
+      share: 0.89
+      tier: core
+    - operation: GET item
+      providers: 109
+      share: 0.801
+      tier: core
+    - operation: POST collection
+      providers: 67
+      share: 0.493
+      tier: extended
+    - operation: UPDATE item
+      providers: 43
+      share: 0.316
+      tier: extended
+    - operation: DELETE item
+      providers: 25
+      share: 0.184
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 8
+      share: 0.059
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 2
+      share: 0.015
+      tier: long-tail
+    - operation: POST item
+      providers: 2
+      share: 0.015
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 92
+      share: 0.719
+      type: string
+      spellings:
+      - name
+      - nickname
+      - accountName
+      - account_name
+      - displayName
+      - label
+      - display_name
+      - display-name
+    - name: type
+      tier: core
+      providers: 90
+      share: 0.703
+      type: string
+      spellings:
+      - type
+      - accountType
+      - account_type
+      - subtype
+      - account_sub_type
+      - kind
+      - accountSubType
+      - productType
+    - name: status
+      tier: core
+      providers: 78
+      share: 0.609
+      type: string
+      spellings:
+      - status
+      - state
+      - accountStatus
+      - transactionStatus
+      - account-status
+      - Status
+      - account_status
+    - name: currency
+      tier: core
+      providers: 77
+      share: 0.602
+      type: string
+      spellings:
+      - currency
+      - currency_code
+      - currencyCode
+    - name: id
+      tier: core
+      providers: 70
+      share: 0.547
+      type: string
+      spellings:
+      - id
+      - resourceId
+      - guid
+    - name: account_number
+      tier: core
+      providers: 69
+      share: 0.539
+      type: string
+      spellings:
+      - accountNumber
+      - account_number
+      - iban
+      - accountNumberDisplay
+      - number
+      - maskedNumber
+      - mask
+      - accountNumberLast4
+    - name: balance
+      tier: extended
+      providers: 63
+      share: 0.492
+      type: number
+      spellings:
+      - balance
+      - availableBalance
+      - currentBalance
+      - balances
+      - available_balance
+      - current_balance
+      - available-balance
+    - name: account_id
+      tier: extended
+      providers: 43
+      share: 0.336
+      type: string
+      spellings:
+      - accountId
+      - account_id
+      - bankAccountId
+      - sourceAccountId
+      - accountID
+      - AccountID
+    - name: created_at
+      tier: extended
+      providers: 43
+      share: 0.336
+      type: string
+      spellings:
+      - created_at
+      - createdDate
+      - createdAt
+      - creationDate
+      - createdOn
+      - created
+      - date_created
+      - creation_date
+    - name: routing_number
+      tier: extended
+      providers: 31
+      share: 0.242
+      type: string
+      spellings:
+      - routing_number
+      - routingNumber
+      - bic
+      - bankCode
+      - sortCode
+      - bank_code
+      - swift_code
+    long_tail_count: 1202
+    long_tail_sample:
+    - metadata
+    - holder_name
+    - institution
+    - updated_at
+    - description
+    - interest_rate
+    - product_name
+    - customer_id
+    - credit_limit
+    - account_category
+    - details
+    - identifiers
+    - opened_at
+    - available_credit
+    - cash_account_type
+    - pagination
+    - product
+    - closed_at
+    - country
+    - account_ownership
+    - country_code
+    - product_id
+    - profile
+    - provider_id
+    - token
+    - user_id
+    - address
+    - apr
+    - balance_as_of
+    - branch_code
+    - death_benefit
+    - is_manual
+    - last_payment
+    - margin_balance
+    - maturity_date
+    - page_size
+    - source
+    - active
+    - amount
+    - balance_type
+  balance:
+    segments_seen:
+      balances: 49
+      balance: 37
+    providers_exposing: 74
+    providers_with_readable_schema: 70
+    operations:
+    - operation: GET collection
+      providers: 70
+      share: 0.946
+      tier: core
+    - operation: POST collection
+      providers: 9
+      share: 0.122
+      tier: long-tail
+    - operation: GET item
+      providers: 7
+      share: 0.095
+      tier: long-tail
+    - operation: DELETE item
+      providers: 1
+      share: 0.014
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.014
+      tier: long-tail
+    properties:
+    - name: account_id
+      tier: extended
+      providers: 34
+      share: 0.486
+      type: string
+      spellings:
+      - accountId
+      - account_id
+      - account
+    - name: available
+      tier: extended
+      providers: 30
+      share: 0.429
+      type: number
+      spellings:
+      - availableBalance
+      - available
+      - available_balance
+      - available_amount
+    - name: currency
+      tier: extended
+      providers: 29
+      share: 0.414
+      type: string
+      spellings:
+      - currency
+      - currency_code
+      - currencyCode
+      - Currency
+    - name: current
+      tier: extended
+      providers: 20
+      share: 0.286
+      type: number
+      spellings:
+      - currentBalance
+      - current_balance
+      - ledgerBalance
+      - booked
+      - balanceAmount
+      - current
+      - ledger_balance
+    long_tail_count: 175
+    long_tail_sample:
+    - id
+    - type
+    - amount
+    - as_of
+    - name
+    - created_at
+    - status
+    - timestamp
+    - account_number
+    - account_type
+    - date
+    - account_balance
+    - last_updated
+    - pending_credits
+    - account_balances
+    - amortised_limit
+    - as_of_date_time
+    - blocked
+    - card_account
+    - credit_limit
+    - error
+    - last_change_date_time
+    - last_committed_transaction
+    - limit
+    - pending
+    - posted
+    - purses
+    - reference_date
+    - reserved_amount
+    - threshold
+    - token
+    - accepted_amount
+    - account_connection_id
+    - account_ids
+    - account_internal_identification
+    - account_ref
+    - active_credit_limit
+    - active_credit_limit_amount
+    - allocation_id
+    - allocation_ids
+  transaction:
+    segments_seen:
+      transactions: 116
+      transaction: 12
+      banktransactions: 1
+    providers_exposing: 118
+    providers_with_readable_schema: 110
+    operations:
+    - operation: GET collection
+      providers: 112
+      share: 0.949
+      tier: core
+    - operation: GET item
+      providers: 66
+      share: 0.559
+      tier: core
+    - operation: POST collection
+      providers: 29
+      share: 0.246
+      tier: extended
+    - operation: UPDATE item
+      providers: 19
+      share: 0.161
+      tier: long-tail
+    - operation: DELETE item
+      providers: 8
+      share: 0.068
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 3
+      share: 0.025
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.008
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 80
+      share: 0.727
+      type: string
+      spellings:
+      - id
+      - transactionId
+      - transaction_id
+      - guid
+      - resourceId
+      - uuid
+      - transactionID
+      - TransactionID
+    - name: amount
+      tier: core
+      providers: 78
+      share: 0.709
+      type: number
+      spellings:
+      - amount
+      - transactionAmount
+      - instructedAmount
+      - instructed_amount
+      - transaction_amount
+      - Amount
+    - name: status
+      tier: core
+      providers: 69
+      share: 0.627
+      type: string
+      spellings:
+      - status
+      - state
+      - transactionStatus
+      - Status
+      - transaction_status
+      - TransactionStatus
+    - name: direction
+      tier: core
+      providers: 64
+      share: 0.582
+      type: string
+      spellings:
+      - type
+      - transactionType
+      - direction
+      - transaction_type
+      - credit_debit_indicator
+      - creditDebitIndicator
+      - debit_credit
+    - name: description
+      tier: core
+      providers: 62
+      share: 0.564
+      type: string
+      spellings:
+      - description
+      - reference
+      - memo
+      - notes
+      - remittanceInformation
+      - note
+      - transactionInformation
+      - Note
+    - name: account_id
+      tier: extended
+      providers: 50
+      share: 0.455
+      type: string
+      spellings:
+      - account_id
+      - accountId
+      - account
+      - sourceAccountId
+      - bankAccountId
+      - internalAccountId
+      - bank_account_id
+    - name: posted_at
+      tier: extended
+      providers: 49
+      share: 0.445
+      type: string
+      spellings:
+      - date
+      - transactionDate
+      - bookingDate
+      - posted_at
+      - postedDate
+      - value_date_time
+      - valueDateTime
+      - settled_at
+    - name: currency
+      tier: extended
+      providers: 40
+      share: 0.364
+      type: string
+      spellings:
+      - currency
+      - currency_code
+      - currencyCode
+      - Currency
+    - name: created_at
+      tier: extended
+      providers: 37
+      share: 0.336
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - createdDate
+      - created
+      - creationDate
+      - created_on
+      - dateCreated
+      - createdOn
+    - name: merchant_name
+      tier: extended
+      providers: 34
+      share: 0.309
+      type: string
+      spellings:
+      - merchant
+      - merchantName
+      - payee
+      - merchant_name
+      - creditorName
+      - debtorName
+      - counterpartyName
+      - counterparty_name
+    - name: category
+      tier: extended
+      providers: 32
+      share: 0.291
+      type: string
+      spellings:
+      - category
+      - categories
+      - categoryId
+      - bankTransactionCode
+      - transactionCode
+      - category_id
+    long_tail_count: 1227
+    long_tail_sample:
+    - balance_after
+    - updated_at
+    - metadata
+    - merchant_category_code
+    - value_date
+    - pagination
+    - check_number
+    - source
+    - counterparty
+    - customer_id
+    - fee
+    - pending
+    - total_elements
+    - transacted_at
+    - user_id
+    - approval_code
+    - card
+    - card_id
+    - completed_at
+    - external_id
+    - is_manual
+    - merchant_id
+    - page_size
+    - posted_timestamp
+    - token
+    - transaction_timestamp
+    - account_number
+    - beneficiary
+    - creditor_account
+    - currency_exchange
+    - debit_credit_memo
+    - fees
+    - is_expense
+    - is_international
+    - is_recurring
+    - next_offset
+    - offset
+    - post_date
+    - posting_date
+    - quantity
+  beneficiary:
+    segments_seen:
+      beneficiaries: 19
+      payees: 8
+      counterparties: 8
+      external-accounts: 6
+      recipients: 5
+      external_accounts: 2
+      recipient: 2
+      counterparty: 1
+    providers_exposing: 43
+    providers_with_readable_schema: 41
+    operations:
+    - operation: GET collection
+      providers: 39
+      share: 0.907
+      tier: core
+    - operation: GET item
+      providers: 26
+      share: 0.605
+      tier: core
+    - operation: POST collection
+      providers: 24
+      share: 0.558
+      tier: core
+    - operation: UPDATE item
+      providers: 14
+      share: 0.326
+      tier: extended
+    - operation: DELETE item
+      providers: 13
+      share: 0.302
+      tier: extended
+    - operation: POST item
+      providers: 3
+      share: 0.07
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 2
+      share: 0.047
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 21
+      share: 0.512
+      type: string
+      spellings:
+      - id
+      - beneficiaryId
+    - name: name
+      tier: core
+      providers: 21
+      share: 0.512
+      type: string
+      spellings:
+      - name
+      - nickname
+      - label
+    - name: created_at
+      tier: extended
+      providers: 17
+      share: 0.415
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - creationDate
+      - createdDate
+      - creation_date
+      - created-at
+    - name: account_number
+      tier: extended
+      providers: 15
+      share: 0.366
+      type: string
+      spellings:
+      - iban
+      - accountNumber
+      - account_number
+      - account
+      - account-number
+      - number
+    - name: status
+      tier: extended
+      providers: 14
+      share: 0.341
+      type: string
+      spellings:
+      - status
+      - Status
+      - state
+    - name: type
+      tier: extended
+      providers: 14
+      share: 0.341
+      type: string
+      spellings:
+      - type
+      - entity_type
+    - name: description
+      tier: extended
+      providers: 11
+      share: 0.268
+      type: string
+      spellings:
+      - description
+      - reference
+      - memo
+    - name: updated_at
+      tier: extended
+      providers: 11
+      share: 0.268
+      type: string
+      spellings:
+      - updated_at
+      - updated
+      - updatedAt
+      - modifiedAt
+    long_tail_count: 391
+    long_tail_sample:
+    - address
+    - metadata
+    - routing_number
+    - email
+    - phone
+    - account_id
+    - currency
+    - account_type
+    - bank_country
+    - bank_name
+    - biller
+    - counterparty_id
+    - country
+    - digital_wallet
+    - domestic
+    - international
+    - payee_id
+    - account_holder
+    - account_identifier
+    - account_identifiers
+    - accounts
+    - bank_account_type
+    - bic_swift
+    - body
+    - branch_code
+    - bsb_code
+    - clabe
+    - company_name
+    - customer_id
+    - date_of_birth
+    - deleted
+    - details
+    - external_id
+    - first_name
+    - header
+    - ifsc
+    - last_name
+    - op
+    - path
+    - payee_u_type
+  transfer:
+    segments_seen:
+      payments: 55
+      transfers: 21
+      payment: 9
+      transfer: 8
+      domestic-payments: 4
+      international-payments: 3
+      wire_transfers: 2
+      ach_transfers: 1
+      book_transfers: 1
+    providers_exposing: 73
+    providers_with_readable_schema: 71
+    operations:
+    - operation: POST collection
+      providers: 64
+      share: 0.877
+      tier: core
+    - operation: GET item
+      providers: 54
+      share: 0.74
+      tier: core
+    - operation: GET collection
+      providers: 47
+      share: 0.644
+      tier: core
+    - operation: DELETE item
+      providers: 12
+      share: 0.164
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 10
+      share: 0.137
+      tier: long-tail
+    - operation: POST item
+      providers: 5
+      share: 0.068
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 2
+      share: 0.027
+      tier: long-tail
+    properties:
+    - name: amount
+      tier: core
+      providers: 54
+      share: 0.761
+      type: number
+      spellings:
+      - amount
+      - instructedAmount
+      - transaction_amount
+      - instructed_amount
+      - transactionAmount
+      - Amount
+    - name: status
+      tier: core
+      providers: 53
+      share: 0.746
+      type: string
+      spellings:
+      - status
+      - transactionStatus
+      - state
+      - Status
+    - name: created_at
+      tier: core
+      providers: 41
+      share: 0.577
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - created
+      - createdDate
+      - createdOn
+      - creationDateTime
+      - created_on
+      - created-at
+    - name: description
+      tier: core
+      providers: 41
+      share: 0.577
+      type: string
+      spellings:
+      - description
+      - reference
+      - memo
+      - remittanceInformation
+      - statement_descriptor
+      - narrative
+      - notes
+      - Notes
+    - name: id
+      tier: core
+      providers: 37
+      share: 0.521
+      type: string
+      spellings:
+      - id
+      - transferId
+      - transfer_id
+      - transferID
+    - name: rail
+      tier: extended
+      providers: 34
+      share: 0.479
+      type: string
+      spellings:
+      - type
+      - paymentType
+      - method
+      - network
+      - payment_type
+      - scheme
+    - name: currency
+      tier: extended
+      providers: 33
+      share: 0.465
+      type: string
+      spellings:
+      - currency
+      - currency_code
+      - currencyCode
+      - Currency
+    - name: from_account_id
+      tier: extended
+      providers: 23
+      share: 0.324
+      type: string
+      spellings:
+      - source
+      - debtorAccount
+      - fromAccountId
+      - source_account_id
+      - sourceAccountId
+      - originating_account_id
+      - from_account_id
+    - name: to_account_id
+      tier: extended
+      providers: 21
+      share: 0.296
+      type: string
+      spellings:
+      - destination
+      - creditorAccount
+      - toAccountId
+      - destination_account_id
+      - beneficiary_id
+      - beneficiaryId
+      - to_account_id
+      - destinationAccountId
+    - name: updated_at
+      tier: extended
+      providers: 18
+      share: 0.254
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - statusUpdateDateTime
+      - updated
+    - name: payment_id
+      tier: extended
+      providers: 16
+      share: 0.225
+      type: string
+      spellings:
+      - paymentId
+    - name: metadata
+      tier: extended
+      providers: 15
+      share: 0.211
+      type: object
+      spellings:
+      - metadata
+      - attributes
+      - tags
+    long_tail_count: 760
+    long_tail_sample:
+    - account_id
+    - transaction_id
+    - creditor
+    - debtor
+    - completed_at
+    - creditor_name
+    - payment_date
+    - beneficiary
+    - creditor_agent
+    - debit_account_id
+    - risk
+    - scheduled_date
+    - beneficiary_name
+    - customer
+    - end_to_end_id
+    - failure_reason
+    - fee
+    - idempotency_key
+    - value_date
+    - balance
+    - batch_id
+    - charge_bearer
+    - created_by
+    - created_time
+    - creditor_address
+    - date
+    - debtor_name
+    - end_to_end_identification
+    - execution_date
+    - external_id
+    - fingerprint
+    - merchant_id
+    - offset
+    - payment_method
+    - purpose
+    - recipient
+    - refunded
+    - remittance_info
+    - remittance_information_structured
+    - remittance_information_unstructured
+  statement:
+    segments_seen:
+      statements: 40
+      statement: 8
+      account_statements: 1
+    providers_exposing: 49
+    providers_with_readable_schema: 44
+    operations:
+    - operation: GET collection
+      providers: 45
+      share: 0.918
+      tier: core
+    - operation: GET item
+      providers: 23
+      share: 0.469
+      tier: extended
+    - operation: POST collection
+      providers: 7
+      share: 0.143
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 23
+      share: 0.523
+      type: string
+      spellings:
+      - id
+      - statementId
+      - guid
+      - statement_id
+      - statementID
+    - name: account_id
+      tier: extended
+      providers: 13
+      share: 0.295
+      type: string
+      spellings:
+      - accountId
+      - account_id
+      - account
+    - name: created_at
+      tier: extended
+      providers: 11
+      share: 0.25
+      type: string
+      spellings:
+      - created_at
+      - creationDate
+      - createdAt
+      - created
+      - createdOn
+      - creationDateTime
+    long_tail_count: 191
+    long_tail_sample:
+    - statement_date
+    - type
+    - description
+    - status
+    - balance
+    - pagination
+    - period_end
+    - period_start
+    - transactions
+    - updated_at
+    - account_guid
+    - account_number
+    - amount_due
+    - closing_balance
+    - content_hash
+    - currency
+    - date
+    - due_date
+    - fees
+    - member_guid
+    - name
+    - next_offset
+    - opening_balance
+    - total_elements
+    - uri
+    - user_guid
+    - amount
+    - apr
+    - billing_period_end
+    - billing_period_start
+    - cash_advance
+    - cash_apr
+    - category
+    - file_id
+    - file_name
+    - file_size
+    - interest
+    - interest_amount
+    - is_latest
+    - last_payment_amount

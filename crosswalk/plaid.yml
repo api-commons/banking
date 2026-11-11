@@ -1,0 +1,59 @@
+provider: plaid
+apis_io: https://apis.io/providers/plaid/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: nickname
+      type: accountType
+      status: status
+      currency: currency
+      account_number: accountNumberDisplay
+      balance:
+      - currentBalance
+      - availableBalance
+      account_id: accountId
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/plaid-core-exchange-openapi-original.yml#GET /accounts
+    - openapi/_original/plaid-core-exchange-openapi-original.yml#GET /accounts/{accountId}
+    - openapi/_original/plaid-core-exchange-openapi.yml#GET /accounts
+    - openapi/_original/plaid-core-exchange-openapi.yml#GET /accounts/{accountId}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      amount: amount
+      status: status
+      description: description
+      merchant_name: payee
+      category: category
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/plaid-core-exchange-openapi-original.yml#GET /accounts/{accountId}/transactions
+    - openapi/_original/plaid-core-exchange-openapi.yml#GET /accounts/{accountId}/transactions
+  beneficiary:
+    path_segment:
+    - recipients
+    - recipient
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/plaid-openapi-original.yml#GET /fdx/recipient/{recipientId}
+    - openapi/_original/plaid-openapi-original.yml#GET /fdx/recipients
+  statement:
+    path_segment:
+    - statements
+    properties:
+      id: statementId
+      account_id: accountId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/plaid-core-exchange-openapi-original.yml#GET /accounts/{accountId}/statements
+    - openapi/_original/plaid-core-exchange-openapi-original.yml#GET /accounts/{accountId}/statements/{statementId}
+    - openapi/_original/plaid-core-exchange-openapi.yml#GET /accounts/{accountId}/statements
+    - openapi/_original/plaid-core-exchange-openapi.yml#GET /accounts/{accountId}/statements/{statementId}

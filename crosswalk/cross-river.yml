@@ -1,0 +1,38 @@
+provider: cross-river
+apis_io: https://apis.io/providers/cross-river/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      status: status
+      currency: currency
+      account_number: accountNumber
+      balance: availableBalance
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/cross-river-openapi.yml#POST /core/v1/dda/accounts
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+      id: id
+      rail: network
+      currency: currency
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/cross-river-openapi.yml#POST /ach/v1/payments
+    - openapi/_original/cross-river-openapi.yml#POST /rtp/v1/payments
+    - openapi/_original/cross-river-openapi.yml#POST /wires/v1/payments
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cross-river-openapi.yml#GET /core/v1/dda/accounts/{accountNumber}/statements

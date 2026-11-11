@@ -1,0 +1,59 @@
+provider: wells-fargo
+apis_io: https://apis.io/providers/wells-fargo/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: accountName
+      type: accountType
+      status: status
+      currency: currency
+      account_number: accountNumber
+      account_id: accountId
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/wells-fargo-account-transactions-api-openapi.yml#GET /v3/accounts
+    - openapi/_original/wells-fargo-gateway-api-openapi.yml#GET /accounts
+  balance:
+    path_segment:
+    - balances
+    properties:
+      account_id: accountId
+      available: availableBalance
+      currency: currency
+      current: ledgerBalance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/wells-fargo-account-transactions-api-openapi.yml#GET /v3/accounts/{accountId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      amount: amount
+      status: status
+      direction: transactionType
+      description: description
+      account_id: accountId
+      posted_at: transactionDate
+      currency: currency
+      merchant_name: counterpartyName
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/wells-fargo-account-transactions-api-openapi.yml#GET /v3/accounts/{accountId}/transactions
+    - openapi/_original/wells-fargo-account-transactions-api-openapi.yml#GET /v3/accounts/{accountId}/transactions/{transactionId}
+    - openapi/_original/wells-fargo-gateway-api-openapi.yml#GET /transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      description: description
+      currency: currency
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/wells-fargo-gateway-api-openapi.yml#GET /payments
+    - openapi/_original/wells-fargo-gateway-api-openapi.yml#POST /payments

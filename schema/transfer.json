@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/banking/main/schema/transfer.json",
+  "title": "Transfer",
+  "description": "The common transfer in Banking, distilled from 71 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.761,
+      "x-commons-providers": 54,
+      "x-commons-spellings": [
+        "amount",
+        "instructedAmount",
+        "transaction_amount",
+        "instructed_amount",
+        "transactionAmount",
+        "Amount"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.746,
+      "x-commons-providers": 53,
+      "x-commons-spellings": [
+        "status",
+        "transactionStatus",
+        "state",
+        "Status"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.577,
+      "x-commons-providers": 41,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "created",
+        "createdDate",
+        "createdOn",
+        "creationDateTime",
+        "created_on",
+        "created-at"
+      ],
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.577,
+      "x-commons-providers": 41,
+      "x-commons-spellings": [
+        "description",
+        "reference",
+        "memo",
+        "remittanceInformation",
+        "statement_descriptor",
+        "narrative",
+        "notes",
+        "Notes"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.521,
+      "x-commons-providers": 37,
+      "x-commons-spellings": [
+        "id",
+        "transferId",
+        "transfer_id",
+        "transferID"
+      ]
+    },
+    "rail": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.479,
+      "x-commons-providers": 34,
+      "x-commons-spellings": [
+        "type",
+        "paymentType",
+        "method",
+        "network",
+        "payment_type",
+        "scheme"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.465,
+      "x-commons-providers": 33,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code",
+        "currencyCode",
+        "Currency"
+      ]
+    },
+    "from_account_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.324,
+      "x-commons-providers": 23,
+      "x-commons-spellings": [
+        "source",
+        "debtorAccount",
+        "fromAccountId",
+        "source_account_id",
+        "sourceAccountId",
+        "originating_account_id",
+        "from_account_id"
+      ]
+    },
+    "to_account_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.296,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "destination",
+        "creditorAccount",
+        "toAccountId",
+        "destination_account_id",
+        "beneficiary_id",
+        "beneficiaryId",
+        "to_account_id",
+        "destinationAccountId"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.254,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "statusUpdateDateTime",
+        "updated"
+      ],
+      "format": "date-time"
+    },
+    "payment_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.225,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "paymentId"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.211,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "metadata",
+        "attributes",
+        "tags"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "banking",
+    "concept": "transfer",
+    "providers": 71,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

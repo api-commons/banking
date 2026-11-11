@@ -1,0 +1,92 @@
+provider: barclays
+apis_io: https://apis.io/providers/barclays/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      currency: currency
+      id:
+      - resourceId
+      - id
+      account_number: iban
+      balance: balances
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /accounts
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /accounts/{accountId}
+    - openapi/_original/barclays-accounts-openapi.json#POST /cards/customers/search/accounts
+    - openapi/_original/barclays-bank-ireland-account-information-openapi.json#GET /accounts
+    - openapi/_original/barclays-bank-ireland-account-information-openapi.json#GET /accounts/{account-id}
+  balance:
+    path_segment:
+    - balances
+    - balance
+    properties:
+      account_id: account
+      available: availableBalance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /accounts/{accountId}/balances
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /balances
+    - openapi/_original/barclays-bank-ireland-account-information-openapi.json#GET /accounts/{account-id}/balances
+    - openapi/_original/barclays-benefits-redemption-openapi.json#GET /cards/accounts/external/{externalAccountID}/rewards/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      amount: transactionAmount
+      direction: transactionType
+      account_id: account
+      posted_at:
+      - bookingDate
+      - transactionDate
+      merchant_name: merchantName
+      category: category
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /accounts/{accountId}/statements/{statementId}/transactions
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /accounts/{accountId}/transactions
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /transactions
+    - openapi/_original/barclays-bank-ireland-account-information-openapi.json#GET /accounts/{account-id}/transactions
+    - openapi/_original/barclays-bank-ireland-account-information-openapi.json#GET /accounts/{account-id}/transactions/{transactionId}
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    - external-accounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /accounts/{accountId}/beneficiaries
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /beneficiaries
+    - openapi/_original/barclays-payments-openapi.json#GET /cards/accounts/{extAccountId}/payments/external-accounts
+    - openapi/_original/barclays-payments-openapi.json#GET /cards/accounts/{extAccountId}/payments/external-accounts/{bankAccountId}
+  transfer:
+    path_segment:
+    - payments
+    - domestic-payments
+    - international-payments
+    properties:
+      amount: amount
+      status: status
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/barclays-payment-initiation-openapi.json#GET /domestic-payments/{domesticPaymentId}
+    - openapi/_original/barclays-payment-initiation-openapi.json#GET /international-payments/{internationalPaymentId}
+    - openapi/_original/barclays-payment-initiation-openapi.json#POST /domestic-payments
+    - openapi/_original/barclays-payment-initiation-openapi.json#POST /international-payments
+    - openapi/_original/barclays-payments-openapi.json#GET /cards/accounts/{extAccountId}/payments
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /accounts/{accountId}/statements
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /accounts/{accountId}/statements/{statementId}
+    - openapi/_original/barclays-account-and-transactions-openapi.json#GET /statements

@@ -1,0 +1,79 @@
+provider: lean-technologies
+apis_io: https://apis.io/providers/lean-technologies/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      type: type
+      status:
+      - status
+      - Status
+      - account_status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/lean-technologies-bank-data-openapi.yml#GET /data/v2/accounts
+    - openapi/_original/lean-technologies-data-openapi.yml#GET /data/v2/accounts
+    - openapi/_original/lean-technologies-ksa-bank-data-openapi.yml#GET /data/v2/accounts
+    - openapi/_original/lean-technologies-ksa-open-banking-openapi.yml#GET /open-banking/account-information/2022.11.01-final-errata2/accounts
+    - openapi/_original/lean-technologies-ksa-verifications-openapi.yml#POST /verifications/v1/accounts
+  balance:
+    path_segment:
+    - balances
+    - balance
+    properties:
+      currency: currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lean-technologies-bank-data-openapi.yml#GET /data/v2/accounts/{account_id}/balances
+    - openapi/_original/lean-technologies-consents-openapi.yml#GET /consents/v1/{consent_id}/balance
+    - openapi/_original/lean-technologies-data-openapi.yml#GET /data/v2/accounts/{account_id}/balances
+    - openapi/_original/lean-technologies-insights-openapi.yml#GET /insights/v2/assets/balances
+    - openapi/_original/lean-technologies-ksa-bank-data-openapi.yml#GET /data/v2/accounts/{account_id}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      status:
+      - status
+      - Status
+      direction: type
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/lean-technologies-bank-data-openapi.yml#GET /data/v2/accounts/{account_id}/transactions
+    - openapi/_original/lean-technologies-data-openapi.yml#GET /data/v2/accounts/{account_id}/transactions
+    - openapi/_original/lean-technologies-ksa-bank-data-openapi.yml#GET /data/v2/accounts/{account_id}/transactions
+    - openapi/_original/lean-technologies-ksa-open-banking-openapi.yml#GET /open-banking/account-information/2022.11.01-final-errata2/accounts/{AccountId}/transactions
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties:
+      status:
+      - status
+      - Status
+      type: type
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lean-technologies-data-openapi.yml#GET /data/v2/accounts/{account_id}/beneficiaries
+    - openapi/_original/lean-technologies-ksa-bank-data-openapi.yml#GET /data/v2/accounts/{account_id}/beneficiaries
+    - openapi/_original/lean-technologies-ksa-open-banking-openapi.yml#GET /open-banking/account-information/2022.11.01-final-errata2/accounts/{AccountId}/beneficiaries
+  transfer:
+    path_segment:
+    - payments
+    - payment
+    properties:
+      amount: amount
+      status: status
+      created_at: created_at
+      description: reference
+      id: id
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/lean-technologies-ksa-payouts-openapi.yml#GET /payouts/v1/payments
+    - openapi/_original/lean-technologies-ksa-payouts-openapi.yml#POST /payouts/v1/payment
+    - openapi/_original/lean-technologies-payouts-extended-openapi.yml#GET /payouts/v1/payments
+    - openapi/_original/lean-technologies-payouts-extended-openapi.yml#POST /payouts/v1/payment
+    - openapi/_original/lean-technologies-payouts-openapi.yml#GET /payouts/v1/payments

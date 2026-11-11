@@ -1,0 +1,13 @@
+provider: pagbank
+apis_io: https://apis.io/providers/pagbank/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pagseguro-accounts-api-openapi.yml#GET /accounts/{id}
+    - openapi/_original/pagseguro-accounts-api-openapi.yml#POST /accounts

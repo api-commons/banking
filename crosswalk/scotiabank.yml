@@ -1,0 +1,35 @@
+provider: scotiabank
+apis_io: https://apis.io/providers/scotiabank/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: nickname
+      type: account_type
+      currency: currency
+      account_number: account_number
+      account_id: account_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/scotiabank-tranxact-openapi.yml#GET /v1/accounts
+  balance:
+    path_segment:
+    - balance
+    properties:
+      account_id: account_id
+      available: available_balance
+      currency: currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/scotiabank-tranxact-openapi.yml#GET /v1/accounts/{account_id}/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      account_id: account_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/scotiabank-tranxact-openapi.yml#GET /v1/accounts/{account_id}/transactions

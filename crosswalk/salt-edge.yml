@@ -1,0 +1,19 @@
+provider: salt-edge
+apis_io: https://apis.io/providers/salt-edge/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salt-edge-openapi.yml#GET /accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salt-edge-openapi.yml#GET /transactions

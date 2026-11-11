@@ -1,0 +1,45 @@
+provider: modernfi
+apis_io: https://apis.io/providers/modernfi/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      type: account_type
+      id: id
+      account_id: account_id
+      created_at: created_at
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/modernfi-openapi-original.json#DELETE /digital-banking/v1/accounts/{account_id}
+    - openapi/_original/modernfi-openapi-original.json#DELETE /digital-banking/v1/pricing-groups/{pricing_group_id}/accounts
+    - openapi/_original/modernfi-openapi-original.json#GET /digital-banking/v1/accounts
+    - openapi/_original/modernfi-openapi-original.json#GET /digital-banking/v1/accounts/{account_id}
+    - openapi/_original/modernfi-openapi-original.json#PATCH /digital-banking/v1/accounts/{account_id}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: transaction_status
+      direction: transaction_type
+      description: description
+      account_id: account_id
+      posted_at: posted_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/modernfi-openapi-original.json#GET /digital-banking/v1/accounts/{account_id}/transactions
+    - openapi/_original/modernfi-openapi-original.json#GET /digital-banking/v1/accounts/{account_id}/transactions/{transaction_id}
+    - openapi/_original/modernfi-openapi-original.json#PATCH /digital-banking/v1/accounts/{account_id}/transactions/{transaction_id}
+    - openapi/_original/modernfi-openapi-original.json#POST /digital-banking/v1/accounts/{account_id}/transactions
+  statement:
+    path_segment:
+    - statements
+    properties:
+      account_id: account_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/modernfi-openapi-original.json#GET /digital-banking/v1/files/statements

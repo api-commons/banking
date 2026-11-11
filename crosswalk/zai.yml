@@ -1,0 +1,61 @@
+provider: zai
+apis_io: https://apis.io/providers/zai/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bank_accounts
+    properties:
+      name: account_name
+      type: account_type
+      currency: currency
+      id: id
+      account_number: account_number
+      created_at: created_at
+      routing_number: routing_number
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/zai-assembly-api.json#DELETE /bank_accounts/{id}
+    - openapi/_original/zai-assembly-api.json#GET /bank_accounts/{id}
+    - openapi/_original/zai-assembly-api.json#GET /disbursements/{id}/bank_accounts
+    - openapi/_original/zai-assembly-api.json#GET /transactions/{id}/bank_accounts
+    - openapi/_original/zai-assembly-api.json#GET /users/{id}/bank_accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: state
+      direction:
+      - type
+      - debit_credit
+      description: description
+      account_id: account_id
+      currency: currency
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/zai-assembly-api.json#GET /disbursements/{id}/transactions
+    - openapi/_original/zai-assembly-api.json#GET /items/{id}/transactions
+    - openapi/_original/zai-assembly-api.json#GET /sub_wallets/{id}/transactions
+    - openapi/_original/zai-assembly-api.json#GET /transactions
+    - openapi/_original/zai-assembly-api.json#GET /transactions/{id}
+  transfer:
+    path_segment:
+    - transfer
+    properties:
+      amount: amount
+      status: state
+      created_at: created_at
+      description: description
+      id: id
+      rail: type
+      currency: currency
+      from_account_id: source
+      to_account_id: destination
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/zai-assembly-api.json#PATCH /sub_wallets/transfer

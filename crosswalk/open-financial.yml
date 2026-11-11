@@ -1,0 +1,77 @@
+provider: open-financial
+apis_io: https://apis.io/providers/open-financial/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      status: status
+      id: id
+      account_number: account_number
+      created_at: created_at
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts
+    - openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts/{account_id}
+    - openapi/_original/open-financial-2-openapi.yml#POST /v1/accounts
+    - openapi/_original/open-financial-6-openapi.yml#POST /v1/accounts
+    - openapi/_original/open-financial-8-openapi.yml#POST /v1/accounts
+  balance:
+    path_segment:
+    - balance
+    properties:
+      currency: currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts/{account_id}/balance
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties:
+      id: id
+      created_at: created_at
+      status: status
+      type: type
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/open-financial-1-openapi.yml#DELETE /v1/accounts/beneficiaries/{beneficiary_id}
+    - openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts/beneficiaries/{beneficiary_id}
+    - openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts/{account_id}/beneficiaries
+    - openapi/_original/open-financial-1-openapi.yml#POST /v1/accounts/beneficiaries/{beneficiary_id}
+    - openapi/_original/open-financial-1-openapi.yml#POST /v1/accounts/{account_id}/beneficiaries
+  transfer:
+    path_segment:
+    - transfers
+    - payment
+    properties:
+      amount: amount
+      status: status
+      created_at: created_at
+      id: id
+      rail: type
+      currency:
+      - currency
+      - currency_code
+      to_account_id: beneficiary_id
+      updated_at: updated_at
+      metadata: metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/open-financial-1-openapi.yml#GET /v1/pg/sandbox/payment_token/{tokenvalue}/payment
+    - openapi/_original/open-financial-1-openapi.yml#GET /v1/transfers
+    - openapi/_original/open-financial-1-openapi.yml#GET /v1/transfers/{transfer_id}
+    - openapi/_original/open-financial-1-openapi.yml#POST /v1/transfers
+    - openapi/_original/open-financial-1-openapi.yml#POST /v2/transfers/bulk
+  statement:
+    path_segment:
+    - statements
+    properties:
+      id: id
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts/{account_id}/statements

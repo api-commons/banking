@@ -1,0 +1,55 @@
+provider: griffin
+apis_io: https://apis.io/providers/griffin/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: display-name
+      status: account-status
+      balance: available-balance
+      created_at: created-at
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/griffin-openapi-original.yml#GET /v0/bank/accounts/{bank-account-id}
+    - openapi/_original/griffin-openapi-original.yml#GET /v0/organizations/{organization-id}/bank/accounts
+    - openapi/_original/griffin-openapi-original.yml#PATCH /v0/bank/accounts/{bank-account-id}
+    - openapi/_original/griffin-openapi-original.yml#POST /v0/bank/products/{bank-product-id}/accounts
+    - openapi/_original/griffin-openapi-original.yml#POST /v0/organizations/{organization-id}/bank/accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      description:
+      - reference
+      - description
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/griffin-openapi-original.yml#GET /v0/bank/accounts/{bank-account-id}/transactions
+    - openapi/_original/griffin-openapi-original.yml#GET /v0/bank/transactions/{transaction-id}
+  beneficiary:
+    path_segment:
+    - payees
+    properties:
+      created_at: created-at
+      account_number: account-number
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/griffin-openapi-original.yml#GET /v0/legal-persons/{legal-person-id}/bank/payees
+    - openapi/_original/griffin-openapi-original.yml#GET /v0/payees/{payee-id}
+    - openapi/_original/griffin-openapi-original.yml#PATCH /v0/payees/{payee-id}
+    - openapi/_original/griffin-openapi-original.yml#POST /v0/legal-persons/{legal-person-id}/bank/payees
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      created_at: created-at
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/griffin-openapi-original.yml#GET /v0/bank/accounts/{bank-account-id}/payments
+    - openapi/_original/griffin-openapi-original.yml#GET /v0/organizations/{organization-id}/payments
+    - openapi/_original/griffin-openapi-original.yml#GET /v0/payments/{payment-id}
+    - openapi/_original/griffin-openapi-original.yml#PATCH /v0/payments/{payment-id}
+    - openapi/_original/griffin-openapi-original.yml#POST /v0/bank/accounts/{bank-account-id}/payments

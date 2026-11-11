@@ -1,0 +1,51 @@
+provider: tink-com
+apis_io: https://apis.io/providers/tink-com/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      currency: currencyCode
+      balance: balance
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/tink-connector-api-openapi.yml#POST /connector/users/{external_user_id}/accounts
+    - openapi/_original/tink-data-api-openapi.yml#GET /data/v2/accounts
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/tink-data-api-openapi.yml#GET /data/v2/accounts/{account_id}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      amount: amount
+      description: description
+      merchant_name: merchantName
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/tink-connector-api-openapi.yml#POST /connector/users/{external_user_id}/transactions
+    - openapi/_original/tink-data-api-openapi.yml#GET /data/v2/transactions
+    - openapi/_original/tink-data-enrichment-api-openapi.yml#GET /enrichment/v1/transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: created
+      description: remittanceInformation
+      id: id
+      currency: currency
+      updated_at: updated
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tink-payments-api-openapi.yml#GET /payments/{paymentId}
+    - openapi/_original/tink-payments-api-openapi.yml#POST /payments

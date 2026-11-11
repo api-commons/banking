@@ -1,0 +1,81 @@
+provider: btg-pactual
+apis_io: https://apis.io/providers/btg-pactual/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - account
+    properties:
+      type: accountType
+      status: status
+      account_number: number
+      account_id: accountId
+      routing_number: bankCode
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/btg-pactual-banking-accounts-openapi.yml#GET /{companyId}/banking/accounts
+    - openapi/_original/btg-pactual-banking-payroll-openapi.yml#GET /{companyId}/banking/payroll/employees/{employeeTaxId}/account
+  balance:
+    path_segment:
+    - balances
+    - balance
+    properties:
+      account_id: accountId
+      available: available
+      currency: currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/btg-pactual-banking-accounts-openapi.yml#GET /{companyId}/banking/accounts/{accountId}/balances
+    - openapi/_original/btg-pactual-fidc-prepayment-openapi.yml#GET /fidc-loan/v1/prepayment/{contract_number}/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      direction: transactionType
+      created_at: createdAt
+      merchant_name: merchant
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/btg-pactual-banking-cards-openapi.yml#GET /{companyId}/banking/cards/invoices/{invoiceId}/transactions
+  beneficiary:
+    path_segment:
+    - payees
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/btg-pactual-scf-risco-sacado-openapi.yml#GET /companies/{payerTaxId}/payees/{payeeTaxId}
+    - openapi/_original/btg-pactual-scf-risco-sacado-openapi.yml#POST /companies/{payerTaxId}/payees
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: amount
+      status: status
+      description:
+      - description
+      - reference
+      rail:
+      - type
+      - paymentType
+      payment_id: paymentId
+      metadata: tags
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/btg-pactual-banking-payments-openapi.yml#DELETE /{companyId}/banking/payments/{paymentId}
+    - openapi/_original/btg-pactual-banking-payments-openapi.yml#GET /{companyId}/banking/payments
+    - openapi/_original/btg-pactual-banking-payments-openapi.yml#GET /{companyId}/banking/payments-recurrences/{recurrenceId}/payments
+    - openapi/_original/btg-pactual-banking-payments-openapi.yml#GET /{companyId}/banking/payments/{paymentId}
+    - openapi/_original/btg-pactual-banking-payments-openapi.yml#POST /{companyId}/banking/payments
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/btg-pactual-banking-accounts-openapi.yml#GET /{companyId}/banking/accounts/statements
+    - openapi/_original/btg-pactual-banking-accounts-openapi.yml#GET /{companyId}/banking/accounts/{accountId}/statements

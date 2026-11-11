@@ -1,0 +1,79 @@
+provider: investec
+apis_io: https://apis.io/providers/investec/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/allica-bank-account-information-openapi.yaml#GET /accounts
+    - openapi/_original/allica-bank-account-information-openapi.yaml#GET /accounts/{AccountId}
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /accounts
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /accounts/{AccountId}
+    - openapi/_original/obie-account-info-openapi.yaml#GET /accounts
+    shared_spec: open-banking-uk
+  balance:
+    path_segment:
+    - balances
+    properties:
+      account_id: account
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/allica-bank-account-information-openapi.yaml#GET /accounts/{AccountId}/balances
+    - openapi/_original/allica-bank-account-information-openapi.yaml#GET /balances
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /accounts/{AccountId}/balances
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /balances
+    - openapi/_original/obie-account-info-openapi.yaml#GET /accounts/{AccountId}/balances
+    shared_spec: open-banking-uk
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/allica-bank-account-information-openapi.yaml#GET /accounts/{AccountId}/transactions
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /accounts/{AccountId}/statements/{StatementId}/transactions
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /accounts/{AccountId}/transactions
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /transactions
+    - openapi/_original/obie-account-info-openapi.yaml#GET /accounts/{AccountId}/statements/{StatementId}/transactions
+    shared_spec: open-banking-uk
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/allica-bank-account-information-openapi.yaml#GET /accounts/{AccountId}/beneficiaries
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /accounts/{AccountId}/beneficiaries
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /beneficiaries
+    - openapi/_original/obie-account-info-openapi.yaml#GET /accounts/{AccountId}/beneficiaries
+    - openapi/_original/obie-account-info-openapi.yaml#GET /beneficiaries
+    shared_spec: open-banking-uk
+  transfer:
+    path_segment:
+    - domestic-payments
+    - international-payments
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/allica-bank-payment-initiation-openapi.yaml#GET /domestic-payments/{DomesticPaymentId}
+    - openapi/_original/allica-bank-payment-initiation-openapi.yaml#POST /domestic-payments
+    - openapi/_original/bank-of-ireland-uk-payment-initiation-openapi.yaml#GET /domestic-payments/{DomesticPaymentId}
+    - openapi/_original/bank-of-ireland-uk-payment-initiation-openapi.yaml#GET /international-payments/{InternationalPaymentId}
+    - openapi/_original/bank-of-ireland-uk-payment-initiation-openapi.yaml#POST /domestic-payments
+    shared_spec: open-banking-uk
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /accounts/{AccountId}/statements
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /accounts/{AccountId}/statements/{StatementId}
+    - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /statements
+    - openapi/_original/obie-account-info-openapi.yaml#GET /accounts/{AccountId}/statements
+    - openapi/_original/obie-account-info-openapi.yaml#GET /accounts/{AccountId}/statements/{StatementId}
+    shared_spec: open-banking-uk

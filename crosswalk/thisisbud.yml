@@ -1,0 +1,60 @@
+provider: thisisbud
+apis_io: https://apis.io/providers/thisisbud/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: account_name
+      type:
+      - account_type
+      - account_sub_type
+      status: status
+      currency: currency
+      balance: balances
+      account_id: account_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/thisisbud-openapi-openapi.yml#DELETE /financial/v2/accounts/{account_id}
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /financial/v2/accounts
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /financial/v2/accounts/{account_id}
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /financial/v3/accounts
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /financial/v3/accounts/{account_id}
+  balance:
+    path_segment:
+    - balances
+    properties:
+      account_id: account_id
+      current: booked
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /financial/v2/accounts/{account_id}/balances
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /financial/v2/balances
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /financial/v3/accounts/{account_id}/balances
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /financial/v3/balances
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /insights/v1/actionable/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transaction_id
+      amount: amount
+      status: status
+      direction:
+      - credit_debit_indicator
+      - transaction_type
+      description: description
+      account_id: account_id
+      posted_at:
+      - value_date_time
+      - date
+      category: categories
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /affordability/v2/transactions
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /financial/v2/transactions
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /goals/v1/spending-budgets/{budget_id}/transactions
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /insights/beta/report/balance/unauthorised-overdraft/transactions/{reference}
+    - openapi/_original/thisisbud-openapi-openapi.yml#GET /insights/beta/report/income-expenditure/transactions/{reference}

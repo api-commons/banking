@@ -1,0 +1,99 @@
+provider: fis
+apis_io: https://apis.io/providers/fis/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bankaccounts
+    - accounts
+    properties:
+      name:
+      - name
+      - accountName
+      type:
+      - type
+      - accountType
+      - accountSubType
+      status: status
+      currency: currency
+      id: id
+      account_number: accountNumber
+      balance:
+      - currentBalance
+      - availableBalance
+      account_id: accountId
+      routing_number:
+      - routingNumber
+      - bankCode
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /accounts
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /bankAccounts
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /v2/accounting/accounts
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /v2/accounting/bankAccounts
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /v2/accounting/customers/bankAccounts
+  balance:
+    path_segment:
+    - balance
+    properties:
+      account_id: accountId
+      available: availableBalance
+      currency: currency
+      current: currentBalance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fis-payments-openapi.yml#GET /accounts/{accountId}/balance
+  transaction:
+    path_segment:
+    - banktransactions
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: status
+      direction: transactionType
+      description:
+      - description
+      - memo
+      account_id: accountId
+      posted_at:
+      - date
+      - postedDate
+      currency: currency
+      created_at: createdDate
+      merchant_name: merchantName
+      category: categories
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /bankTransactions
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /commerce/transactions
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /v2/accounting/bankTransactions
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /v2/banking/bankTransactions
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /v2/commerce/transactions
+  transfer:
+    path_segment:
+    - payments
+    - transfers
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+      description:
+      - memo
+      - description
+      id:
+      - id
+      - transferId
+      currency: currency
+      from_account_id: debtorAccount
+      to_account_id: creditorAccount
+      updated_at: updatedAt
+      payment_id: paymentId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#DELETE /v2/accounting/bills/payments/{id}
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#DELETE /v2/accounting/invoices/payments/{id}
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /bills/payments
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /invoices/payments
+    - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /v2/accounting/bills/payments

@@ -1,0 +1,26 @@
+provider: okra-ng
+apis_io: https://apis.io/providers/okra-ng/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/okra-ng-openapi.yml#POST /products/accounts
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/okra-ng-openapi.yml#POST /products/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/okra-ng-openapi.yml#POST /products/transactions

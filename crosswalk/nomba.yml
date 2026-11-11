@@ -1,0 +1,42 @@
+provider: nomba
+apis_io: https://apis.io/providers/nomba/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: accountName
+      type:
+      - accountType
+      - type
+      status: status
+      currency: currency
+      account_id: accountId
+      created_at: createdAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/nomba-accounts-openapi.yml#GET /v1/accounts
+    - openapi/_original/nomba-transactions-openapi.yml#GET /v1/transactions/accounts
+    - openapi/_original/nomba-transactions-openapi.yml#POST /v1/transactions/accounts
+  balance:
+    path_segment:
+    - balance
+    properties:
+      account_id: accountId
+      currency: currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/nomba-accounts-openapi.yml#GET /v1/accounts/balance
+  transfer:
+    path_segment:
+    - transfer
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/nomba-global-payout-openapi.yml#GET /v1/global-payout/transfer/{transactionId}
+    - openapi/_original/nomba-global-payout-openapi.yml#POST /v1/global-payout/transfer

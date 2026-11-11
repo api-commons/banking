@@ -1,0 +1,32 @@
+provider: pismo
+apis_io: https://apis.io/providers/pismo/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      status: status
+      currency: currency
+      id: id
+      created_at: created_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/pismo-openapi.yml#GET /accounts/v1/accounts/{accountId}
+    - openapi/_original/pismo-openapi.yml#PATCH /accounts/v1/accounts/{accountId}
+    - openapi/_original/pismo-openapi.yml#POST /accounts/v1/accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      direction: type
+      description: description
+      account_id: account_id
+      currency: currency
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/pismo-openapi.yml#GET /accounts/v2/accounts/{accountId}/statements/{statementId}/transactions
+    - openapi/_original/pismo-openapi.yml#GET /transactions/v1/transactions/{transactionId}

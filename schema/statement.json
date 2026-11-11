@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/banking/main/schema/statement.json",
+  "title": "Statement",
+  "description": "The common statement in Banking, distilled from 44 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.523,
+      "x-commons-providers": 23,
+      "x-commons-spellings": [
+        "id",
+        "statementId",
+        "guid",
+        "statement_id",
+        "statementID"
+      ]
+    },
+    "account_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.295,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "accountId",
+        "account_id",
+        "account"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "created_at",
+        "creationDate",
+        "createdAt",
+        "created",
+        "createdOn",
+        "creationDateTime"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "banking",
+    "concept": "statement",
+    "providers": 44,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

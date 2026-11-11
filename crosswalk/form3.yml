@@ -1,0 +1,44 @@
+provider: form3
+apis_io: https://apis.io/providers/form3/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      type: type
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/form3-payments.yml#DELETE /organisation/accounts/{id}
+    - openapi/_original/form3-payments.yml#GET /organisation/accounts
+    - openapi/_original/form3-payments.yml#GET /organisation/accounts/{id}
+    - openapi/_original/form3-payments.yml#PATCH /organisation/accounts/{id}
+    - openapi/_original/form3-payments.yml#POST /organisation/accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      direction: type
+      created_at: created_on
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/form3-payments.yml#GET /files/transactions
+    - openapi/_original/form3-payments.yml#GET /files/transactions/{transaction_file_id}
+    - openapi/_original/form3-payments.yml#POST /files/transactions
+    - openapi/_original/form3-payments.yml#PUT /files/transactions/{transaction_file_id}
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      created_at: created_on
+      id: id
+      rail: type
+      metadata: attributes
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/form3-payments.yml#GET /transaction/payments
+    - openapi/_original/form3-payments.yml#GET /transaction/payments/{id}
+    - openapi/_original/form3-payments.yml#POST /transaction/payments

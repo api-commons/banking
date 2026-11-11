@@ -1,0 +1,52 @@
+provider: orum
+apis_io: https://apis.io/providers/orum/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      type:
+      - account_type
+      - type
+      status: status
+      id: id
+      account_number: account_number
+      created_at: created_at
+      routing_number: routing_number
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/orum-openapi-original.yml#DELETE /deliver/external/accounts/{id}
+    - openapi/_original/orum-openapi-original.yml#GET /deliver/businesses/{id}/external/accounts
+    - openapi/_original/orum-openapi-original.yml#GET /deliver/external/accounts
+    - openapi/_original/orum-openapi-original.yml#GET /deliver/external/accounts/{id}
+    - openapi/_original/orum-openapi-original.yml#GET /deliver/persons/{id}/external/accounts
+  balance:
+    path_segment:
+    - balances
+    - balance
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/orum-openapi-original.yml#GET /deliver/balance
+    - openapi/_original/orum-openapi-original.yml#GET /deliver/reports/balances
+  transfer:
+    path_segment:
+    - transfers
+    properties:
+      amount: amount
+      status: status
+      created_at: created_at
+      id: id
+      currency: currency
+      from_account_id: source
+      to_account_id: destination
+      updated_at: updated_at
+      metadata: metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/orum-openapi-original.yml#GET /deliver/transfers
+    - openapi/_original/orum-openapi-original.yml#GET /deliver/transfers/{id}
+    - openapi/_original/orum-openapi-original.yml#PATCH /deliver/transfers/{id}
+    - openapi/_original/orum-openapi-original.yml#POST /deliver/transfers

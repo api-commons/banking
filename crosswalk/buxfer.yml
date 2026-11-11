@@ -1,0 +1,20 @@
+provider: buxfer
+apis_io: https://apis.io/providers/buxfer/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/buxfer-openapi.yml#GET /accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      status: status
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/buxfer-openapi.yml#GET /transactions

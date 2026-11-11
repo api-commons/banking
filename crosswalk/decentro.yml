@@ -1,0 +1,35 @@
+provider: decentro
+apis_io: https://apis.io/providers/decentro/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - account
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/decentro-ledger-api-openapi.yml#GET /v2/ledger/account/{id}
+    - openapi/_original/decentro-ledger-api-openapi.yml#POST /v2/ledger/account
+  balance:
+    path_segment:
+    - balance
+    properties:
+      current: current_balance
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/decentro-openapi.json#GET /v3/banking/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/decentro-ledger-api-openapi.yml#GET /v2/ledger/transactions
+  statement:
+    path_segment:
+    - statement
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/decentro-openapi.json#GET /v3/banking/account/statement

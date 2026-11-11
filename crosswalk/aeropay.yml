@@ -1,0 +1,33 @@
+provider: aeropay
+apis_io: https://apis.io/providers/aeropay/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bankaccounts
+    properties:
+      name: name
+      type: accountType
+      status: status
+      account_id: bankAccountId
+      created_at: createdDate
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/aeropay-v2-openapi.json#GET /v2/bankAccounts
+    - openapi/_original/aeropay-v2-openapi.yml#GET /v2/bankAccounts
+  transaction:
+    path_segment:
+    - transaction
+    properties:
+      id: id
+      amount: amount
+      status: status
+      account_id: bankAccountId
+      created_at: createdDate
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/aeropay-v2-openapi.json#GET /v2/transaction/{transactionId}
+    - openapi/_original/aeropay-v2-openapi.json#POST /v2/transaction
+    - openapi/_original/aeropay-v2-openapi.yml#GET /v2/transaction/{transactionId}
+    - openapi/_original/aeropay-v2-openapi.yml#POST /v2/transaction

@@ -1,0 +1,72 @@
+provider: tietoevry
+apis_io: https://apis.io/providers/tietoevry/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      status: status
+      currency: currency
+      id: resourceId
+      account_number: iban
+      balance: balances
+      routing_number: bic
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/accounts
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts/{account-id}
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger_2.json#GET /v1/xs2a/v1.0/accounts
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger_2.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts
+  balance:
+    path_segment:
+    - balances
+    properties:
+      account_id: account
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts/{account-id}/balances
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger_2.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts/{account-id}/balances
+    - openapi/_original/tietoevry-openbanking-xs2a-swagger.json#GET /sandbox/xs2a/v1.3/accounts/{account-id}/balances
+    - openapi/_original/tietoevry-openbanking-xs2a-swagger_2.json#GET /sandbox/xs2a/v1.3/accounts/{account-id}/balances
+    - openapi/_original/tietoevry-tieto-xs2a-accounts-cards-premium.v1_3.yaml#GET /{sandbox|live}/xs2a-premium/v1.3/card-accounts/{account-id}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transactionId
+      amount: transactionAmount
+      account_id: account
+      posted_at:
+      - bookingDate
+      - transactionDate
+      merchant_name:
+      - debtorName
+      - creditorName
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts/{account-id}/transactions
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger_2.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts/{account-id}/transactions
+    - openapi/_original/tietoevry-openbanking-xs2a-swagger.json#GET /sandbox/xs2a/v1.3/accounts/{account-id}/transactions
+    - openapi/_original/tietoevry-openbanking-xs2a-swagger.json#GET /sandbox/xs2a/v1.3/accounts/{account-id}/transactions/{transactionId}
+    - openapi/_original/tietoevry-openbanking-xs2a-swagger_2.json#GET /sandbox/xs2a/v1.3/accounts/{account-id}/transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      amount: instructedAmount
+      status: transactionStatus
+      from_account_id: debtorAccount
+      to_account_id: creditorAccount
+      payment_id: paymentId
+      metadata: metadata
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/payments
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#POST /v1/xs2a/v1.0/providers/{provider-id}/payments/{payment-product}
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger_2.json#GET /v1/xs2a/v1.0/providers/{provider-id}/payments
+    - openapi/_original/tietoevry-financial-api-aggregation-swagger_2.json#POST /v1/xs2a/v1.0/providers/{provider-id}/payments/{payment-product}
+    - openapi/_original/tietoevry-openbanking-xs2a-swagger.json#POST /sandbox/xs2a/v1.3/payments/{payment-product}

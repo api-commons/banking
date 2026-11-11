@@ -1,0 +1,80 @@
+provider: basiq
+apis_io: https://apis.io/providers/basiq/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - account
+    properties:
+      name:
+      - name
+      - displayName
+      type:
+      - accountType
+      - type
+      status: status
+      currency: currency
+      id: id
+      account_number:
+      - accountNumber
+      - maskedNumber
+      balance: balance
+      account_id: accountId
+      created_at: creationDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/basiq-insights-openapi.json#POST /users/{userId}/insights/account
+    - openapi/_original/basiq-openapi.json#GET /users/{userId}/accounts
+    - openapi/_original/basiq-openapi.json#GET /users/{userId}/accounts/{accountId}
+  balance:
+    path_segment:
+    - balance
+    properties:
+      account_id: accountId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/basiq-insights-openapi.json#POST /users/{userId}/insights/balance
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: status
+      direction:
+      - type
+      - direction
+      description:
+      - description
+      - reference
+      account_id: account
+      posted_at: transactionDate
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/basiq-affordability-openapi.json#GET /users/{userId}/affordability/{snapshotId}/transactions
+    - openapi/_original/basiq-openapi.json#GET /users/{userId}/transactions
+    - openapi/_original/basiq-openapi.json#GET /users/{userId}/transactions/{transactionId}
+    - openapi/_original/basiq-reporting-openapi.json#GET /reports/{reportId}/transactions
+  beneficiary:
+    path_segment:
+    - payees
+    properties:
+      id: id
+      name: nickname
+      created_at: createdDate
+      type: type
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/basiq-payees-openapi.json#GET /users/{userId}/payees
+    - openapi/_original/basiq-payees-openapi.json#GET /users/{userId}/payees/{payeeId}
+  statement:
+    path_segment:
+    - statements
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/basiq-platform-openapi.json#POST /users/{userId}/statements

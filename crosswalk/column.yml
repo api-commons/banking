@@ -1,0 +1,30 @@
+provider: column
+apis_io: https://apis.io/providers/column/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bank-accounts
+    properties:
+      name: display_name
+      currency: currency_code
+      id: id
+      created_at: created_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/column-openapi.yml#GET /bank-accounts
+    - openapi/_original/column-openapi.yml#GET /bank-accounts/{id}
+    - openapi/_original/column-openapi.yml#POST /bank-accounts
+  beneficiary:
+    path_segment:
+    - counterparties
+    properties:
+      account_number: account_number
+      description: description
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/column-openapi.yml#DELETE /counterparties/{id}
+    - openapi/_original/column-openapi.yml#GET /counterparties
+    - openapi/_original/column-openapi.yml#GET /counterparties/{id}
+    - openapi/_original/column-openapi.yml#POST /counterparties

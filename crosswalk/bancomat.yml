@@ -1,0 +1,67 @@
+provider: bancomat
+apis_io: https://apis.io/providers/bancomat/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: label
+      currency: currency
+      id: id
+      account_number: iban
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/accounts
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.yml#GET /{tenantID}/accounts
+    - openapi/_original/bancomat-flowpay-api-v2-openapi.json#GET /accounts
+    - openapi/_original/bancomat-flowpay-api-v2-openapi.json#GET /accounts/{accountID}
+    - openapi/_original/bancomat-flowpay-api-v2-openapi.json#POST /accounts
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/balances
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.yml#GET /{tenantID}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      status: status
+      direction: type
+      posted_at: bookingDate
+      currency: currency
+      created_at: createdAt
+      merchant_name:
+      - creditorName
+      - debtorName
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/transactions
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/transactions/{transactionID}
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.yml#GET /{tenantID}/transactions
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.yml#GET /{tenantID}/transactions/{transactionID}
+    - openapi/_original/bancomat-flowpay-api-v2-openapi.json#GET /transactions
+  transfer:
+    path_segment:
+    - transfers
+    - payments
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+      id: id
+      currency: currency
+      updated_at: updatedAt
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#DELETE /{tenantID}/transfers/{fingerprint}
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/transfers
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/transfers/{fingerprint}
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.json#POST /{tenantID}/transfers
+    - openapi/_original/bancomat-flowpay-api-v1-openapi.yml#DELETE /{tenantID}/transfers/{fingerprint}

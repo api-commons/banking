@@ -1,0 +1,52 @@
+provider: fintecture
+apis_io: https://apis.io/providers/fintecture/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - bank-accounts
+    - accounts
+    - account
+    properties:
+      type: type
+      currency: currency
+      id: id
+      account_number: iban
+      balance: balances
+      routing_number: bic
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/fintecture-ais-api-openapi.yml#GET /ais/v1/customer/{customer_id}/account/{account_id}
+    - openapi/_original/fintecture-ais-api-openapi.yml#GET /ais/v1/customer/{customer_id}/accounts
+    - openapi/_original/fintecture-oac-api-openapi.yml#DELETE /v1/bank-accounts/{bank_account_id}
+    - openapi/_original/fintecture-oac-api-openapi.yml#GET /v1/bank-accounts
+    - openapi/_original/fintecture-oac-api-openapi.yml#PATCH /v1/bank-accounts/{bank_account_id}
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: id
+      amount: amount
+      direction: type
+      description: description
+      posted_at: booking_date
+      currency: currency
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/fintecture-ais-api-openapi.yml#GET /ais/v1/customer/{customer_id}/account/{account_id}/transactions
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      status: status
+      created_at: created_at
+      id: id
+      rail: type
+      updated_at: updated_at
+      metadata: attributes
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/fintecture-pis-api-openapi.yml#GET /pis/v2/payments
+    - openapi/_original/fintecture-pis-api-openapi.yml#GET /pis/v2/payments/{payment_id}
+    - openapi/_original/fintecture-pis-api-openapi.yml#PATCH /pis/v2/payments/{payment_id}

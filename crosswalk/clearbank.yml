@@ -1,0 +1,38 @@
+provider: clearbank
+apis_io: https://apis.io/providers/clearbank/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name:
+      - name
+      - label
+      type:
+      - kind
+      - type
+      status: status
+      currency: currency
+      id: id
+      account_number: iban
+      balance: balances
+      routing_number: sortCode
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/clearbank-mccy-accounts-v2.json#POST /mccy/v2/Accounts
+    - openapi/_original/clearbank-sterling-v4.json#POST /v4/Accounts
+  transfer:
+    path_segment:
+    - payments
+    properties:
+      description: remittanceInformation
+      currency: currencyCode
+      from_account_id: debtorAccount
+      to_account_id: creditorAccount
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/clearbank-cross-border-v4.json#POST /payments/cross-border-sterling/v4/payments
+    - openapi/_original/clearbank-mccy-payments-v1.json#DELETE /v1/mccy/payments/{batchId}
+    - openapi/_original/clearbank-mccy-payments-v1.json#POST /v1/mccy/payments

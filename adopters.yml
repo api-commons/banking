@@ -1,0 +1,1790 @@
+context: banking
+generated: '2026-11-10'
+adopters:
+- provider: aeropay
+  apis_io: https://apis.io/providers/aeropay/
+  crosswalk: crosswalk/aeropay.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: agicap
+  apis_io: https://apis.io/providers/agicap/
+  crosswalk: crosswalk/agicap.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - statement
+- provider: alex-bank
+  apis_io: https://apis.io/providers/alex-bank/
+  crosswalk: crosswalk/alex-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: algbra
+  apis_io: https://apis.io/providers/algbra/
+  crosswalk: crosswalk/algbra.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: allica-bank
+  apis_io: https://apis.io/providers/allica-bank/
+  crosswalk: crosswalk/allica-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: alloy-com
+  apis_io: https://apis.io/providers/alloy-com/
+  crosswalk: crosswalk/alloy-com.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: alviere
+  apis_io: https://apis.io/providers/alviere/
+  crosswalk: crosswalk/alviere.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: amp-bank
+  apis_io: https://apis.io/providers/amp-bank/
+  crosswalk: crosswalk/amp-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: anchorage
+  apis_io: https://apis.io/providers/anchorage/
+  crosswalk: crosswalk/anchorage.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: anz
+  apis_io: https://apis.io/providers/anz/
+  crosswalk: crosswalk/anz.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: atlar
+  apis_io: https://apis.io/providers/atlar/
+  crosswalk: crosswalk/atlar.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+- provider: augustus
+  apis_io: https://apis.io/providers/augustus/
+  crosswalk: crosswalk/augustus.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+- provider: australian-military-bank
+  apis_io: https://apis.io/providers/australian-military-bank/
+  crosswalk: crosswalk/australian-military-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: australian-unity-bank
+  apis_io: https://apis.io/providers/australian-unity-bank/
+  crosswalk: crosswalk/australian-unity-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: auswide-bank
+  apis_io: https://apis.io/providers/auswide-bank/
+  crosswalk: crosswalk/auswide-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: avaloq
+  apis_io: https://apis.io/providers/avaloq/
+  crosswalk: crosswalk/avaloq.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: avenue-bank
+  apis_io: https://apis.io/providers/avenue-bank/
+  crosswalk: crosswalk/avenue-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bancomat
+  apis_io: https://apis.io/providers/bancomat/
+  crosswalk: crosswalk/bancomat.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: bank-australia
+  apis_io: https://apis.io/providers/bank-australia/
+  crosswalk: crosswalk/bank-australia.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bank-first
+  apis_io: https://apis.io/providers/bank-first/
+  crosswalk: crosswalk/bank-first.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bank-of-america
+  apis_io: https://apis.io/providers/bank-of-america/
+  crosswalk: crosswalk/bank-of-america.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: bank-of-ireland-uk
+  apis_io: https://apis.io/providers/bank-of-ireland-uk/
+  crosswalk: crosswalk/bank-of-ireland-uk.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bank-of-new-york-mellon
+  apis_io: https://apis.io/providers/bank-of-new-york-mellon/
+  crosswalk: crosswalk/bank-of-new-york-mellon.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: bank-of-queensland
+  apis_io: https://apis.io/providers/bank-of-queensland/
+  crosswalk: crosswalk/bank-of-queensland.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bank-of-scotland
+  apis_io: https://apis.io/providers/bank-of-scotland/
+  crosswalk: crosswalk/bank-of-scotland.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bank-of-sydney
+  apis_io: https://apis.io/providers/bank-of-sydney/
+  crosswalk: crosswalk/bank-of-sydney.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bank-of-us
+  apis_io: https://apis.io/providers/bank-of-us/
+  crosswalk: crosswalk/bank-of-us.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: banksa
+  apis_io: https://apis.io/providers/banksa/
+  crosswalk: crosswalk/banksa.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bankvic
+  apis_io: https://apis.io/providers/bankvic/
+  crosswalk: crosswalk/bankvic.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bankwest
+  apis_io: https://apis.io/providers/bankwest/
+  crosswalk: crosswalk/bankwest.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: barclays
+  apis_io: https://apis.io/providers/barclays/
+  crosswalk: crosswalk/barclays.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: basiq
+  apis_io: https://apis.io/providers/basiq/
+  crosswalk: crosswalk/basiq.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+- provider: bbandt-corp
+  apis_io: https://apis.io/providers/bbandt-corp/
+  crosswalk: crosswalk/bbandt-corp.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: bcb-group
+  apis_io: https://apis.io/providers/bcb-group/
+  crosswalk: crosswalk/bcb-group.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: bcu-bank
+  apis_io: https://apis.io/providers/bcu-bank/
+  crosswalk: crosswalk/bcu-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: belvo
+  apis_io: https://apis.io/providers/belvo/
+  crosswalk: crosswalk/belvo.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: bendigo-and-adelaide-bank
+  apis_io: https://apis.io/providers/bendigo-and-adelaide-bank/
+  crosswalk: crosswalk/bendigo-and-adelaide-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: beyond-bank
+  apis_io: https://apis.io/providers/beyond-bank/
+  crosswalk: crosswalk/beyond-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bmo
+  apis_io: https://apis.io/providers/bmo/
+  crosswalk: crosswalk/bmo.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: bond
+  apis_io: https://apis.io/providers/bond/
+  crosswalk: crosswalk/bond.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: btg-pactual
+  apis_io: https://apis.io/providers/btg-pactual/
+  crosswalk: crosswalk/btg-pactual.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: bud-co
+  apis_io: https://apis.io/providers/bud-co/
+  crosswalk: crosswalk/bud-co.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: buxfer
+  apis_io: https://apis.io/providers/buxfer/
+  crosswalk: crosswalk/buxfer.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: c-hoare-and-co
+  apis_io: https://apis.io/providers/c-hoare-and-co/
+  crosswalk: crosswalk/c-hoare-and-co.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: casap
+  apis_io: https://apis.io/providers/casap/
+  crosswalk: crosswalk/casap.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: cashplus
+  apis_io: https://apis.io/providers/cashplus/
+  crosswalk: crosswalk/cashplus.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: chariot
+  apis_io: https://apis.io/providers/chariot/
+  crosswalk: crosswalk/chariot.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+- provider: charles-schwab
+  apis_io: https://apis.io/providers/charles-schwab/
+  crosswalk: crosswalk/charles-schwab.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: chase
+  apis_io: https://apis.io/providers/chase/
+  crosswalk: crosswalk/chase.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: chase-uk
+  apis_io: https://apis.io/providers/chase-uk/
+  crosswalk: crosswalk/chase-uk.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: citi
+  apis_io: https://apis.io/providers/citi/
+  crosswalk: crosswalk/citi.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: citizens-financial
+  apis_io: https://apis.io/providers/citizens-financial/
+  crosswalk: crosswalk/citizens-financial.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: citizens-financial-group
+  apis_io: https://apis.io/providers/citizens-financial-group/
+  crosswalk: crosswalk/citizens-financial-group.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: clearbank
+  apis_io: https://apis.io/providers/clearbank/
+  crosswalk: crosswalk/clearbank.yml
+  concepts:
+  - bank_account
+  - transfer
+- provider: codat-io
+  apis_io: https://apis.io/providers/codat-io/
+  crosswalk: crosswalk/codat-io.yml
+  concepts:
+  - bank_account
+  - transfer
+- provider: column
+  apis_io: https://apis.io/providers/column/
+  crosswalk: crosswalk/column.yml
+  concepts:
+  - bank_account
+  - beneficiary
+- provider: commonwealth-bank
+  apis_io: https://apis.io/providers/commonwealth-bank/
+  crosswalk: crosswalk/commonwealth-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: connexis-cash
+  apis_io: https://apis.io/providers/connexis-cash/
+  crosswalk: crosswalk/connexis-cash.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: coutts
+  apis_io: https://apis.io/providers/coutts/
+  crosswalk: crosswalk/coutts.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: coventry-building-society
+  apis_io: https://apis.io/providers/coventry-building-society/
+  crosswalk: crosswalk/coventry-building-society.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: cross-river
+  apis_io: https://apis.io/providers/cross-river/
+  crosswalk: crosswalk/cross-river.yml
+  concepts:
+  - bank_account
+  - statement
+  - transfer
+- provider: currencycloud
+  apis_io: https://apis.io/providers/currencycloud/
+  crosswalk: crosswalk/currencycloud.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: cynergy-bank
+  apis_io: https://apis.io/providers/cynergy-bank/
+  crosswalk: crosswalk/cynergy-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: danske-bank-uk
+  apis_io: https://apis.io/providers/danske-bank-uk/
+  crosswalk: crosswalk/danske-bank-uk.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: datanomik
+  apis_io: https://apis.io/providers/datanomik/
+  crosswalk: crosswalk/datanomik.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: decentro
+  apis_io: https://apis.io/providers/decentro/
+  crosswalk: crosswalk/decentro.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+- provider: defence-bank
+  apis_io: https://apis.io/providers/defence-bank/
+  crosswalk: crosswalk/defence-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: distyra
+  apis_io: https://apis.io/providers/distyra/
+  crosswalk: crosswalk/distyra.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: dwolla
+  apis_io: https://apis.io/providers/dwolla/
+  crosswalk: crosswalk/dwolla.yml
+  concepts:
+  - balance
+  - bank_account
+  - transfer
+- provider: end-close
+  apis_io: https://apis.io/providers/end-close/
+  crosswalk: crosswalk/end-close.yml
+  concepts:
+  - bank_account
+- provider: envestnet
+  apis_io: https://apis.io/providers/envestnet/
+  crosswalk: crosswalk/envestnet.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+- provider: falcon
+  apis_io: https://apis.io/providers/falcon/
+  crosswalk: crosswalk/falcon.yml
+  concepts:
+  - bank_account
+  - transfer
+- provider: fdx
+  apis_io: https://apis.io/providers/fdx/
+  crosswalk: crosswalk/fdx.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: finicity
+  apis_io: https://apis.io/providers/finicity/
+  crosswalk: crosswalk/finicity.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: fintecture
+  apis_io: https://apis.io/providers/fintecture/
+  crosswalk: crosswalk/fintecture.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: first-direct
+  apis_io: https://apis.io/providers/first-direct/
+  crosswalk: crosswalk/first-direct.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: fis
+  apis_io: https://apis.io/providers/fis/
+  crosswalk: crosswalk/fis.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: fiserv
+  apis_io: https://apis.io/providers/fiserv/
+  crosswalk: crosswalk/fiserv.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: fiskil
+  apis_io: https://apis.io/providers/fiskil/
+  crosswalk: crosswalk/fiskil.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+- provider: form3
+  apis_io: https://apis.io/providers/form3/
+  crosswalk: crosswalk/form3.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: galileo-fs
+  apis_io: https://apis.io/providers/galileo-fs/
+  crosswalk: crosswalk/galileo-fs.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: gateway-bank
+  apis_io: https://apis.io/providers/gateway-bank/
+  crosswalk: crosswalk/gateway-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: gb-bank
+  apis_io: https://apis.io/providers/gb-bank/
+  crosswalk: crosswalk/gb-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: gc-mutual-bank
+  apis_io: https://apis.io/providers/gc-mutual-bank/
+  crosswalk: crosswalk/gc-mutual-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: great-southern-bank
+  apis_io: https://apis.io/providers/great-southern-bank/
+  crosswalk: crosswalk/great-southern-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: greater-bank
+  apis_io: https://apis.io/providers/greater-bank/
+  crosswalk: crosswalk/greater-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: griffin
+  apis_io: https://apis.io/providers/griffin/
+  crosswalk: crosswalk/griffin.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: groupe-bpce
+  apis_io: https://apis.io/providers/groupe-bpce/
+  crosswalk: crosswalk/groupe-bpce.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: hampden-and-co
+  apis_io: https://apis.io/providers/hampden-and-co/
+  crosswalk: crosswalk/hampden-and-co.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: hsbc-australia
+  apis_io: https://apis.io/providers/hsbc-australia/
+  crosswalk: crosswalk/hsbc-australia.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: hume-bank
+  apis_io: https://apis.io/providers/hume-bank/
+  crosswalk: crosswalk/hume-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: huntington-bancshares
+  apis_io: https://apis.io/providers/huntington-bancshares/
+  crosswalk: crosswalk/huntington-bancshares.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: imb-bank
+  apis_io: https://apis.io/providers/imb-bank/
+  crosswalk: crosswalk/imb-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: increase
+  apis_io: https://apis.io/providers/increase/
+  crosswalk: crosswalk/increase.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: ing-australia
+  apis_io: https://apis.io/providers/ing-australia/
+  crosswalk: crosswalk/ing-australia.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: investec
+  apis_io: https://apis.io/providers/investec/
+  crosswalk: crosswalk/investec.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: jack-henry
+  apis_io: https://apis.io/providers/jack-henry/
+  crosswalk: crosswalk/jack-henry.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: joinslash-com
+  apis_io: https://apis.io/providers/joinslash-com/
+  crosswalk: crosswalk/joinslash-com.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+- provider: judo-bank
+  apis_io: https://apis.io/providers/judo-bank/
+  crosswalk: crosswalk/judo-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: kroo
+  apis_io: https://apis.io/providers/kroo/
+  crosswalk: crosswalk/kroo.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: lead-bank
+  apis_io: https://apis.io/providers/lead-bank/
+  crosswalk: crosswalk/lead-bank.yml
+  concepts:
+  - bank_account
+- provider: lean-tech
+  apis_io: https://apis.io/providers/lean-tech/
+  crosswalk: crosswalk/lean-tech.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: lean-technologies
+  apis_io: https://apis.io/providers/lean-technologies/
+  crosswalk: crosswalk/lean-technologies.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: lemonmarkets
+  apis_io: https://apis.io/providers/lemonmarkets/
+  crosswalk: crosswalk/lemonmarkets.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: lithic-com
+  apis_io: https://apis.io/providers/lithic-com/
+  crosswalk: crosswalk/lithic-com.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: lloyds-banking-group
+  apis_io: https://apis.io/providers/lloyds-banking-group/
+  crosswalk: crosswalk/lloyds-banking-group.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: lorum
+  apis_io: https://apis.io/providers/lorum/
+  crosswalk: crosswalk/lorum.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: macquarie-bank
+  apis_io: https://apis.io/providers/macquarie-bank/
+  crosswalk: crosswalk/macquarie-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: marqeta
+  apis_io: https://apis.io/providers/marqeta/
+  crosswalk: crosswalk/marqeta.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: mastercard
+  apis_io: https://apis.io/providers/mastercard/
+  crosswalk: crosswalk/mastercard.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: mastercard-developer-hub-for-fdx-apis
+  apis_io: https://apis.io/providers/mastercard-developer-hub-for-fdx-apis/
+  crosswalk: crosswalk/mastercard-developer-hub-for-fdx-apis.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: memo-bank
+  apis_io: https://apis.io/providers/memo-bank/
+  crosswalk: crosswalk/memo-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: meow
+  apis_io: https://apis.io/providers/meow/
+  crosswalk: crosswalk/meow.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: mercury
+  apis_io: https://apis.io/providers/mercury/
+  crosswalk: crosswalk/mercury.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+- provider: method-financial
+  apis_io: https://apis.io/providers/method-financial/
+  crosswalk: crosswalk/method-financial.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: modernfi
+  apis_io: https://apis.io/providers/modernfi/
+  crosswalk: crosswalk/modernfi.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: modulr
+  apis_io: https://apis.io/providers/modulr/
+  crosswalk: crosswalk/modulr.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: moneyhub
+  apis_io: https://apis.io/providers/moneyhub/
+  crosswalk: crosswalk/moneyhub.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+- provider: mono-africa
+  apis_io: https://apis.io/providers/mono-africa/
+  crosswalk: crosswalk/mono-africa.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: mono-co
+  apis_io: https://apis.io/providers/mono-co/
+  crosswalk: crosswalk/mono-co.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+- provider: montran
+  apis_io: https://apis.io/providers/montran/
+  crosswalk: crosswalk/montran.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: monument-bank
+  apis_io: https://apis.io/providers/monument-bank/
+  crosswalk: crosswalk/monument-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: moov
+  apis_io: https://apis.io/providers/moov/
+  crosswalk: crosswalk/moov.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: move-bank
+  apis_io: https://apis.io/providers/move-bank/
+  crosswalk: crosswalk/move-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: mx
+  apis_io: https://apis.io/providers/mx/
+  crosswalk: crosswalk/mx.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: mx-platform
+  apis_io: https://apis.io/providers/mx-platform/
+  crosswalk: crosswalk/mx-platform.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: mx-technologies
+  apis_io: https://apis.io/providers/mx-technologies/
+  crosswalk: crosswalk/mx-technologies.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: mystate-bank
+  apis_io: https://apis.io/providers/mystate-bank/
+  crosswalk: crosswalk/mystate-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: narmi
+  apis_io: https://apis.io/providers/narmi/
+  crosswalk: crosswalk/narmi.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: national-australia-bank
+  apis_io: https://apis.io/providers/national-australia-bank/
+  crosswalk: crosswalk/national-australia-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: natwest
+  apis_io: https://apis.io/providers/natwest/
+  crosswalk: crosswalk/natwest.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: newcastle-permanent
+  apis_io: https://apis.io/providers/newcastle-permanent/
+  crosswalk: crosswalk/newcastle-permanent.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: nomba
+  apis_io: https://apis.io/providers/nomba/
+  crosswalk: crosswalk/nomba.yml
+  concepts:
+  - balance
+  - bank_account
+  - transfer
+- provider: novopayment
+  apis_io: https://apis.io/providers/novopayment/
+  crosswalk: crosswalk/novopayment.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: number26
+  apis_io: https://apis.io/providers/number26/
+  crosswalk: crosswalk/number26.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: okra-africa
+  apis_io: https://apis.io/providers/okra-africa/
+  crosswalk: crosswalk/okra-africa.yml
+  concepts:
+  - bank_account
+- provider: okra-ng
+  apis_io: https://apis.io/providers/okra-ng/
+  crosswalk: crosswalk/okra-ng.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: open-banking-uk
+  apis_io: https://apis.io/providers/open-banking-uk/
+  crosswalk: crosswalk/open-banking-uk.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: open-financial
+  apis_io: https://apis.io/providers/open-financial/
+  crosswalk: crosswalk/open-financial.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transfer
+- provider: openpayments-io
+  apis_io: https://apis.io/providers/openpayments-io/
+  crosswalk: crosswalk/openpayments-io.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: ordo
+  apis_io: https://apis.io/providers/ordo/
+  crosswalk: crosswalk/ordo.yml
+  concepts:
+  - bank_account
+- provider: orum
+  apis_io: https://apis.io/providers/orum/
+  crosswalk: crosswalk/orum.yml
+  concepts:
+  - balance
+  - bank_account
+  - transfer
+- provider: pagbank
+  apis_io: https://apis.io/providers/pagbank/
+  crosswalk: crosswalk/pagbank.yml
+  concepts:
+  - bank_account
+- provider: paragon-bank
+  apis_io: https://apis.io/providers/paragon-bank/
+  crosswalk: crosswalk/paragon-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: paywithmybank
+  apis_io: https://apis.io/providers/paywithmybank/
+  crosswalk: crosswalk/paywithmybank.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: pennylane
+  apis_io: https://apis.io/providers/pennylane/
+  crosswalk: crosswalk/pennylane.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: people-first-bank
+  apis_io: https://apis.io/providers/people-first-bank/
+  crosswalk: crosswalk/people-first-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: pismo
+  apis_io: https://apis.io/providers/pismo/
+  crosswalk: crosswalk/pismo.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: plaid
+  apis_io: https://apis.io/providers/plaid/
+  crosswalk: crosswalk/plaid.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+- provider: pluggy
+  apis_io: https://apis.io/providers/pluggy/
+  crosswalk: crosswalk/pluggy.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: pn-bank
+  apis_io: https://apis.io/providers/pn-bank/
+  crosswalk: crosswalk/pn-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: police-bank
+  apis_io: https://apis.io/providers/police-bank/
+  crosswalk: crosswalk/police-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: qudos-bank
+  apis_io: https://apis.io/providers/qudos-bank/
+  crosswalk: crosswalk/qudos-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: rabobank-australia
+  apis_io: https://apis.io/providers/rabobank-australia/
+  crosswalk: crosswalk/rabobank-australia.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: racq-bank
+  apis_io: https://apis.io/providers/racq-bank/
+  crosswalk: crosswalk/racq-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: raiffeisen-ru
+  apis_io: https://apis.io/providers/raiffeisen-ru/
+  crosswalk: crosswalk/raiffeisen-ru.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: recognise-bank
+  apis_io: https://apis.io/providers/recognise-bank/
+  crosswalk: crosswalk/recognise-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: regional-australia-bank
+  apis_io: https://apis.io/providers/regional-australia-bank/
+  crosswalk: crosswalk/regional-australia-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: regions-financial
+  apis_io: https://apis.io/providers/regions-financial/
+  crosswalk: crosswalk/regions-financial.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: revolut
+  apis_io: https://apis.io/providers/revolut/
+  crosswalk: crosswalk/revolut.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: salt-edge
+  apis_io: https://apis.io/providers/salt-edge/
+  crosswalk: crosswalk/salt-edge.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: santander-uk
+  apis_io: https://apis.io/providers/santander-uk/
+  crosswalk: crosswalk/santander-uk.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: scotiabank
+  apis_io: https://apis.io/providers/scotiabank/
+  crosswalk: crosswalk/scotiabank.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: secure-trust-bank
+  apis_io: https://apis.io/providers/secure-trust-bank/
+  crosswalk: crosswalk/secure-trust-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: shawbrook-bank
+  apis_io: https://apis.io/providers/shawbrook-bank/
+  crosswalk: crosswalk/shawbrook-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: sibill
+  apis_io: https://apis.io/providers/sibill/
+  crosswalk: crosswalk/sibill.yml
+  concepts:
+  - bank_account
+  - transaction
+- provider: sikoia
+  apis_io: https://apis.io/providers/sikoia/
+  crosswalk: crosswalk/sikoia.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: slash
+  apis_io: https://apis.io/providers/slash/
+  crosswalk: crosswalk/slash.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+- provider: spliceforms
+  apis_io: https://apis.io/providers/spliceforms/
+  crosswalk: crosswalk/spliceforms.yml
+  concepts:
+  - bank_account
+- provider: st-george-bank
+  apis_io: https://apis.io/providers/st-george-bank/
+  crosswalk: crosswalk/st-george-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: summerland-bank
+  apis_io: https://apis.io/providers/summerland-bank/
+  crosswalk: crosswalk/summerland-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: suncorp-bank
+  apis_io: https://apis.io/providers/suncorp-bank/
+  crosswalk: crosswalk/suncorp-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: synctera
+  apis_io: https://apis.io/providers/synctera/
+  crosswalk: crosswalk/synctera.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: tandem-bank
+  apis_io: https://apis.io/providers/tandem-bank/
+  crosswalk: crosswalk/tandem-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: td-bank
+  apis_io: https://apis.io/providers/td-bank/
+  crosswalk: crosswalk/td-bank.yml
+  concepts:
+  - bank_account
+  - beneficiary
+- provider: teachers-mutual-bank
+  apis_io: https://apis.io/providers/teachers-mutual-bank/
+  crosswalk: crosswalk/teachers-mutual-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: teller
+  apis_io: https://apis.io/providers/teller/
+  crosswalk: crosswalk/teller.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: temenos
+  apis_io: https://apis.io/providers/temenos/
+  crosswalk: crosswalk/temenos.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: temenos-transact
+  apis_io: https://apis.io/providers/temenos-transact/
+  crosswalk: crosswalk/temenos-transact.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+- provider: tesser
+  apis_io: https://apis.io/providers/tesser/
+  crosswalk: crosswalk/tesser.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transfer
+- provider: the-bank-of-london
+  apis_io: https://apis.io/providers/the-bank-of-london/
+  crosswalk: crosswalk/the-bank-of-london.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: thisisbud
+  apis_io: https://apis.io/providers/thisisbud/
+  crosswalk: crosswalk/thisisbud.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: tietoevry
+  apis_io: https://apis.io/providers/tietoevry/
+  crosswalk: crosswalk/tietoevry.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: tink-com
+  apis_io: https://apis.io/providers/tink-com/
+  crosswalk: crosswalk/tink-com.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: token-io
+  apis_io: https://apis.io/providers/token-io/
+  crosswalk: crosswalk/token-io.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: toqio
+  apis_io: https://apis.io/providers/toqio/
+  crosswalk: crosswalk/toqio.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - transaction
+- provider: treasury-prime
+  apis_io: https://apis.io/providers/treasury-prime/
+  crosswalk: crosswalk/treasury-prime.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+- provider: tribe-payments
+  apis_io: https://apis.io/providers/tribe-payments/
+  crosswalk: crosswalk/tribe-payments.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: triodos-bank-uk
+  apis_io: https://apis.io/providers/triodos-bank-uk/
+  crosswalk: crosswalk/triodos-bank-uk.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: truist-financial
+  apis_io: https://apis.io/providers/truist-financial/
+  crosswalk: crosswalk/truist-financial.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+- provider: trustly
+  apis_io: https://apis.io/providers/trustly/
+  crosswalk: crosswalk/trustly.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: ubank
+  apis_io: https://apis.io/providers/ubank/
+  crosswalk: crosswalk/ubank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: unit-co
+  apis_io: https://apis.io/providers/unit-co/
+  crosswalk: crosswalk/unit-co.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: unity-bank
+  apis_io: https://apis.io/providers/unity-bank/
+  crosswalk: crosswalk/unity-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: up-bank
+  apis_io: https://apis.io/providers/up-bank/
+  crosswalk: crosswalk/up-bank.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: uphold
+  apis_io: https://apis.io/providers/uphold/
+  crosswalk: crosswalk/uphold.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - transaction
+- provider: upward-financial
+  apis_io: https://apis.io/providers/upward-financial/
+  crosswalk: crosswalk/upward-financial.yml
+  concepts:
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: us-bancorp
+  apis_io: https://apis.io/providers/us-bancorp/
+  crosswalk: crosswalk/us-bancorp.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: vanquis-banking-group
+  apis_io: https://apis.io/providers/vanquis-banking-group/
+  crosswalk: crosswalk/vanquis-banking-group.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: volt-io
+  apis_io: https://apis.io/providers/volt-io/
+  crosswalk: crosswalk/volt-io.yml
+  concepts:
+  - bank_account
+  - beneficiary
+  - transaction
+- provider: vopay
+  apis_io: https://apis.io/providers/vopay/
+  crosswalk: crosswalk/vopay.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - transaction
+  - transfer
+- provider: wells-fargo
+  apis_io: https://apis.io/providers/wells-fargo/
+  crosswalk: crosswalk/wells-fargo.yml
+  concepts:
+  - balance
+  - bank_account
+  - transaction
+  - transfer
+- provider: westpac
+  apis_io: https://apis.io/providers/westpac/
+  crosswalk: crosswalk/westpac.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: wise
+  apis_io: https://apis.io/providers/wise/
+  crosswalk: crosswalk/wise.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+  - transfer
+- provider: wordline
+  apis_io: https://apis.io/providers/wordline/
+  crosswalk: crosswalk/wordline.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: yapily
+  apis_io: https://apis.io/providers/yapily/
+  crosswalk: crosswalk/yapily.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: yodlee
+  apis_io: https://apis.io/providers/yodlee/
+  crosswalk: crosswalk/yodlee.yml
+  concepts:
+  - balance
+  - bank_account
+  - statement
+  - transaction
+- provider: yorkshire-building-society
+  apis_io: https://apis.io/providers/yorkshire-building-society/
+  crosswalk: crosswalk/yorkshire-building-society.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer
+- provider: zai
+  apis_io: https://apis.io/providers/zai/
+  crosswalk: crosswalk/zai.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: zepto-payments
+  apis_io: https://apis.io/providers/zepto-payments/
+  crosswalk: crosswalk/zepto-payments.yml
+  concepts:
+  - bank_account
+  - transaction
+  - transfer
+- provider: zopa
+  apis_io: https://apis.io/providers/zopa/
+  crosswalk: crosswalk/zopa.yml
+  concepts:
+  - balance
+  - bank_account
+  - beneficiary
+  - statement
+  - transaction
+  - transfer

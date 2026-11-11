@@ -1,0 +1,29 @@
+provider: number26
+apis_io: https://apis.io/providers/number26/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/number26-xs2a-openapi-original.yml#GET /accounts
+    - openapi/_original/number26-xs2a-openapi-original.yml#GET /accounts/{bg_account_id}
+  balance:
+    path_segment:
+    - balances
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/number26-xs2a-openapi-original.yml#GET /accounts/{bg_account_id}/balances
+    - openapi/_original/number26-xs2a-openapi-original.yml#GET /accounts/{space_bg_account_id}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/number26-xs2a-openapi-original.yml#GET /accounts/{bg_account_id}/transactions
+    - openapi/_original/number26-xs2a-openapi-original.yml#GET /accounts/{bg_account_id}/transactions/{transaction_id}

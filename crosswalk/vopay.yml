@@ -1,0 +1,74 @@
+provider: vopay
+apis_io: https://apis.io/providers/vopay/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - account
+    properties:
+      account_id: AccountID
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vopay-account-api-reference.json#GET /partner/account
+    - openapi/_original/vopay-account-api-reference.json#POST /partner/account
+  balance:
+    path_segment:
+    - balance
+    - balances
+    properties:
+      currency: Currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vopay-account-api-reference.json#GET /account/balance
+    - openapi/_original/vopay-account-api-reference.json#GET /account/balances
+    - openapi/_original/vopay-client-accounts.json#GET /account/client-accounts/balance
+    - openapi/_original/vopay-iq11.json#GET /iq11/balance
+    - openapi/_original/vopay-virtual-account-api-reference.json#GET /virtual-account/balance
+  transaction:
+    path_segment:
+    - transaction
+    - transactions
+    properties:
+      id: TransactionID
+      amount: Amount
+      status: TransactionStatus
+      description:
+      - Note
+      - Notes
+      - Memo
+      posted_at: TransactionDate
+      currency: Currency
+      merchant_name: MerchantName
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/vopay-account-api-reference.json#GET /account/subaccount/transactions
+    - openapi/_original/vopay-account-api-reference.json#GET /account/transactions
+    - openapi/_original/vopay-account-api-reference.json#GET /partner/account/transactions
+    - openapi/_original/vopay-bill-pay-references.json#GET /bill-pay/transaction
+    - openapi/_original/vopay-client-accounts.json#GET /account/client-accounts/transactions
+  beneficiary:
+    path_segment:
+    - recipients
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vopay-payment-method-api-reference.json#GET /paypal/recipients
+    - openapi/_original/vopay-payment-method-api-reference.json#GET /venmo/recipients
+    - openapi/_original/vopay-payment-method-api-reference.json#GET /zelle/recipients
+  transfer:
+    path_segment:
+    - transfer
+    - payment
+    properties:
+      amount: Amount
+      status: Status
+      description: Notes
+      currency: Currency
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/vopay-account-api-reference.json#POST /partner/account/transfer
+    - openapi/_original/vopay-client-accounts.json#POST /account/client-accounts/transfer
+    - openapi/_original/vopay-client-accounts.json#POST /account/client-accounts/wallets/transfer
+    - openapi/_original/vopay-payment-api-reference.json#POST /v3/payment
+    - openapi/_original/vopay-payment-rails-api-reference.json#POST /journal-entry/transfer

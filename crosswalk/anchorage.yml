@@ -1,0 +1,100 @@
+provider: anchorage
+apis_io: https://apis.io/providers/anchorage/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      status: status
+      id: id
+      balance: balances
+      created_at: createdAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /subaccounts/customers/accounts
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /subaccounts/customers/{customerId}/accounts
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /tax/accounts
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /trading/accounts
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /trading/accounts/{accountId}
+  balance:
+    path_segment:
+    - balances
+    - balance
+    properties:
+      account_id: accountId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /trading/accounts/{accountId}/balances
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /vesting/balances/{allocationId}
+    - openapi/_original/anchorage-v2-openapi-original.yml#POST /vesting/balances
+    - openapi/_original/anchorage-v3-openapi-original.yml#GET /fiat/banks/balance/{id}
+    - openapi/_original/anchorage-v3-openapi-original.yml#GET /wallets/{walletId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    - transaction
+    properties:
+      id:
+      - transactionId
+      - id
+      amount: amount
+      status: status
+      direction:
+      - transactionType
+      - type
+      - direction
+      description: description
+      account_id: internalAccountId
+      created_at: createdAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /subaccounts/transactions
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /subaccounts/transactions/{transactionsIds}
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /tax/accounts/{accountId}/transactions
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /tax/transactions/{subaccountId}
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /transactions
+  beneficiary:
+    path_segment:
+    - counterparties
+    properties:
+      description: description
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /atlas/directory/counterparties
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /atlas/directory/counterparties/{counterpartyId}
+    - openapi/_original/anchorage-v2-openapi-original.yml#POST /atlas/directory/counterparties
+    - openapi/_original/anchorage-v3-openapi-original.yml#GET /atlas/directory/counterparties
+    - openapi/_original/anchorage-v3-openapi-original.yml#GET /atlas/directory/counterparties/{counterpartyId}
+  transfer:
+    path_segment:
+    - transfers
+    - transfer
+    properties:
+      amount: amount
+      status: status
+      created_at: createdAt
+      description: description
+      id: transferId
+      from_account_id: source
+      to_account_id: destination
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/anchorage-v2-openapi-original.yml#DELETE /transfers/{transferId}
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /transfers
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /transfers/{transferId}
+    - openapi/_original/anchorage-v2-openapi-original.yml#POST /transfers
+    - openapi/_original/anchorage-v3-openapi-original.yml#POST /wallet-operations/construct/transfer
+  statement:
+    path_segment:
+    - statements
+    properties:
+      id: id
+      created_at: createdAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /statements
+    - openapi/_original/anchorage-v2-openapi-original.yml#GET /statements/{statementId}

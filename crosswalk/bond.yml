@@ -1,0 +1,57 @@
+provider: bond
+apis_io: https://apis.io/providers/bond/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      type: type
+      status: status
+      account_number: account_number
+      balance: balance
+      account_id: account_id
+      created_at: date_created
+      routing_number: routing_number
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/bond-accounts-openapi.yml#GET /accounts
+    - openapi/_original/bond-accounts-openapi.yml#GET /accounts/{account_id}
+    - openapi/_original/bond-accounts-openapi.yml#PATCH /accounts/{account_id}
+    - openapi/_original/bond-accounts-openapi.yml#POST /accounts
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id: transaction_id
+      amount: amount
+      status: state
+      direction: transaction_type
+      account_id: account_id
+      currency: currency
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/bond-ledger-openapi.yml#GET /transactions
+    - openapi/_original/bond-ledger-openapi.yml#GET /transactions/{transaction_id}
+  transfer:
+    path_segment:
+    - transfers
+    properties:
+      amount: amount
+      status: status
+      description: description
+      id: transfer_id
+      to_account_id: destination_account_id
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/bond-transfers-openapi.yml#POST /transfers
+  statement:
+    path_segment:
+    - statements
+    properties:
+      id: statement_id
+      account_id: account_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bond-accounts-openapi.yml#GET /accounts/{account_id}/statements

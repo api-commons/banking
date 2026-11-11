@@ -1,0 +1,73 @@
+provider: wise
+apis_io: https://apis.io/providers/wise/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    properties:
+      name: name
+      type: type
+      currency: currency
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/wise-platform-openapi.yml#DELETE /v2/accounts/{accountId}
+    - openapi/_original/wise-platform-openapi.yml#GET /v1/accounts
+    - openapi/_original/wise-platform-openapi.yml#GET /v1/accounts/{accountId}
+    - openapi/_original/wise-platform-openapi.yml#GET /v2/accounts
+    - openapi/_original/wise-platform-openapi.yml#GET /v2/accounts/{accountId}
+  balance:
+    path_segment:
+    - balances
+    properties:
+      currency: currency
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/wise-platform-openapi.yml#DELETE /v4/profiles/{profileId}/balances/{balanceId}
+    - openapi/_original/wise-platform-openapi.yml#GET /v4/profiles/{profileId}/balances
+    - openapi/_original/wise-platform-openapi.yml#GET /v4/profiles/{profileId}/balances/{balanceId}
+    - openapi/_original/wise-platform-openapi.yml#POST /v4/profiles/{profileId}/balances
+  transaction:
+    path_segment:
+    - transactions
+    properties:
+      id:
+      - id
+      - transactionId
+      amount: transactionAmount
+      status: state
+      direction: type
+      created_at: createdDate
+      merchant_name: merchant
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/wise-platform-openapi.yml#GET /v2/simulation/spend/profiles/{profileId}/cards/{cardToken}/transactions
+    - openapi/_original/wise-platform-openapi.yml#GET /v3/spend/profiles/{profileId}/cards/transactions/{transactionId}
+    - openapi/_original/wise-platform-openapi.yml#GET /v4/spend/profiles/{profileId}/cards/transactions/{transactionId}
+    - openapi/_original/wise-platform-openapi.yml#GET /v4/spend/profiles/{profileId}/cards/{cardToken}/transactions
+  transfer:
+    path_segment:
+    - transfers
+    - payments
+    properties:
+      status: status
+      created_at: created
+      description: reference
+      id: id
+      rail: type
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/wise-platform-openapi.yml#GET /v1/transfers
+    - openapi/_original/wise-platform-openapi.yml#GET /v1/transfers/{transferId}
+    - openapi/_original/wise-platform-openapi.yml#POST /v1/transfers
+    - openapi/_original/wise-platform-openapi.yml#POST /v3/profiles/{profileId}/batch-groups/{batchGroupId}/transfers
+    - openapi/_original/wise-platform-openapi.yml#POST /v3/profiles/{profileId}/batch-payments/{batchGroupId}/payments
+  statement:
+    path_segment:
+    - statement
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/wise-platform-openapi.yml#GET /v1/profiles/{profileId}/balance-statements/{balanceId}/statement.json

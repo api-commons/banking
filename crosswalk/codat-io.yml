@@ -1,0 +1,24 @@
+provider: codat-io
+apis_io: https://apis.io/providers/codat-io/
+context: banking
+generated: '2026-11-10'
+concepts:
+  bank_account:
+    path_segment:
+    - accounts
+    - bankaccounts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/codat-io-openapi.yml#GET /companies/{companyId}/connections/{connectionId}/data/bankAccounts
+    - openapi/_original/codat-io-openapi.yml#GET /companies/{companyId}/data/accounts
+    - openapi/_original/codat-io-openapi.yml#GET /companies/{companyId}/data/accounts/{accountId}
+    - openapi/_original/codat-io-openapi.yml#GET /companies/{companyId}/reports/enhancedBalanceSheet/accounts
+    - openapi/_original/codat-io-openapi.yml#GET /companies/{companyId}/reports/enhancedProfitAndLoss/accounts
+  transfer:
+    path_segment:
+    - payment
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/codat-io-openapi.yml#POST /companies/{companyId}/connections/{connectionId}/payables/bills/{billId}/payment
