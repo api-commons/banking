@@ -9,10 +9,10 @@ info:
     name: CC BY-NC-SA 4.0
     url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 paths:
-  /bank-accounts:
+  /accounts:
     get:
       operationId: listBankAccounts
-      summary: List bank accounts
+      summary: List accounts
       tags:
       - Bank Accounts
       x-commons-tier: core
@@ -53,7 +53,7 @@ paths:
         content:
           application/json:
             schema: *id001
-  /bank-accounts/{bank_account_id}:
+  /accounts/{bank_account_id}:
     parameters:
     - $ref: '#/components/parameters/bank_account_id'
     get:

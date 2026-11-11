@@ -24,6 +24,7 @@ common_fields:
 
 concepts:
   bank_account:
+    path: /accounts
     segments: [accounts, account, bank_accounts, bank-accounts, bankaccounts, deposit_accounts, deposit-accounts, internal_accounts, internal-accounts, financial_accounts, financial-accounts]
     aliases:
       account_number: [number, account_number_last4, mask, masked_number, account_number_display, iban, identification]
