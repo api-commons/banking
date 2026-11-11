@@ -9,11 +9,11 @@ concepts:
     properties:
       name: name
       type: type
-      status: status
       currency: currency
+      status: status
       id: id
       balance: balance
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/volt-io-accounts-openapi-original.yaml#GET /accounts
     - openapi/_original/volt-io-accounts-openapi-original.yaml#GET /accounts/{accountId}
@@ -23,11 +23,11 @@ concepts:
     properties:
       id: id
       amount: amount
-      status: status
       direction: type
+      status: status
       currency: currency
       created_at: createdAt
-    core_coverage: 0.8
+    core_coverage: 0.571
     evidence:
     - openapi/_original/volt-io-accounts-openapi-original.yaml#GET /transactions
     - openapi/_original/volt-io-accounts-openapi-original.yaml#GET /transactions/{transactionId}

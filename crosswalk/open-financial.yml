@@ -13,7 +13,7 @@ concepts:
       id: id
       account_number: account_number
       created_at: created_at
-    core_coverage: 0.833
+    core_coverage: 0.714
     evidence:
     - openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts
     - openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts/{account_id}
@@ -25,6 +25,7 @@ concepts:
     - balance
     properties:
       currency: currency
+      amount: amount
     core_coverage: 0.0
     evidence:
     - openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts/{account_id}/balance
@@ -58,7 +59,6 @@ concepts:
       - currency_code
       to_account_id: beneficiary_id
       updated_at: updated_at
-      metadata: metadata
     core_coverage: 0.8
     evidence:
     - openapi/_original/open-financial-1-openapi.yml#GET /v1/pg/sandbox/payment_token/{tokenvalue}/payment

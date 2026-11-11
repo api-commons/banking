@@ -32,15 +32,16 @@ concepts:
     properties:
       id: TransactionID
       amount: Amount
-      status: TransactionStatus
+      direction: TransactionType
       description:
       - Note
       - Notes
       - Memo
+      status: TransactionStatus
       posted_at: TransactionDate
       currency: Currency
       merchant_name: MerchantName
-    core_coverage: 0.8
+    core_coverage: 0.857
     evidence:
     - openapi/_original/vopay-account-api-reference.json#GET /account/subaccount/transactions
     - openapi/_original/vopay-account-api-reference.json#GET /account/transactions

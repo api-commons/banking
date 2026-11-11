@@ -14,7 +14,7 @@ concepts:
       id: id
       account_number: mask
       created_at: created_at
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/end-close-openapi.json#DELETE /bank_accounts/{id}
     - openapi/_original/end-close-openapi.json#GET /bank_accounts

@@ -12,7 +12,7 @@ concepts:
       type: accountType
       status: status
       account_number: iban
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/toqio-accounts-openapi.yml#GET /customers/{customerId}/accounts
     - openapi/_original/toqio-accounts-openapi.yml#GET /customers/{customerId}/accounts/{accountId}
@@ -25,10 +25,10 @@ concepts:
     properties:
       amount: amount
       description: reference
-      account_id: sourceAccountId
       posted_at: date
+      account_id: sourceAccountId
       currency: currency
-    core_coverage: 0.4
+    core_coverage: 0.571
     evidence:
     - openapi/_original/toqio-integration-hub-api-openapi.yml#GET /customers/{customerId}/lending/loans/{loanId}/transactions
     - openapi/_original/toqio-integration-hub-api-openapi.yml#GET /customers/{customerId}/transactions
@@ -46,6 +46,7 @@ concepts:
       - accountNumber
       - iban
       type: type
+      routing_number: routingNumber
     core_coverage: 1.0
     evidence:
     - openapi/_original/toqio-beneficiaries-openapi.yml#DELETE /customers/{customerId}/clients/{clientId}/beneficiaries/{beneficiaryId}

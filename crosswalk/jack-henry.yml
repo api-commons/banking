@@ -21,7 +21,7 @@ concepts:
       - balance
       - availableBalance
       - currentBalance
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/banno-consumer-api-openapi.yml#GET /a/consumer/api/v0/users/{userId}/accounts
     - openapi/_original/banno-consumer-api-openapi.yml#GET /a/consumer/api/v0/users/{userId}/accounts/{accountId}
@@ -34,17 +34,18 @@ concepts:
       - id
       - transactionId
       amount: amount
-      status: status
       direction: type
       description:
       - description
       - memo
       - notes
+      status: status
       posted_at:
       - date
       - postedDate
       merchant_name: merchant
-    core_coverage: 1.0
+      balance_after: runningBalance
+    core_coverage: 0.857
     evidence:
     - openapi/_original/banno-consumer-api-openapi.yml#GET /a/consumer/api/v0/users/{userId}/accounts/{accountId}/transactions
     - openapi/_original/banno-consumer-api-openapi.yml#GET /a/consumer/api/v0/users/{userId}/accounts/{accountId}/transactions/{transactionId}

@@ -9,12 +9,12 @@ concepts:
     properties:
       name: accountName
       type: accountType
-      status: status
       currency: currency
+      status: status
       account_number: accountNumber
       account_id: accountId
       routing_number: routingNumber
-    core_coverage: 0.833
+    core_coverage: 0.714
     evidence:
     - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts
     - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts/{accountId}
@@ -23,14 +23,24 @@ concepts:
     - balances
     properties:
       account_id: accountId
+      available: availableBalance
+      currency: currency
+      current: ledgerBalance
     core_coverage: 0.0
     evidence:
     - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts/{accountId}/balances
   transaction:
     path_segment:
     - transactions
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: transactionId
+      amount: amount
+      direction: type
+      description: description
+      status: status
+      account_id: accountId
+      currency: currency
+    core_coverage: 0.857
     evidence:
     - openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts/{accountId}/transactions
   transfer:

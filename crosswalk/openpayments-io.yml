@@ -8,15 +8,15 @@ concepts:
     - accounts
     properties:
       name: name
-      status: status
       currency: currency
+      status: status
       id: resourceId
       account_number:
       - iban
       - accountNumber
       balance: balances
       routing_number: bic
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/accounts
     - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/accounts/{account-id}
@@ -35,13 +35,13 @@ concepts:
     properties:
       id: transactionId
       amount: transactionAmount
-      account_id: account
       posted_at: bookingDate
+      account_id: account
       merchant_name:
       - creditorName
       - debtorName
       category: bankTransactionCode
-    core_coverage: 0.4
+    core_coverage: 0.571
     evidence:
     - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/accounts/{account-id}/transactions
     - openapi/_original/openpayments-io-openapi.yml#GET /psd2/accountinformation/v1/accounts/{account-id}/transactions/{transactionId}
@@ -54,7 +54,6 @@ concepts:
       status: transactionStatus
       from_account_id: debtorAccount
       to_account_id: creditorAccount
-      payment_id: paymentId
     core_coverage: 0.4
     evidence:
     - openapi/_original/openpayments-io-openapi.yml#GET /iso/payments/{paymentId}

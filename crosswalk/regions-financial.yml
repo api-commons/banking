@@ -9,20 +9,32 @@ concepts:
     properties:
       name: nickname
       type: accountType
-      status: status
       currency: currency
+      status: status
       account_number: accountNumber
       balance: balance
       account_id: accountId
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/regions-open-banking-openapi.yml#GET /accounts
     - openapi/_original/regions-open-banking-openapi.yml#GET /accounts/{accountId}
   transaction:
     path_segment:
     - transactions
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: transactionId
+      amount: amount
+      direction: type
+      description: description
+      status: status
+      posted_at:
+      - postedDate
+      - transactionDate
+      account_id: accountId
+      currency: currency
+      merchant_name: merchantName
+      category: category
+    core_coverage: 1.0
     evidence:
     - openapi/_original/regions-open-banking-openapi.yml#GET /accounts/{accountId}/transactions
   transfer:

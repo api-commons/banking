@@ -13,7 +13,7 @@ concepts:
       id: id
       account_number: account_number
       balance: balance
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/mono-africa-openapi.yml#GET /v2/accounts
     - openapi/_original/mono-africa-openapi.yml#GET /v2/accounts/{id}
@@ -22,6 +22,7 @@ concepts:
     - balance
     properties:
       currency: currency
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/mono-africa-openapi.yml#GET /v2/accounts/{id}/balance
@@ -34,7 +35,8 @@ concepts:
       direction: type
       posted_at: date
       category: category
-    core_coverage: 0.6
+      balance_after: balance
+    core_coverage: 0.571
     evidence:
     - openapi/_original/mono-africa-openapi.yml#GET /v2/accounts/{id}/transactions
   transfer:
@@ -55,6 +57,7 @@ concepts:
     - statement
     properties:
       id: id
+      type: type
     core_coverage: 1.0
     evidence:
     - openapi/_original/mono-africa-openapi.yml#GET /v2/accounts/{id}/statement

@@ -17,7 +17,7 @@ concepts:
       routing_number:
       - bic
       - bank_code
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/lean-data-api-openapi.yml#GET /data/v2/accounts
     - openapi/_original/lean-verifications-api-openapi.yml#POST /verifications/v1/accounts
@@ -38,7 +38,7 @@ concepts:
       amount: amount
       direction: credit_debit_indicator
       description: description
-    core_coverage: 0.8
+    core_coverage: 0.571
     evidence:
     - openapi/_original/lean-data-api-openapi.yml#GET /data/v2/accounts/{account_id}/transactions
   beneficiary:

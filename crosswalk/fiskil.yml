@@ -15,7 +15,7 @@ concepts:
       - masked_number
       account_id: account_id
       created_at: creation_date
-    core_coverage: 0.333
+    core_coverage: 0.286
     evidence:
     - openapi/_original/fiskil-openapi.json#GET /v1/banking/accounts
     - openapi/_original/fiskil-openapi.json#GET /v1/energy/accounts
@@ -37,13 +37,13 @@ concepts:
     properties:
       id: transaction_id
       amount: amount
-      status: status
       direction: type
       description:
       - description
       - reference
-      account_id: account_id
+      status: status
       posted_at: value_date_time
+      account_id: account_id
       currency: currency
       merchant_name: merchant_name
       category: category

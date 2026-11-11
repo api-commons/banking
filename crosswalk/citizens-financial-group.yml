@@ -9,14 +9,14 @@ concepts:
     properties:
       name: nickname
       type: accountType
-      status: status
       currency: currency
+      status: status
       account_number: accountNumberDisplay
       balance:
       - currentBalance
       - availableBalance
       account_id: accountId
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/citizens-accounts-fdx-v1.json#GET /accounts
     - openapi/_original/citizens-accounts-fdx-v1.json#GET /accounts/{accountId}
@@ -29,14 +29,14 @@ concepts:
     properties:
       id: transactionId
       amount: amount
-      status: status
       direction: transactionType
       description:
       - description
       - memo
+      status: status
       account_id: accountId
       category: category
-    core_coverage: 1.0
+    core_coverage: 0.857
     evidence:
     - openapi/_original/citizens-accounts-fdx-v1.json#GET /accounts/{accountId}/transactions
     - openapi/_original/citizens-accounts-fdx-v2-sandbox.json#GET /accounts/{accountId}/transactions

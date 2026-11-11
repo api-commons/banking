@@ -8,7 +8,7 @@ concepts:
     - accounts
     properties:
       status: status
-    core_coverage: 0.167
+    core_coverage: 0.143
     evidence:
     - openapi/_original/galileo-fs-openapi.yml#POST /pro/program/accounts
   transaction:
@@ -17,7 +17,7 @@ concepts:
     properties:
       id: transactionId
       status: status
-    core_coverage: 0.4
+    core_coverage: 0.286
     evidence:
     - openapi/_original/galileo-fs-openapi.yml#POST /pro/program/transactions
   beneficiary:

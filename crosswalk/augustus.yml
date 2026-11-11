@@ -9,12 +9,12 @@ concepts:
     properties:
       name: label
       type: type
-      status: status
       currency: currency
+      status: status
       id: id
       account_id: account_id
       created_at: created_at
-    core_coverage: 0.833
+    core_coverage: 0.714
     evidence:
     - openapi/_original/augustus-openapi.json#GET /v1/accounts
     - openapi/_original/augustus-openapi.json#GET /v1/accounts/{id}
@@ -26,6 +26,9 @@ concepts:
     properties:
       account_id: account_id
       currency: currency
+      type: type
+      amount: amount
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/augustus-openapi.json#GET /v1/account_programs/{id}/balance
@@ -36,12 +39,12 @@ concepts:
     properties:
       id: id
       amount: amount
-      status: status
       direction: type
-      account_id: account_id
+      status: status
       posted_at: booked_at
+      account_id: account_id
       currency: currency
-    core_coverage: 0.8
+    core_coverage: 0.857
     evidence:
     - openapi/_original/augustus-openapi.json#GET /v1/transactions
     - openapi/_original/augustus-openapi.json#GET /v1/transactions/{id}

@@ -8,8 +8,8 @@
     "amount": {
       "type": "number",
       "x-commons-tier": "core",
-      "x-commons-share": 0.761,
-      "x-commons-providers": 54,
+      "x-commons-share": 0.775,
+      "x-commons-providers": 55,
       "x-commons-spellings": [
         "amount",
         "instructedAmount",
@@ -51,8 +51,8 @@
     "description": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.577,
-      "x-commons-providers": 41,
+      "x-commons-share": 0.563,
+      "x-commons-providers": 40,
       "x-commons-spellings": [
         "description",
         "reference",
@@ -98,7 +98,6 @@
       "x-commons-spellings": [
         "currency",
         "currency_code",
-        "currencyCode",
         "Currency"
       ]
     },
@@ -152,18 +151,8 @@
       "x-commons-share": 0.225,
       "x-commons-providers": 16,
       "x-commons-spellings": [
-        "paymentId"
-      ]
-    },
-    "metadata": {
-      "type": "object",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.211,
-      "x-commons-providers": 15,
-      "x-commons-spellings": [
-        "metadata",
-        "attributes",
-        "tags"
+        "paymentId",
+        "payment_id"
       ]
     }
   },

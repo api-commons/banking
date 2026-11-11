@@ -10,10 +10,12 @@ concepts:
       name:
       - name
       - nickname
-      type: type
+      type:
+      - accountType
+      - type
       status: status
       id: id
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/token-io-bank-integration-openapi.json#DELETE /accounts/{bankAccountId}
     - openapi/_original/token-io-bank-integration-openapi.json#GET /accounts/{bankAccountId}
@@ -27,6 +29,8 @@ concepts:
     properties:
       available: available
       current: current
+      type: type
+      amount: amount
     core_coverage: 0.0
     evidence:
     - openapi/_original/token-io-bank-integration-openapi.json#GET /accounts/{bankAccountId}/balance
@@ -40,13 +44,18 @@ concepts:
     properties:
       id: id
       amount: amount
-      status: status
       direction:
       - type
       - transactionType
-      description: description
+      description:
+      - description
+      - reference
+      status: status
+      merchant_name: merchant
+      category: bankTransactionCode
       created_at: createdAt
-    core_coverage: 1.0
+      balance_after: balance
+    core_coverage: 0.714
     evidence:
     - openapi/_original/token-io-bank-integration-openapi.json#GET /accounts/{bankAccountId}/transactions
     - openapi/_original/token-io-bank-integration-openapi.json#GET /accounts/{bankAccountId}/transactions/{transactionId}
@@ -70,7 +79,6 @@ concepts:
       - method
       - paymentType
       from_account_id: source
-      metadata: metadata
     core_coverage: 0.8
     evidence:
     - openapi/_original/token-io-bank-integration-openapi.json#POST /transfers

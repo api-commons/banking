@@ -12,7 +12,7 @@ concepts:
       status: status
       account_id: bankAccountId
       created_at: createdDate
-    core_coverage: 0.5
+    core_coverage: 0.429
     evidence:
     - openapi/_original/aeropay-v2-openapi.json#GET /v2/bankAccounts
     - openapi/_original/aeropay-v2-openapi.yml#GET /v2/bankAccounts
@@ -25,7 +25,7 @@ concepts:
       status: status
       account_id: bankAccountId
       created_at: createdDate
-    core_coverage: 0.6
+    core_coverage: 0.571
     evidence:
     - openapi/_original/aeropay-v2-openapi.json#GET /v2/transaction/{transactionId}
     - openapi/_original/aeropay-v2-openapi.json#POST /v2/transaction

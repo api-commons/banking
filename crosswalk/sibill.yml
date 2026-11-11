@@ -14,7 +14,7 @@ concepts:
       - available_balance
       - current_balance
       created_at: created_at
-    core_coverage: 0.5
+    core_coverage: 0.571
     evidence:
     - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/accounts
     - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/accounts/{id}
@@ -26,16 +26,16 @@ concepts:
       amount: amount
       direction: type
       description: description
-      account_id: account_id
       posted_at:
       - booking_date_time
       - date
       - value_date_time
-      created_at: created_at
+      account_id: account_id
       category:
       - category
       - category_id
-    core_coverage: 0.8
+      created_at: created_at
+    core_coverage: 0.857
     evidence:
     - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/transactions
     - openapi/_original/sibill-openapi-original.json#GET /api/v1/companies/{company_id}/transactions/{id}

@@ -10,7 +10,7 @@ concepts:
       name: name
       type: type
       id: id
-    core_coverage: 0.5
+    core_coverage: 0.429
     evidence:
     - openapi/_original/dwolla-accounts-openapi.yml#GET /accounts/{id}
     - openapi/_original/dwolla-openapi.yml#GET /accounts/{id}
@@ -30,7 +30,6 @@ concepts:
       status: status
       created_at: created
       id: id
-      metadata: metadata
     core_coverage: 0.8
     evidence:
     - openapi/_original/dwolla-accounts-openapi.yml#GET /accounts/{id}/transfers

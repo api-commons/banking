@@ -10,14 +10,14 @@ concepts:
       name:
       - accountName
       - name
-      status: status
       currency: currency
+      status: status
       account_number:
       - iban
       - accountNumber
       balance: availableBalance
       account_id: accountId
-    core_coverage: 0.667
+    core_coverage: 0.714
     evidence:
     - openapi/_original/montran-corporate-payments-portal-openapi.yml#GET /accounts
     - openapi/_original/montran-corporate-payments-portal-openapi.yml#GET /accounts/{accountId}
@@ -28,11 +28,14 @@ concepts:
     - balance
     - balances
     properties:
-      account_id:
-      - accountId
-      - account
+      account_id: accountId
       available: availableBalance
       currency: currency
+      type:
+      - type
+      - creditDebitIndicator
+      - balanceType
+      amount: amount
     core_coverage: 0.0
     evidence:
     - openapi/_original/montran-global-payments-hub-openapi.yml#GET /accounts/{accountId}/balance
@@ -42,8 +45,20 @@ concepts:
     path_segment:
     - transactions
     properties:
+      id: transactionId
+      amount: amount
+      direction:
+      - type
+      - creditDebitIndicator
+      description:
+      - reference
+      - remittanceInformation
+      posted_at: bookingDate
       account_id: accountId
-    core_coverage: 0.0
+      currency: currency
+      merchant_name: counterpartyName
+      created_at: createdAt
+    core_coverage: 0.857
     evidence:
     - openapi/_original/montran-corporate-payments-portal-openapi.yml#GET /accounts/{accountId}/transactions
     - openapi/_original/montran-instant-payments-gateway-openapi.yml#GET /accounts/{accountId}/transactions
@@ -54,8 +69,8 @@ concepts:
     properties:
       id: beneficiaryId
       name: name
-      created_at: createdAt
       account_number: accountNumber
+      created_at: createdAt
       status: status
     core_coverage: 1.0
     evidence:
@@ -90,7 +105,7 @@ concepts:
     path_segment:
     - statements
     properties:
-      account_id: accountId
-    core_coverage: 0.0
+      id: statementId
+    core_coverage: 1.0
     evidence:
     - openapi/_original/montran-global-payments-hub-openapi.yml#GET /accounts/{accountId}/statements

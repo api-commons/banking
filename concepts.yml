@@ -104,8 +104,9 @@ findings:
     vocabulary: fifty Australian banks implement the Consumer Data Right and some thirty UK
     providers the Open Banking UK standard. Counted per bank, a beneficiary's 'core' was
     CDR's own field names. Counted once per standard, the market's own agreement shows."
-  - "A bank account agrees on name, type, status, currency, id and account number; its
-    balance sits just under core (49%) because half the market serves balances separately."
+  - "A bank account agrees on name, type, status, currency, id, account number and balance --
+    once the open-banking standards count once, a proprietary bank account and a standardised
+    one share the shape."
   - "A transaction agrees on id, amount, status, direction and description -- direction
     (credit or debit) is core, which is not true of a payment in the payments context."
   - "Balances agree on nothing outright: account, available and currency all sit just under

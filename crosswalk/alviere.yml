@@ -9,7 +9,7 @@ concepts:
     properties:
       type: type
       status: status
-    core_coverage: 0.333
+    core_coverage: 0.286
     evidence:
     - openapi/_original/alviere-openapi.yml#DELETE /v1/accounts/{account_uuid}
     - openapi/_original/alviere-openapi.yml#GET /v1/accounts/{account_uuid}
@@ -21,12 +21,12 @@ concepts:
     - transaction
     properties:
       amount: amount
-      status: status
       direction: type
       description: description
+      status: status
       currency: currency
       created_at: created_at
-    core_coverage: 0.8
+    core_coverage: 0.571
     evidence:
     - openapi/_original/alviere-openapi.yml#GET /v1/ledger/{account_uuid}/transactions
     - openapi/_original/alviere-openapi.yml#GET /v1/ledger/{account_uuid}/transactions/{transaction_uuid}

@@ -10,8 +10,11 @@ concepts:
       name: name
       type: type
       currency: currencyCode
-      balance: balance
-    core_coverage: 0.5
+      id: id
+      balance:
+      - balance
+      - balances
+    core_coverage: 0.714
     evidence:
     - openapi/_original/tink-connector-api-openapi.yml#POST /connector/users/{external_user_id}/accounts
     - openapi/_original/tink-data-api-openapi.yml#GET /data/v2/accounts
@@ -26,10 +29,14 @@ concepts:
     path_segment:
     - transactions
     properties:
+      id: id
       amount: amount
       description: description
+      status: status
+      account_id: accountId
       merchant_name: merchantName
-    core_coverage: 0.4
+      category: categories
+    core_coverage: 0.714
     evidence:
     - openapi/_original/tink-connector-api-openapi.yml#POST /connector/users/{external_user_id}/transactions
     - openapi/_original/tink-data-api-openapi.yml#GET /data/v2/transactions

@@ -13,9 +13,8 @@ concepts:
       currency: currency
       id: id
       account_number: iban
-      balance: balances
       routing_number: bic
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/fintecture-ais-api-openapi.yml#GET /ais/v1/customer/{customer_id}/account/{account_id}
     - openapi/_original/fintecture-ais-api-openapi.yml#GET /ais/v1/customer/{customer_id}/accounts
@@ -32,7 +31,7 @@ concepts:
       description: description
       posted_at: booking_date
       currency: currency
-    core_coverage: 0.8
+    core_coverage: 0.714
     evidence:
     - openapi/_original/fintecture-ais-api-openapi.yml#GET /ais/v1/customer/{customer_id}/account/{account_id}/transactions
   transfer:
@@ -44,7 +43,6 @@ concepts:
       id: id
       rail: type
       updated_at: updated_at
-      metadata: attributes
     core_coverage: 0.6
     evidence:
     - openapi/_original/fintecture-pis-api-openapi.yml#GET /pis/v2/payments

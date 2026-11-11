@@ -9,17 +9,23 @@ concepts:
     properties:
       name: accountName
       type: accountType
-      status: status
       currency: currency
+      status: status
       account_number: accountNumber
-    core_coverage: 0.833
+    core_coverage: 0.714
     evidence:
     - openapi/_original/us-bank-corporate-account-information-openapi.yml#GET /accounts
   transaction:
     path_segment:
     - transactions
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: transactionId
+      amount: amount
+      direction: transactionType
+      description: description
+      posted_at: transactionDate
+      currency: currency
+    core_coverage: 0.714
     evidence:
     - openapi/_original/us-bank-corporate-account-information-openapi.yml#GET /accounts/{accountNumber}/transactions
   transfer:

@@ -9,11 +9,11 @@ concepts:
     properties:
       name: name
       type: type
-      status: status
       currency: currency
+      status: status
       id: id
       created_at: created
-    core_coverage: 0.833
+    core_coverage: 0.714
     evidence:
     - openapi/_original/atlar-api-v2-openapi.yml#GET /financial-data/v2/accounts
     - openapi/_original/atlar-api-v2-openapi.yml#GET /financial-data/v2/accounts/{id}
@@ -23,6 +23,9 @@ concepts:
     - balances
     properties:
       account_id: accountId
+      type: type
+      amount: amount
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/atlar-api-v2-openapi.yml#GET /financial-data/v2/accounts/{id}/balances
@@ -37,11 +40,11 @@ concepts:
       description:
       - reference
       - description
-      account_id: accountId
       posted_at: date
-      created_at: created
+      account_id: accountId
       category: bankTransactionCode
-    core_coverage: 0.6
+      created_at: created
+    core_coverage: 0.714
     evidence:
     - openapi/_original/atlar-api-v2-openapi.yml#GET /financial-data/v2/transactions
     - openapi/_original/atlar-api-v2-openapi.yml#GET /financial-data/v2/transactions/{id}
@@ -55,6 +58,7 @@ concepts:
       name: name
       created_at: created
       updated_at: updated
+      routing_number: routing
     core_coverage: 1.0
     evidence:
     - openapi/_original/atlar-api-v2-openapi.yml#DELETE /payments/v2/counterparties/{id}

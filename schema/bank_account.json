@@ -8,8 +8,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.719,
-      "x-commons-providers": 92,
+      "x-commons-share": 0.758,
+      "x-commons-providers": 97,
       "x-commons-spellings": [
         "name",
         "nickname",
@@ -24,8 +24,8 @@
     "type": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.703,
-      "x-commons-providers": 90,
+      "x-commons-share": 0.734,
+      "x-commons-providers": 94,
       "x-commons-spellings": [
         "type",
         "accountType",
@@ -37,11 +37,22 @@
         "productType"
       ]
     },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.633,
+      "x-commons-providers": 81,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code",
+        "currencyCode"
+      ]
+    },
     "status": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.609,
-      "x-commons-providers": 78,
+      "x-commons-share": 0.617,
+      "x-commons-providers": 79,
       "x-commons-spellings": [
         "status",
         "state",
@@ -52,22 +63,11 @@
         "account_status"
       ]
     },
-    "currency": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.602,
-      "x-commons-providers": 77,
-      "x-commons-spellings": [
-        "currency",
-        "currency_code",
-        "currencyCode"
-      ]
-    },
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.547,
-      "x-commons-providers": 70,
+      "x-commons-share": 0.578,
+      "x-commons-providers": 74,
       "x-commons-spellings": [
         "id",
         "resourceId",
@@ -77,29 +77,29 @@
     "account_number": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.539,
-      "x-commons-providers": 69,
+      "x-commons-share": 0.57,
+      "x-commons-providers": 73,
       "x-commons-spellings": [
         "accountNumber",
-        "account_number",
         "iban",
+        "account_number",
         "accountNumberDisplay",
         "number",
         "maskedNumber",
-        "mask",
-        "accountNumberLast4"
+        "AccountNumber",
+        "mask"
       ]
     },
     "balance": {
       "type": "number",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.492,
-      "x-commons-providers": 63,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.508,
+      "x-commons-providers": 65,
       "x-commons-spellings": [
         "balance",
         "availableBalance",
-        "currentBalance",
         "balances",
+        "currentBalance",
         "available_balance",
         "current_balance",
         "available-balance"
@@ -108,8 +108,8 @@
     "account_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.336,
-      "x-commons-providers": 43,
+      "x-commons-share": 0.367,
+      "x-commons-providers": 47,
       "x-commons-spellings": [
         "accountId",
         "account_id",
@@ -122,8 +122,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.336,
-      "x-commons-providers": 43,
+      "x-commons-share": 0.344,
+      "x-commons-providers": 44,
       "x-commons-spellings": [
         "created_at",
         "createdDate",
@@ -131,16 +131,16 @@
         "creationDate",
         "createdOn",
         "created",
-        "date_created",
-        "creation_date"
+        "CreatedAt",
+        "date_created"
       ],
       "format": "date-time"
     },
     "routing_number": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.242,
-      "x-commons-providers": 31,
+      "x-commons-share": 0.266,
+      "x-commons-providers": 34,
       "x-commons-spellings": [
         "routing_number",
         "routingNumber",

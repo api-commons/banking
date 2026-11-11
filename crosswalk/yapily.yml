@@ -14,14 +14,16 @@ concepts:
       currency: currency
       id: id
       balance: balance
-    core_coverage: 0.667
+    core_coverage: 0.714
     evidence:
     - openapi/_original/yapily-data-api-openapi.yml#GET /accounts
     - openapi/_original/yapily-data-api-openapi.yml#GET /accounts/{accountId}
   balance:
     path_segment:
     - balances
-    properties: {}
+    properties:
+      current: balanceAmount
+      type: type
     core_coverage: 0.0
     evidence:
     - openapi/_original/yapily-data-api-openapi.yml#GET /accounts/{accountId}/balances
@@ -31,17 +33,18 @@ concepts:
     properties:
       id: id
       amount: transactionAmount
-      status: status
       description:
       - reference
       - description
       - transactionInformation
+      status: status
       posted_at:
       - date
       - bookingDateTime
       - valueDateTime
       merchant_name: merchant
-    core_coverage: 0.8
+      balance_after: balance
+    core_coverage: 0.714
     evidence:
     - openapi/_original/yapily-data-api-openapi.yml#GET /accounts/{accountId}/real-time/transactions
     - openapi/_original/yapily-data-api-openapi.yml#GET /accounts/{accountId}/transactions

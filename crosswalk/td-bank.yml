@@ -9,14 +9,14 @@ concepts:
     properties:
       name: displayName
       type: accountType
-      status: status
       currency: currency
+      status: status
       account_number: accountNumberDisplay
       balance:
       - currentBalance
       - availableBalance
       account_id: accountId
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/td-bank-account-basic-api-openapi.yml#GET /accounts
     - openapi/_original/td-bank-account-detailed-api-openapi.yml#GET /accounts/{accountId}

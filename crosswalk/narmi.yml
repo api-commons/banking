@@ -22,7 +22,7 @@ concepts:
       balance: balances
       created_at: created_at
       routing_number: routing_number
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/narmi-public-openapi-original.yml#DELETE /v1/accounts/{uuid}/
     - openapi/_original/narmi-public-openapi-original.yml#DELETE /v1/alerts/account/{uuid}/
@@ -40,12 +40,12 @@ concepts:
       description:
       - description
       - note
-      account_id: account_id
       posted_at: settled_at
-      created_at: created_at
+      account_id: account_id
       merchant_name: merchant
       category: category
-    core_coverage: 0.8
+      created_at: created_at
+    core_coverage: 0.857
     evidence:
     - openapi/_original/narmi-public-openapi-original.yml#DELETE /v1/alerts/transaction/{uuid}/
     - openapi/_original/narmi-public-openapi-original.yml#GET /v1/accounts/{account_uuids}/transactions/

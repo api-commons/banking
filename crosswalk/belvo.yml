@@ -17,7 +17,7 @@ concepts:
       account_number: number
       balance: balance
       created_at: created_at
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/belvo-openapi.json#DELETE /api/accounts/{id}/
     - openapi/_original/belvo-openapi.json#GET /api/accounts/
@@ -31,6 +31,7 @@ concepts:
       account_id: account_id
       available: available
       currency: currency
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/belvo-openapi.json#GET /api/br/balances/
@@ -42,19 +43,20 @@ concepts:
     properties:
       id: id
       amount: amount
-      status: status
       direction:
       - type
       - transaction_type
       description:
       - description
       - reference
+      status: status
       account_id: account
       currency: currency
-      created_at: created_at
       merchant_name: merchant
       category: category
-    core_coverage: 1.0
+      created_at: created_at
+      balance_after: balance
+    core_coverage: 0.857
     evidence:
     - openapi/_original/belvo-openapi.json#DELETE /api/transactions/{id}/
     - openapi/_original/belvo-openapi.json#GET /api/transactions/

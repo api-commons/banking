@@ -9,7 +9,7 @@ concepts:
     properties:
       status: status
       id: id
-    core_coverage: 0.333
+    core_coverage: 0.286
     evidence:
     - openapi/_original/lemonmarkets-brokerage-openapi.json#GET /accounts
     - openapi/_original/lemonmarkets-brokerage-openapi.json#GET /accounts/{account_id}
@@ -20,13 +20,13 @@ concepts:
     properties:
       id: id
       amount: amount
-      status: status
       direction:
       - type
       - direction
+      status: status
       currency: currency
       created_at: created_at
-    core_coverage: 0.8
+    core_coverage: 0.571
     evidence:
     - openapi/_original/lemonmarkets-brokerage-openapi.json#GET /accounts/{account_id}/transactions
     - openapi/_original/lemonmarkets-brokerage-openapi.json#GET /accounts/{account_id}/transactions/{transaction_id}

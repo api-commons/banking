@@ -8,14 +8,14 @@ concepts:
     - accounts
     properties:
       name: name
-      status: status
       currency: currency
+      status: status
       id: id
       balance:
       - balance
       - availableBalance
       created_at: createdDate
-    core_coverage: 0.667
+    core_coverage: 0.714
     evidence:
     - openapi/_original/modulr-api.json#GET /accounts
     - openapi/_original/modulr-api.json#GET /accounts/{accountId}
@@ -25,8 +25,17 @@ concepts:
   transaction:
     path_segment:
     - transactions
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      amount: amount
+      direction: type
+      description: description
+      posted_at:
+      - transactionDate
+      - postedDate
+      account_id: account
+      currency: currency
+    core_coverage: 0.857
     evidence:
     - openapi/_original/modulr-api.json#GET /accounts/{accountId}/transactions
   beneficiary:

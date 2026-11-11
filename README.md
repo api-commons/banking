@@ -12,12 +12,12 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| bank_account | 136 | 128 | name 72%, type 70%, status 61%, currency 60%, id 55%, account_number 54% | accounts 123, account 18, bank-accounts 5, bankaccounts 4 |
+| bank_account | 136 | 128 | name 76%, type 73%, currency 63%, status 62%, id 58%, account_number 57%, balance 51% | accounts 123, account 18, bank-accounts 5, bankaccounts 4 |
 | balance | 74 | 70 |  | balances 49, balance 37 |
-| transaction | 118 | 110 | id 73%, amount 71%, status 63%, direction 58%, description 56% | transactions 116, transaction 12, banktransactions 1 |
-| beneficiary | 43 | 41 | id 51%, name 51% | beneficiaries 19, payees 8, counterparties 8, external-accounts 6 |
-| transfer | 73 | 71 | amount 76%, status 75%, created_at 58%, description 58%, id 52% | payments 55, transfers 21, payment 9, transfer 8 |
-| statement | 49 | 44 | id 52% | statements 40, statement 8, account_statements 1 |
+| transaction | 118 | 110 | id 89%, amount 87%, direction 74%, description 71%, status 67%, posted_at 56%, account_id 56% | transactions 116, transaction 12, banktransactions 1 |
+| beneficiary | 43 | 41 | id 58%, name 54% | beneficiaries 19, payees 8, counterparties 8, external-accounts 6 |
+| transfer | 73 | 71 | amount 78%, status 75%, created_at 58%, description 56%, id 52% | payments 55, transfers 21, payment 9, transfer 8 |
+| statement | 49 | 44 | id 59% | statements 40, statement 8, account_statements 1 |
 
 Cohort: 315 providers with harvested OpenAPI, 211 crosswalks. Of the providers exposing a bank_account: 49% create, 89% list, 80% fetch, 32% update, 18% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
@@ -28,7 +28,7 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 ## What the measurement shows
 
 - Open-banking standards dominate banking APIs, and measured naively they ARE the vocabulary: fifty Australian banks implement the Consumer Data Right and some thirty UK providers the Open Banking UK standard. Counted per bank, a beneficiary's 'core' was CDR's own field names. Counted once per standard, the market's own agreement shows.
-- A bank account agrees on name, type, status, currency, id and account number; its balance sits just under core (49%) because half the market serves balances separately.
+- A bank account agrees on name, type, status, currency, id, account number and balance -- once the open-banking standards count once, a proprietary bank account and a standardised one share the shape.
 - A transaction agrees on id, amount, status, direction and description -- direction (credit or debit) is core, which is not true of a payment in the payments context.
 - Balances agree on nothing outright: account, available and currency all sit just under half. Open-banking standards split a balance into typed entries; proprietary APIs carry available and current side by side.
 

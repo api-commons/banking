@@ -11,7 +11,7 @@ concepts:
       type: type
       id: id
       created_at: created_at
-    core_coverage: 0.5
+    core_coverage: 0.429
     evidence:
     - openapi/_original/tesser-openapi-original.json#GET /v1/accounts
     - openapi/_original/tesser-openapi-original.json#GET /v1/accounts/{id}

@@ -14,7 +14,7 @@ concepts:
       - iban
       - accountNumber
       routing_number: sortCode
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#GET /accounts
     - openapi/_original/tribe-payments-obb-tpp-api-openapi.json#GET /accounts/{accountId}

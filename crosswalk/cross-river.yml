@@ -7,11 +7,11 @@ concepts:
     path_segment:
     - accounts
     properties:
-      status: status
       currency: currency
+      status: status
       account_number: accountNumber
       balance: availableBalance
-    core_coverage: 0.5
+    core_coverage: 0.571
     evidence:
     - openapi/_original/cross-river-openapi.yml#POST /core/v1/dda/accounts
   transfer:

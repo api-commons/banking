@@ -14,7 +14,7 @@ concepts:
       account_id: account_id
       created_at: date_created
       routing_number: routing_number
-    core_coverage: 0.5
+    core_coverage: 0.571
     evidence:
     - openapi/_original/bond-accounts-openapi.yml#GET /accounts
     - openapi/_original/bond-accounts-openapi.yml#GET /accounts/{account_id}
@@ -26,11 +26,11 @@ concepts:
     properties:
       id: transaction_id
       amount: amount
-      status: state
       direction: transaction_type
+      status: state
       account_id: account_id
       currency: currency
-    core_coverage: 0.8
+    core_coverage: 0.714
     evidence:
     - openapi/_original/bond-ledger-openapi.yml#GET /transactions
     - openapi/_original/bond-ledger-openapi.yml#GET /transactions/{transaction_id}
@@ -52,6 +52,7 @@ concepts:
     properties:
       id: statement_id
       account_id: account_id
+      type: type
     core_coverage: 1.0
     evidence:
     - openapi/_original/bond-accounts-openapi.yml#GET /accounts/{account_id}/statements

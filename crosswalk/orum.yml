@@ -15,7 +15,7 @@ concepts:
       account_number: account_number
       created_at: created_at
       routing_number: routing_number
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/orum-openapi-original.yml#DELETE /deliver/external/accounts/{id}
     - openapi/_original/orum-openapi-original.yml#GET /deliver/businesses/{id}/external/accounts
@@ -26,7 +26,8 @@ concepts:
     path_segment:
     - balances
     - balance
-    properties: {}
+    properties:
+      type: type
     core_coverage: 0.0
     evidence:
     - openapi/_original/orum-openapi-original.yml#GET /deliver/balance
@@ -43,7 +44,6 @@ concepts:
       from_account_id: source
       to_account_id: destination
       updated_at: updated_at
-      metadata: metadata
     core_coverage: 0.8
     evidence:
     - openapi/_original/orum-openapi-original.yml#GET /deliver/transfers

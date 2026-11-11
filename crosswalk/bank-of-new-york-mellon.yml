@@ -9,12 +9,12 @@ concepts:
     properties:
       name: accountName
       type: accountType
-      status: status
       currency: currency
+      status: status
       account_number: accountNumber
       account_id: accountId
       routing_number: bankCode
-    core_coverage: 0.833
+    core_coverage: 0.714
     evidence:
     - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts
     - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts/{accountId}
@@ -23,14 +23,25 @@ concepts:
     - balances
     properties:
       account_id: accountId
+      currency: currency
+      type: balanceType
+      amount: amount
     core_coverage: 0.0
     evidence:
     - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts/{accountId}/balances
   transaction:
     path_segment:
     - transactions
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: transactionId
+      amount: amount
+      direction: debitCredit
+      description: description
+      status: status
+      posted_at: bookingDate
+      account_id: accountId
+      currency: currency
+    core_coverage: 1.0
     evidence:
     - openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts/{accountId}/transactions
   transfer:

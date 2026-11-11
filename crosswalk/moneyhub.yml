@@ -14,7 +14,7 @@ concepts:
       currency: currency
       id: id
       balance: balance
-    core_coverage: 0.667
+    core_coverage: 0.714
     evidence:
     - openapi/_original/moneyhub-data-api-swagger.json#DELETE /accounts/{accountId}
     - openapi/_original/moneyhub-data-api-swagger.json#GET /accounts
@@ -24,7 +24,9 @@ concepts:
   balance:
     path_segment:
     - balances
-    properties: {}
+    properties:
+      type: type
+      amount: amount
     core_coverage: 0.0
     evidence:
     - openapi/_original/moneyhub-data-api-swagger.json#GET /accounts/{accountId}/balances
@@ -35,18 +37,19 @@ concepts:
     properties:
       id: id
       amount: amount
-      status: status
       description:
       - notes
       - transactionInformation
-      account_id: accountId
+      status: status
       posted_at: date
-      created_at: dateCreated
+      account_id: accountId
       merchant_name: merchantName
       category:
       - categoryId
       - transactionCode
-    core_coverage: 0.8
+      created_at: dateCreated
+      balance_after: balance
+    core_coverage: 0.857
     evidence:
     - openapi/_original/moneyhub-data-api-swagger.json#DELETE /transactions/{transactionId}
     - openapi/_original/moneyhub-data-api-swagger.json#GET /transactions
@@ -62,13 +65,14 @@ concepts:
       name:
       - label
       - name
-      created_at: createdAt
       account_number:
       - accountNumber
       - iban
+      created_at: createdAt
       type: type
       description: reference
       updated_at: modifiedAt
+      routing_number: sortCode
     core_coverage: 1.0
     evidence:
     - openapi/_original/moneyhub-data-api-swagger.json#GET /accounts/{accountId}/counterparties
@@ -81,6 +85,7 @@ concepts:
       id: id
       account_id: accountId
       created_at: creationDate
+      type: type
     core_coverage: 1.0
     evidence:
     - openapi/_original/moneyhub-data-api-swagger.json#GET /accounts/{accountId}/statements

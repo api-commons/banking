@@ -11,7 +11,7 @@ concepts:
       id: id
       balance: balance
       created_at: createdAt
-    core_coverage: 0.333
+    core_coverage: 0.429
     evidence:
     - openapi/_original/uphold-core-api-openapi.json#DELETE /core/accounts/{accountId}
     - openapi/_original/uphold-core-api-openapi.json#GET /core/accounts
@@ -25,7 +25,7 @@ concepts:
       id: id
       status: status
       created_at: createdAt
-    core_coverage: 0.4
+    core_coverage: 0.286
     evidence:
     - openapi/_original/uphold-core-api-openapi.json#GET /core/accounts/{accountId}/transactions
     - openapi/_original/uphold-core-api-openapi.json#GET /core/statements/transactions
@@ -38,8 +38,8 @@ concepts:
     properties:
       id: id
       name: label
-      created_at: createdAt
       account_number: number
+      created_at: createdAt
       status: status
       type: type
       updated_at: updatedAt

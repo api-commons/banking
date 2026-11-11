@@ -7,13 +7,13 @@ concepts:
     path_segment:
     - accounts
     properties:
-      status: state
       currency: currency
+      status: state
       id: id
       account_number: accountNumber
       balance: availableBalance
       routing_number: bic
-    core_coverage: 0.667
+    core_coverage: 0.714
     evidence:
     - openapi/_original/raiffeisen-ru-agency-factoring-openapi.yml#GET /v1/agreements/{id}/accounts
     - openapi/_original/raiffeisen-ru-agency-factoring-openapi_2.yml#GET /v1/agreements/{id}/accounts

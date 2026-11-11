@@ -8,13 +8,13 @@ concepts:
     - accounts
     properties:
       name: name
-      status: status
       currency: currency
+      status: status
       id: resourceId
       account_number: iban
       balance: balances
       routing_number: bic
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/accounts
     - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts
@@ -25,7 +25,8 @@ concepts:
     path_segment:
     - balances
     properties:
-      account_id: account
+      current: balanceAmount
+      type: balanceType
     core_coverage: 0.0
     evidence:
     - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts/{account-id}/balances
@@ -39,14 +40,13 @@ concepts:
     properties:
       id: transactionId
       amount: transactionAmount
-      account_id: account
       posted_at:
       - bookingDate
       - transactionDate
       merchant_name:
       - debtorName
       - creditorName
-    core_coverage: 0.4
+    core_coverage: 0.429
     evidence:
     - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts/{account-id}/transactions
     - openapi/_original/tietoevry-financial-api-aggregation-swagger_2.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts/{account-id}/transactions
@@ -62,7 +62,6 @@ concepts:
       from_account_id: debtorAccount
       to_account_id: creditorAccount
       payment_id: paymentId
-      metadata: metadata
     core_coverage: 0.4
     evidence:
     - openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/payments

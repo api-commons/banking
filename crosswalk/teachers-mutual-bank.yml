@@ -14,8 +14,8 @@ concepts:
       type:
       - type
       - accountType
-      status: status
       currency: currency
+      status: status
       id: id
       account_number:
       - maskedNumber
@@ -58,17 +58,22 @@ concepts:
       - transactionId
       - id
       amount: amount
-      status: status
-      direction: type
+      direction:
+      - type
+      - transactionType
       description:
       - description
       - reference
+      status: status
+      posted_at:
+      - valueDateTime
+      - transactionDate
       account_id: accountId
-      posted_at: valueDateTime
       currency: currency
       merchant_name:
       - merchantName
       - payee
+      balance_after: runningBalance
     core_coverage: 1.0
     evidence:
     - openapi/_original/alex-bank-cds-banking-products-openapi.yml#GET /banking/accounts/{accountId}/transactions

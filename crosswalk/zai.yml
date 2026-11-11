@@ -14,7 +14,7 @@ concepts:
       account_number: account_number
       created_at: created_at
       routing_number: routing_number
-    core_coverage: 0.833
+    core_coverage: 0.714
     evidence:
     - openapi/_original/zai-assembly-api.json#DELETE /bank_accounts/{id}
     - openapi/_original/zai-assembly-api.json#GET /bank_accounts/{id}
@@ -27,15 +27,15 @@ concepts:
     properties:
       id: id
       amount: amount
-      status: state
       direction:
       - type
       - debit_credit
       description: description
+      status: state
       account_id: account_id
       currency: currency
       created_at: created_at
-    core_coverage: 1.0
+    core_coverage: 0.857
     evidence:
     - openapi/_original/zai-assembly-api.json#GET /disbursements/{id}/transactions
     - openapi/_original/zai-assembly-api.json#GET /items/{id}/transactions

@@ -14,8 +14,8 @@ concepts:
       type:
       - type
       - accountType
-      status: status
       currency: currency
+      status: status
       id: id
       account_number:
       - accountNumber
@@ -39,6 +39,7 @@ concepts:
     properties:
       account_id: accountId
       available: available
+      type: type
     core_coverage: 0.0
     evidence:
     - openapi/_original/slash-openapi-original.json#GET /account/{accountId}/balance
@@ -47,14 +48,19 @@ concepts:
     - transaction
     - transactions
     properties:
-      id: id
-      status: status
+      id:
+      - id
+      - transactionId
+      amount: amount
       description:
       - description
       - memo
-      account_id: accountId
+      status: status
       posted_at: date
-    core_coverage: 0.6
+      account_id: accountId
+      merchant_name: payee
+      category: category
+    core_coverage: 0.857
     evidence:
     - openapi/_original/slash-openapi-original.json#GET /fdx/accounts/{accountId}/transactions
     - openapi/_original/slash-openapi-original.json#GET /transaction

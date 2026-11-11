@@ -9,7 +9,7 @@ concepts:
     properties:
       type: type
       account_number: accountNumber
-    core_coverage: 0.333
+    core_coverage: 0.286
     evidence:
     - openapi/_original/charles-schwab-trader-api-openapi.yml#GET /accounts
     - openapi/_original/charles-schwab-trader-api-openapi.yml#GET /accounts/{accountNumber}

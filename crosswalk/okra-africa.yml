@@ -8,6 +8,6 @@ concepts:
     - accounts
     properties:
       status: status
-    core_coverage: 0.167
+    core_coverage: 0.143
     evidence:
     - openapi/_original/okra-africa-openapi.yml#POST /products/accounts

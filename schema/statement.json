@@ -8,12 +8,13 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.523,
-      "x-commons-providers": 23,
+      "x-commons-share": 0.591,
+      "x-commons-providers": 26,
       "x-commons-spellings": [
         "id",
         "statementId",
         "guid",
+        "Id",
         "statement_id",
         "statementID"
       ]
@@ -21,28 +22,39 @@
     "account_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.295,
-      "x-commons-providers": 13,
+      "x-commons-share": 0.273,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
         "accountId",
         "account_id",
-        "account"
+        "account",
+        "accountID"
       ]
     },
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.273,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
         "created_at",
         "creationDate",
+        "CreatedAt",
         "createdAt",
         "created",
         "createdOn",
         "creationDateTime"
       ],
       "format": "date-time"
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.205,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "type"
+      ]
     }
   },
   "required": [

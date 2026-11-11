@@ -13,7 +13,7 @@ concepts:
       - accountNumber
       - iban
       routing_number: routingNumber
-    core_coverage: 0.5
+    core_coverage: 0.429
     evidence:
     - openapi/_original/paywithmybank-openapi-original.yml#GET /transactions/{transactionId}/payment/paymentProvider/accounts
   balance:
@@ -22,6 +22,7 @@ concepts:
     properties:
       account_id: account
       currency: currency
+      amount: amount
     core_coverage: 0.0
     evidence:
     - openapi/_original/paywithmybank-openapi-original.yml#GET /transactions/{transactionId}/payment/paymentProvider/account/balance
@@ -31,11 +32,12 @@ concepts:
     properties:
       id: transactionId
       amount: amount
-      status: status
       direction: transactionType
+      status: status
       currency: currency
       created_at: createdAt
-    core_coverage: 0.8
+      balance_after: balance
+    core_coverage: 0.571
     evidence:
     - openapi/_original/paywithmybank-openapi-original.yml#GET /transactions
     - openapi/_original/paywithmybank-openapi-original.yml#GET /transactions/{transactionId}

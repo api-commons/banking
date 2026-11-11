@@ -13,8 +13,8 @@ concepts:
       type:
       - kind
       - type
-      status: status
       currency: currency
+      status: status
       id: id
       account_number: iban
       balance: balances
@@ -27,11 +27,13 @@ concepts:
     path_segment:
     - payments
     properties:
-      description: remittanceInformation
-      currency: currencyCode
+      amount: amount
+      description:
+      - remittanceInformation
+      - reference
       from_account_id: debtorAccount
       to_account_id: creditorAccount
-    core_coverage: 0.2
+    core_coverage: 0.4
     evidence:
     - openapi/_original/clearbank-cross-border-v4.json#POST /payments/cross-border-sterling/v4/payments
     - openapi/_original/clearbank-mccy-payments-v1.json#DELETE /v1/mccy/payments/{batchId}

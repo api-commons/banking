@@ -9,15 +9,15 @@ concepts:
     - account
     properties:
       type: type
-      status: state
       currency: currencyCode
+      status: state
       id: id
       balance: balance
       account_id:
       - accountId
       - sourceAccountId
       created_at: createdOn
-    core_coverage: 0.667
+    core_coverage: 0.714
     evidence:
     - openapi/_original/algbra-openapi.json#GET /v1/partner/accounts
     - openapi/_original/algbra-openapi.json#GET /v1/partner/accounts/{accountId}
@@ -41,15 +41,15 @@ concepts:
     properties:
       id: transactionId
       amount: amount
-      status: state
       description: description
+      status: state
+      posted_at: transactionDate
       account_id:
       - accountId
       - sourceAccountId
-      posted_at: transactionDate
       currency: currencyCode
       category: category
-    core_coverage: 0.8
+    core_coverage: 0.857
     evidence:
     - openapi/_original/algbra-openapi.json#GET /v1/partner/customers/{customerId}/transactions
     - openapi/_original/algbra-openapi.json#GET /v1/partner/transactions

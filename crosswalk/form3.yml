@@ -9,7 +9,7 @@ concepts:
     properties:
       type: type
       id: id
-    core_coverage: 0.333
+    core_coverage: 0.286
     evidence:
     - openapi/_original/form3-payments.yml#DELETE /organisation/accounts/{id}
     - openapi/_original/form3-payments.yml#GET /organisation/accounts
@@ -23,7 +23,7 @@ concepts:
       id: id
       direction: type
       created_at: created_on
-    core_coverage: 0.4
+    core_coverage: 0.286
     evidence:
     - openapi/_original/form3-payments.yml#GET /files/transactions
     - openapi/_original/form3-payments.yml#GET /files/transactions/{transaction_file_id}
@@ -36,7 +36,6 @@ concepts:
       created_at: created_on
       id: id
       rail: type
-      metadata: attributes
     core_coverage: 0.4
     evidence:
     - openapi/_original/form3-payments.yml#GET /transaction/payments

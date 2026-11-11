@@ -8,8 +8,8 @@
     "account_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.486,
-      "x-commons-providers": 34,
+      "x-commons-share": 0.457,
+      "x-commons-providers": 32,
       "x-commons-spellings": [
         "accountId",
         "account_id",
@@ -19,8 +19,8 @@
     "available": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.429,
-      "x-commons-providers": 30,
+      "x-commons-share": 0.457,
+      "x-commons-providers": 32,
       "x-commons-spellings": [
         "availableBalance",
         "available",
@@ -31,8 +31,8 @@
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.414,
-      "x-commons-providers": 29,
+      "x-commons-share": 0.457,
+      "x-commons-providers": 32,
       "x-commons-spellings": [
         "currency",
         "currency_code",
@@ -43,20 +43,52 @@
     "current": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
-      "x-commons-providers": 20,
+      "x-commons-share": 0.371,
+      "x-commons-providers": 26,
       "x-commons-spellings": [
         "currentBalance",
-        "current_balance",
-        "ledgerBalance",
-        "booked",
         "balanceAmount",
-        "current",
-        "ledger_balance"
+        "ledgerBalance",
+        "current_balance",
+        "booked",
+        "ledger_balance",
+        "current"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.329,
+      "x-commons-providers": 23,
+      "x-commons-spellings": [
+        "type",
+        "balanceType",
+        "credit_debit_indicator",
+        "creditDebitIndicator"
+      ]
+    },
+    "amount": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.214,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "amount"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "id"
       ]
     }
   },
-  "required": [],
+  "required": [
+    "id"
+  ],
   "x-commons": {
     "context": "banking",
     "concept": "balance",

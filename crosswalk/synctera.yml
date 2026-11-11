@@ -10,8 +10,8 @@ concepts:
     properties:
       name: nickname
       type: account_type
-      status: status
       currency: currency
+      status: status
       id: id
       account_number:
       - account_number
@@ -45,7 +45,7 @@ concepts:
       currency: currency
       merchant_name: merchant_name
       category: category
-    core_coverage: 0.4
+    core_coverage: 0.429
     evidence:
     - openapi/_original/synctera-openapi.json#GET /external_accounts/{external_account_id}/transactions
   beneficiary:
@@ -77,7 +77,6 @@ concepts:
       rail: type
       currency: currency
       from_account_id: originating_account_id
-      metadata: metadata
     core_coverage: 0.8
     evidence:
     - openapi/_original/synctera-openapi.json#GET /external_cards/transfers

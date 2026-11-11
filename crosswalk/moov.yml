@@ -11,7 +11,7 @@ concepts:
       type: accountType
       account_id: accountID
       created_at: createdOn
-    core_coverage: 0.333
+    core_coverage: 0.286
     evidence:
     - openapi/_original/moov-api-openapi.yml#DELETE /accounts/{accountID}
     - openapi/_original/moov-api-openapi.yml#GET /accounts
@@ -24,12 +24,12 @@ concepts:
     properties:
       id: transactionID
       amount: amount
-      status: status
       direction: transactionType
       description: memo
+      status: status
       currency: currency
       created_at: createdOn
-    core_coverage: 1.0
+    core_coverage: 0.714
     evidence:
     - openapi/_original/moov-api-openapi.yml#GET /accounts/{accountID}/wallets/{walletID}/transactions
     - openapi/_original/moov-api-openapi.yml#GET /accounts/{accountID}/wallets/{walletID}/transactions/{transactionID}
@@ -47,7 +47,6 @@ concepts:
       id: transferID
       from_account_id: source
       to_account_id: destination
-      metadata: metadata
     core_coverage: 1.0
     evidence:
     - openapi/_original/moov-api-openapi.yml#GET /accounts/{accountID}/transfers

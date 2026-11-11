@@ -9,7 +9,7 @@ concepts:
     properties:
       type: type
       id: id
-    core_coverage: 0.333
+    core_coverage: 0.286
     evidence:
     - openapi/_original/unit-co-openapi.yml#GET /accounts
     - openapi/_original/unit-co-openapi.yml#GET /accounts/{accountId}
@@ -18,7 +18,9 @@ concepts:
   balance:
     path_segment:
     - balance
-    properties: {}
+    properties:
+      type: type
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/unit-co-openapi.yml#GET /counterparties/{counterpartyId}/balance
@@ -28,7 +30,7 @@ concepts:
     properties:
       id: id
       direction: type
-    core_coverage: 0.4
+    core_coverage: 0.286
     evidence:
     - openapi/_original/unit-co-openapi.yml#GET /accounts/{accountId}/transactions/{transactionId}
     - openapi/_original/unit-co-openapi.yml#GET /transactions
@@ -52,7 +54,6 @@ concepts:
     properties:
       id: id
       rail: type
-      metadata: attributes
     core_coverage: 0.2
     evidence:
     - openapi/_original/unit-co-openapi.yml#GET /payments
@@ -64,6 +65,7 @@ concepts:
     - statements
     properties:
       id: id
+      type: type
     core_coverage: 1.0
     evidence:
     - openapi/_original/unit-co-openapi.yml#GET /statements

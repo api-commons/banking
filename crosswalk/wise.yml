@@ -11,7 +11,7 @@ concepts:
       type: type
       currency: currency
       id: id
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/wise-platform-openapi.yml#DELETE /v2/accounts/{accountId}
     - openapi/_original/wise-platform-openapi.yml#GET /v1/accounts
@@ -23,6 +23,9 @@ concepts:
     - balances
     properties:
       currency: currency
+      type: type
+      amount: amount
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/wise-platform-openapi.yml#DELETE /v4/profiles/{profileId}/balances/{balanceId}
@@ -37,11 +40,11 @@ concepts:
       - id
       - transactionId
       amount: transactionAmount
-      status: state
       direction: type
-      created_at: createdDate
+      status: state
       merchant_name: merchant
-    core_coverage: 0.8
+      created_at: createdDate
+    core_coverage: 0.571
     evidence:
     - openapi/_original/wise-platform-openapi.yml#GET /v2/simulation/spend/profiles/{profileId}/cards/{cardToken}/transactions
     - openapi/_original/wise-platform-openapi.yml#GET /v3/spend/profiles/{profileId}/cards/transactions/{transactionId}
@@ -67,7 +70,8 @@ concepts:
   statement:
     path_segment:
     - statement
-    properties: {}
+    properties:
+      type: type
     core_coverage: 0.0
     evidence:
     - openapi/_original/wise-platform-openapi.yml#GET /v1/profiles/{profileId}/balance-statements/{balanceId}/statement.json

@@ -11,7 +11,7 @@ concepts:
       currency: currency
       id: id
       account_number: iban
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/accounts
     - openapi/_original/bancomat-flowpay-api-v1-openapi.yml#GET /{tenantID}/accounts
@@ -32,15 +32,15 @@ concepts:
     properties:
       id: id
       amount: amount
-      status: status
       direction: type
+      status: status
       posted_at: bookingDate
       currency: currency
-      created_at: createdAt
       merchant_name:
       - creditorName
       - debtorName
-    core_coverage: 0.8
+      created_at: createdAt
+    core_coverage: 0.714
     evidence:
     - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/transactions
     - openapi/_original/bancomat-flowpay-api-v1-openapi.json#GET /{tenantID}/transactions/{transactionID}

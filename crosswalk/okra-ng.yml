@@ -6,21 +6,35 @@ concepts:
   bank_account:
     path_segment:
     - accounts
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      name: name
+      type: type
+      currency: currency
+      id: id
+    core_coverage: 0.571
     evidence:
     - openapi/_original/okra-ng-openapi.yml#POST /products/accounts
   balance:
     path_segment:
     - balances
-    properties: {}
+    properties:
+      account_id: account
+      available: available_balance
+      currency: currency
+      current: ledger_balance
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/okra-ng-openapi.yml#POST /products/balances
   transaction:
     path_segment:
     - transactions
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      amount: amount
+      direction: type
+      description: notes
+      account_id: account
+    core_coverage: 0.714
     evidence:
     - openapi/_original/okra-ng-openapi.yml#POST /products/transactions

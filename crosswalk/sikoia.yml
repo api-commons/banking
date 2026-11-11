@@ -8,16 +8,18 @@ concepts:
     - bankaccounts
     properties:
       type: account_type
-      status: status
       currency: currency
-    core_coverage: 0.5
+      status: status
+    core_coverage: 0.429
     evidence:
     - openapi/_original/sikoia-openapi.yml#GET /v2/bankaccounts/{account_connection_id}
     - openapi/_original/sikoia-openapi.yml#GET /v2/{entity_type}/{entity_id}/bankaccounts
   balance:
     path_segment:
     - balances
-    properties: {}
+    properties:
+      type: type
+      amount: amount
     core_coverage: 0.0
     evidence:
     - openapi/_original/sikoia-openapi.yml#GET /v2/bankaccounts/{account_connection_id}/balances
@@ -25,8 +27,18 @@ concepts:
     path_segment:
     - transactions
     properties:
+      id: transaction_id
+      amount: amount
+      description:
+      - reference
+      - description
       status: status
-    core_coverage: 0.2
+      posted_at:
+      - date
+      - value_date_time
+      currency: currency
+      merchant_name: merchant
+    core_coverage: 0.714
     evidence:
     - openapi/_original/sikoia-openapi.yml#GET /v2/affordability-insights/{request_id}/transactions
     - openapi/_original/sikoia-openapi.yml#GET /v2/bankaccounts/{account_connection_id}/transactions

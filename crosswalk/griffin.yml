@@ -11,7 +11,7 @@ concepts:
       status: account-status
       balance: available-balance
       created_at: created-at
-    core_coverage: 0.333
+    core_coverage: 0.429
     evidence:
     - openapi/_original/griffin-openapi-original.yml#GET /v0/bank/accounts/{bank-account-id}
     - openapi/_original/griffin-openapi-original.yml#GET /v0/organizations/{organization-id}/bank/accounts
@@ -25,7 +25,8 @@ concepts:
       description:
       - reference
       - description
-    core_coverage: 0.2
+      balance_after: account-balance
+    core_coverage: 0.143
     evidence:
     - openapi/_original/griffin-openapi-original.yml#GET /v0/bank/accounts/{bank-account-id}/transactions
     - openapi/_original/griffin-openapi-original.yml#GET /v0/bank/transactions/{transaction-id}
@@ -33,8 +34,8 @@ concepts:
     path_segment:
     - payees
     properties:
-      created_at: created-at
       account_number: account-number
+      created_at: created-at
     core_coverage: 0.0
     evidence:
     - openapi/_original/griffin-openapi-original.yml#GET /v0/legal-persons/{legal-person-id}/bank/payees

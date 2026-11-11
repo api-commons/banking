@@ -9,10 +9,10 @@ concepts:
     properties:
       name: accountName
       type: accountType
-      status: status
       currency: currency
+      status: status
       account_id: accountId
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/huntington-bank-treasury-management-api-openapi.yml#GET /accounts
   balance:
@@ -35,7 +35,8 @@ concepts:
       direction: type
       description: description
       posted_at: date
-    core_coverage: 0.8
+      balance_after: balance
+    core_coverage: 0.714
     evidence:
     - openapi/_original/huntington-bank-treasury-management-api-openapi.yml#GET /accounts/{accountId}/transactions
   transfer:

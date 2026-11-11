@@ -16,7 +16,7 @@ concepts:
       - available_balance
       - current_balance
       routing_number: routing_number
-    core_coverage: 0.667
+    core_coverage: 0.714
     evidence:
     - openapi/_original/upward-financial-openapi.json#GET /v2/accounts/
     - openapi/_original/upward-financial-openapi.json#GET /v2/accounts/{account_id}/
@@ -29,14 +29,14 @@ concepts:
     properties:
       id: id
       amount: amount
-      status: status
       direction:
       - direction
       - transaction_type
       description: description
+      status: status
       posted_at: posted_at
       merchant_name: merchant_name
-    core_coverage: 1.0
+    core_coverage: 0.857
     evidence:
     - openapi/_original/upward-financial-openapi.json#GET /v2/payment-cards/{payment_card_id}/transactions/
     - openapi/_original/upward-financial-openapi.json#GET /v2/payment-cards/{payment_card_id}/transactions/{transaction_id}

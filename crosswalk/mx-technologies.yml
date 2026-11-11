@@ -24,7 +24,7 @@ concepts:
       - balance
       created_at: created_at
       routing_number: routing_number
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/mx-technologies-platform-openapi.yml#DELETE /users/{user_guid}/accounts/{account_guid}
     - openapi/_original/mx-technologies-platform-openapi.yml#DELETE /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}
@@ -39,18 +39,19 @@ concepts:
       - guid
       - id
       amount: amount
-      status: status
       direction: type
       description:
       - description
       - memo
-      account_id: account_id
+      status: status
       posted_at:
       - date
       - posted_at
+      account_id: account_id
       currency: currency_code
-      created_at: created_at
+      merchant_name: merchant
       category: category
+      created_at: created_at
     core_coverage: 1.0
     evidence:
     - openapi/_original/mx-technologies-platform-openapi.yml#DELETE /users/{user_guid}/managed_members/{member_guid}/accounts/{account_guid}/transactions/{transaction_guid}

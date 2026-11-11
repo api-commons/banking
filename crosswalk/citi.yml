@@ -7,12 +7,15 @@ concepts:
     path_segment:
     - accounts
     properties:
-      name: account_name
+      name:
+      - account_name
+      - name
       type: account_type
-      status: status
       currency: currency_code
+      status: status
+      id: id
       account_number: account_number
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/accounts.yaml#GET /accounts
     - openapi/_original/accountsv5.yaml#GET /accounts
@@ -37,12 +40,24 @@ concepts:
     - transactions
     properties:
       id: transactionId
-      amount: transactionAmount
-      status: status
-      description: reference
-      posted_at: transactionDate
+      amount:
+      - amount
+      - transactionAmount
+      direction:
+      - transaction_type
+      - transactionType
+      description:
+      - description
+      - reference
+      status:
+      - transaction_status
+      - status
+      - transactionStatus
+      posted_at:
+      - transactionDate
+      - bookingDate
       currency: currencyCode
-    core_coverage: 0.8
+    core_coverage: 0.857
     evidence:
     - openapi/_original/accounts.yaml#GET /transactions
     - openapi/_original/citi-accounts-openapi.yaml#GET /transactions

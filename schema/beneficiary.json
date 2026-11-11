@@ -8,22 +8,38 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.512,
-      "x-commons-providers": 21,
+      "x-commons-share": 0.585,
+      "x-commons-providers": 24,
       "x-commons-spellings": [
         "id",
-        "beneficiaryId"
+        "beneficiaryId",
+        "beneficiary_id"
       ]
     },
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.512,
-      "x-commons-providers": 21,
+      "x-commons-share": 0.537,
+      "x-commons-providers": 22,
       "x-commons-spellings": [
         "name",
         "nickname",
         "label"
+      ]
+    },
+    "account_number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.439,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "iban",
+        "accountNumber",
+        "account_number",
+        "account",
+        "account-number",
+        "creditor_account",
+        "number"
       ]
     },
     "created_at": {
@@ -42,25 +58,11 @@
       ],
       "format": "date-time"
     },
-    "account_number": {
+    "status": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.366,
       "x-commons-providers": 15,
-      "x-commons-spellings": [
-        "iban",
-        "accountNumber",
-        "account_number",
-        "account",
-        "account-number",
-        "number"
-      ]
-    },
-    "status": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.341,
-      "x-commons-providers": 14,
       "x-commons-spellings": [
         "status",
         "Status",
@@ -80,8 +82,8 @@
     "description": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.268,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.293,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
         "description",
         "reference",
@@ -100,6 +102,20 @@
         "modifiedAt"
       ],
       "format": "date-time"
+    },
+    "routing_number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.22,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "bic",
+        "routing_number",
+        "routing",
+        "sortCode",
+        "sort_code",
+        "routingNumber"
+      ]
     }
   },
   "required": [

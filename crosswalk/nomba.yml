@@ -11,11 +11,11 @@ concepts:
       type:
       - accountType
       - type
-      status: status
       currency: currency
+      status: status
       account_id: accountId
       created_at: createdAt
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/nomba-accounts-openapi.yml#GET /v1/accounts
     - openapi/_original/nomba-transactions-openapi.yml#GET /v1/transactions/accounts

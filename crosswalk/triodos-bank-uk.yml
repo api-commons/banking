@@ -8,11 +8,11 @@ concepts:
     - accounts
     properties:
       name: name
-      status: status
       currency: currency
+      status: status
       id: resourceId
       account_number: iban
-    core_coverage: 0.833
+    core_coverage: 0.714
     evidence:
     - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v1/accounts
     - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v1/accounts/{account-id}
@@ -20,7 +20,8 @@ concepts:
     path_segment:
     - balances
     properties:
-      account_id: account
+      current: balanceAmount
+      type: balanceType
     core_coverage: 0.0
     evidence:
     - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v1/accounts/{account-id}/balances
@@ -30,7 +31,7 @@ concepts:
     - transactions
     properties:
       account_id: account
-    core_coverage: 0.0
+    core_coverage: 0.143
     evidence:
     - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v1/accounts/{account-id}/transactions
     - openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v2/savings/{account-id}/transactions

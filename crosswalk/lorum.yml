@@ -9,13 +9,13 @@ concepts:
     properties:
       name: account_name
       type: account_type
-      status: status
       currency: currency
+      status: status
       id: id
       balance:
       - available_balance
       - current_balance
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/lorum-openapi-original.json#GET /v1/accounts
     - openapi/_original/lorum-openapi-original.json#GET /v1/accounts/{account_id}
@@ -28,14 +28,14 @@ concepts:
     properties:
       id: id
       amount: instructed_amount
-      status: state
       direction:
       - direction
       - type
+      status: state
       account_id: account_id
       currency: currency
       created_at: created_at
-    core_coverage: 0.8
+    core_coverage: 0.714
     evidence:
     - openapi/_original/lorum-openapi-original.json#GET /v1/accounts/{account_id}/transactions
     - openapi/_original/lorum-openapi-original.json#GET /v1/transactions

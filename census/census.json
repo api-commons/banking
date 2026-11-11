@@ -51,8 +51,10 @@
      "GET collection"
     ],
     "properties": {
-     "Items": "array",
-     "Pagination": "object"
+     "AccountNumber": "string",
+     "ConnectionId": "string",
+     "CreatedAt": "string",
+     "EntityId": "integer"
     },
     "evidence": [
      "openapi/_original/agicap-banking-documents-v1-openapi.json#GET /public/banking-documents/v1/organizations/{organizationId}/bank-accounts"
@@ -325,6 +327,8 @@
      "subaccountId": "string",
      "subType": "string",
      "type": "string",
+     "isBillable": "boolean",
+     "rate": "number",
      "beneficiaryGroup": "array",
      "contingencyBeneficiaryGroup": "array",
      "programSignerGroup": "array",
@@ -782,10 +786,6 @@
      "GET item"
     ],
     "properties": {
-     "accounts": "array",
-     "totalCount": "integer",
-     "pageSize": "integer",
-     "offset": "integer",
      "accountId": "string",
      "accountNumber": "string",
      "accountName": "string",
@@ -827,8 +827,6 @@
      "GET item"
     ],
     "properties": {
-     "accounts": "array",
-     "totalCount": "integer",
      "accountId": "string",
      "accountNumber": "string",
      "accountName": "string",
@@ -1119,10 +1117,10 @@
      "Data": "object",
      "Links": "object",
      "Meta": "object",
-     "accountLookupToken": "string",
-     "firstName": "string",
-     "lastName": "string",
-     "accounts": "array",
+     "accountId": "string",
+     "cardLast4": "string",
+     "cardType": "string",
+     "brandCode": "string",
      "ssn": "string",
      "posMetaData": "object",
      "cashAccountType": "string",
@@ -1544,8 +1542,11 @@
      "pastDueAmount": "number",
      "lastStmtBalance": "number",
      "lastStmtDate": "string",
-     "currentValue": "number",
-     "balanceList": "array"
+     "balanceName": "string",
+     "balanceDescription": "string",
+     "balanceType": "string",
+     "balanceValue": "number",
+     "balanceDate": "string"
     },
     "evidence": [
      "openapi/_original/bmo-account-information-openapi.json#GET /accounts",
@@ -1668,7 +1669,11 @@
      "GET collection"
     ],
     "properties": {
-     "response": "object"
+     "id": "integer",
+     "name": "string",
+     "bank": "string",
+     "balance": "number",
+     "lastSynced": "string"
     },
     "evidence": [
      "openapi/_original/buxfer-openapi.yml#GET /accounts"
@@ -1741,9 +1746,6 @@
      "GET item"
     ],
     "properties": {
-     "organizationId": "string",
-     "page": "object",
-     "accounts": "array",
      "accountCategory": "string",
      "accountType": "string",
      "accountId": "string",
@@ -1859,10 +1861,60 @@
      "country_code": "string",
      "bank_rte_id": "string",
      "interest_rate_details": "object",
-     "fundManagerId": "string",
-     "accounts": "array",
-     "consent_id": "string",
-     "account_details": "array"
+     "id": "string",
+     "jointAccountStatus": "string",
+     "name": "string",
+     "firstName": "string",
+     "middleName": "string",
+     "lastName": "string",
+     "designation": "string",
+     "amlStatus": "string",
+     "pep": "string",
+     "fullDealingRestrictionsIndicator": "boolean",
+     "purchaseRestrictionsIndicator": "boolean",
+     "redemptionRestrictionsIndicator": "boolean",
+     "transferInRestrictionsIndicator": "boolean",
+     "transferOutRestrictionsIndicator": "boolean",
+     "exchangeInRestrictionsIndicator": "boolean",
+     "exchangeOutRestrictionsIndicator": "boolean",
+     "settlementRestrictionsIndicator": "boolean",
+     "registerAddressLine1": "string",
+     "registerAddressLine2": "string",
+     "registerAddressLine3": "string",
+     "registerAddressLine4": "string",
+     "registerAddressLine5": "string",
+     "registerAddressTown": "string",
+     "registerAddressPostCode": "string",
+     "registerAddressCountry": "string",
+     "correspondenceAddressLine1": "string",
+     "correspondenceAddressLine2": "string",
+     "correspondenceAddressLine3": "string",
+     "correspondenceAddressLine4": "string",
+     "correspondenceAddressLine5": "string",
+     "correspondenceAddressTown": "string",
+     "correspondenceAddressPostCode": "string",
+     "correspondenceAddressCountry": "string",
+     "emailAddress": "string",
+     "activationDate": "string",
+     "deactivationDate": "string",
+     "dealerId": "string",
+     "dealerName": "string",
+     "branchId": "string",
+     "branchName": "string",
+     "repId": "string",
+     "repName": "string",
+     "dealerAddressLine1": "string",
+     "dealerAddressLine2": "string",
+     "dealerAddressLine3": "string",
+     "dealerAddressLine4": "string",
+     "dealerAddressLine5": "string",
+     "dealerTown": "string",
+     "dealerPostCode": "string",
+     "dealerCountry": "string",
+     "nonDigitalInvestor": "string",
+     "investorIds": "array",
+     "client_account": "string",
+     "instruction_currencies": "array"
     },
     "evidence": [
      "openapi/_original/accounts.yaml#GET /accounts",
@@ -2069,16 +2121,19 @@
      "GET item"
     ],
     "properties": {
-     "connectedPsu": "string",
-     "accounts": "array",
-     "_links": "object",
      "resourceId": "string",
+     "bicFi": "string",
      "accountId": "object",
      "name": "string",
-     "product": "string",
+     "details": "string",
+     "linkedAccount": "string",
+     "usage": "string",
      "cashAccountType": "string",
+     "product": "string",
      "currency": "string",
-     "psuStatus": "string"
+     "balances": "array",
+     "psuStatus": "string",
+     "_links": "object"
     },
     "evidence": [
      "openapi/_original/connexis-cash-account-information-psd2-stet-mock-openapi.yml#GET /v2/accounts",
@@ -2666,9 +2721,20 @@
      "accountNumberLast4": "string",
      "autoVerifiedAccount": "integer",
      "railType": "string",
-     "holders": "array",
-     "encryptedValue": "string",
+     "relationship": "string",
      "ownerName": "string",
+     "firstName": "string",
+     "middleName": "string",
+     "lastName": "string",
+     "suffix": "string",
+     "nameScores": "object",
+     "nameClassification": "string",
+     "nameClassificationconfidencescore": "number",
+     "addresses": "array",
+     "emails": "array",
+     "phones": "array",
+     "documentations": "array",
+     "identityInsights": "object",
      "address": "object",
      "phone": "string",
      "email": "string",
@@ -2708,12 +2774,13 @@
      "POST collection"
     ],
     "properties": {
+     "type": "string",
+     "amount": "string",
+     "currency": "string",
+     "timestamp": "string",
      "id": "string",
      "iban": "string",
      "bic": "string",
-     "currency": "string",
-     "balances": "array",
-     "type": "string",
      "holder_name": "string"
     },
     "evidence": [
@@ -2791,8 +2858,7 @@
      "status": "string",
      "data": null,
      "passThrough": "object",
-     "batchId": "string",
-     "batch": "array",
+     "accountRef": "string",
      "institutionName": "string",
      "accountId": "string",
      "availableBalance": "number",
@@ -3185,10 +3251,7 @@
      "beneficiary-url": "string",
      "primary-account": "boolean",
      "account-balance": "object",
-     "savings-type": "string",
-     "accounts": "array",
-     "links": "object",
-     "included": null
+     "savings-type": "string"
     },
     "evidence": [
      "openapi/_original/griffin-openapi-original.yml#GET /v0/bank/accounts/{bank-account-id}",
@@ -3541,8 +3604,6 @@
      "createdAt": "string",
      "type": "string",
      "balances": "array",
-     "page": "object",
-     "accounts": "array",
      "accountId": "string",
      "accountNumberDisplay": "string",
      "productName": "string",
@@ -3640,7 +3701,12 @@
      "details": "object",
      "metadata": "object",
      "documents": "array",
-     "client_account_id": "string"
+     "client_account_id": "string",
+     "type": "string",
+     "document_id": "string",
+     "displayed_at": "string",
+     "consented_at": "string",
+     "version": "string"
     },
     "evidence": [
      "openapi/_original/lead-bank-openapi.json#GET /v0/accounts",
@@ -3688,7 +3754,10 @@
      "POST collection"
     ],
     "properties": {
-     "status": "string",
+     "status": [
+      "string",
+      "null"
+     ],
      "results_id": "string",
      "message": "string",
      "meta": [
@@ -3704,9 +3773,39 @@
       "string",
       "null"
      ],
-     "type": "string",
-     "accounts": "array",
-     "page": "object",
+     "type": [
+      "string",
+      "null"
+     ],
+     "entity_id": "string",
+     "account_id": "string",
+     "account_holder_name": "string",
+     "account_holder_short_name": "string",
+     "status_update_date_time": [
+      "string",
+      "null"
+     ],
+     "currency": "string",
+     "account_type": "string",
+     "account_sub_type": "string",
+     "nickname": [
+      "string",
+      "null"
+     ],
+     "description": [
+      "string",
+      "null"
+     ],
+     "opening_date": [
+      "string",
+      "null"
+     ],
+     "maturity_date": [
+      "string",
+      "null"
+     ],
+     "account": "array",
+     "servicer": null,
      "data": "object",
      "Data": [
       "object",
@@ -3741,10 +3840,6 @@
       "null"
      ],
      "account_status": "string",
-     "account_holder_name": [
-      "string",
-      "null"
-     ],
      "account_currency": [
       "string",
       "null"
@@ -3784,7 +3879,9 @@
      "status": "string",
      "metadata": "object",
      "agreements": "array",
-     "accepted_agreements": "array"
+     "agreement_id": "string",
+     "accepted_at": "string",
+     "legal_representative": "string"
     },
     "evidence": [
      "openapi/_original/lemonmarkets-brokerage-openapi.json#GET /accounts",
@@ -3953,6 +4050,10 @@
      "usages": "array",
      "user_substatuses": "array",
      "user_token": "string",
+     "apply_next_cycle": "boolean",
+     "effective_date": "string",
+     "margin": "number",
+     "value": "number",
      "balances": "object",
      "default_currency_code": "string",
      "impacted_amount": "number",
@@ -4010,11 +4111,16 @@
      "cycleRun": "boolean",
      "productTransfer": "boolean",
      "bankProductCode": "string",
-     "offset": "integer",
-     "limit": "integer",
-     "total": "integer",
-     "count": "integer",
-     "accounts": "array"
+     "accountFirstFour": "string",
+     "accountLastFour": "string",
+     "autoEnrolled": "boolean",
+     "enrollmentTypeId": "integer",
+     "enrollmentType": "string",
+     "previousAccountLostStolen": "boolean",
+     "previousAccountFirstFour": "string",
+     "previousAccountLastFour": "string",
+     "programName": "string",
+     "householdId": "integer"
     },
     "evidence": [
      "openapi/_original/mastercard-user-account-management-openapi.yml#GET /accounts/{id}",
@@ -4031,9 +4137,6 @@
      "GET item"
     ],
     "properties": {
-     "page": "object",
-     "links": "object",
-     "accounts": "array",
      "errorCode": "integer",
      "errorMessage": "string",
      "accountCategory": "string",
@@ -4047,6 +4150,11 @@
      "description": "string",
      "accountOpenDate": "string",
      "accountCloseDate": "string",
+     "currentBalance": "number",
+     "openingDayBalance": "number",
+     "principalBalance": "number",
+     "availableCashBalance": "number",
+     "accountId": "string",
      "parentAccountId": "string",
      "lineOfBusiness": "string",
      "routingTransitNumber": "string",
@@ -4060,12 +4168,7 @@
      "micrNumber": "string",
      "lastActivityDate": "string",
      "rewardProgramId": "string",
-     "transactionsIncluded": "boolean",
-     "currentBalance": "number",
-     "openingDayBalance": "number",
-     "principalBalance": "number",
-     "availableCashBalance": "number",
-     "accountId": "string"
+     "transactionsIncluded": "boolean"
     },
     "evidence": [
      "openapi/_original/fdx-resource-api-openapi.yaml#GET /consent/accounts",
@@ -4109,20 +4212,18 @@
      "POST collection"
     ],
     "properties": {
-     "page": null,
-     "accounts": "array",
-     "status": "string",
-     "account_id": null,
-     "product": "string",
      "accountId": "string",
      "accountType": "string",
      "accountNumberDisplay": null,
      "productName": "string",
      "nickname": null,
+     "status": "string",
      "currency": "object",
+     "bankProductType": null,
+     "account_id": null,
+     "product": "string",
      "currentBalance": "number",
      "availableBalance": "number",
-     "bankProductType": null,
      "id": "string",
      "display_name": "string",
      "account_number_mask": "string",
@@ -4430,11 +4531,6 @@
      "createdDate": "string",
      "directDebit": "boolean",
      "securedFundingLimit": "string",
-     "content": "array",
-     "size": "integer",
-     "totalSize": "integer",
-     "page": "integer",
-     "totalPages": "integer",
      "productCode": "string",
      "identifier": "object"
     },
@@ -4696,7 +4792,6 @@
      "revoked_at": "string",
      "automatic_access": "boolean",
      "enabled": "boolean",
-     "pagination": "object",
      "account_number": "string",
      "account_ownership": "string",
      "annuity_policy_to_date": "string",
@@ -4786,8 +4881,6 @@
      "PUT item"
     ],
     "properties": {
-     "accounts": "array",
-     "pagination": "object",
      "account_number": "string",
      "account_ownership": "string",
      "annuity_policy_to_date": "string",
@@ -4879,8 +4972,6 @@
      "PUT item"
     ],
     "properties": {
-     "accounts": "array",
-     "pagination": "object",
      "account_number": "string",
      "account_number_set_by": "integer",
      "account_ownership": "string",
@@ -5352,8 +5443,12 @@
      "POST collection"
     ],
     "properties": {
-     "accounts": "array",
-     "pagination": "object",
+     "id": "string",
+     "name": "string",
+     "nuban": "string",
+     "type": "string",
+     "bank": "string",
+     "currency": "string",
      "pdf": "boolean"
     },
     "evidence": [
@@ -5473,10 +5568,16 @@
      "GET item"
     ],
     "properties": {
-     "aVid": "string",
-     "participantId": "integer",
-     "accounts": "array",
-     "avId": "string"
+     "accountId": "string",
+     "type": "string",
+     "subType": "string",
+     "schemeName": "string",
+     "currency": "string",
+     "accountName": "string",
+     "sortCode": "string",
+     "accountNumber": "string",
+     "iban": "string",
+     "pan": "string"
     },
     "evidence": [
      "openapi/_original/ordo-account-data-client-hosted.yml#GET /account/verification/account",
@@ -6066,8 +6167,6 @@
      "GET item"
     ],
     "properties": {
-     "accounts": "array",
-     "page": "object",
      "accountId": "string",
      "accountType": "string",
      "accountNumber": "string",
@@ -6267,8 +6366,6 @@
      "createdAt": "string",
      "type": "string",
      "balances": "array",
-     "page": "object",
-     "accounts": "array",
      "accountId": "string",
      "accountNumberDisplay": "string",
      "productName": "string",
@@ -6483,8 +6580,10 @@
      "status": "string",
      "swift_code": "string",
      "next_page_token": "string",
-     "account_template_id": "string",
-     "relationships": "array",
+     "business_id": "string",
+     "customer_id": "string",
+     "person_id": "string",
+     "relationship_type": "string",
      "description": "string",
      "gl_type": "string",
      "is_system_acc": "boolean"
@@ -6527,19 +6626,17 @@
      "GET item"
     ],
     "properties": {
-     "accounts": "array",
-     "page": "object",
      "accountId": "string",
      "accountType": "string",
      "accountCategory": "string",
      "displayName": "string",
      "accountNumberDisplay": "string",
      "currency": "string",
+     "status": "string",
      "currentBalance": "number",
      "availableBalance": "number",
      "openingDayBalance": "number",
      "interestRate": "number",
-     "status": "string",
      "depositAccount": "object",
      "loanAccount": "object",
      "investmentAccount": "object"
@@ -6630,8 +6727,6 @@
      "PUT item"
     ],
     "properties": {
-     "header": "object",
-     "body": "array",
      "accountId": "string",
      "customerId": "string",
      "productId": "string",
@@ -6640,11 +6735,14 @@
      "balance": "number",
      "region": "string",
      "status": "string",
-     "accounts": "array",
-     "pagination": "object",
-     "accountName": "string",
-     "availableBalance": "number",
+     "averageBalance": "number",
+     "transactionCount": "integer",
+     "totalDebits": "number",
+     "totalCredits": "number",
      "currentBalance": "number",
+     "availableBalance": "number",
+     "lastUpdated": "string",
+     "accountName": "string",
      "productName": "string",
      "resourceId": "string",
      "iban": "string",
@@ -6678,9 +6776,24 @@
      "PUT item"
     ],
     "properties": {
+     "accountId": "string",
+     "accountName": "string",
+     "customerId": "string",
+     "customerName": "string",
+     "productId": "string",
+     "productName": "string",
+     "accountType": "string",
+     "currency": "string",
+     "status": "string",
+     "openingDate": "string",
+     "workingBalance": "number",
+     "availableBalance": "number",
+     "accountOfficerId": "integer",
+     "branchId": "string",
+     "iban": "string",
+     "bic": "string",
      "header": "object",
-     "body": "array",
-     "page": "object"
+     "body": "object"
     },
     "evidence": [
      "openapi/_original/temenos-transact-core-banking-openapi.yml#GET /holdings/accounts",
@@ -6734,28 +6847,28 @@
      "POST collection"
     ],
     "properties": {
-     "accounts": "array",
-     "metadata": "object",
      "id": "string",
-     "currency": "string",
      "type": "string",
-     "accountOwner": "object",
-     "nickname": "string",
-     "salesProductId": "string",
      "limits": "object",
      "status": null,
      "totals": "object",
      "balances": "object",
+     "currency": "string",
      "lockType": "string",
+     "nickname": "string",
      "interests": "object",
      "countryCode": "string",
      "identifiers": "object",
      "createdDateTime": "string",
      "accountHolderName": "string",
-     "constraints": "object",
+     "accountOwner": "object",
+     "salesProductId": "string",
+     "name": "string",
+     "accountNumber": "string",
+     "sortCode": "string",
+     "organisationId": "string",
      "headerAccountId": "string",
-     "virtualAggregatorNodeId": "string",
-     "organisationId": "string"
+     "virtualAggregatorNodeId": "string"
     },
     "evidence": [
      "openapi/_original/the-bank-of-london-api-openapi.json#GET /v2/accounts",
@@ -6875,8 +6988,11 @@
      "currencyCode": "string",
      "balance": "object",
      "identifiers": "object",
-     "accounts": "array",
-     "nextPageToken": "string"
+     "id": "string",
+     "balances": "object",
+     "customerSegment": "string",
+     "financialInstitutionId": "string",
+     "dates": "object"
     },
     "evidence": [
      "openapi/_original/tink-connector-api-openapi.yml#POST /connector/users/{external_user_id}/accounts",
@@ -6893,12 +7009,16 @@
      "GET item"
     ],
     "properties": {
-     "name": "string",
+     "identifier": "string",
+     "accountType": "string",
+     "status": "string",
+     "metadata": "array",
+     "accountDetails": "object",
      "accountFeatures": "object",
-     "accountDetails": "array",
      "bankId": "string",
      "id": "string",
      "isLocked": "boolean",
+     "name": "string",
      "lastCacheUpdateMs": "string",
      "nextCacheUpdateMs": "string",
      "customerSegment": "string",
@@ -6906,7 +7026,6 @@
      "identifiers": "object",
      "nickname": "string",
      "parties": "array",
-     "status": "string",
      "subType": "string",
      "type": "string"
     },
@@ -7052,8 +7171,6 @@
      "GET item"
     ],
     "properties": {
-     "accounts": "array",
-     "totalCount": "integer",
      "accountId": "string",
      "accountNumber": "string",
      "accountType": "string",
@@ -7266,8 +7383,6 @@
      "POST collection"
     ],
     "properties": {
-     "accounts": "array",
-     "pagination": "object",
      "id": "string",
      "ownerId": "string",
      "label": "string",
@@ -7516,12 +7631,7 @@
      "accountSummary": "string",
      "longAccountSummary": "string",
      "displayFields": "array",
-     "isInternal": "boolean",
-     "content": "array",
-     "seekPositionForNext": "integer",
-     "seekPositionForCurrent": "integer",
-     "sort": "object",
-     "size": "integer"
+     "isInternal": "boolean"
     },
     "evidence": [
      "openapi/_original/wise-platform-openapi.yml#DELETE /v2/accounts/{accountId}",
@@ -8071,7 +8181,9 @@
      "walletInfo": "object",
      "allocationIds": "array",
      "stakeholderId": "string",
-     "accountId": "string",
+     "amount": "object",
+     "asOfTime": "string",
+     "type": "string",
      "balances": "array"
     },
     "evidence": [
@@ -8357,7 +8469,11 @@
     ],
     "properties": {
      "accountId": "string",
-     "balances": "array"
+     "ledgerBalance": "number",
+     "availableBalance": "number",
+     "collectedBalance": "number",
+     "currency": "string",
+     "asOfDate": "string"
     },
     "evidence": [
      "openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts/{accountId}/balances"
@@ -8389,7 +8505,12 @@
     ],
     "properties": {
      "accountId": "string",
-     "balances": "array"
+     "balanceType": "string",
+     "amount": "number",
+     "currency": "string",
+     "asOfDateTime": "string",
+     "openingBalance": "number",
+     "closingBalance": "number"
     },
     "evidence": [
      "openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts/{accountId}/balances"
@@ -8760,14 +8881,13 @@
      "GET collection"
     ],
     "properties": {
-     "account_id": "string",
-     "balances": "array",
      "date": "string",
      "booked": "object",
      "pending": "object",
      "id": "string",
      "type": "string",
      "_links": "object",
+     "account_id": "string",
      "balance": "object",
      "threshold": "object"
     },
@@ -8912,7 +9032,7 @@
      "balances": "array",
      "virtual_account_id": "string",
      "available_amount": null,
-     "consent_id": "string"
+     "balance": "array"
     },
     "evidence": [
      "openapi/_original/accounts.yaml#GET /balances",
@@ -9051,8 +9171,9 @@
      "GET collection"
     ],
     "properties": {
-     "account": "object",
-     "balances": "array",
+     "balanceAmount": "object",
+     "balanceType": "string",
+     "referenceDate": "string",
      "Data": "object",
      "Links": "object",
      "Meta": "object"
@@ -9414,9 +9535,13 @@
     ],
     "properties": {
      "ok": "boolean",
-     "accounts": "array",
-     "evmAddress": null,
-     "privyAddress": null
+     "accountId": "string",
+     "chainId": "string",
+     "walletType": "string",
+     "balanceUsd": "number",
+     "rawBalance": "string",
+     "balanceByToken": "object",
+     "custodial": "boolean"
     },
     "evidence": [
      "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/balance",
@@ -9706,11 +9831,22 @@
       "null"
      ],
      "type": "string",
-     "balances": "array",
-     "page": "object",
-     "total": "object",
-     "monthly_totals": "array",
-     "balance_factors": "object",
+     "entity_id": "string",
+     "account_id": "string",
+     "credit_debit_indicator": "string",
+     "amount": "object",
+     "date_time": [
+      "string",
+      "null"
+     ],
+     "credit_line": "array",
+     "month": "integer",
+     "year": "integer",
+     "is_month_complete": "boolean",
+     "monthly_growth_rate": "number",
+     "contribution_amount": null,
+     "average_balance": null,
+     "initial_balance": null,
      "data": "object",
      "insights": "object",
      "Data": [
@@ -9978,10 +10114,15 @@
      "GET collection"
     ],
     "properties": {
-     "accountId": "string",
-     "account": "object",
-     "balances": "array",
+     "type": "string",
+     "amount": "number",
      "currency": "string",
+     "creditDebitIndicator": "string",
+     "dateTime": "string",
+     "balanceType": "string",
+     "referenceDate": "string",
+     "lastChangeDateTime": "string",
+     "accountId": "string",
      "availableBalance": "number",
      "bookedBalance": "number",
      "pendingCredits": "number",
@@ -10207,8 +10348,12 @@
      "POST collection"
     ],
     "properties": {
-     "balances": "array",
-     "pagination": "object",
+     "id": "string",
+     "account": "string",
+     "customer": "string",
+     "ledger_balance": "number",
+     "available_balance": "number",
+     "currency": "string",
      "pdf": "boolean"
     },
     "evidence": [
@@ -10277,10 +10422,9 @@
      "GET collection"
     ],
     "properties": {
-     "start_time": "string",
-     "end_time": "string",
-     "account_balances": "object",
-     "ledger_entry_balances": "array",
+     "type": "string",
+     "debit": "integer",
+     "credit": "integer",
      "balance": "object",
      "total_balance": "object"
     },
@@ -10649,9 +10793,9 @@
      "GET collection"
     ],
     "properties": {
-     "account_connection_id": "string",
-     "balances": "array",
-     "datetime_refreshed": "string"
+     "type": "string",
+     "amount": "object",
+     "date": "string"
     },
     "evidence": [
      "openapi/_original/sikoia-openapi.yml#GET /v2/bankaccounts/{account_connection_id}/balances"
@@ -10897,8 +11041,6 @@
      "GET collection"
     ],
     "properties": {
-     "account_id": "string",
-     "balances": "array",
      "date": "string",
      "booked": "object",
      "pending": "object",
@@ -10906,6 +11048,7 @@
      "type": "string",
      "created_at": "string",
      "_links": "object",
+     "account_id": "string",
      "balance": "object",
      "threshold": "object"
     },
@@ -10930,10 +11073,11 @@
      "GET collection"
     ],
     "properties": {
-     "account": "object",
-     "balances": "array",
-     "cardAccount": "object",
-     "card": "object"
+     "balanceAmount": "object",
+     "balanceType": "string",
+     "referenceDate": "string",
+     "lastChangeDateTime": "string",
+     "lastCommittedTransaction": "string"
     },
     "evidence": [
      "openapi/_original/tietoevry-financial-api-aggregation-swagger.json#GET /v1/xs2a/v1.0/providers/{provider-id}/accounts/{account-id}/balances",
@@ -10978,7 +11122,9 @@
      "updatedAt": "string",
      "balance": "object",
      "status": "string",
-     "entries": "array"
+     "amount": "object",
+     "included": "boolean",
+     "type": "string"
     },
     "evidence": [
      "openapi/_original/token-io-bank-integration-openapi.json#GET /accounts/{bankAccountId}/balance",
@@ -11009,8 +11155,10 @@
      "GET collection"
     ],
     "properties": {
-     "account": "object",
-     "balances": "array"
+     "balanceType": "string",
+     "balanceAmount": "object",
+     "referenceDate": "string",
+     "creditLimitIncluded": "boolean"
     },
     "evidence": [
      "openapi/_original/triodos-bank-uk-xs2a-openapi.json#GET /{tenant}/v1/accounts/{account-id}/balances",
@@ -11311,20 +11459,20 @@
      "liableBalance": null,
      "reservedAmount": null,
      "activeCreditLimit": null,
-     "contractIdentification": "object",
-     "balances": "array",
-     "correlationId": "string",
-     "status": "object",
      "balanceNumber": "integer",
      "merchantReconciliationReference": "string",
      "paymentLevel": "integer",
      "paymentAggregation": "integer",
      "paymentFrequency": "integer",
-     "terminalPeriodCutoffTime": "string",
-     "terminalPeriodClosureLevel": "integer",
      "paymentDay": "integer",
      "paymentDelay": "integer",
+     "terminalPeriodClosureLevel": "integer",
+     "terminalPeriodCutoffTime": "string",
      "bankAccounts": "array",
+     "balances": "array",
+     "correlationId": "string",
+     "contractIdentification": "object",
+     "status": "object",
      "value": "object",
      "path": "string",
      "op": "string",
@@ -11350,8 +11498,11 @@
      "GET collection"
     ],
     "properties": {
-     "mainBalanceAmount": "object",
-     "balances": "array"
+     "type": "string",
+     "dateTime": "string",
+     "balanceAmount": "object",
+     "creditLineIncluded": "boolean",
+     "creditLines": "array"
     },
     "evidence": [
      "openapi/_original/yapily-data-api-openapi.yml#GET /accounts/{accountId}/balances"
@@ -11658,8 +11809,6 @@
      "dda": "object",
      "created_at": "string",
      "updated_at": "string",
-     "records": "integer",
-     "transactions": "array",
      "validation": "object",
      "quote_uuid": null,
      "token": null
@@ -11733,19 +11882,18 @@
      "idempotentId": "string",
      "sourceSubaccountId": "string",
      "transactionMemo": "string",
-     "externalId": "string",
-     "id": "string",
-     "receivedAssets": "array",
-     "transactionTime": "string",
      "acquisitionDatetime": "string",
      "costBasis": "string",
      "quantity": "string",
+     "externalId": "string",
      "fee": "object",
      "feeAsset": "array",
+     "id": "string",
      "received": "object",
      "receivedAsset": "array",
      "sent": "object",
      "sentAsset": "array",
+     "transactionTime": "string",
      "type": "string",
      "blockchainTxId": "string",
      "dateTime": "string",
@@ -12269,10 +12417,16 @@
      "GET collection"
     ],
     "properties": {
-     "transactions": "array",
-     "totalCount": "integer",
-     "pageSize": "integer",
-     "offset": "integer"
+     "transactionId": "string",
+     "accountId": "string",
+     "type": "string",
+     "amount": "number",
+     "currency": "string",
+     "description": "string",
+     "referenceNumber": "string",
+     "valueDate": "string",
+     "postDate": "string",
+     "status": "string"
     },
     "evidence": [
      "openapi/_original/bank-of-america-cashpro-api-openapi.yml#GET /accounts/{accountId}/transactions"
@@ -12304,9 +12458,16 @@
      "GET collection"
     ],
     "properties": {
-     "transactions": "array",
-     "totalCount": "integer",
-     "pageSize": "integer"
+     "transactionId": "string",
+     "accountId": "string",
+     "amount": "number",
+     "currency": "string",
+     "debitCredit": "string",
+     "description": "string",
+     "referenceNumber": "string",
+     "valueDate": "string",
+     "bookingDate": "string",
+     "status": "string"
     },
     "evidence": [
      "openapi/_original/bny-mellon-treasury-services-api-openapi.yml#GET /accounts/{accountId}/transactions"
@@ -12662,8 +12823,20 @@
      "baiCode": "string",
      "transactionType": "string",
      "transactionDate": "string",
-     "paginatedArray": "object",
-     "transactions": "array"
+     "accountId": "string",
+     "accountCategory": "string",
+     "transactionId": "string",
+     "referenceTransactionId": "string",
+     "cardNumberDisplay": "string",
+     "postedTimestamp": "string",
+     "transactionTimestamp": "string",
+     "memo": "string",
+     "debitCreditMemo": "string",
+     "reference": "string",
+     "reward": "object",
+     "fiAttributes": "array",
+     "payee": "string",
+     "checkNumber": "integer"
     },
     "evidence": [
      "openapi/_original/bbandt-corp-commercial-account-transactions-openapi.yml#GET /v3/accounts/{accountId}/transactions",
@@ -12980,11 +13153,6 @@
      "GET item"
     ],
     "properties": {
-     "page": "integer",
-     "pages": "integer",
-     "count": "integer",
-     "next_page": "integer",
-     "transactions": "array",
      "transaction_id": "string",
      "bond_brand_id": "string",
      "customer_id": "string",
@@ -13098,9 +13266,14 @@
      "GET collection"
     ],
     "properties": {
-     "status": "string",
-     "numTransactions": "integer",
-     "transactions": "array"
+     "id": "integer",
+     "description": "string",
+     "date": "string",
+     "type": "string",
+     "amount": "number",
+     "accountId": "integer",
+     "tags": "string",
+     "extraInfo": "string"
     },
     "evidence": [
      "openapi/_original/buxfer-openapi.yml#GET /transactions"
@@ -13115,9 +13288,6 @@
      "GET item"
     ],
     "properties": {
-     "totalElements": "integer",
-     "content": "array",
-     "pageable": "object",
      "id": "string",
      "address": "object",
      "reference": "string",
@@ -13254,8 +13424,26 @@
      "GET collection"
     ],
     "properties": {
-     "page": "object",
-     "transactions": "array"
+     "accountCategory": "string",
+     "accountId": "string",
+     "transactionId": "string",
+     "transactionTimestamp": "string",
+     "postedTimestamp": "string",
+     "description": "string",
+     "memo": "string",
+     "debitCreditMemo": "string",
+     "category": "string",
+     "subCategory": "string",
+     "status": "string",
+     "amount": "number",
+     "lineItem": "array",
+     "reward": "object",
+     "reference": "string",
+     "links": "array",
+     "fiAttributes": "array",
+     "transactionType": "string",
+     "payee": "string",
+     "checkNumber": "integer"
     },
     "evidence": [
      "openapi/_original/chariot-fdx-openapi-original.yml#GET /accounts/{id}/transactions"
@@ -13336,7 +13524,38 @@
     ],
     "properties": {
      "account_ref": "string",
-     "transactions": "array",
+     "value_date": "string",
+     "statement_date": "string",
+     "account_number": "string",
+     "account_name": "string",
+     "branch_name": "string",
+     "beneficiary": "string",
+     "transaction_currency": "string",
+     "amount": "string",
+     "transaction_status": "string",
+     "transaction_type": "string",
+     "description": "string",
+     "bank_reference": "string",
+     "customer_reference": "string",
+     "entry_date": "string",
+     "uetr": "string",
+     "transaction_number": "string",
+     "base_currency": "string",
+     "branch_number": "string",
+     "bene_acct_no": "string",
+     "org_acct_name": "string",
+     "org_acct_no": "string",
+     "bene_name": "string",
+     "payment_details": "string",
+     "account_type": "string",
+     "iban_account_number": "string",
+     "bank_name": "string",
+     "orgnl_tran_virt_acct_no": "string",
+     "tran_detl": "string",
+     "bank_rte_id": "string",
+     "prod_typ": "string",
+     "credit_debit_mark": "string",
+     "transaction_actual_time": "string",
      "merchant_id": "string",
      "status": null,
      "message": "string",
@@ -13370,9 +13589,44 @@
      "statementCycleEndDate": "string",
      "currencyCode": "string",
      "languageCode": "string",
-     "fundManagerId": "string",
-     "accountsTransactions": "array",
-     "consent_id": "string"
+     "fundCode": "string",
+     "shareClassCode": "string",
+     "shareClassName": "string",
+     "isin": "string",
+     "cusip": "string",
+     "sedol": "string",
+     "transactionType": "string",
+     "tradeDate": "string",
+     "actualSettlementDate": "string",
+     "contractualSettlementDate": "string",
+     "reconciliationDate": "string",
+     "bookingDate": "string",
+     "dealerId": "string",
+     "branchId": "string",
+     "repId": "string",
+     "transactionStatus": "string",
+     "transactionRejectReason": "string",
+     "sourceTransactionId": "string",
+     "transactionFailureReason": "string",
+     "orderReference": "string",
+     "shareAmount": "number",
+     "dealPrice": "number",
+     "grossAmount": "number",
+     "netAmount": "number",
+     "feeOrLoadAmount": "number",
+     "dealerLoadAmount": "number",
+     "fundLoadAmount": "number",
+     "adlAmount": "number",
+     "brokerCredit": "number",
+     "taxAmount": "number",
+     "transactionReceivingMediumType": "string",
+     "largeDealIndicator": "boolean",
+     "transactionCurrency": "string",
+     "settlementCurrency": "string",
+     "settlementFxRate": "number",
+     "inSpecieTransferFlag": "boolean",
+     "end_to_end_id": "string",
+     "swift_transaction_code": "string"
     },
     "evidence": [
      "openapi/_original/accounts.yaml#GET /transactions",
@@ -13394,8 +13648,13 @@
      "GET collection"
     ],
     "properties": {
-     "transactions": "array",
-     "totalCount": "integer"
+     "transactionId": "string",
+     "date": "string",
+     "description": "string",
+     "amount": "number",
+     "type": "string",
+     "balance": "number",
+     "category": "string"
     },
     "evidence": [
      "openapi/_original/citizens-bank-accounts-api-openapi.yml#GET /accounts/{accountId}/transactions"
@@ -13575,8 +13834,22 @@
      "GET collection"
     ],
     "properties": {
-     "transactions": "array",
-     "hasMorePages": "boolean"
+     "description": "string",
+     "transactionCode": "string",
+     "transactionCodeDescription": "string",
+     "effectiveDate": "string",
+     "postingDate": "string",
+     "amount": "number",
+     "serialNumber": "string",
+     "controlNumber": "string",
+     "confirmationNumber": "string",
+     "transactionType": "string",
+     "rail": "string",
+     "id": "string",
+     "coreTransactionId": "string",
+     "processedAt": "string",
+     "checkNumber": "string",
+     "bai2TransactionCode": "string"
     },
     "evidence": [
      "openapi/_original/customers-bank-accounts-openapi.json#GET /{accountId}/transactions"
@@ -13608,8 +13881,30 @@
      "GET collection"
     ],
     "properties": {
-     "transactions": "array",
-     "next": "object",
+     "transactionId": "string",
+     "entryReference": "string",
+     "batchIndicator": "boolean",
+     "batchNumberOfTransactions": "integer",
+     "references": "object",
+     "bookingDate": "string",
+     "valueDate": "string",
+     "transactionAmount": "object",
+     "amountDetails": "object",
+     "creditor": "object",
+     "creditorAccount": "object",
+     "creditorAgent": "object",
+     "ultimateCreditor": "object",
+     "debtor": "object",
+     "debtorAccount": "object",
+     "debtorAgent": "object",
+     "ultimateDebtor": "object",
+     "remittanceInformationUnstructured": "array",
+     "remittanceInformationStructured": "array",
+     "additionalTransactionInformation": "string",
+     "bankTransactionCode": "string",
+     "bankTransactionCodeProprietary": "string",
+     "balanceAfterTransaction": "object",
+     "links": "object",
      "Data": "object",
      "Links": "object",
      "Meta": "object"
@@ -13808,8 +14103,6 @@
      "GET item"
     ],
     "properties": {
-     "transactions": "array",
-     "continuation_key": "string",
      "entry_reference": "string",
      "merchant_category_code": "string",
      "transaction_amount": "object",
@@ -14073,9 +14366,9 @@
      "subAccountFund": "string",
      "securityId": "string",
      "securityIdType": "string",
-     "accountIds": "string",
-     "reportCustomFields": "array",
-     "findTransaction": "object",
+     "label": "string",
+     "value": "string",
+     "shown": "boolean",
      "externalCustomerId": "string",
      "externalAccountId": "string",
      "accountType": "string",
@@ -14185,22 +14478,14 @@
      "PUT item"
     ],
     "properties": {
-     "pagination": "object",
-     "count": "integer",
-     "reports": "array",
-     "currencyRate": "number",
-     "currency": "string",
-     "transactionType": "string",
-     "customerRef": "string",
-     "vendorRef": "string",
-     "bankAccountRef": "string",
-     "lines": "array",
-     "date": "string",
      "id": "string",
      "accountId": "string",
+     "date": "string",
      "authorizedOnDate": "string",
      "isPending": "boolean",
      "amount": "number",
+     "currency": "string",
+     "transactionType": "string",
      "paymentChannel": "string",
      "categories": "array",
      "merchantName": "string",
@@ -14211,6 +14496,11 @@
      "subSection": "string",
      "group": "string",
      "subGroup": "string",
+     "currencyRate": "number",
+     "customerRef": "string",
+     "vendorRef": "string",
+     "bankAccountRef": "string",
+     "lines": "array",
      "accountType": "string",
      "accountSubType": "string",
      "postedDate": "string",
@@ -14228,16 +14518,16 @@
      "status": "string",
      "data": null,
      "passThrough": "object",
-     "batchId": "string",
-     "batch": "array",
+     "bankTransactionRef": "string",
      "orderId": "string",
      "paymentMethodType": "string",
      "currencyRef": "object",
      "transactionSourceRefs": "array",
      "createdDate": "string",
-     "transactions": "array",
-     "nextPageToken": "string",
-     "totalCount": "integer"
+     "transactionId": "string",
+     "type": "string",
+     "effectiveDate": "string",
+     "balanceAfter": "number"
     },
     "evidence": [
      "openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /bankTransactions",
@@ -14261,9 +14551,17 @@
      "GET collection"
     ],
     "properties": {
-     "accountId": "string",
-     "transactions": "array",
-     "accountNumber": "string"
+     "transactionId": "string",
+     "transactionType": "string",
+     "amount": "number",
+     "currency": "string",
+     "description": "string",
+     "postDate": "string",
+     "effectiveDate": "string",
+     "runningBalance": "number",
+     "transactionDate": "string",
+     "merchantName": "string",
+     "merchantCategoryCode": "string"
     },
     "evidence": [
      "openapi/_original/fiserv-bankinghub-openapi.yml#GET /banking/accounts/{accountId}/transactions",
@@ -14534,9 +14832,6 @@
      "GET item"
     ],
     "properties": {
-     "account-transactions": "array",
-     "links": "object",
-     "included": null,
      "account-transaction-url": "string",
      "processed-at": "string",
      "post-datetime": "string",
@@ -14643,8 +14938,28 @@
      "GET collection"
     ],
     "properties": {
-     "transactions": "array",
-     "summary": null
+     "onchainTransactionId": "string",
+     "txHash": null,
+     "type": "string",
+     "name": "string",
+     "time": "string",
+     "status": "string",
+     "isIncome": "boolean",
+     "tag": null,
+     "from": "object",
+     "to": null,
+     "fee": null,
+     "destinationChainId": null,
+     "usdBalanceAfter": null,
+     "card": null,
+     "userFrom": null,
+     "userTo": null,
+     "walletFrom": null,
+     "walletTo": null,
+     "ibanFrom": null,
+     "ibanTo": null,
+     "approved": null,
+     "hasAttachments": "boolean"
     },
     "evidence": [
      "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/transactions"
@@ -14892,8 +15207,6 @@
      "GET item"
     ],
     "properties": {
-     "transactions": "array",
-     "nextCursor": "string",
      "id": "string",
      "amount": "number",
      "date": "string",
@@ -14960,8 +15273,18 @@
      "fpsInfo": "object",
      "feeInfo": "object",
      "cryptoInfo": "object",
-     "page": "object",
-     "transactions": "array"
+     "transactionId": "string",
+     "referenceTransactionId": "string",
+     "postedTimestamp": "string",
+     "transactionTimestamp": "string",
+     "debitCreditMemo": "string",
+     "category": "string",
+     "subCategory": "string",
+     "amount": "number",
+     "foreignAmount": "number",
+     "foreignCurrency": "string",
+     "payee": "string",
+     "checkNumber": "string"
     },
     "evidence": [
      "openapi/_original/joinslash-com.json#GET /fdx/accounts/{accountId}/transactions",
@@ -15015,8 +15338,33 @@
      "GET collection"
     ],
     "properties": {
-     "transactions": "array",
-     "pagination": "object"
+     "amount": "integer",
+     "capture_id": "string",
+     "merchant_reference1": "string",
+     "sale_date": "string",
+     "type": "string",
+     "capture_date": "string",
+     "payment_reference": "string",
+     "order_id": "string",
+     "payout": "string",
+     "refund_id": "string",
+     "short_order_id": "string",
+     "merchant_reference2": "string",
+     "currency_code": "string",
+     "purchase_country": "string",
+     "vat_rate": "integer",
+     "vat_amount": "integer",
+     "shipping_country": "string",
+     "initial_payment_method_type": "string",
+     "initial_number_of_installments": "integer",
+     "initial_payment_method_monthly_downpayments": "integer",
+     "merchant_capture_reference": "string",
+     "merchant_refund_reference": "string",
+     "detailed_type": "string",
+     "tax_in_currency_of_registration_country": "integer",
+     "currency_code_of_registration_country": "string",
+     "klarna_comment": "string",
+     "reversal_reference": "string"
     },
     "evidence": [
      "openapi/_original/klarna-settlements-api-openapi.yml#GET /transactions"
@@ -15083,9 +15431,39 @@
       "string",
       "null"
      ],
-     "type": "string",
-     "transactions": "array",
-     "page": "object",
+     "type": [
+      "string",
+      "null"
+     ],
+     "entity_id": "string",
+     "account_id": "string",
+     "transaction_id": "string",
+     "transaction_information": "string",
+     "transaction_reference": "string",
+     "credit_debit_indicator": "string",
+     "amount": "object",
+     "transaction_mutability": "string",
+     "booking_date_time": "string",
+     "insights": "object",
+     "balance": "object",
+     "statement_reference": "array",
+     "value_date_time": "string",
+     "index": "integer",
+     "charge_amount": "object",
+     "bank_transaction_code": "object",
+     "card_instrument": "object",
+     "merchant_details": "object",
+     "proprietary_bank_transaction_code": "object",
+     "currency_exchange": "object",
+     "creditor_account": "object",
+     "creditor_agent": "object",
+     "debtor_account": "object",
+     "debtor_agent": "object",
+     "local_time_zone": "string",
+     "transaction_type": "string",
+     "sub_transaction_type": "string",
+     "payment_modes": "string",
+     "flags": "array",
      "data": "object",
      "Data": [
       "object",
@@ -15519,11 +15897,27 @@
      "GET collection"
     ],
     "properties": {
-     "errorCode": "integer",
-     "errorMessage": "string",
-     "page": "object",
-     "links": "object",
-     "transactions": "array"
+     "accountCategory": "string",
+     "accountId": "string",
+     "transactionId": "string",
+     "transactionType": "string",
+     "referenceTransactionId": "string",
+     "postedTimestamp": "string",
+     "transactionTimestamp": "string",
+     "description": "string",
+     "memo": "string",
+     "debitCreditMemo": "string",
+     "category": "string",
+     "subCategory": "string",
+     "reference": "string",
+     "status": "string",
+     "amount": "number",
+     "foreignAmount": "number",
+     "foreignCurrency": "string",
+     "imageIds": "array",
+     "payee": "string",
+     "checkNumber": "integer",
+     "paymentDetails": "object"
     },
     "evidence": [
      "openapi/_original/fdx-resource-api-openapi.yaml#GET /fdx/v6/accounts/{accountId}/transactions"
@@ -15575,16 +15969,28 @@
      "GET item"
     ],
     "properties": {
-     "page": null,
-     "transactions": "array",
+     "transactionId": "string",
+     "referenceTransactionId": null,
+     "postedTimestamp": null,
+     "transactionTimestamp": "string",
+     "description": "string",
+     "debitCreditMemo": "string",
+     "category": null,
+     "subCategory": null,
+     "status": "string",
+     "amount": "number",
+     "foreignAmount": null,
+     "foreignCurrency": null,
+     "card_id": null,
+     "transactionType": null,
+     "payee": null,
+     "checkNumber": null,
      "id": "string",
-     "amount": "string",
      "destination_address": "string",
      "destination_payment_rail": "string",
      "destination_tx_hash": null,
      "destination_address_nickname": null,
      "trace_id": null,
-     "status": "string",
      "tx_type": "string",
      "detail": "string",
      "created_time": "string",
@@ -15596,7 +16002,6 @@
      "is_missing_receipt": null,
      "original_created_time": "string",
      "cashback": null,
-     "card_id": "string",
      "cardholder_name": "string",
      "card_nickname": "string",
      "is_physical": "boolean",
@@ -15605,7 +16010,6 @@
      "original_amount": "string",
      "original_currency": "string",
      "industry": null,
-     "category": null,
      "failure_reason_user_friendly": null,
      "hold_id": null,
      "credit_id": null,
@@ -15768,12 +16172,18 @@
      "GET collection"
     ],
     "properties": {
-     "content": "array",
-     "size": "integer",
-     "totalSize": "integer",
-     "page": "integer",
-     "totalPages": "integer",
-     "pageStartBalance": "number"
+     "id": "string",
+     "amount": "number",
+     "currency": "string",
+     "description": "string",
+     "transactionDate": "string",
+     "postedDate": "string",
+     "credit": "boolean",
+     "type": "string",
+     "sourceId": "string",
+     "sourceExternalReference": "string",
+     "additionalInfo": null,
+     "account": "object"
     },
     "evidence": [
      "openapi/_original/modulr-api.json#GET /accounts/{accountId}/transactions"
@@ -15901,9 +16311,22 @@
      "GET collection"
     ],
     "properties": {
-     "transactions": "array",
+     "transactionId": "string",
+     "amount": "number",
+     "currency": "string",
+     "creditDebit": "string",
+     "bookingDate": "string",
+     "valueDate": "string",
+     "counterpartyName": "string",
+     "reference": "string",
+     "remittanceInformation": "string",
+     "accountId": "string",
+     "transactions": "object",
      "pagination": "object",
-     "accountId": "string"
+     "type": "string",
+     "creditDebitIndicator": "string",
+     "counterpartyAccount": "string",
+     "createdAt": "string"
     },
     "evidence": [
      "openapi/_original/montran-corporate-payments-portal-openapi.yml#GET /accounts/{accountId}/transactions",
@@ -16021,8 +16444,6 @@
      "PUT item"
     ],
     "properties": {
-     "transactions": "array",
-     "pagination": "object",
      "account_guid": "string",
      "account_id": "string",
      "amount": "number",
@@ -16067,11 +16488,16 @@
      "updated_at": "string",
      "user_guid": "string",
      "user_id": "string",
+     "classification": "object",
+     "geolocation": "object",
+     "merchant": "object",
+     "repeating_transaction": "object",
      "has_been_viewed": "boolean",
      "is_hidden": "boolean",
      "skip_webhook": "boolean",
      "transaction": "object",
      "account_owners": "array",
+     "pagination": "object",
      "verifiableCredential": "string"
     },
     "evidence": [
@@ -16101,8 +16527,6 @@
      "PUT item"
     ],
     "properties": {
-     "pagination": "object",
-     "transactions": "array",
      "account_guid": "string",
      "account_id": "string",
      "amount": "number",
@@ -16122,7 +16546,6 @@
      "is_fee": "boolean",
      "is_income": "boolean",
      "is_international": "boolean",
-     "is_manual": "boolean",
      "is_overdraft_fee": "boolean",
      "is_payroll_advance": "boolean",
      "is_recurring": "boolean",
@@ -16147,6 +16570,7 @@
      "updated_at": "string",
      "user_guid": "string",
      "user_id": "string",
+     "is_manual": "boolean",
      "has_been_viewed": "boolean",
      "is_hidden": "boolean",
      "skip_webhook": "boolean",
@@ -16179,8 +16603,6 @@
      "PUT item"
     ],
     "properties": {
-     "transactions": "array",
-     "pagination": "object",
      "account_guid": "string",
      "account_id": "string",
      "amount": "number",
@@ -16225,10 +16647,15 @@
      "updated_at": "string",
      "user_guid": "string",
      "user_id": "string",
+     "classification": "object",
+     "geolocation": "object",
+     "merchant": "object",
+     "repeating_transaction": "object",
      "has_been_viewed": "boolean",
      "is_hidden": "boolean",
      "skip_webhook": "boolean",
      "account_owners": "array",
+     "pagination": "object",
      "verifiableCredential": "string",
      "transaction": "object"
     },
@@ -16595,8 +17022,13 @@
      "POST collection"
     ],
     "properties": {
-     "transaction": "array",
-     "pagination": "object",
+     "id": "string",
+     "account": "string",
+     "customer": "string",
+     "amount": "number",
+     "type": "string",
+     "notes": "string",
+     "trans_date": "string",
      "pdf": "boolean"
     },
     "evidence": [
@@ -17257,8 +17689,18 @@
      "GET collection"
     ],
     "properties": {
-     "transactions": "array",
-     "page": "object"
+     "transactionId": "string",
+     "accountId": "string",
+     "postedDate": "string",
+     "transactionDate": "string",
+     "amount": "number",
+     "currency": "string",
+     "description": "string",
+     "category": "string",
+     "type": "string",
+     "status": "string",
+     "merchantName": "string",
+     "merchantCategory": "string"
     },
     "evidence": [
      "openapi/_original/regions-open-banking-openapi.yml#GET /accounts/{accountId}/transactions"
@@ -17336,10 +17778,13 @@
      "GET collection"
     ],
     "properties": {
-     "account_id": "string",
-     "transactions": "array",
-     "total_count": "integer",
-     "page": "integer"
+     "transaction_id": "string",
+     "date": "string",
+     "amount": "number",
+     "credit_debit_indicator": "string",
+     "description": "string",
+     "reference": "string",
+     "balance": "number"
     },
     "evidence": [
      "openapi/_original/scotiabank-tranxact-openapi.yml#GET /v1/accounts/{account_id}/transactions"
@@ -17423,11 +17868,19 @@
      "GET collection"
     ],
     "properties": {
-     "account_connection_id": "string",
-     "transactions": "array",
-     "datetime_refreshed": "string",
-     "request_id": "string",
+     "transaction_id": "string",
+     "date": "string",
+     "booking_datetime": "string",
+     "value_date_time": "string",
      "status": "string",
+     "amount": "object",
+     "currency": "string",
+     "reference": "string",
+     "description": "string",
+     "merchant": "object",
+     "iso_bank_transaction_code": "object",
+     "proprietary_bank_transaction_code": "object",
+     "request_id": "string",
      "entity_id": "string",
      "entity_type": "string",
      "datetime_requested": "string",
@@ -17482,8 +17935,18 @@
      "fpsInfo": "object",
      "feeInfo": "object",
      "cryptoInfo": "object",
-     "page": "object",
-     "transactions": "array"
+     "transactionId": "string",
+     "referenceTransactionId": "string",
+     "postedTimestamp": "string",
+     "transactionTimestamp": "string",
+     "debitCreditMemo": "string",
+     "category": "string",
+     "subCategory": "string",
+     "amount": "number",
+     "foreignAmount": "number",
+     "foreignCurrency": "string",
+     "payee": "string",
+     "checkNumber": "string"
     },
     "evidence": [
      "openapi/_original/slash-openapi-original.json#GET /fdx/accounts/{accountId}/transactions",
@@ -17829,20 +18292,41 @@
      "POST collection"
     ],
     "properties": {
-     "header": "object",
-     "body": "array",
-     "screeningId": "string",
-     "status": "string",
-     "matches": "array",
      "transactionId": "string",
+     "accountId": "string",
+     "transactionType": "string",
+     "amount": "number",
+     "currency": "string",
+     "bookingDate": "string",
+     "valueDate": "string",
+     "channel": "string",
+     "description": "string",
+     "status": "string",
+     "alertId": "string",
+     "customerId": "string",
+     "matchType": "string",
+     "matchScore": "number",
+     "matchedEntity": "string",
+     "listSource": "string",
+     "severity": "string",
+     "createdDate": "string",
      "originatorName": "string",
      "beneficiaryName": "string",
      "beneficiaryAddress": "string",
-     "amount": "number",
-     "currency": "string",
      "messageType": "string",
-     "transactions": "array",
-     "pagination": "object"
+     "fundId": "string",
+     "securityId": "string",
+     "quantity": "number",
+     "price": "number",
+     "tradeDate": "string",
+     "settlementDate": "string",
+     "debitOrCredit": "string",
+     "narrative": "string",
+     "journeyName": "string",
+     "currentStep": "string",
+     "startDate": "string",
+     "lastActivity": "string",
+     "reference": "string"
     },
     "evidence": [
      "openapi/_original/temenos-data-hub-openapi.yml#GET /analytics/transactions",
@@ -17862,9 +18346,24 @@
      "GET collection"
     ],
     "properties": {
-     "header": "object",
-     "body": "array",
-     "page": "object"
+     "transactionId": "string",
+     "accountId": "string",
+     "transactionType": "string",
+     "debitOrCredit": "string",
+     "amount": "number",
+     "currency": "string",
+     "bookingDate": "string",
+     "valueDate": "string",
+     "processingDate": "string",
+     "reference": "string",
+     "narrative": "string",
+     "counterpartyAccountId": "string",
+     "counterpartyName": "string",
+     "balance": "number",
+     "exchangeRate": "number",
+     "chargesAmount": "number",
+     "reversalIndicator": "boolean",
+     "statementNumber": "string"
     },
     "evidence": [
      "openapi/_original/temenos-transact-core-banking-openapi.yml#GET /holdings/accounts/{accountId}/transactions"
@@ -17879,8 +18378,6 @@
      "GET item"
     ],
     "properties": {
-     "transactions": "array",
-     "metadata": "object",
      "id": "string",
      "type": "string",
      "typeDescription": "string",
@@ -17978,9 +18475,10 @@
      "GET item"
     ],
     "properties": {
-     "account": "object",
-     "transactions": "object",
-     "balances": "array",
+     "balanceAmount": "object",
+     "balanceType": "string",
+     "referenceDate": "string",
+     "lastChangeDateTime": "string",
      "transactionId": "string",
      "debtorName": "string",
      "debtorAccount": "object",
@@ -17990,9 +18488,7 @@
      "bookingDate": "string",
      "valueDate": "string",
      "remittanceInformationUnstructured": "string",
-     "cardAccount": "object",
-     "cardTransactions": "object",
-     "_links": "object",
+     "lastCommittedTransaction": "string",
      "cardTransactionId": "string",
      "terminalId": "string",
      "transactionDate": "string",
@@ -18009,7 +18505,6 @@
      "transactionDetails": "string",
      "invoiced": "boolean",
      "proprietaryBankTransactionCode": "string",
-     "card": "object",
      "remittanceInformationStructured": "object"
     },
     "evidence": [
@@ -18042,8 +18537,15 @@
      "bookedDate": "string",
      "description": "string",
      "merchantName": "string",
-     "transactions": "array",
-     "nextPageToken": "string"
+     "id": "string",
+     "accountId": "string",
+     "descriptions": "object",
+     "dates": "object",
+     "status": "string",
+     "categories": "object",
+     "merchantInformation": "object",
+     "types": "object",
+     "recurring": "boolean"
     },
     "evidence": [
      "openapi/_original/tink-connector-api-openapi.yml#POST /connector/users/{external_user_id}/transactions",
@@ -18061,8 +18563,6 @@
      "GET item"
     ],
     "properties": {
-     "offset": "string",
-     "transactions": "array",
      "id": "string",
      "type": "string",
      "status": "string",
@@ -18071,8 +18571,13 @@
      "tokenId": "string",
      "tokenTransferId": "string",
      "createdAt": "string",
+     "bankTransactionCode": "object",
+     "bankTransactionId": "string",
+     "createdAtMs": "string",
+     "creditorEndpoint": "object",
+     "metadata": "object",
+     "providerTransactionDetails": "object",
      "transaction": "object",
-     "pageInfo": "object",
      "providerPaymentId": "string",
      "createdDateTime": "string",
      "transactionType": "string",
@@ -18084,7 +18589,19 @@
      "paymentId": "string",
      "refundId": "string",
      "payoutId": "string",
-     "page": "object"
+     "balance": "object",
+     "categoryPurpose": "string",
+     "classification": "object",
+     "codes": "object",
+     "creditorAgent": "object",
+     "dates": "object",
+     "debtorAgent": "object",
+     "merchant": "object",
+     "mutability": "string",
+     "paymentPurpose": "string",
+     "reference": "string",
+     "ultimateCreditor": "object",
+     "ultimateDebtor": "object"
     },
     "evidence": [
      "openapi/_original/token-io-bank-integration-openapi.json#GET /accounts/{bankAccountId}/transactions",
@@ -18240,10 +18757,6 @@
      "GET item"
     ],
     "properties": {
-     "transactions": "array",
-     "totalCount": "integer",
-     "pageSize": "integer",
-     "offset": "integer",
      "transactionId": "string",
      "accountId": "string",
      "transactionDate": "string",
@@ -18502,8 +19015,6 @@
      "POST collection"
     ],
     "properties": {
-     "transactions": "array",
-     "pagination": "object",
      "id": "string",
      "origin": "object",
      "destination": "object",
@@ -18518,7 +19029,8 @@
      "quoteId": "string",
      "params": null,
      "metadata": "object",
-     "statement": "object"
+     "statement": "object",
+     "pagination": "object"
     },
     "evidence": [
      "openapi/_original/uphold-core-api-openapi.json#GET /core/accounts/{accountId}/transactions",
@@ -18563,9 +19075,16 @@
      "GET collection"
     ],
     "properties": {
+     "transactionId": "string",
      "accountNumber": "string",
-     "transactions": "array",
-     "totalCount": "integer"
+     "amount": "number",
+     "currency": "string",
+     "transactionDate": "string",
+     "valueDate": "string",
+     "description": "string",
+     "transactionType": "string",
+     "referenceNumber": "string",
+     "bankReference": "string"
     },
     "evidence": [
      "openapi/_original/us-bank-corporate-account-information-openapi.yml#GET /accounts/{accountNumber}/transactions"
@@ -18715,7 +19234,9 @@
      "PayPalToken": "string",
      "VenmoToken": "string",
      "IBAN": "string",
-     "VirtualAccountTransactions": "array"
+     "FullName": "string",
+     "ShortForm": "string",
+     "TransactionType": "string"
     },
     "evidence": [
      "openapi/_original/vopay-account-api-reference.json#GET /account/subaccount/transactions",
@@ -18757,9 +19278,6 @@
      "GET item"
     ],
     "properties": {
-     "transactions": "array",
-     "count": "integer",
-     "responseCount": "integer",
      "id": "string",
      "type": "string",
      "status": "string",
@@ -18768,7 +19286,8 @@
      "fee": "object",
      "creationTimestamp": "integer",
      "lastUpdatedTimestamp": "integer",
-     "transaction": null
+     "transaction": null,
+     "instrument": "object"
     },
     "evidence": [
      "openapi/_original/weavr-multi-openapi-original.yml#GET /managed_accounts/{id}/transactions",
@@ -18787,9 +19306,6 @@
      "GET item"
     ],
     "properties": {
-     "transactions": "array",
-     "nextPageToken": "string",
-     "totalCount": "integer",
      "transactionId": "string",
      "accountId": "string",
      "transactionType": "string",
@@ -20664,9 +21180,6 @@
      "POST collection"
     ],
     "properties": {
-     "payees": "array",
-     "links": "object",
-     "included": null,
      "cop-request-url": "string",
      "payee-url": "string",
      "account-number": "string",
@@ -20982,9 +21495,19 @@
       "string",
       "null"
      ],
-     "type": "string",
-     "beneficiaries": "array",
-     "page": "object",
+     "type": [
+      "string",
+      "null"
+     ],
+     "account_id": "string",
+     "account_holder_name": "string",
+     "account_holder_short_name": "string",
+     "beneficiary_id": "string",
+     "beneficiary_type": "string",
+     "creditor_agent": "object",
+     "creditor_account": "object",
+     "reference": "string",
+     "supplementary_data": "object",
      "Data": [
       "object",
       "null"
@@ -21130,12 +21653,7 @@
      "approvalStatus": "string",
      "accessGroups": "array",
      "createdBy": "string",
-     "idToReplace": "string",
-     "content": "array",
-     "size": "integer",
-     "totalSize": "integer",
-     "page": "integer",
-     "totalPages": "integer"
+     "idToReplace": "string"
     },
     "evidence": [
      "openapi/_original/modulr-api.json#DELETE /customers/{customerId}/beneficiaries",
@@ -21189,8 +21707,6 @@
      "POST collection"
     ],
     "properties": {
-     "beneficiaries": "array",
-     "pagination": "object",
      "beneficiaryId": "string",
      "name": "string",
      "accountIban": "string",
@@ -22000,8 +22516,14 @@
      "GET collection"
     ],
     "properties": {
-     "header": "object",
-     "body": "array"
+     "beneficiaryId": "string",
+     "customerId": "string",
+     "beneficiaryName": "string",
+     "accountNumber": "string",
+     "iban": "string",
+     "bic": "string",
+     "bankName": "string",
+     "country": "string"
     },
     "evidence": [
      "openapi/_original/temenos-transact-openapi.yml#GET /party/beneficiaries"
@@ -22016,9 +22538,20 @@
      "POST collection"
     ],
     "properties": {
+     "beneficiaryId": "string",
+     "customerId": "string",
+     "beneficiaryName": "string",
+     "accountNumber": "string",
+     "iban": "string",
+     "bic": "string",
+     "bankName": "string",
+     "bankCountry": "string",
+     "currency": "string",
+     "beneficiaryType": "string",
+     "status": "string",
+     "nickname": "string",
      "header": "object",
-     "body": "array",
-     "page": "object"
+     "body": "object"
     },
     "evidence": [
      "openapi/_original/temenos-transact-core-banking-openapi.yml#GET /party/beneficiaries",
@@ -22332,9 +22865,6 @@
      "POST collection"
     ],
     "properties": {
-     "accounts": "array",
-     "count": "integer",
-     "responseCount": "integer",
      "id": "string",
      "profileId": "string",
      "tag": "string",
@@ -22347,8 +22877,6 @@
      "state": "string",
      "creationTimestamp": "integer",
      "owner": "object",
-     "beneficiaries": "array",
-     "operationBatchId": "object",
      "trustLevel": "string",
      "externalRefs": "array",
      "group": "string",
@@ -22356,8 +22884,7 @@
      "beneficiaryDetails": null,
      "relatedOperationBatches": "array",
      "validationFailure": "string",
-     "batches": "array",
-     "linkedAccounts": "array",
+     "operationBatchId": "object",
      "accountIdentification": null,
      "institution": "object",
      "consent": "object",
@@ -22709,8 +23236,6 @@
      "card_uuid": "string",
      "merchant_name": "string",
      "merchant_id": "string",
-     "records": "integer",
-     "transactions": "array",
      "payment_transaction": "object",
      "balance": "object",
      "validation": "object",
@@ -22761,11 +23286,7 @@
      "idempotentId": "string",
      "transferAmlQuestionnaire": "object",
      "useGasStation": "boolean",
-     "description": "string",
-     "destinationAmounts": "array",
-     "idempotencyKey": "string",
-     "networkSpecific": null,
-     "sourceWalletId": "string"
+     "clientReferenceId": "string"
     },
     "evidence": [
      "openapi/_original/anchorage-v2-openapi-original.yml#DELETE /transfers/{transferId}",
@@ -23004,10 +23525,6 @@
      "POST collection"
     ],
     "properties": {
-     "payments": "array",
-     "totalCount": "integer",
-     "pageSize": "integer",
-     "offset": "integer",
      "paymentId": "string",
      "clientReferenceId": "string",
      "status": "string",
@@ -23062,8 +23579,6 @@
      "POST collection"
     ],
     "properties": {
-     "payments": "array",
-     "totalCount": "integer",
      "paymentId": "string",
      "clientReference": "string",
      "status": "string",
@@ -23257,7 +23772,11 @@
      "paidAmount": "number",
      "errorTransferCount": "integer",
      "company": "object",
-     "companies": "array"
+     "taxId": "string",
+     "bankCode": "string",
+     "branchCode": "string",
+     "accountNumber": "string",
+     "netAmount": "number"
     },
     "evidence": [
      "openapi/_original/btg-pactual-banking-payments-openapi.yml#DELETE /{companyId}/banking/payments/{paymentId}",
@@ -23486,17 +24005,19 @@
      "POST collection"
     ],
     "properties": {
+     "issue": "string",
+     "action": "string",
+     "code": "string",
+     "transaction": "object",
+     "creditor": "object",
+     "method": "object",
      "message_id": "string",
-     "payments": "array",
      "debtor": "object",
      "ultimate_debtor": "object",
-     "creditor": "object",
      "ultimate_creditor": "object",
      "intermediary": "array",
      "instructed_agent": "object",
      "instructing_agent": "object",
-     "method": "object",
-     "transaction": "object",
      "account_validation": "object",
      "initiating_party": "object",
      "original_payment": "object",
@@ -23552,9 +24073,18 @@
      "categoryPurpose": "string",
      "remittanceInformation": "object",
      "intermediaryAgent1": "object",
-     "batchId": "string",
-     "currencyCode": "string",
-     "transactions": "array"
+     "endToEndId": "string",
+     "reference": "string",
+     "amount": "number",
+     "debtorName": "string",
+     "debtorAddress": "object",
+     "debtorBic": "string",
+     "debtorPrivateIdentification": "object",
+     "accountIdentifier": "object",
+     "debtorAccountCurrency": "string",
+     "intermediaryAgent": "object",
+     "instructionForDebtorAgent": "string",
+     "ultimateCreditor": "object"
     },
     "evidence": [
      "openapi/_original/clearbank-cross-border-v4.json#POST /payments/cross-border-sterling/v4/payments",
@@ -24635,9 +25165,20 @@
      "POST collection"
     ],
     "properties": {
-     "end_user_id": "string",
-     "payouts_payment_details": "array",
-     "payment_details": "array",
+     "payment_intent_id": "string",
+     "payment_id": [
+      "string",
+      "null"
+     ],
+     "initiate_payment_task_id": "string",
+     "account_number": "string",
+     "iban": "string",
+     "bank_identifier": "string",
+     "destination_details": "object",
+     "payment_destination_id": "string",
+     "amount": "number",
+     "description": "string",
+     "authorize_payment": "boolean",
      "content": "array",
      "number": "integer",
      "size": "integer",
@@ -24649,8 +25190,12 @@
      "first": "boolean",
      "number_of_elements": "integer",
      "empty": "boolean",
-     "payments": "array",
-     "pagination": "object",
+     "currency": "string",
+     "external_reference": "string",
+     "id": "string",
+     "customer_id": "string",
+     "payment_initiation_timestamp": "string",
+     "reconciliation": "object",
      "payment_initiation_date": "object",
      "status": [
       "string",
@@ -24660,12 +25205,8 @@
       "array",
       "null"
      ],
-     "amount": "object",
+     "pagination": "object",
      "deposit_match_type": [
-      "string",
-      "null"
-     ],
-     "customer_id": [
       "string",
       "null"
      ],
@@ -24681,12 +25222,7 @@
       "string",
       "null"
      ],
-     "id": "string",
-     "payment_initiation_timestamp": "string",
-     "reconciliation": "object",
-     "page": "object",
      "scheduled_payment_id": "string",
-     "schedule_id": "string",
      "occurrence_index": "integer",
      "due_date": "string",
      "reference": [
@@ -24694,11 +25230,12 @@
       "null"
      ],
      "attempt_count": "integer",
-     "created_at": "string",
      "updated_at": [
       "string",
       "null"
-     ]
+     ],
+     "schedule_id": "string",
+     "created_at": "string"
     },
     "evidence": [
      "openapi/_original/lean-technologies-ksa-payouts-openapi.yml#GET /payouts/v1/payments",
@@ -25037,11 +25574,6 @@
      "POST collection"
     ],
     "properties": {
-     "content": "array",
-     "size": "integer",
-     "totalSize": "integer",
-     "page": "integer",
-     "totalPages": "integer",
      "id": "string",
      "status": "string",
      "createdDate": "string",
@@ -25107,8 +25639,6 @@
      "POST collection"
     ],
     "properties": {
-     "payments": "array",
-     "pagination": "object",
      "paymentId": "string",
      "paymentType": "string",
      "status": "string",
@@ -25128,20 +25658,19 @@
      "chargeBearer": "string",
      "urgency": "string",
      "messageId": "string",
-     "endToEndId": "string",
-     "clearingSystem": "string",
      "debtorName": "string",
      "debtorAccount": "object",
      "debtorAgent": "object",
      "creditorName": "string",
      "creditorAccount": "object",
      "creditorAgent": "object",
-     "requestedExecutionDate": "string",
+     "endToEndId": "string",
+     "clearingSystem": "string",
      "settlementDate": "string",
      "statusHistory": "array",
-     "batchId": "string",
-     "numberOfTransactions": "integer",
-     "controlSum": "number"
+     "requestedExecutionDate": "string",
+     "transactionId": "string",
+     "purpose": "string"
     },
     "evidence": [
      "openapi/_original/montran-corporate-payments-portal-openapi.yml#GET /payments",
@@ -25355,10 +25884,20 @@
      "recurringPaymentInformation": "object",
      "unscheduledPaymentInformation": "object",
      "hostedPaymentInformation": "object",
-     "totalCount": "integer",
-     "cyclesCompletedCount": "object",
-     "billingCyclesToSkip": "array",
-     "subscriptionPayment": "array"
+     "paymentType": "string",
+     "transactionID": "string",
+     "date": "string",
+     "currency": "string",
+     "billingStartDate": "string",
+     "billingEndDate": "string",
+     "billingCycle": "string",
+     "paymentNumber": "string",
+     "billingAmount": "string",
+     "setupFee": "string",
+     "surchargeAmount": "string",
+     "surchargeDescription": "string",
+     "modifiable": "boolean",
+     "billingCyclesToSkip": "array"
     },
     "evidence": [
      "openapi/_original/national-australia-bank-gateway-payments-swagger.json#GET /rbs/v1/subscriptions/{id}/payments",
@@ -25549,7 +26088,7 @@
      "total_transfer_amount": "integer",
      "bulk_reference_id": "string",
      "updated_at": "integer",
-     "transfers": "array"
+     "beneficiary_details": "object"
     },
     "evidence": [
      "openapi/_original/open-financial-1-openapi.yml#GET /v1/pg/sandbox/payment_token/{tokenvalue}/payment",
@@ -25568,10 +26107,10 @@
      "POST collection"
     ],
     "properties": {
-     "transactionStatus": "string",
-     "paymentId": "string",
-     "_links": null,
-     "tppMessage": "array",
+     "category": "string",
+     "code": "string",
+     "path": "string",
+     "text": "string",
      "instructedAmount": "object",
      "debtorAccount": "object",
      "creditorAccount": "object",
@@ -25586,6 +26125,7 @@
      "purposeCode": "string",
      "endToEndIdentification": "string",
      "remittanceInformationStructured": "object",
+     "transactionStatus": "string",
      "tppMessages": "array"
     },
     "evidence": [
@@ -25660,9 +26200,6 @@
      "GET item"
     ],
     "properties": {
-     "payments": "array",
-     "startIndex": "number",
-     "itemsPerPage": "number",
      "paymentId": "string",
      "paymentType": "string",
      "merchant": "object",
@@ -25742,17 +26279,16 @@
      "POST collection"
     ],
     "properties": {
-     "externalId": "string",
-     "transfers": "array",
-     "offset": "integer",
-     "limit": "integer",
-     "totalCount": "integer",
+     "orderNumber": "integer",
+     "status": "string",
+     "message": "string",
+     "errors": "array",
+     "warnings": "array",
      "amount": "number",
      "id": "string",
      "qrId": "string",
      "account": "string",
      "createdDate": "string",
-     "status": "object",
      "paymentPurpose": "string",
      "statementPaymentPurpose": "string",
      "isTaxable": "boolean",
@@ -26197,21 +26733,13 @@
      "POST collection"
     ],
     "properties": {
-     "payments": "array",
-     "metadata": "object",
-     "scheme": "string",
-     "quoteId": "string",
-     "debtor": "object",
-     "amount": "object",
-     "creditorAgent": null,
-     "creditor": "object",
-     "reference": null,
-     "endToEndId": "string",
-     "idempotencyId": "string",
      "id": "string",
      "type": "string",
+     "scheme": "string",
      "sender": "object",
      "recipient": null,
+     "amount": null,
+     "reference": null,
      "notes": "string",
      "plannedExecutionDateTime": "string",
      "status": null,
@@ -26219,10 +26747,16 @@
      "createdDateTime": "string",
      "createdBy": "string",
      "paymentOrderId": "string",
+     "idempotencyId": "string",
      "standingOrderId": "string",
      "creator": null,
      "paymentType": "string",
-     "originator": null
+     "originator": null,
+     "quoteId": "string",
+     "debtor": "object",
+     "creditorAgent": null,
+     "creditor": "object",
+     "endToEndId": "string"
     },
     "evidence": [
      "openapi/_original/the-bank-of-london-api-openapi.json#GET /v2/payments",
@@ -26302,7 +26836,10 @@
      "redirectUrl": "string",
      "destinations": "array",
      "sourceAccount": "object",
-     "remittanceInformation": "object"
+     "remittanceInformation": "object",
+     "accountNumber": "object",
+     "name": "string",
+     "country": "string"
     },
     "evidence": [
      "openapi/_original/tink-payments-api-openapi.yml#GET /payments/{paymentId}",
@@ -26333,15 +26870,6 @@
      "tokenInitiatorId": "string",
      "transferRefId": "string",
      "metadata": "object",
-     "offset": "string",
-     "transfers": "array",
-     "authorizationDetails": "object",
-     "transfer": "object",
-     "amount": null,
-     "confirmFunds": "boolean",
-     "refId": "string",
-     "tokenId": "string",
-     "transferDestinations": "array",
      "actingAs": "object",
      "convertedToFutureDatedPayment": "boolean",
      "createdAtMs": "string",
@@ -26353,28 +26881,32 @@
      "refund": "object",
      "refundDetails": "object",
      "statusReasonInformation": "string",
-     "vrps": "array",
-     "pageInfo": "object",
-     "payments": "array",
+     "authorizationDetails": "object",
+     "transfer": "object",
+     "amount": null,
+     "confirmFunds": "boolean",
+     "refId": "string",
+     "tokenId": "string",
+     "transferDestinations": "array",
      "memberId": "string",
      "initiation": "object",
+     "createdDateTime": "string",
+     "updatedDateTime": "string",
+     "bankVrpId": "string",
+     "bankVrpStatus": "string",
      "bankPaymentStatus": "string",
      "bankPaymentId": "string",
      "bankTransactionId": "string",
-     "bankVrpId": "string",
-     "bankVrpStatus": "string",
      "authentication": "object",
-     "createdDateTime": "string",
-     "updatedDateTime": "string",
      "errorInfo": "object",
      "paymentLinkStatus": "string",
      "pispConsentAccepted": "boolean",
      "initialEmbeddedAuth": "object",
-     "payloadSignature": "object",
      "method": "string",
      "orderId": "string",
      "scaStatus": "string",
      "transferRefundStatus": "string",
+     "payloadSignature": "object",
      "expiresDateTime": "string",
      "paymentType": "string",
      "v1Fields": "object"
@@ -26462,9 +26994,6 @@
      "GET item"
     ],
     "properties": {
-     "payments": "array",
-     "startIndex": "number",
-     "itemsPerPage": "number",
      "paymentId": "string",
      "paymentType": "string",
      "merchant": "object",
@@ -26736,9 +27265,6 @@
      "PUT collection"
     ],
     "properties": {
-     "transfer": "array",
-     "count": "integer",
-     "responseCount": "integer",
      "id": "string",
      "profileId": "string",
      "tag": "string",
@@ -27061,13 +27587,13 @@
      "links": "object",
      "sandbox": "object",
      "data": "array",
-     "matures_at": "string",
-     "your_bank_account_id": "string",
-     "channels": "array",
-     "payouts": "array",
+     "recipient_contact_id": "string",
+     "category_purpose_code": "string",
+     "end_to_end_id": "string",
      "ref": "string",
      "from_bank_account_id": "string",
      "to_bank_account_id": "string",
+     "matures_at": "string",
      "initiator_id": "string"
     },
     "evidence": [
@@ -27112,8 +27638,14 @@
      "GET item"
     ],
     "properties": {
-     "Items": "array",
-     "Pagination": "object"
+     "AccountNumber": "string",
+     "ConnectionId": "string",
+     "CreatedAt": "string",
+     "FileId": "string",
+     "Filename": "string",
+     "Format": "string",
+     "Id": "string",
+     "IsDuplicate": "boolean"
     },
     "evidence": [
      "openapi/_original/agicap-banking-documents-v1-openapi.json#GET /public/banking-documents/v1/entities/{entityId}/connections/{connectionId}/statements",
@@ -27150,8 +27682,6 @@
      "GET item"
     ],
     "properties": {
-     "statements": "array",
-     "totalCount": "integer",
      "statementId": "string",
      "accountId": "string",
      "statementDate": "string",
@@ -27266,11 +27796,18 @@
      "GET collection"
     ],
     "properties": {
-     "accountNumber": "string",
-     "balance": "object",
-     "dailyMovements": "array",
-     "date": "string",
-     "movements": "array"
+     "id": "integer",
+     "type": "string",
+     "category": "object",
+     "description": "string",
+     "dateHour": "string",
+     "amount": "number",
+     "descriptionDetails": "string",
+     "txId": "string",
+     "endToEndId": "string",
+     "returnInfo": "string",
+     "details": "object",
+     "account": "object"
     },
     "evidence": [
      "openapi/_original/btg-pactual-banking-accounts-openapi.yml#GET /{companyId}/banking/accounts/statements",
@@ -27344,8 +27881,12 @@
      "GET item"
     ],
     "properties": {
-     "page": "object",
-     "statements": "array"
+     "statementId": "string",
+     "accountId": "string",
+     "statementDate": "string",
+     "description": "string",
+     "status": "string",
+     "links": "array"
     },
     "evidence": [
      "openapi/_original/chariot-fdx-openapi-original.yml#GET /accounts/{id}/statements",
@@ -27459,11 +28000,11 @@
      "GET collection"
     ],
     "properties": {
-     "start": "object",
-     "entries": "array",
-     "end": "object",
-     "aggregations": "object",
-     "header": "object"
+     "id": "string",
+     "type": "string",
+     "amount": "integer",
+     "createdAt": "string",
+     "transaction": "object"
     },
     "evidence": [
      "openapi/_original/cora-extrato-openapi.yml#GET /statement"
@@ -27612,10 +28153,12 @@
      "lastPaymentAmount": "object",
      "id": "integer",
      "newCharges": "object",
-     "configName": "string",
-     "reportId": "integer",
-     "statements": "array",
-     "submissionDate": "string",
+     "accountID": "integer",
+     "formType": "string",
+     "docType": "string",
+     "name": "string",
+     "source": "string",
+     "uri": "string",
      "status": "string"
     },
     "evidence": [
@@ -27633,12 +28176,10 @@
     ],
     "properties": {
      "page": "object",
-     "accountId": "string",
-     "statementId": "string",
-     "statementDate": "string",
-     "description": "string",
-     "links": "array",
-     "status": "string",
+     "href": "string",
+     "action": "string",
+     "rel": "string",
+     "types": "array",
      "nextOffset": "string",
      "nextPageKey": "string",
      "totalElements": "integer"
@@ -27673,8 +28214,9 @@
      "POST collection"
     ],
     "properties": {
-     "statementReportData": "object",
-     "reportCustomFields": "array",
+     "label": "string",
+     "value": "string",
+     "shown": "boolean",
      "id": "string",
      "description": "string",
      "asOfDate": "integer",
@@ -27716,8 +28258,13 @@
      "GET collection"
     ],
     "properties": {
-     "accountNumber": "string",
-     "statements": "array"
+     "statementDate": "string",
+     "openingBalance": "number",
+     "closingBalance": "number",
+     "minimumPaymentDue": "number",
+     "paymentDueDate": "string",
+     "totalDebits": "number",
+     "totalCredits": "number"
     },
     "evidence": [
      "openapi/_original/fiserv-carddeveloper-openapi.yml#GET /v1/accounts/{accountNumber}/statements"
@@ -27816,8 +28363,10 @@
      "GET item"
     ],
     "properties": {
-     "page": "object",
-     "statements": "array"
+     "href": "string",
+     "rel": "string",
+     "action": "string",
+     "types": "array"
     },
     "evidence": [
      "openapi/_original/joinslash-com.json#GET /fdx/accounts/{accountId}/statements",
@@ -28058,9 +28607,7 @@
      "type": "string",
      "balance": "integer",
      "date": "string",
-     "category": "string",
-     "account": "object",
-     "transactions": "array"
+     "category": "string"
     },
     "evidence": [
      "openapi/_original/mono-africa-financial-data-api-openapi.yml#GET /v2/accounts/{id}/statement",
@@ -28075,8 +28622,13 @@
      "GET collection"
     ],
     "properties": {
-     "accountId": "string",
-     "statements": "array"
+     "statementId": "string",
+     "fromDate": "string",
+     "toDate": "string",
+     "openingBalance": "number",
+     "closingBalance": "number",
+     "currency": "string",
+     "entries": "array"
     },
     "evidence": [
      "openapi/_original/montran-global-payments-hub-openapi.yml#GET /accounts/{accountId}/statements"
@@ -28145,8 +28697,6 @@
      "GET item"
     ],
     "properties": {
-     "statements": "array",
-     "pagination": "object",
      "account_guid": "string",
      "content_hash": "string",
      "created_at": "string",
@@ -28170,8 +28720,6 @@
      "GET item"
     ],
     "properties": {
-     "pagination": "object",
-     "statements": "array",
      "account_guid": "string",
      "content_hash": "string",
      "created_at": "string",
@@ -28195,8 +28743,6 @@
      "GET item"
     ],
     "properties": {
-     "statements": "array",
-     "pagination": "object",
      "account_guid": "string",
      "content_hash": "string",
      "created_at": "string",
@@ -28310,12 +28856,10 @@
      "nextOffset": "string",
      "nextPageKey": "string",
      "totalElements": "integer",
-     "accountId": "string",
-     "statementId": "string",
-     "statementDate": "string",
-     "description": "string",
-     "links": "array",
-     "status": "string"
+     "href": "string",
+     "action": "string",
+     "rel": "string",
+     "types": "array"
     },
     "evidence": [
      "openapi/_original/plaid-core-exchange-openapi-original.yml#GET /accounts/{accountId}/statements",
@@ -28450,8 +28994,10 @@
      "GET item"
     ],
     "properties": {
-     "page": "object",
-     "statements": "array"
+     "href": "string",
+     "rel": "string",
+     "action": "string",
+     "types": "array"
     },
     "evidence": [
      "openapi/_original/slash-openapi-original.json#GET /fdx/accounts/{accountId}/statements",
@@ -28532,8 +29078,15 @@
      "GET collection"
     ],
     "properties": {
-     "statements": "array",
-     "metadata": "object"
+     "id": "string",
+     "startDate": "string",
+     "endDate": "string",
+     "name": "string",
+     "type": "string",
+     "accountId": "string",
+     "accountStatus": null,
+     "accountNickname": "string",
+     "accountType": "string"
     },
     "evidence": [
      "openapi/_original/the-bank-of-london-api-openapi.json#GET /v2/statements"
@@ -28616,15 +29169,32 @@
      "GET collection"
     ],
     "properties": {
-     "entry": "array",
-     "count": "integer",
-     "responseCount": "integer",
-     "startBalance": "object",
-     "endBalance": "object",
-     "footer": "string",
-     "openingBalance": "object",
-     "closingBalance": "object",
-     "entries": "array"
+     "transactionId": "object",
+     "entryState": "string",
+     "originalAmount": "object",
+     "forexRate": "object",
+     "transactionAmount": "object",
+     "availableBalanceAdjustment": "object",
+     "actualBalanceAdjustment": "object",
+     "balanceAfter": "object",
+     "availableBalanceAfter": "object",
+     "actualBalanceAfter": "object",
+     "transactionFee": "object",
+     "cardholderFee": "object",
+     "processedTimestamp": "integer",
+     "sourceAmount": "object",
+     "userCurrencyTransactionDetails": "object",
+     "additionalFields": "object",
+     "entryId": "string",
+     "transaction": "object",
+     "description": "string",
+     "timestamp": "integer",
+     "balanceAdjustment": "object",
+     "counterparty": null,
+     "fee": "object",
+     "forex": "object",
+     "relatedEntryId": "string",
+     "executingAccessInstrument": "object"
     },
     "evidence": [
      "openapi/_original/weavr-multi-backoffice-openapi-original.yml#GET /managed_accounts/{id}/statement",
@@ -28643,15 +29213,17 @@
      "GET collection"
     ],
     "properties": {
-     "accountHolder": "object",
-     "issuer": "object",
-     "bankDetails": [
+     "type": "string",
+     "date": "string",
+     "amount": "object",
+     "totalFees": "object",
+     "details": "object",
+     "exchangeDetails": [
       "object",
       "null"
      ],
-     "transactions": "array",
-     "endOfStatementBalance": "object",
-     "query": "object"
+     "runningBalance": "object",
+     "referenceNumber": "string"
     },
     "evidence": [
      "openapi/_original/wise-platform-openapi.yml#GET /v1/profiles/{profileId}/balance-statements/{balanceId}/statement.json"
@@ -30877,8 +31449,10 @@
     "codat-io",
     "commonwealth-bank",
     "connexis-cash",
+    "cora",
     "cross-river",
     "customers-bank",
+    "danske-bank-uk",
     "datanomik",
     "defence-bank",
     "deutsche-bank",
@@ -30956,6 +31530,7 @@
     "td-bank",
     "teachers-mutual-bank",
     "temenos",
+    "temenos-transact",
     "tesser",
     "the-bank-of-london",
     "tietoevry",
@@ -31013,6 +31588,7 @@
     "form3",
     "galileo-fs",
     "increase",
+    "klarna",
     "lead-bank",
     "lean-tech",
     "lean-technologies",
@@ -31029,6 +31605,7 @@
     "mx-platform",
     "mx-technologies",
     "narmi",
+    "okra-ng",
     "open-financial",
     "orbii",
     "orum",

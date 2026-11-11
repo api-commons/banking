@@ -13,7 +13,7 @@ concepts:
       account_number: iban
       created_at: created_at
       routing_number: bic
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/bcb-group-payments-openapi.json#GET /v3/accounts
     - openapi/_original/bcb-group-payments-openapi.json#POST /v4/accounts
@@ -33,11 +33,11 @@ concepts:
     properties:
       id: transactionId
       amount: amount
-      status: status
       description: notes
+      status: status
       account_id: account_id
       currency: currency
-    core_coverage: 0.8
+    core_coverage: 0.714
     evidence:
     - openapi/_original/bcb-group-payments-openapi.json#GET /v1/payments/{accountId}/transaction/{transactionId}
     - openapi/_original/bcb-group-payments-openapi.json#GET /v3/accounts/{accountId}/transactions
@@ -47,8 +47,8 @@ concepts:
     - beneficiaries
     properties:
       id: id
-      created_at: created_at
       account_number: iban
+      created_at: created_at
       description: description
       updated_at: updated_at
     core_coverage: 0.5

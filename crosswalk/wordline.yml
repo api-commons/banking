@@ -11,7 +11,7 @@ concepts:
       status: status
       account_number: iban
       routing_number: bic
-    core_coverage: 0.5
+    core_coverage: 0.429
     evidence:
     - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/{accountReference}
     - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/contracts/external-contracts/{issuerContractExternalReference}/accounts
@@ -35,13 +35,13 @@ concepts:
     - transactions
     properties:
       amount: transactionAmount
-      status: status
       direction: creditDebitIndicator
+      status: status
       posted_at:
       - transactionDate
       - bookingDate
       created_at: creationDate
-    core_coverage: 0.6
+    core_coverage: 0.571
     evidence:
     - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/transactions/{transactionId}
     - openapi/_original/worldline-interchange-fees-api.yaml#GET /acquiring/interchangefees/v2.0/acquirers/{acquirerId}/transactions/{transactionId}
@@ -54,6 +54,7 @@ concepts:
       - iban
       - account
       status: status
+      routing_number: bic
     core_coverage: 0.5
     evidence:
     - openapi/_original/worldline-card-issuing-api-2.41.1.json#GET /issuers/{issuerId}/accounts/external-accounts/{issuerAccountExternalReference}

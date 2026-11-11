@@ -8,7 +8,7 @@ concepts:
     - accounts
     properties:
       type: accountType
-    core_coverage: 0.167
+    core_coverage: 0.143
     evidence:
     - openapi/_original/casap-openapi.json#GET /v1/accounts
   transaction:
@@ -16,6 +16,6 @@ concepts:
     - transactions
     properties:
       id: uuid
-    core_coverage: 0.2
+    core_coverage: 0.143
     evidence:
     - openapi/_original/casap-openapi.json#GET /v1/disputes/transactions

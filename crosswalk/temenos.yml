@@ -11,14 +11,14 @@ concepts:
       - accountName
       - name
       type: accountType
-      status: status
       currency: currency
+      status: status
       id: resourceId
       account_number: iban
       balance:
       - balance
-      - availableBalance
       - currentBalance
+      - availableBalance
       account_id: accountId
     core_coverage: 1.0
     evidence:
@@ -43,9 +43,17 @@ concepts:
     properties:
       id: transactionId
       amount: amount
+      direction: transactionType
+      description:
+      - description
+      - narrative
+      - reference
       status: status
+      posted_at: bookingDate
+      account_id: accountId
       currency: currency
-    core_coverage: 0.6
+      created_at: createdDate
+    core_coverage: 1.0
     evidence:
     - openapi/_original/temenos-data-hub-openapi.yml#GET /analytics/transactions
     - openapi/_original/temenos-data-hub-openapi.yml#GET /operational/transactions
@@ -55,8 +63,13 @@ concepts:
   beneficiary:
     path_segment:
     - beneficiaries
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: beneficiaryId
+      account_number:
+      - accountNumber
+      - iban
+      routing_number: bic
+    core_coverage: 0.5
     evidence:
     - openapi/_original/temenos-transact-openapi.yml#GET /party/beneficiaries
   transfer:

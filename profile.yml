@@ -147,8 +147,8 @@ concepts:
     properties:
     - name: name
       tier: core
-      providers: 92
-      share: 0.719
+      providers: 97
+      share: 0.758
       type: string
       spellings:
       - name
@@ -161,8 +161,8 @@ concepts:
       - display-name
     - name: type
       tier: core
-      providers: 90
-      share: 0.703
+      providers: 94
+      share: 0.734
       type: string
       spellings:
       - type
@@ -173,10 +173,19 @@ concepts:
       - kind
       - accountSubType
       - productType
+    - name: currency
+      tier: core
+      providers: 81
+      share: 0.633
+      type: string
+      spellings:
+      - currency
+      - currency_code
+      - currencyCode
     - name: status
       tier: core
-      providers: 78
-      share: 0.609
+      providers: 79
+      share: 0.617
       type: string
       spellings:
       - status
@@ -186,19 +195,10 @@ concepts:
       - account-status
       - Status
       - account_status
-    - name: currency
-      tier: core
-      providers: 77
-      share: 0.602
-      type: string
-      spellings:
-      - currency
-      - currency_code
-      - currencyCode
     - name: id
       tier: core
-      providers: 70
-      share: 0.547
+      providers: 74
+      share: 0.578
       type: string
       spellings:
       - id
@@ -206,35 +206,35 @@ concepts:
       - guid
     - name: account_number
       tier: core
-      providers: 69
-      share: 0.539
+      providers: 73
+      share: 0.57
       type: string
       spellings:
       - accountNumber
-      - account_number
       - iban
+      - account_number
       - accountNumberDisplay
       - number
       - maskedNumber
+      - AccountNumber
       - mask
-      - accountNumberLast4
     - name: balance
-      tier: extended
-      providers: 63
-      share: 0.492
+      tier: core
+      providers: 65
+      share: 0.508
       type: number
       spellings:
       - balance
       - availableBalance
-      - currentBalance
       - balances
+      - currentBalance
       - available_balance
       - current_balance
       - available-balance
     - name: account_id
       tier: extended
-      providers: 43
-      share: 0.336
+      providers: 47
+      share: 0.367
       type: string
       spellings:
       - accountId
@@ -245,8 +245,8 @@ concepts:
       - AccountID
     - name: created_at
       tier: extended
-      providers: 43
-      share: 0.336
+      providers: 44
+      share: 0.344
       type: string
       spellings:
       - created_at
@@ -255,12 +255,12 @@ concepts:
       - creationDate
       - createdOn
       - created
+      - CreatedAt
       - date_created
-      - creation_date
     - name: routing_number
       tier: extended
-      providers: 31
-      share: 0.242
+      providers: 34
+      share: 0.266
       type: string
       spellings:
       - routing_number
@@ -270,48 +270,48 @@ concepts:
       - sortCode
       - bank_code
       - swift_code
-    long_tail_count: 1202
+    long_tail_count: 1270
     long_tail_sample:
-    - metadata
-    - holder_name
     - institution
+    - metadata
     - updated_at
+    - holder_name
     - description
-    - interest_rate
-    - product_name
     - customer_id
+    - product_name
+    - interest_rate
     - credit_limit
+    - opened_at
     - account_category
     - details
     - identifiers
-    - opened_at
     - available_credit
     - cash_account_type
-    - pagination
     - product
     - closed_at
     - country
-    - account_ownership
-    - country_code
     - product_id
+    - account_ownership
+    - bank
+    - country_code
+    - maturity_date
     - profile
     - provider_id
     - token
     - user_id
     - address
+    - amount
     - apr
     - balance_as_of
+    - balance_type
     - branch_code
     - death_benefit
+    - entity_id
     - is_manual
     - last_payment
+    - last_updated
     - margin_balance
-    - maturity_date
-    - page_size
     - source
-    - active
-    - amount
-    - balance_type
   balance:
     segments_seen:
       balances: 49
@@ -342,8 +342,8 @@ concepts:
     properties:
     - name: account_id
       tier: extended
-      providers: 34
-      share: 0.486
+      providers: 32
+      share: 0.457
       type: string
       spellings:
       - accountId
@@ -351,8 +351,8 @@ concepts:
       - account
     - name: available
       tier: extended
-      providers: 30
-      share: 0.429
+      providers: 32
+      share: 0.457
       type: number
       spellings:
       - availableBalance
@@ -361,8 +361,8 @@ concepts:
       - available_amount
     - name: currency
       tier: extended
-      providers: 29
-      share: 0.414
+      providers: 32
+      share: 0.457
       type: string
       spellings:
       - currency
@@ -371,52 +371,74 @@ concepts:
       - Currency
     - name: current
       tier: extended
-      providers: 20
-      share: 0.286
+      providers: 26
+      share: 0.371
       type: number
       spellings:
       - currentBalance
-      - current_balance
-      - ledgerBalance
-      - booked
       - balanceAmount
-      - current
+      - ledgerBalance
+      - current_balance
+      - booked
       - ledger_balance
-    long_tail_count: 175
+      - current
+    - name: type
+      tier: extended
+      providers: 23
+      share: 0.329
+      type: string
+      spellings:
+      - type
+      - balanceType
+      - credit_debit_indicator
+      - creditDebitIndicator
+    - name: amount
+      tier: extended
+      providers: 15
+      share: 0.214
+      type: object
+      spellings:
+      - amount
+    - name: id
+      tier: extended
+      providers: 14
+      share: 0.2
+      type: string
+      spellings:
+      - id
+    long_tail_count: 177
     long_tail_sample:
-    - id
-    - type
-    - amount
     - as_of
     - name
     - created_at
+    - reference_date
     - status
+    - date
     - timestamp
     - account_number
     - account_type
-    - date
+    - last_change_date_time
     - account_balance
+    - as_of_date_time
+    - last_committed_transaction
     - last_updated
     - pending_credits
-    - account_balances
     - amortised_limit
-    - as_of_date_time
     - blocked
-    - card_account
+    - closing_balance
+    - collected_balance
     - credit_limit
     - error
-    - last_change_date_time
-    - last_committed_transaction
     - limit
+    - opening_balance
     - pending
     - posted
     - purses
-    - reference_date
     - reserved_amount
     - threshold
     - token
     - accepted_amount
-    - account_connection_id
+    - account_balances
     - account_ids
     - account_internal_identification
     - account_ref
@@ -424,6 +446,8 @@ concepts:
     - active_credit_limit_amount
     - allocation_id
     - allocation_ids
+    - amortization_type
+    - arrangement_id
   transaction:
     segments_seen:
       transactions: 116
@@ -463,8 +487,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 80
-      share: 0.727
+      providers: 98
+      share: 0.891
       type: string
       spellings:
       - id
@@ -477,8 +501,8 @@ concepts:
       - TransactionID
     - name: amount
       tier: core
-      providers: 78
-      share: 0.709
+      providers: 96
+      share: 0.873
       type: number
       spellings:
       - amount
@@ -487,35 +511,24 @@ concepts:
       - instructed_amount
       - transaction_amount
       - Amount
-    - name: status
-      tier: core
-      providers: 69
-      share: 0.627
-      type: string
-      spellings:
-      - status
-      - state
-      - transactionStatus
-      - Status
-      - transaction_status
-      - TransactionStatus
     - name: direction
       tier: core
-      providers: 64
-      share: 0.582
+      providers: 81
+      share: 0.736
       type: string
       spellings:
       - type
       - transactionType
-      - direction
       - transaction_type
+      - direction
       - credit_debit_indicator
       - creditDebitIndicator
-      - debit_credit
+      - debitCredit
+      - TransactionType
     - name: description
       tier: core
-      providers: 62
-      share: 0.564
+      providers: 78
+      share: 0.709
       type: string
       spellings:
       - description
@@ -525,48 +538,87 @@ concepts:
       - remittanceInformation
       - note
       - transactionInformation
-      - Note
-    - name: account_id
-      tier: extended
-      providers: 50
-      share: 0.455
+      - narrative
+    - name: status
+      tier: core
+      providers: 74
+      share: 0.673
       type: string
       spellings:
-      - account_id
-      - accountId
-      - account
-      - sourceAccountId
-      - bankAccountId
-      - internalAccountId
-      - bank_account_id
+      - status
+      - state
+      - transactionStatus
+      - transaction_status
+      - Status
+      - TransactionStatus
     - name: posted_at
-      tier: extended
-      providers: 49
-      share: 0.445
+      tier: core
+      providers: 62
+      share: 0.564
       type: string
       spellings:
       - date
       - transactionDate
       - bookingDate
-      - posted_at
       - postedDate
       - value_date_time
+      - posted_at
       - valueDateTime
       - settled_at
+    - name: account_id
+      tier: core
+      providers: 61
+      share: 0.555
+      type: string
+      spellings:
+      - accountId
+      - account_id
+      - account
+      - sourceAccountId
+      - bankAccountId
+      - internalAccountId
+      - bank_account_id
     - name: currency
       tier: extended
-      providers: 40
-      share: 0.364
+      providers: 48
+      share: 0.436
       type: string
       spellings:
       - currency
       - currency_code
       - currencyCode
       - Currency
+    - name: merchant_name
+      tier: extended
+      providers: 47
+      share: 0.427
+      type: string
+      spellings:
+      - merchant
+      - payee
+      - merchantName
+      - counterpartyName
+      - merchant_name
+      - creditorName
+      - debtorName
+      - merchant_details
+    - name: category
+      tier: extended
+      providers: 42
+      share: 0.382
+      type: string
+      spellings:
+      - category
+      - bankTransactionCode
+      - categories
+      - categoryId
+      - transactionCode
+      - bank_transaction_code
+      - category_id
     - name: created_at
       tier: extended
-      providers: 37
-      share: 0.336
+      providers: 39
+      share: 0.355
       type: string
       spellings:
       - created_at
@@ -577,74 +629,59 @@ concepts:
       - created_on
       - dateCreated
       - createdOn
-    - name: merchant_name
+    - name: balance_after
       tier: extended
-      providers: 34
-      share: 0.309
-      type: string
+      providers: 26
+      share: 0.236
+      type: number
       spellings:
-      - merchant
-      - merchantName
-      - payee
-      - merchant_name
-      - creditorName
-      - debtorName
-      - counterpartyName
-      - counterparty_name
-    - name: category
-      tier: extended
-      providers: 32
-      share: 0.291
-      type: string
-      spellings:
-      - category
-      - categories
-      - categoryId
-      - bankTransactionCode
-      - transactionCode
-      - category_id
-    long_tail_count: 1227
+      - balance
+      - runningBalance
+      - running_balance
+      - balanceAfter
+      - account-balance
+    long_tail_count: 1310
     long_tail_sample:
-    - balance_after
+    - value_date
     - updated_at
     - metadata
-    - merchant_category_code
-    - value_date
-    - pagination
     - check_number
+    - merchant_category_code
+    - posted_timestamp
+    - transaction_timestamp
+    - debit_credit_memo
+    - reference_transaction_id
+    - sub_category
+    - customer_id
+    - reference_number
     - source
     - counterparty
-    - customer_id
+    - creditor_account
     - fee
+    - foreign_amount
+    - foreign_currency
     - pending
+    - post_date
     - total_elements
     - transacted_at
     - user_id
+    - account_category
     - approval_code
-    - card
+    - beneficiary
     - card_id
     - completed_at
+    - currency_exchange
+    - debtor_account
     - external_id
     - is_manual
     - merchant_id
-    - page_size
-    - posted_timestamp
-    - token
-    - transaction_timestamp
-    - account_number
-    - beneficiary
-    - creditor_account
-    - currency_exchange
-    - debit_credit_memo
-    - fees
-    - is_expense
-    - is_international
-    - is_recurring
-    - next_offset
-    - offset
-    - post_date
-    - posting_date
+    - pagination
+    - payment_details
+    - proprietary_bank_transaction_code
     - quantity
+    - token
+    - account_type
+    - card
   beneficiary:
     segments_seen:
       beneficiaries: 19
@@ -689,21 +726,35 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 21
-      share: 0.512
+      providers: 24
+      share: 0.585
       type: string
       spellings:
       - id
       - beneficiaryId
+      - beneficiary_id
     - name: name
       tier: core
-      providers: 21
-      share: 0.512
+      providers: 22
+      share: 0.537
       type: string
       spellings:
       - name
       - nickname
       - label
+    - name: account_number
+      tier: extended
+      providers: 18
+      share: 0.439
+      type: string
+      spellings:
+      - iban
+      - accountNumber
+      - account_number
+      - account
+      - account-number
+      - creditor_account
+      - number
     - name: created_at
       tier: extended
       providers: 17
@@ -717,22 +768,10 @@ concepts:
       - createdDate
       - creation_date
       - created-at
-    - name: account_number
+    - name: status
       tier: extended
       providers: 15
       share: 0.366
-      type: string
-      spellings:
-      - iban
-      - accountNumber
-      - account_number
-      - account
-      - account-number
-      - number
-    - name: status
-      tier: extended
-      providers: 14
-      share: 0.341
       type: string
       spellings:
       - status
@@ -748,8 +787,8 @@ concepts:
       - entity_type
     - name: description
       tier: extended
-      providers: 11
-      share: 0.268
+      providers: 12
+      share: 0.293
       type: string
       spellings:
       - description
@@ -765,21 +804,33 @@ concepts:
       - updated
       - updatedAt
       - modifiedAt
+    - name: routing_number
+      tier: extended
+      providers: 9
+      share: 0.22
+      type: string
+      spellings:
+      - bic
+      - routing_number
+      - routing
+      - sortCode
+      - sort_code
+      - routingNumber
     long_tail_count: 391
     long_tail_sample:
     - address
     - metadata
-    - routing_number
     - email
-    - phone
     - account_id
-    - currency
-    - account_type
-    - bank_country
     - bank_name
+    - currency
+    - phone
+    - bank_country
+    - country
+    - customer_id
+    - account_type
     - biller
     - counterparty_id
-    - country
     - digital_wallet
     - domestic
     - international
@@ -789,24 +840,24 @@ concepts:
     - account_identifiers
     - accounts
     - bank_account_type
+    - beneficiary_name
+    - beneficiary_type
     - bic_swift
-    - body
     - branch_code
     - bsb_code
     - clabe
     - company_name
-    - customer_id
     - date_of_birth
     - deleted
     - details
     - external_id
     - first_name
-    - header
     - ifsc
     - last_name
     - op
     - path
     - payee_u_type
+    - postal_address
   transfer:
     segments_seen:
       payments: 55
@@ -852,8 +903,8 @@ concepts:
     properties:
     - name: amount
       tier: core
-      providers: 54
-      share: 0.761
+      providers: 55
+      share: 0.775
       type: number
       spellings:
       - amount
@@ -888,8 +939,8 @@ concepts:
       - created-at
     - name: description
       tier: core
-      providers: 41
-      share: 0.577
+      providers: 40
+      share: 0.563
       type: string
       spellings:
       - description
@@ -930,7 +981,6 @@ concepts:
       spellings:
       - currency
       - currency_code
-      - currencyCode
       - Currency
     - name: from_account_id
       tier: extended
@@ -976,24 +1026,19 @@ concepts:
       type: string
       spellings:
       - paymentId
-    - name: metadata
-      tier: extended
-      providers: 15
-      share: 0.211
-      type: object
-      spellings:
-      - metadata
-      - attributes
-      - tags
-    long_tail_count: 760
+      - payment_id
+    long_tail_count: 774
     long_tail_sample:
+    - metadata
     - account_id
     - transaction_id
     - creditor
     - debtor
     - completed_at
     - creditor_name
+    - end_to_end_id
     - payment_date
+    - account_number
     - beneficiary
     - creditor_agent
     - debit_account_id
@@ -1001,32 +1046,29 @@ concepts:
     - scheduled_date
     - beneficiary_name
     - customer
-    - end_to_end_id
+    - date
+    - debtor_name
     - failure_reason
     - fee
-    - idempotency_key
+    - purpose
     - value_date
     - balance
-    - batch_id
     - charge_bearer
+    - client_reference_id
+    - code
+    - country
     - created_by
     - created_time
     - creditor_address
-    - date
-    - debtor_name
     - end_to_end_identification
     - execution_date
-    - external_id
+    - external_reference
     - fingerprint
+    - idempotency_key
     - merchant_id
-    - offset
     - payment_method
-    - purpose
     - recipient
     - refunded
-    - remittance_info
-    - remittance_information_structured
-    - remittance_information_unstructured
   statement:
     segments_seen:
       statements: 40
@@ -1050,75 +1092,85 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 23
-      share: 0.523
+      providers: 26
+      share: 0.591
       type: string
       spellings:
       - id
       - statementId
       - guid
+      - Id
       - statement_id
       - statementID
     - name: account_id
       tier: extended
-      providers: 13
-      share: 0.295
+      providers: 12
+      share: 0.273
       type: string
       spellings:
       - accountId
       - account_id
       - account
+      - accountID
     - name: created_at
       tier: extended
-      providers: 11
-      share: 0.25
+      providers: 12
+      share: 0.273
       type: string
       spellings:
       - created_at
       - creationDate
+      - CreatedAt
       - createdAt
       - created
       - createdOn
       - creationDateTime
-    long_tail_count: 191
+    - name: type
+      tier: extended
+      providers: 9
+      share: 0.205
+      type: string
+      spellings:
+      - type
+    long_tail_count: 201
     long_tail_sample:
-    - statement_date
-    - type
-    - description
-    - status
-    - balance
-    - pagination
+    - name
     - period_end
     - period_start
-    - transactions
-    - updated_at
-    - account_guid
-    - account_number
-    - amount_due
+    - statement_date
     - closing_balance
-    - content_hash
+    - description
+    - opening_balance
+    - status
+    - action
+    - amount
     - currency
+    - href
+    - rel
+    - types
+    - updated_at
+    - uri
+    - account_guid
+    - amount_due
+    - balance
+    - category
+    - content_hash
     - date
     - due_date
     - fees
+    - file_id
     - member_guid
-    - name
     - next_offset
-    - opening_balance
+    - payment_due_date
     - total_elements
-    - uri
     - user_guid
-    - amount
+    - account_number
     - apr
     - billing_period_end
     - billing_period_start
     - cash_advance
     - cash_apr
-    - category
-    - file_id
+    - details
     - file_name
     - file_size
     - interest
-    - interest_amount
-    - is_latest
-    - last_payment_amount

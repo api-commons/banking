@@ -13,7 +13,7 @@ concepts:
       id: id
       balance: balances
       created_at: createdAt
-    core_coverage: 0.667
+    core_coverage: 0.714
     evidence:
     - openapi/_original/anchorage-v2-openapi-original.yml#GET /subaccounts/customers/accounts
     - openapi/_original/anchorage-v2-openapi-original.yml#GET /subaccounts/customers/{customerId}/accounts
@@ -25,7 +25,8 @@ concepts:
     - balances
     - balance
     properties:
-      account_id: accountId
+      type: type
+      amount: amount
     core_coverage: 0.0
     evidence:
     - openapi/_original/anchorage-v2-openapi-original.yml#GET /trading/accounts/{accountId}/balances
@@ -42,15 +43,15 @@ concepts:
       - transactionId
       - id
       amount: amount
-      status: status
       direction:
       - transactionType
       - type
       - direction
       description: description
+      status: status
       account_id: internalAccountId
       created_at: createdAt
-    core_coverage: 1.0
+    core_coverage: 0.857
     evidence:
     - openapi/_original/anchorage-v2-openapi-original.yml#GET /subaccounts/transactions
     - openapi/_original/anchorage-v2-openapi-original.yml#GET /subaccounts/transactions/{transactionsIds}
@@ -77,11 +78,10 @@ concepts:
       amount: amount
       status: status
       created_at: createdAt
-      description: description
       id: transferId
       from_account_id: source
       to_account_id: destination
-    core_coverage: 1.0
+    core_coverage: 0.8
     evidence:
     - openapi/_original/anchorage-v2-openapi-original.yml#DELETE /transfers/{transferId}
     - openapi/_original/anchorage-v2-openapi-original.yml#GET /transfers

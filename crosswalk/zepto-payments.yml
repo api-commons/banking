@@ -13,7 +13,7 @@ concepts:
       id: id
       account_number: account_number
       balance: available_balance
-    core_coverage: 0.833
+    core_coverage: 0.857
     evidence:
     - openapi/_original/zepto-payments-zepto.yml#GET /bank_accounts
     - openapi/_original/zepto-payments-zepto.yml#GET /bank_accounts/{id}
@@ -22,13 +22,13 @@ concepts:
     - transactions
     properties:
       amount: amount
-      status: status
       direction: type
       description: description
+      status: status
       account_id: bank_account_id
-      created_at: created_at
       category: category
-    core_coverage: 0.8
+      created_at: created_at
+    core_coverage: 0.714
     evidence:
     - openapi/_original/zepto-payments-zepto.yml#GET /transactions
   transfer:
@@ -42,7 +42,6 @@ concepts:
       description:
       - reference
       - description
-      metadata: metadata
     core_coverage: 0.8
     evidence:
     - openapi/_original/zepto-payments-pay-to.yml#GET /payto/payments

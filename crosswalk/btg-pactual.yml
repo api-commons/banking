@@ -13,7 +13,7 @@ concepts:
       account_number: number
       account_id: accountId
       routing_number: bankCode
-    core_coverage: 0.5
+    core_coverage: 0.429
     evidence:
     - openapi/_original/btg-pactual-banking-accounts-openapi.yml#GET /{companyId}/banking/accounts
     - openapi/_original/btg-pactual-banking-payroll-openapi.yml#GET /{companyId}/banking/payroll/employees/{employeeTaxId}/account
@@ -36,9 +36,9 @@ concepts:
       id: id
       amount: amount
       direction: transactionType
-      created_at: createdAt
       merchant_name: merchant
-    core_coverage: 0.6
+      created_at: createdAt
+    core_coverage: 0.429
     evidence:
     - openapi/_original/btg-pactual-banking-cards-openapi.yml#GET /{companyId}/banking/cards/invoices/{invoiceId}/transactions
   beneficiary:
@@ -63,7 +63,6 @@ concepts:
       - type
       - paymentType
       payment_id: paymentId
-      metadata: tags
     core_coverage: 0.6
     evidence:
     - openapi/_original/btg-pactual-banking-payments-openapi.yml#DELETE /{companyId}/banking/payments/{paymentId}
@@ -74,8 +73,11 @@ concepts:
   statement:
     path_segment:
     - statements
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      account_id: account
+      type: type
+    core_coverage: 1.0
     evidence:
     - openapi/_original/btg-pactual-banking-accounts-openapi.yml#GET /{companyId}/banking/accounts/statements
     - openapi/_original/btg-pactual-banking-accounts-openapi.yml#GET /{companyId}/banking/accounts/{accountId}/statements

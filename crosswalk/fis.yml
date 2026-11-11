@@ -15,8 +15,8 @@ concepts:
       - type
       - accountType
       - accountSubType
-      status: status
       currency: currency
+      status: status
       id: id
       account_number: accountNumber
       balance:
@@ -49,21 +49,26 @@ concepts:
     - banktransactions
     - transactions
     properties:
-      id: id
+      id:
+      - id
+      - transactionId
       amount: amount
-      status: status
-      direction: transactionType
+      direction:
+      - transactionType
+      - type
       description:
       - description
       - memo
-      account_id: accountId
+      status: status
       posted_at:
       - date
       - postedDate
+      account_id: accountId
       currency: currency
-      created_at: createdDate
       merchant_name: merchantName
       category: categories
+      created_at: createdDate
+      balance_after: balanceAfter
     core_coverage: 1.0
     evidence:
     - openapi/_original/fis-accounting-data-as-a-service-openapi.json#GET /bankTransactions

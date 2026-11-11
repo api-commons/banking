@@ -18,7 +18,8 @@ concepts:
     path_segment:
     - balances
     properties:
-      account_id: account
+      current: balanceAmount
+      type: balanceType
     core_coverage: 0.0
     evidence:
     - openapi/_original/allica-bank-account-information-openapi.yaml#GET /accounts/{AccountId}/balances
@@ -29,8 +30,12 @@ concepts:
   transaction:
     path_segment:
     - transactions
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: transactionId
+      amount: transactionAmount
+      posted_at: bookingDate
+      category: bankTransactionCode
+    core_coverage: 0.429
     evidence:
     - openapi/_original/allica-bank-account-information-openapi.yaml#GET /accounts/{AccountId}/transactions
     - openapi/_original/bank-of-ireland-uk-account-info-openapi.yaml#GET /accounts/{AccountId}/statements/{StatementId}/transactions

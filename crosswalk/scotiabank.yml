@@ -12,7 +12,7 @@ concepts:
       currency: currency
       account_number: account_number
       account_id: account_id
-    core_coverage: 0.667
+    core_coverage: 0.571
     evidence:
     - openapi/_original/scotiabank-tranxact-openapi.yml#GET /v1/accounts
   balance:
@@ -29,7 +29,14 @@ concepts:
     path_segment:
     - transactions
     properties:
-      account_id: account_id
-    core_coverage: 0.0
+      id: transaction_id
+      amount: amount
+      direction: credit_debit_indicator
+      description:
+      - description
+      - reference
+      posted_at: date
+      balance_after: balance
+    core_coverage: 0.714
     evidence:
     - openapi/_original/scotiabank-tranxact-openapi.yml#GET /v1/accounts/{account_id}/transactions

@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.727,
-      "x-commons-providers": 80,
+      "x-commons-share": 0.891,
+      "x-commons-providers": 98,
       "x-commons-spellings": [
         "id",
         "transactionId",
@@ -24,8 +24,8 @@
     "amount": {
       "type": "number",
       "x-commons-tier": "core",
-      "x-commons-share": 0.709,
-      "x-commons-providers": 78,
+      "x-commons-share": 0.873,
+      "x-commons-providers": 96,
       "x-commons-spellings": [
         "amount",
         "transactionAmount",
@@ -35,40 +35,27 @@
         "Amount"
       ]
     },
-    "status": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.627,
-      "x-commons-providers": 69,
-      "x-commons-spellings": [
-        "status",
-        "state",
-        "transactionStatus",
-        "Status",
-        "transaction_status",
-        "TransactionStatus"
-      ]
-    },
     "direction": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.582,
-      "x-commons-providers": 64,
+      "x-commons-share": 0.736,
+      "x-commons-providers": 81,
       "x-commons-spellings": [
         "type",
         "transactionType",
-        "direction",
         "transaction_type",
+        "direction",
         "credit_debit_indicator",
         "creditDebitIndicator",
-        "debit_credit"
+        "debitCredit",
+        "TransactionType"
       ]
     },
     "description": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.564,
-      "x-commons-providers": 62,
+      "x-commons-share": 0.709,
+      "x-commons-providers": 78,
       "x-commons-spellings": [
         "description",
         "reference",
@@ -77,17 +64,48 @@
         "remittanceInformation",
         "note",
         "transactionInformation",
-        "Note"
+        "narrative"
       ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.673,
+      "x-commons-providers": 74,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "transactionStatus",
+        "transaction_status",
+        "Status",
+        "TransactionStatus"
+      ]
+    },
+    "posted_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.564,
+      "x-commons-providers": 62,
+      "x-commons-spellings": [
+        "date",
+        "transactionDate",
+        "bookingDate",
+        "postedDate",
+        "value_date_time",
+        "posted_at",
+        "valueDateTime",
+        "settled_at"
+      ],
+      "format": "date-time"
     },
     "account_id": {
       "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.455,
-      "x-commons-providers": 50,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.555,
+      "x-commons-providers": 61,
       "x-commons-spellings": [
-        "account_id",
         "accountId",
+        "account_id",
         "account",
         "sourceAccountId",
         "bankAccountId",
@@ -95,28 +113,11 @@
         "bank_account_id"
       ]
     },
-    "posted_at": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.445,
-      "x-commons-providers": 49,
-      "x-commons-spellings": [
-        "date",
-        "transactionDate",
-        "bookingDate",
-        "posted_at",
-        "postedDate",
-        "value_date_time",
-        "valueDateTime",
-        "settled_at"
-      ],
-      "format": "date-time"
-    },
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.364,
-      "x-commons-providers": 40,
+      "x-commons-share": 0.436,
+      "x-commons-providers": 48,
       "x-commons-spellings": [
         "currency",
         "currency_code",
@@ -124,11 +125,42 @@
         "Currency"
       ]
     },
+    "merchant_name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.427,
+      "x-commons-providers": 47,
+      "x-commons-spellings": [
+        "merchant",
+        "payee",
+        "merchantName",
+        "counterpartyName",
+        "merchant_name",
+        "creditorName",
+        "debtorName",
+        "merchant_details"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.382,
+      "x-commons-providers": 42,
+      "x-commons-spellings": [
+        "category",
+        "bankTransactionCode",
+        "categories",
+        "categoryId",
+        "transactionCode",
+        "bank_transaction_code",
+        "category_id"
+      ]
+    },
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.336,
-      "x-commons-providers": 37,
+      "x-commons-share": 0.355,
+      "x-commons-providers": 39,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -141,34 +173,17 @@
       ],
       "format": "date-time"
     },
-    "merchant_name": {
-      "type": "string",
+    "balance_after": {
+      "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.309,
-      "x-commons-providers": 34,
+      "x-commons-share": 0.236,
+      "x-commons-providers": 26,
       "x-commons-spellings": [
-        "merchant",
-        "merchantName",
-        "payee",
-        "merchant_name",
-        "creditorName",
-        "debtorName",
-        "counterpartyName",
-        "counterparty_name"
-      ]
-    },
-    "category": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.291,
-      "x-commons-providers": 32,
-      "x-commons-spellings": [
-        "category",
-        "categories",
-        "categoryId",
-        "bankTransactionCode",
-        "transactionCode",
-        "category_id"
+        "balance",
+        "runningBalance",
+        "running_balance",
+        "balanceAfter",
+        "account-balance"
       ]
     }
   },
